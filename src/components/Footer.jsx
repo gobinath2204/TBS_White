@@ -3,15 +3,19 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer id="contact">
-      <p><strong>Test Base Solutions</strong></p>
-      <p>
-        <a href="https://linkedin.com/company/testbasesolutions-ltd" target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
-      </p>
-      <p>Address: 3, Birmingham Rd, Coventry, CV5 9AB</p>
-      <p>Phone: +44 79181 07720</p>
-      <p>Email: <a href="mailto:info@testbasesolutions.co.uk">info@testbasesolutions.co.uk</a></p>
-    </footer>
+        <h3>Test Base Solutions</h3>
+        <p>3, Birmingham Rd, Coventry, CV5 9AB</p>
+        <p>Phone: +44 79181 07720 | Email: info@testbasesolutions.co.uk</p>
+        <div className="footer-links">
+          <a href="https://linkedin.com/company/testbasesolutions-ltd" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a href="#">Home</a>
+          <a href="#services">Services</a>
+          <a href="#products">Products</a>
+          <a href="#about">About Us</a>
+          <a href="#careers">Careers</a>
+        </div>
+      </footer>
   );
 }

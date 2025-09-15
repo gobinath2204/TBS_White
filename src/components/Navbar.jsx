@@ -14,31 +14,40 @@ export default function Navbar() {
 
   const handleLinkClick = () => setOpen(false);
 
+  const handleServicesClick = () => {
+    // If we're not already on the homepage, navigate to homepage first
+    if (location.pathname !== '/') {
+      // Navigate to home page, then scroll to services
+      window.location.href = '/#services';
+    } else {
+      // If already on home page, just scroll to services
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
-    <nav role="navigation" aria-label="Main navigation">
-      <div className="logo"> <img src="/logo.png" alt="logo" /> </div>
-
-      {/* <button
-        className="menu-toggle"
-        aria-expanded={open}
-        aria-controls="main-navigation"
-        onClick={() => setOpen((s) => !s)}
-      >
-        {open ? 'Close' : 'Menu'}
-      </button> */}
-
-      <ul
-        id="main-navigation"
-        className={open ? 'open' : ''}
-      >
-        {LINKS.map((l) => (
-          <li key={l.href}>
-            <a href={l.href} onClick={handleLinkClick}>
-              {l.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <nav>
+        <div className="logo">
+          <img src="/logo.png" alt="Test Base Solutions Logo" />
+        </div>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li>
+          <a 
+            href="/#services" 
+            onClick={handleServicesClick}
+          >
+            SERVICES
+          </a>
+        </li>
+          <li><a href="#products">PRODUCTS</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
+          <li><a href="#careers">CAREERS</a></li>
+        </ul>
+      </nav>
   );
 }

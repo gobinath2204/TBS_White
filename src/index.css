@@ -60,7 +60,7 @@ nav ul::after {
 
 nav a {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   color: var(--blue);
   letter-spacing: 1px;
   transition: color 0.3s ease;
@@ -84,17 +84,19 @@ nav a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-nav a:hover {
+/* nav a:hover {
   color: var(--orange);
-}
+} */
 
 /* HERO */
 .hero {
   display: flex;
   flex-wrap: wrap;
+  height: 100vh;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 2rem;
+  padding-left: 2rem;
+  margin-top: 0;
   background: linear-gradient(135deg, #fff, #f0f4fa);
 }
 
@@ -353,6 +355,7 @@ section h2 {
   align-items: flex-end;
   color: #fff;
   font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card img {
@@ -367,6 +370,11 @@ section h2 {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(33,60,122,0.6), rgba(229,107,46,0.6));
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .product-info {
