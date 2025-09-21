@@ -29,6 +29,38 @@
   line-height: 1.6;
 }
 
+/* Scroll Animation for Sections */
+.story-card-section,
+.pillars-of-excellence-section,
+.fostering-talent-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.story-card-section.visible,
+.pillars-of-excellence-section.visible,
+.fostering-talent-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Add a subtle scale effect for more engagement */
+.story-card-section.visible .story-card,
+.pillars-of-excellence-section.visible .pillars-of-excellence,
+.fostering-talent-section.visible .fostering-talent {
+  transform: scale(1);
+  transition: transform 0.6s ease 0.3s;
+}
+
+.story-card-section .story-card,
+.pillars-of-excellence-section .pillars-of-excellence,
+.fostering-talent-section .fostering-talent {
+  transform: scale(0.98);
+  transition: transform 0.6s ease;
+}
+
 /* Story Card Section */
 .story-card-section {
   margin-bottom: 80px;
@@ -64,29 +96,211 @@
   font-weight: 600;
 }
 
-/* Hero Section */
-.hero-section {
-  text-align: center;
+/* Pillars of Excellence Section */
+.pillars-of-excellence-section {
   margin-bottom: 80px;
-  padding: 40px 0;
-  border-top: 1px solid #eaeaea;
-  border-bottom: 1px solid #eaeaea;
 }
 
-.hero-section h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 20px;
+.pillars-of-excellence {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.pillars-of-excellence-content h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
   color: #2c3e50;
+  text-align: center;
 }
 
-.hero-section p {
+.pillars-of-excellence-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.pillars-of-excellence-content strong {
+  color: #3498db;
+  font-weight: 600;
+}
+
+/* Excellence List Styling */
+.excellence-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.excellence-list li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.excellence-list li::before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
   font-size: 1.2rem;
+}
+
+/* Fostering Talent Section */
+.fostering-talent-section {
+  margin-bottom: 80px;
+}
+
+.fostering-talent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.fostering-talent-content h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.fostering-talent-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.fostering-talent-content .fostering-talent-p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+  display: block;
+}
+
+.fostering-talent-content strong {
+  color: #3498db;
+  font-weight: 600;
+}
+
+/* Counter Section */
+.counter-section {
+  text-align: center;
+  margin: 80px 0;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  border-radius: 12px;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 30px;
+}
+
+.counter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #3498db;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.counter-label {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.counter-tagline {
+  font-size: 1.4rem;
   color: #7f8c8d;
   font-weight: 400;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Video Section */
+.video-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Timeline Section */
@@ -227,20 +441,36 @@
     font-size: 2.4rem;
   }
   
-  .story-card {
+  .story-card,
+  .pillars-of-excellence,
+  .fostering-talent {
     padding: 40px 30px;
   }
   
-  .story-card-content h2 {
+  .story-card-content h2,
+  .pillars-of-excellence-content h2,
+  .fostering-talent-content h2 {
     font-size: 2rem;
   }
   
-  .hero-section h1 {
-    font-size: 2.2rem;
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.3rem;
   }
   
   .timeline-date {
     font-size: 1.8rem;
+  }
+  
+  .counter-container {
+    gap: 60px;
+  }
+  
+  .counter-number {
+    font-size: 3.2rem;
   }
 }
 
@@ -289,20 +519,37 @@
     font-size: 1.1rem;
   }
   
-  .story-card {
+  .story-card,
+  .pillars-of-excellence,
+  .fostering-talent {
     padding: 30px 20px;
   }
   
-  .story-card-content h2 {
+  .story-card-content h2,
+  .pillars-of-excellence-content h2,
+  .fostering-talent-content h2 {
     font-size: 1.8rem;
   }
   
-  .hero-section h1 {
-    font-size: 1.9rem;
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
   
-  .hero-section p {
+  .hero-content p {
     font-size: 1.1rem;
+  }
+  
+  .counter-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .counter-number {
+    font-size: 2.8rem;
+  }
+  
+  .counter-tagline {
+    font-size: 1.2rem;
   }
 }
 
@@ -324,11 +571,164 @@
     font-size: 1.8rem;
   }
   
-  .story-card-content h2 {
+  .story-card-content h2,
+  .pillars-of-excellence-content h2,
+  .fostering-talent-content h2 {
     font-size: 1.6rem;
   }
   
-  .story-card-content p {
+  .story-card-content p,
+  .pillars-of-excellence-content p,
+  .fostering-talent-content p,
+  .fostering-talent-content .fostering-talent-p {
     font-size: 1rem;
+  }
+  
+  .excellence-list {
+    padding-left: 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .counter-number {
+    font-size: 2.2rem;
+  }
+  
+  .counter-label {
+    font-size: 1rem;
+  }
+}
+
+/* Text Animation Styles */
+.text-animation-container {
+  text-align: center;
+  padding: 20px 0;
+  margin: 40px 0;
+}
+
+.text-animation-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.dropping-texts {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  height: 36px;
+  vertical-align: -2px;
+}
+
+.dropping-texts > div {
+  font-size: 0px;
+  opacity: 0;
+  margin-left: -30px;
+  position: absolute;
+  font-weight: 300;
+  color: #3498db; /* Blue color to match your theme */
+}
+
+.dropping-texts > div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+
+.dropping-texts > div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+
+.dropping-texts > div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+
+.dropping-texts > div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  20% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size: 0px;
+    opacity: 0.5;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  30% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  37% {
+    font-size: 1500px;
+    opacity: 0;
+    margin-left: -1000px;
+    margin-top: -800px;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
   }
 }
