@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import './product-pages.css';
 import { useNavigate } from "react-router-dom";
 import "../index.css";
+import Navbar from '../components/Navbar.jsx';
 
 const P3 = () => {
   const contentRef = useRef(null);
@@ -36,6 +37,7 @@ const P3 = () => {
 
   return (
     <>
+      <Navbar />
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
@@ -48,6 +50,7 @@ const P3 = () => {
 
         {/* Creative Content Sections */}
         <div className="product-page">
+
           <div className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Smart HIL Overview" className="section-image" />
@@ -110,6 +113,21 @@ const P3 = () => {
             </svg>
           </div>
         </button>
+
+        {/* Footer */}
+        <footer id="contact">
+          <h3>Test Base Solutions</h3>
+          <p>3, Birmingham Rd, Coventry, CV5 9AB</p>
+          <p>Phone: +44 79181 07720 | Email: info@testbasesolutions.co.uk</p>
+          <div className="footer-links">
+            <a href="https://linkedin.com/company/testbasesolutions-ltd" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#careers">Careers</a>
+          </div>
+        </footer>
       </div>
     </>
   );
