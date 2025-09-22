@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 // import { Flip } from "gsap/Flip";
 import "./ProductShowcase.css";
 import "../index.css";
-import { gsap } from "gsap";
 import { Flip } from "gsap/dist/Flip"; 
 
 
