@@ -50,11 +50,14 @@ const Navbar = () => {
       </div>
 
         <ul className={`nav-items ${isMobileMenuOpen ? 'active' : ''}`} >
-          <li><Link className="font" onClick={() => handleSectionNav("home")}>Home</Link></li>
-          <li><Link className="font" onClick={() => handleSectionNav("about")}>About</Link></li>
+          <li><Link className="font" to="/">Home</Link></li>
+          <li><Link className="font" to="/about">About</Link></li>
+          {/* <li><Link className="font" onClick={() => handleSectionNav("home")}>Home</Link></li>
+          <li><Link className="font" onClick={() => handleSectionNav("about")}>About</Link></li> */}
           <li><Link className="font" onClick={() => handleSectionNav("services")}>Services</Link></li>
           <li><Link className="font" onClick={() => handleSectionNav("products")}>Products</Link></li>
           {/* Separate pages */}
+          
           <li><Link className="font" to="/careers">Careers</Link></li>
           <li><Link className="font" to="/contact">Contact</Link></li>
         </ul>
