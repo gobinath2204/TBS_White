@@ -69,14 +69,14 @@
 
 .content-section {
   margin: 1rem 0;
-  height: 80vh;
-  padding: 2rem;
+  height: 55vh;
+  padding: 1rem;
   border-radius: 12px;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
   color: var(--text-primary);
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(10px);
   transition: all 0.8s ease;
 }
 
@@ -251,7 +251,7 @@
 .section-text {
   flex: 1;
   min-width: 280px;
-  height: 80vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,6 +267,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--bg-dark);
+  text-align: justify;
 }
 
 

@@ -51,20 +51,20 @@ const P2 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/software.jpg" alt="Software Overview" className="section-image" />
+              <img src="/HWtitle.png" alt="Hardware Overview" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
               <h2>Overview</h2>
               <p>
-                At TBS, our hardware engineering services deliver innovative and reliable solutions for automotive systems. Our expertise spans requirement development, schematic and PCB design, risk analysis, simulations, and verification, ensuring high-performance hardware that meets stringent industry standards.
+                At TBS, We provide complete ASPICE-compliant Hardware Engineering (HWE) services from HWE.1 to HWE.4. Our structured approach standardizes and improves hardware development, ensuring quality, reliability, and safety in complex automotive systems, while enabling seamless integration with software and system engineering.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="Custom UI" className="section-image" />
+              <img src="/HWE1.png" alt="Custom UI" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
@@ -77,7 +77,7 @@ const P2 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
+              <img src="/HWE2.png" alt="Connectivity" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
@@ -90,7 +90,7 @@ const P2 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
+              <img src="/HWE2.png" alt="Software Updates" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
@@ -104,7 +104,7 @@ const P2 = () => {
 
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
+              <img src="/HWS.png" alt="Connectivity" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
@@ -117,7 +117,7 @@ const P2 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
+              <img src="/HWE3.png" alt="Software Updates" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
@@ -130,7 +130,7 @@ const P2 = () => {
 
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
+              <img src="/HWS.png" alt="Connectivity" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
@@ -143,7 +143,7 @@ const P2 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
+              <img src="/HWE4.png" alt="Software Updates" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">

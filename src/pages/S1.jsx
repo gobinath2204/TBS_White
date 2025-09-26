@@ -45,7 +45,7 @@ const P2 = () => {
           <div className="hero-overlay"></div>
           <h1 className="hero-title">In-house Software Stacks</h1>
         </div> */}
-     <h1 className="hero-title">System Engineering Services</h1>
+     <h1 className="hero-title">System Development Services</h1>
         {/* Creative Content Sections */}
         <div className="product-page">
 
@@ -99,8 +99,7 @@ const P2 = () => {
             <div className="section-text">
               <h2>FMEA/DFMEA Development</h2>
             <p>
-              Our Failure Mode and Effects Analysis (FMEA) and Design FMEA (DFMEA) services identify and mitigate system risks. Aligned with AIAG and VDA standards, we analyze potential failures, assess their impact, and implement preventive measures. This enhances system reliability, safety, and compliance with automotive regulatory requirements.
-            
+              Our Failure Mode and Effects Analysis (FMEA) and Design FMEA (DFMEA) services identify and mitigate system risks. Aligned with AIAG and VDA standards, we analyze potential failures, assess their impact, and implement preventive measures. This enhances system reliability, safety, and compliance with automotive regulatory requirements.           
             </p>
             </div>
           </section>

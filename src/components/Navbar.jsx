@@ -36,7 +36,7 @@ const Navbar = () => {
       <div className="nav-container">
         {/* Logo */}
         <a href="/" className="logo">
-          <span className="logo-text"> <img src="logo.png" alt="Logo" /> </span>
+          <span className="logo-text"> <img src="/logo.png" alt="Logo" /> </span>
         </a>
 
         {/* Mobile Menu Toggle */}
