@@ -172,12 +172,9 @@ const nextService = () =>
           </span>
 
           {/* Slide */}
-          <div className="slide">
-            <div className="slide-image ">
-              <img src={currentService.img} alt={currentService.name} />
-              <span className="image-overlay"></span>
-            </div>
-            <div className="slide-content">
+          <div className="slide reverse">
+            
+            <div className="slide-content" style={{paddingLeft: '4rem'}}>
               {/* <span className="tag">PRODUCT</span> */}
               <h3>{currentService.name}</h3>
               <p>{currentService.desc}</p>
@@ -191,6 +188,10 @@ const nextService = () =>
               >
                 Read More
               </button>
+            </div>
+            <div className="slide-image ">
+              <img src={currentService.img} alt={currentService.name} />
+              <span className="image-overlay" style={{width: '65%', left: '35%', borderRadius: '0 25px 25px 0'}}></span>
             </div>
           </div>
           {/* Right Arrow */}
