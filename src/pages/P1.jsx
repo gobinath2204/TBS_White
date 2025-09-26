@@ -43,74 +43,56 @@ const P1 = () => {
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title">HMI for Electric Vehicles</h1>
+          <h1 className="hero-title" style={{color: 'white'}}>In-House Software Stack (COTS)</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <div className="content-section section-with-image">
+          <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/hmi.png" alt="HMI Core System" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>Next-Gen HMI for Wireless Charging</h2>
+              <h2>Overview</h2>
               <p className="paragraph-content">
-                Our Smart HMI is a powerful standalone device for wireless power
-                transfer applications. It ensures seamless integration into
-                automotive and industrial systems with support for Foreign Object
-                Detection (FOD), Load Detection (LOD), Positioning, and Power
-                Transfer.
+                TBS’s In-House Software Stack (Commercial Off-The-Shelf, or COTS) is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market. Validated to ISO 26262 for functional safety, it minimizes costs compared to custom solutions while ensuring high reliability.
               </p>
             </div>
-          </div>
+          </section>
 
-          <div className="content-section section-with-image reverse">
+          <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Touchscreen Display" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>Display & User Interface</h2>
-              <ul>
-                <li>High-resolution touchscreen with fluid performance</li>
-                <li>Fully customizable graphics & UI</li>
-                <li>Intuitive interaction without distractions</li>
-              </ul>
+              <h2>In-House Software Stack (COTS)</h2>
+              <p>
+                Supporting multi-core processors and AUTOSAR architectures, it’s ideal for engine management, infotainment, and ADAS applications. Features like hypervisor extensions and board support packages enable rapid prototyping on commercial hardware without compromising performance or security. Clients benefit from lower lifecycle costs, scalability, and seamless upgrades, keeping pace with trends like software-defined vehicles. With TBS’s COTS stack, engineering teams can focus on innovation, delivering safer, smarter, and more efficient vehicles.
+              </p>
             </div>
-          </div>
+          </section>
 
-          <div className="content-section section-with-image">
-            <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="Connectivity" className="section-image" />
-              <div className="section-image-overlay"></div>
-            </div>
-            <div className="section-text">
-              <h2>Connectivity</h2>
-              <ul>
-                <li>Supports CAN & UART protocols</li>
-                <li>Open for third-party API integration</li>
-                <li>Flexible interface configuration</li>
-              </ul>
-            </div>
-          </div>
         </div>
 
         {/* Navigation Arrows */}
         <button className="nav-arrow-btn left" onClick={handlePrevious}>
-          <div className="nav-arrow-btn-inner">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
+          <div className="arrow">
+            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
               <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg>
+            </svg> */}
+            ❮
           </div>
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className="nav-arrow-btn-inner">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
+          <div className=" arrow">
+            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
               <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg>
+            </svg> */}
+            ❯
           </div>
         </button>
 

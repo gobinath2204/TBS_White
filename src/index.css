@@ -419,7 +419,8 @@ nav ul a:hover::after {
   align-items: center;
   height: 100%;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.144); 
+  /* background: rgba(0, 0, 0, 0.144);  */
+  background: linear-gradient(135deg, rgba(33, 60, 122, 0.367), rgba(229,107,46,0.367));
 }
 
 .hero-left {
@@ -454,10 +455,23 @@ section h2 {
   background: #fff;
 }
 
+.services h2{
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
   gap: 1.5rem;
+  max-width: 1000px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .service-card {
@@ -467,6 +481,7 @@ section h2 {
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
@@ -478,183 +493,6 @@ section h2 {
   margin-bottom: 0.5rem;
 }
 
-/* SERVICES ADDED NEW EFFECT */
-
-/* ORBIT LAYOUT */
-.orbit-container {
-  position: relative;
-  width: 500px;           /* tune size here */
-  height: 500px;
-  margin: 0 auto 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Central circle */
-.center-circle {
-  position: absolute;
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  background: var(--blue);
-  color: #fff;
-  font-family: "Audiowide", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0.8rem;
-  z-index: 5;
-  box-shadow: 0 10px 30px rgba(33,60,122,0.18);
-  font-size: 1rem;
-}
-
-/* Orbit path */
-.orbit {
-  position: absolute;
-  inset: 0;
-  pointer-events: none; /* let the buttons themselves handle interactions */
-}
-
-/* Orbit items (planets) */
-.orbit-item {
-  --angle: calc(72deg * var(--i));  /* 360/5 = 72deg spacing */
-  --radius: 210px;                  /* distance from center -> adjust to taste */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  transform: rotate(var(--angle));
-  transform-origin: center center;
-  pointer-events: auto;
-  /* orbit animation around the center */
-  animation: orbit-anim 60s linear infinite;
-}
-
-
-
-/* position the visual circle (the planet) to the right by --radius */
-.orbit-item .orbit-content {
-  position: absolute;
-  left: var(--radius);
-  top: 0;
-  transform: translate(-50%, -50%) rotate(calc(-1 * var(--angle)));
-  transform-origin: center center;
-  pointer-events: auto;
-  padding: 2rem;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: var(--orange);
-  color: #fff;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0.6rem;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.14);
-  transition: all 300ms cubic-bezier(.22,.9,.35,1);
-  overflow: hidden;
-  /* counter-animate to keep upright while parent rotates */
-  animation: counter-anim 60s linear infinite;
-}
-
-/* labels inside planet: title + hidden description */
-.orbit-labels {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-  line-height: 1.05;
-}
-
-/* description hidden by default (revealed on expand) */
-.orbit-labels p {
-  display: none;
-  font-size: 0.75rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-/* hover / focus expansion (works on keyboard too) */
-.orbit-content:hover,
-.orbit-content:focus {
-  width: 170px;
-  height: 140px;
-  border-radius: 12px;
-  padding: 0.8rem 1rem;
-  background: linear-gradient(135deg, var(--blue), var(--orange));
-  box-shadow: 0 18px 40px rgba(33,60,122,0.18);
-  transform: translate(-50%, -50%) rotate(calc(-1 * var(--angle))); /* keep the counter-rotation intact */
-  outline: none;
-}
-
-.orbit-content:hover .orbit-labels p,
-.orbit-content:focus .orbit-labels p {
-  display: block;
-  color: rgba(255,255,255,0.95);
-}
-
-/* make the title slightly larger on hover */
-.orbit-content:hover .orbit-labels strong,
-.orbit-content:focus .orbit-labels strong {
-  font-size: 1.05rem;
-}
-
-/* pause the orbit and counter-rotation when any planet is hovered */
-.orbit:hover .orbit-item,
-.orbit:hover .orbit-item .orbit-content {
-  animation-play-state: paused;
-}
-
-.orbit-item:hover,
-.orbit-item:hover .orbit-content {
-  animation-play-state: paused;
-}
-
-
-/* Animation keyframes */
-
-/* orbit the parent rotator by +360deg over duration */
-@keyframes orbit-anim {
-  from { transform: rotate(var(--angle)); }
-  to   { transform: rotate(calc(var(--angle) + 360deg)); }
-}
-
-/* counter-rotate the inner content by -360deg (and keep initial -angle) */
-@keyframes counter-anim {
-  from { transform: translate(-50%, -50%) rotate(calc(-1 * var(--angle))); }
-  to   { transform: translate(-50%, -50%) rotate(calc(-1 * var(--angle) - 360deg)); }
-}
-
-/* subtle accessibility focus styles */
-.orbit-content:focus {
-  box-shadow: 0 0 0 4px rgba(0,181,226,0.12), 0 18px 40px rgba(33,60,122,0.18);
-}
-
-/* responsiveness */
-@media (max-width: 900px) {
-  .orbit-container { width: 420px; height: 420px; }
-  .center-circle { width: 140px; height: 140px; font-size: 0.95rem; }
-  .orbit-item { --radius: 160px; }
-  .orbit-content { width: 90px; height: 90px; }
-  .orbit-content:hover { width: 140px; height: 120px; }
-}
-
-@media (max-width: 480px) {
-  .orbit-container { width: 320px; height: 320px; }
-  .center-circle { width: 100px; height: 100px; font-size: 0.9rem; }
-  .orbit-item { --radius: 110px; }
-  .orbit-content { width: 72px; height: 72px; font-size: 0.8rem; }
-  .orbit-content:hover { width: 110px; height: 100px; }
-}
-
-
 
 /* PRODUCTS */
 .products {
@@ -662,24 +500,52 @@ section h2 {
   background: #f9f9f9;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+.products h2 {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
 }
 
-/* .product-card { */
-  /* position: relative; */
-  /* overflow: hidden; */
-  /* border-radius: 8px; */
-  /* cursor: pointer;  */
-  /* height: 220px; */
-   /* display: flex;  */
-  /* align-items: flex-end;  */
-  /* color: #fff; */
-  /* font-weight: 500; */
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-/* } */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card:nth-child(4){
+  width: 100%;
+  margin-left: 13rem;
+}
+
+.product-card:nth-child(5){
+  width: 100%;
+  margin-left: 13rem;
+}
+
+@media (min-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .product-card:nth-child(4),
+  .product-card:nth-child(5) {
+    grid-column: span 1.5;
+  }
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer; 
+  height: 220px;
+   display: flex; 
+  align-items: flex-end; 
+  color: #fff;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .product-card img {
   width: 100%;
@@ -708,7 +574,6 @@ section h2 {
 }
 
 .product-info h3 {
-  /* font-family: "Audiowide", sans-serif; */
   margin-bottom: 0.3rem;
 }
 

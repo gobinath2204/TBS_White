@@ -43,13 +43,13 @@ const P2 = () => {
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title">In-house Software Stacks</h1>
+          <h1 className="hero-title" style={{color: 'white'}}>EV Generic Deck</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <div className="content-section section-with-image">
+          <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/software.jpg" alt="Software Overview" className="section-image" />
               <div className="section-image-overlay"></div>
@@ -57,74 +57,52 @@ const P2 = () => {
             <div className="section-text">
               <h2>Overview</h2>
               <p>
-                TBS Smart HMI is a standalone Human-Machine Interface designed
-                for wireless power transfer. It integrates seamlessly into
-                automotive and industrial systems, supporting FOD, LOD,
-                Positioning, and Power Transfer.
+                TBS’s EV Generic Deck is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
               </p>
             </div>
-          </div>
+          </section>
 
-          <div className="content-section section-with-image reverse">
+          <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/SMU.jpg" alt="Custom UI" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>Display & User Interface</h2>
-              <ul>
-                <li>High-resolution Nextion-configurable UI</li>
-                <li>Customizable graphics and interface</li>
-                <li>Touchscreen interaction without distractions</li>
-              </ul>
+              <h2>EV Generic Deck</h2>
+              <p>Designed for efficiency, it incorporates advanced thermal management and regenerative braking to optimize range and performance. Compliant with ISO 15118 for charging interoperability, it integrates with diagnostic protocols for real-time monitoring and OTA updates. The deck reduces development risks by simulating real-world scenarios like fault insertion and load testing, suitable for R&D and assembly lines.</p>
             </div>
-          </div>
+          </section>
 
-          <div className="content-section section-with-image">
+          <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>Communication & Connectivity</h2>
-              <ul>
-                <li>Supports CAN & UART protocols</li>
-                <li>Compatible with TMS570 & Nexteon boards</li>
-                <li>Open for third-party integrations</li>
-              </ul>
+              <h2>Customizable EV Platform Architecture</h2>
+              <p>
+                Clients can customize the platform to specific needs while leveraging TBS’s pre-validated components, ensuring faster market entry and cost savings. The EV Generic Deck empowers manufacturers to deliver sustainable, high-performing vehicles with superior drivability.
+              </p>
             </div>
-          </div>
-
-          <div className="content-section section-with-image reverse">
-            <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
-              <div className="section-image-overlay"></div>
-            </div>
-            <div className="section-text">
-              <h2>Flashing & Software Updates</h2>
-              <ul>
-                <li>Over-the-Air (OTA) Updates</li>
-                <li>UDS-based Flashing</li>
-                <li>AUTOSAR-compliant Safe OS</li>
-              </ul>
-            </div>
-          </div>
+          </section>
         </div>
 
         {/* Navigation Arrows */}
         <button className="nav-arrow-btn left" onClick={handlePrevious}>
-          <div className="nav-arrow-btn-inner">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
+          <div className="arrow">
+            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
               <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg>
+            </svg> */}
+            ❮
           </div>
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className="nav-arrow-btn-inner">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
+          <div className=" arrow">
+            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
               <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg>
+            </svg> */}
+            ❯
           </div>
         </button>
       </div>

@@ -3,17 +3,17 @@ import './product-pages.css';
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 
-const P3 = () => {
+const P1 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/2792370-hd_1920_1080_30fps.mp4";
+  const videoPath = "/videos/HMI.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/p2");
+    navigate("/pages/p3");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/p4");
+    navigate("/pages/p5");
     window.scrollTo(0, 0);
   };
 
@@ -43,46 +43,47 @@ const P3 = () => {
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>HMI (Human-Machine Interface)</h1>
+          <h1 className="hero-title" style={{color: 'white'}}>Secure Manufacturing Unit</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
+
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Smart HIL Overview" className="section-image" />
+              <img src="/hmi.png" alt="HMI Core System" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
               <h2>Overview</h2>
-              <p>
-                TBS’s Automotive Human-Machine Interface (HMI) transforms vehicle cabins into intuitive, connected ecosystems, enhancing driver and passenger experiences while prioritizing safety. Powered by Android Automotive OS, it integrates advanced touchscreens, voice recognition, and gesture controls to unify navigation, multimedia, climate control, and ADAS feedback into a customizable dashboard.
+              <p className="paragraph-content">
+                TBS’s Secure Manufacturing Unit (SMU) safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="User Interface" className="section-image" />
+              <img src="/HIL.jpg" alt="Touchscreen Display" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>HMI (Human-Machine Interface)</h2>
+              <h2>Secure Manufacturing Unit</h2>
               <p>
-                Adhering to ISO 26262 ASIL-B standards, our HMI minimizes distractions with AI-driven contextual interfaces, such as voice-activated commands and augmented reality heads-up displays. The 3D graphics engine delivers immersive visuals, while haptic feedback reduces cognitive load. Modular and OTA-updateable, it supports personalized themes, apps, and profiles, boosting user satisfaction and brand differentiation.
+                Featuring encrypted firmware flashing, AI-driven anomaly detection, and role-based access controls, it prevents unauthorized interventions. The SMU supports parallel processing, flashing up to eight vehicles simultaneously via gateways, and embeds PKI for device authentication and secure OTA updates. Compliant with WP.29 regulations, it mitigates risks like ransomware and supply chain disruptions, with built-in auditing for regulatory compliance.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Hardware Architecture" className="section-image" />
+              <img src="/SMU.jpg" alt="Connectivity" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>Advanced HMI for Next-Generation Vehicle Interfaces</h2>
+              <h2>Embedded Security for Resilient Manufacturing</h2>
               <p>
-                From instrument clusters to central infotainment, TBS’s HMI ensures seamless smartphone integration and real-time data visualization, fostering emotional connections between drivers and vehicles. Rigorous usability testing guarantees natural, secure interactions, paving the way for intelligent, future-ready mobility.
+                By embedding security at the design stage, including standardized encryption for AUTOSAR architectures, TBS’s SMU protects intellectual property and accelerates certification. Manufacturers gain resilient, future-proof production lines, turning potential threats into opportunities for trusted, high-quality output.
               </p>
             </div>
           </section>
@@ -106,9 +107,10 @@ const P3 = () => {
             ❯
           </div>
         </button>
+
       </div>
     </>
   );
 };
 
-export default P3;
+export default P1;

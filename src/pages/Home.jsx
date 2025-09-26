@@ -6,49 +6,48 @@ import "./ProductShowcase.css";
 import "../index.css";
 
 
-
 const products = [
   {
-    id: "software",
+    id: "P1",
     name: "In house SoftWare stack (COTS)",
     img: "/software.jpg",
-    desc: "Pre-validated commercial off-the-shelf software components for automotive ECUs with ASPICE compliance and ISO 26262 safety certification, reducing development time by 40%"
+    desc: "TBS’s In-House Software Stack (Commercial Off-The-Shelf, or COTS) is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market. Validated to ISO 26262 for functional safety, it minimizes costs compared to custom solutions while ensuring high reliability."
   },
   {
-    id: "deck",
+    id: "P2",
     name: "EV generic deck",
     img: "/deck.jpg",
-    desc: "Modular platform for electric vehicle control systems supporting OBC, BMS, and VCU applications with scalable architecture for various vehicle segments"
+    desc: "TBS’s EV Generic Deck is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models."
   },
   {
-    id: "hmi",
+    id: "P3",
     name: "HMI",
     img: "/hmi.jpg",
-    desc: "Advanced Human-Machine Interface systems with customizable digital cockpits, touchscreen displays, and voice recognition supporting AUTOSAR adaptive platform"
+    desc: "TBS’s Automotive Human-Machine Interface (HMI) transforms vehicle cabins into intuitive, connected ecosystems, enhancing driver and passenger experiences while prioritizing safety. Powered by Android Automotive OS, it integrates advanced touchscreens, voice recognition, and gesture controls to unify navigation, multimedia, climate control, and ADAS feedback into a customizable dashboard."
   },
   {
-    id: "smu",
+    id: "P4",
     name: "Secure Manufacturing Unit",
     img: "/SMU.webp",
-    desc: "Hardware security module for secure ECU programming and key management during manufacturing with TPM 2.0 compliance and secure boot capabilities"
+    desc: "TBS’s Secure Manufacturing Unit (SMU) safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle."
   },
   {
-    id: "hil",
+    id: "P5",
     name: "Smart HIL",
     img: "/HIL.jpg",
-    desc: "Hardware-in-the-loop testing platforms for comprehensive ECU validation with real-time simulation of vehicle networks and fault insertion capabilities"
+    desc: "TBS’s Smart Hardware-in-the-Loop (HIL) system revolutionizes automotive testing by bridging virtual simulations with real hardware, enabling precise validation of ECUs and control algorithms in a risk-free environment. Using real-time processors, it emulates vehicle dynamics, sensors, and actuators, testing scenariosfrom normal drives to edge-case faults without physical prototypes."
   },
   {
-    id: "dfu",
+    id: "P6",
     name: "Diagnostics flashing unit",
     img: "/DFU.jpeg",
-    desc: "Unified diagnostic services (UDS) compliant tool for ECU programming, parameterization, and troubleshooting supporting DoIP, CAN, and LIN protocols"
+    desc: "TBS’s Diagnostics Flashing Unit (DFU) is an all-in-one tool for seamless ECU reprogramming and diagnostics, streamlining maintenance, calibration, and updates across the vehicle lifecycle. Supporting UDS, CCP/XCP, and OBD-II protocols, it enables secure flashing over CAN, Ethernet, or LIN, with encryption to prevent tampering."
   },
   {
-    id: "rtos",
+    id: "P7",
     name: "Free RTOS Safety Plugin",
     img: "/RTOS.webp",
-    desc: "ISO 26262 ASIL-D certified safety package for FreeRTOS with memory protection, timing analysis, and safety monitoring for automotive applications"
+    desc: "TBS’s Free RTOS Safety Plugin transforms standard FreeRTOS kernels into certified safety-critical foundations for automotive embedded systems, pre-qualified to ISO 26262 ASIL-D and IEC 61508 SIL-3. This lightweight extension enhances robustness with error handling, memory partitioning, and deterministic scheduling, mitigating risks in applications like autonomous driving."
   }
 ];
 
@@ -66,60 +65,10 @@ export default function Home() {
 
   const current = products[index];
 
-  // useEffect(() => {
-  //   set each card’s initial flex-basis from product data
-  //   products.forEach((p, i) => {
-  //     gsap.set(cardsRef.current[i], { flexBasis: p.basis });
-  //   });
-  // }, []);
-
-  // const expandCard = (index, img) => {
-  //   // shrink others
-  //   gsap.to(cardsRef.current, {
-  //     flexBasis: "8%",
-  //     duration: 0.8,
-  //     ease: "power3.inOut"
-  //   });
-
-  // expand hovered card
-  //   gsap.to(cardsRef.current[index], {
-  //     flexBasis: "55%",
-  //     duration: 1,
-  //     ease: "power3.inOut",
-  //     onStart: () => {
-  //       cardsRef.current[index].style.background = `url(${img}) center/cover no-repeat`;
-  //     }
-  //   });
-  // };
-
-  // const resetCards = () => {
-  //   products.forEach((p, i) => {
-  //     gsap.to(cardsRef.current[i], {
-  //       flexBasis: p.basis, // reset to original basis
-  //       duration: 0.8,
-  //       ease: "power3.inOut",
-  //       onStart: () => {
-  //         cardsRef.current[i].style.background =
-  //           `linear-gradient(135deg, #f9f9f9, #eaeaea)`;
-  //       }
-  //     });
-  //   });
-  // };
-
-
   return (
     <>
       {/* HERO */}
       <section className="hero" id="home">
-        {/* <div className="hero-left">Partners in Software &amp; Testing</div>
-          <div className="hero-right">
-            <p>
-              Test Base Solutions Advanced diagnostics, high-performance software,
-              and EV innovation—from OBCs and BMS to DC-DC converters and
-              beyond.<br />
-              ASPICE-Aligned. Rigorously Validated. Electrically Engineered.
-            </p>
-          </div> */}
         <div className="video-background">
           <iframe
             src="https://www.youtube.com/embed/ejx06woQGA0?autoplay=1&mute=1&loop=1&playlist=ejx06woQGA0&controls=0&modestbranding=1&showinfo=0"
@@ -143,8 +92,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="services" id="services">
+
+      {/* <section className="services" id="services">
         <h2>Our Services</h2>
         <div className="service-grid">
           <div className="service-card">
@@ -168,45 +117,101 @@ export default function Home() {
             <p>ISO 26262, ASPICE, and ISO 21434 compliance</p>
           </div>
         </div>
+      </section> */}
+
+      {/* SERVICES */}
+      <section className="services " id="services">
+        <h2>Our Services</h2>
+        <div className="product-grid">
+          <div
+            className="product-card"
+            onClick={() => {
+              navigate("/pages/s1");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img src="/hmi.png" alt="System Engineering" />
+            <div className="product-info">
+              <h3>System Engineering</h3>
+              <p>
+                Standalone system engineering services deliver comprehensive solutions for automotive systems
+              </p>
+            </div>
+          </div>
+          <div
+            className="product-card"
+            onClick={() => {
+              navigate("/pages/s2");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img src="/software.jpg" alt="Software Engineering" />
+            <div className="product-info">
+              <h3>Software Engineering</h3>
+              <p>
+                Specialize in crafting precise software requirements aligned with ISO 26262 and ASPICE standards
+              </p>
+            </div>
+          </div>
+          <div
+            className="product-card"
+            onClick={() => {
+              navigate("/pages/s3");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img src="/HIL.jpg" alt="Hardware Engineering" />
+            <div className="product-info">
+              <h3>Hardware Engineering</h3>
+              <p>
+                Excel in defining precise hardware requirements aligned with automotive standards like ISO 26262
+              </p>
+            </div>
+          </div>
+          <div
+            className="product-card"
+            onClick={() => navigate("/pages/s4")}
+          >
+            <img src="/SMU.jpg" alt="System Validation" />
+            <div className="product-info">
+              <h3>System Validation</h3>
+              <p>
+                Comprehensive system validation services to ensure automotive systems meet performance, safety, and regulatory requirements
+              </p>
+            </div>
+          </div>
+          <div
+            className="product-card"
+            onClick={() => navigate("/pages/s5")}
+          >
+            <img src="/SMU.jpg" alt="Safety & Regulatory" />
+            <div className="product-info">
+              <h3>Safety & Regulatory</h3>
+              <p>
+                Specialize in developing and testing systems compliant with ISO 26262 functional safety standards
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-
-      {/* <section className="products" id="products">
-        <h2>Our Products</h2>
-        <div className="product-container">
-          {products.map((p, i) => (
-            <div
-              key={i}
-              ref={(el) => (cardsRef.current[i] = el)}
-              className="product-card"
-              style={{ background: `linear-gradient(135deg, #f9f9f9, #eaeaea)` }}
-              onMouseEnter={() => expandCard(i, p.img)}
-              onMouseLeave={resetCards}
-            >
-              <div className="card-title">{p.name}</div>
-              <div className="card-desc">
-                <p>Dummy line 1 describing {p.name}...</p>
-                <p>Dummy line 2 goes here...</p>
-              </div>
-              <span>{p.name}</span>
-            </div>
-          ))}
-        </div>
-      </section> */}
       {/* PRODUCTS */}
       <section className="products" id="products">
         <h2>Our Products</h2>
 
         <div className="slider-container">
           {/* Left Arrow */}
-          <button className="arrow left" onClick={prevProduct}>
+          <span className="arrow left" style={{color:'white'}} onClick={prevProduct}>
             ❮
-          </button>
+          </span>
 
           {/* Slide */}
           <div className="slide">
-            <div className="slide-image">
+            
+            <div className="slide-image ">
+              
               <img src={current.img} alt={current.name} />
+              <span className="image-overlay"></span>
             </div>
             <div className="slide-content">
               {/* <span className="tag">PRODUCT</span> */}
@@ -214,17 +219,20 @@ export default function Home() {
               <p>{current.desc}</p>
               <button
                 className="read-more"
-                onClick={() => navigate(`/products/${current.id}`)}
+                // onClick={() => navigate(`/pages/${current.id}`)}
+                onClick={() => {
+    navigate(`/pages/${current.id}`);
+    window.scrollTo(0, 0);
+  }}
               >
-              Read More
+                Read More
               </button>
             </div>
           </div>
-
           {/* Right Arrow */}
-          <button className="arrow right" onClick={nextProduct}>
+          <span className="arrow right" style={{color:'white'}} onClick={nextProduct}>
             ❯
-          </button>
+          </span>
         </div>
       </section>
 
@@ -239,7 +247,11 @@ export default function Home() {
         <p>
           Today, with nearly 100 dedicated employees, we deliver end-to-end
           expertise in system design, development, verification, validation, and
-          compliance. <Link to="/about" style={{ textDecoration: 'none' }}>Learn More</Link>
+          compliance.<Link
+            to="/about"
+            onClick={() => window.scrollTo(0, 0)}
+            style={{ textDecoration: 'none' }}
+          >..Learn More</Link>
         </p>
       </section>
     </>

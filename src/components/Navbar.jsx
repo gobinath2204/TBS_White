@@ -49,9 +49,13 @@ const Navbar = () => {
         <span></span>
       </div>
 
+      
+
         <ul className={`nav-items ${isMobileMenuOpen ? 'active' : ''}`} >
-          <li><Link className="font" to="/">Home</Link></li>
-          <li><Link className="font" to="/about">About</Link></li>
+          <li><Link className="font" onClick={() => {
+              window.scrollTo(0, 0);
+            }} to="/">Home</Link></li>
+          
           {/* <li><Link className="font" onClick={() => handleSectionNav("home")}>Home</Link></li>
           <li><Link className="font" onClick={() => handleSectionNav("about")}>About</Link></li> */}
           <li><Link className="font" onClick={() => handleSectionNav("services")}>Services</Link></li>
@@ -59,6 +63,9 @@ const Navbar = () => {
           {/* Separate pages */}
           
           <li><Link className="font" to="/careers">Careers</Link></li>
+          <li><Link className="font" onClick={() => {
+              window.scrollTo(0, 0);
+            }} to="/about">About</Link></li>
           <li><Link className="font" to="/contact">Contact</Link></li>
         </ul>
       </div>

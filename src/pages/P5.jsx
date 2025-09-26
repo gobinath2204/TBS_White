@@ -3,17 +3,17 @@ import './product-pages.css';
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 
-const P3 = () => {
+const P2 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/2792370-hd_1920_1080_30fps.mp4";
+  const videoPath = "/videos/In-house-Software.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/p2");
+    navigate("/pages/p4");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/p4");
+    navigate("/pages/p6");
     window.scrollTo(0, 0);
   };
 
@@ -43,49 +43,51 @@ const P3 = () => {
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>HMI (Human-Machine Interface)</h1>
+          <h1 className="hero-title" style={{color: 'white'}}>Smart HIL (Hardware-in-the-Loop)</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
+
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Smart HIL Overview" className="section-image" />
+              <img src="/software.jpg" alt="Software Overview" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
               <h2>Overview</h2>
               <p>
-                TBS’s Automotive Human-Machine Interface (HMI) transforms vehicle cabins into intuitive, connected ecosystems, enhancing driver and passenger experiences while prioritizing safety. Powered by Android Automotive OS, it integrates advanced touchscreens, voice recognition, and gesture controls to unify navigation, multimedia, climate control, and ADAS feedback into a customizable dashboard.
+                TBS’s Smart Hardware-in-the-Loop (HIL) system revolutionizes automotive testing by bridging virtual simulations with real hardware, enabling precise validation of ECUs and control algorithms in a risk-free environment. Using real-time processors, it emulates vehicle dynamics, sensors, and actuators, testing scenarios from normal drives to edge-case faults without physical prototypes.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="User Interface" className="section-image" />
+              <img src="/SMU.jpg" alt="Custom UI" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>HMI (Human-Machine Interface)</h2>
+              <h2>Smart HIL (Hardware-in-the-Loop)</h2>
               <p>
-                Adhering to ISO 26262 ASIL-B standards, our HMI minimizes distractions with AI-driven contextual interfaces, such as voice-activated commands and augmented reality heads-up displays. The 3D graphics engine delivers immersive visuals, while haptic feedback reduces cognitive load. Modular and OTA-updateable, it supports personalized themes, apps, and profiles, boosting user satisfaction and brand differentiation.
+                Supporting fault insertion, scalable I/O for CAN, LIN, and Ethernet, and MATLAB/Simulink integration, it complies with ISO 26262 ASIL-D standards, ensuring deterministic timing and traceability. AI-optimized test automation reduces cycles by up to 50%, enhancing efficiency. Ideal for ADAS, powertrain, and electrification development, TBS’s Smart HIL minimizes costly road tests while maximizing coverage.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Hardware Architecture" className="section-image" />
+              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>Advanced HMI for Next-Generation Vehicle Interfaces</h2>
+              <h2>Advanced HIL Testing for Software-Defined Vehicles</h2>
               <p>
-                From instrument clusters to central infotainment, TBS’s HMI ensures seamless smartphone integration and real-time data visualization, fostering emotional connections between drivers and vehicles. Rigorous usability testing guarantees natural, secure interactions, paving the way for intelligent, future-ready mobility.
+                Clients achieve early defect detection and seamless transitions to vehicle-in-the-loop phases, fostering robust, safe designs. TBS’s HIL accelerates time-to-market and enhances reliability in software-defined vehicles, driving innovation in automotive testing.
               </p>
             </div>
           </section>
+
         </div>
 
         {/* Navigation Arrows */}
@@ -111,4 +113,4 @@ const P3 = () => {
   );
 };
 
-export default P3;
+export default P2;

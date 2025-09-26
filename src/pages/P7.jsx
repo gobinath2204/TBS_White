@@ -3,17 +3,17 @@ import './product-pages.css';
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 
-const P3 = () => {
+const P1 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/2792370-hd_1920_1080_30fps.mp4";
+  const videoPath = "/videos/HMI.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/p2");
+    navigate("/pages/p6");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/p4");
+    navigate("/pages/p1");
     window.scrollTo(0, 0);
   };
 
@@ -43,46 +43,47 @@ const P3 = () => {
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>HMI (Human-Machine Interface)</h1>
+          <h1 className="hero-title" style={{color: 'white'}}>Free RTOS Safety Plugin</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
+
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Smart HIL Overview" className="section-image" />
+              <img src="/hmi.png" alt="HMI Core System" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
               <h2>Overview</h2>
-              <p>
-                TBS’s Automotive Human-Machine Interface (HMI) transforms vehicle cabins into intuitive, connected ecosystems, enhancing driver and passenger experiences while prioritizing safety. Powered by Android Automotive OS, it integrates advanced touchscreens, voice recognition, and gesture controls to unify navigation, multimedia, climate control, and ADAS feedback into a customizable dashboard.
+              <p className="paragraph-content">
+                TBS’s Free RTOS Safety Plugin transforms standard FreeRTOS kernels into certified safety-critical foundations for automotive embedded systems, pre-qualified to ISO 26262 ASIL-D and IEC 61508 SIL-3. This lightweight extension enhances robustness with error handling, memory partitioning, and deterministic scheduling, mitigating risks in applications like autonomous driving.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="User Interface" className="section-image" />
+              <img src="/HIL.jpg" alt="Touchscreen Display" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>HMI (Human-Machine Interface)</h2>
+              <h2>Free RTOS Safety Plugin</h2>
               <p>
-                Adhering to ISO 26262 ASIL-B standards, our HMI minimizes distractions with AI-driven contextual interfaces, such as voice-activated commands and augmented reality heads-up displays. The 3D graphics engine delivers immersive visuals, while haptic feedback reduces cognitive load. Modular and OTA-updateable, it supports personalized themes, apps, and profiles, boosting user satisfaction and brand differentiation.
+                Seamlessly integrating with FreeRTOS codebases, it adds safety features like stack overflow protection and traceable APIs without requiring full recertification. Ideal for resource-constrained MCUs in ECUs, it supports AUTOSAR OS compliance and multi-threading. Developed via HAZOP analysis and TÜV SÜD-verified, it includes safety manuals for easy auditing.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Hardware Architecture" className="section-image" />
+              <img src="/SMU.jpg" alt="Connectivity" className="section-image" />
               <div className="section-image-overlay"></div>
             </div>
             <div className="section-text">
-              <h2>Advanced HMI for Next-Generation Vehicle Interfaces</h2>
+              <h2>Safety-Certified FreeRTOS for Automotive Applications</h2>
               <p>
-                From instrument clusters to central infotainment, TBS’s HMI ensures seamless smartphone integration and real-time data visualization, fostering emotional connections between drivers and vehicles. Rigorous usability testing guarantees natural, secure interactions, paving the way for intelligent, future-ready mobility.
+                Clients upgrading from vanilla FreeRTOS benefit from an effortless migration, preserving familiarity while gaining safety assurances. TBS’s plugin enables faster certification, reduced costs, and reliable performance in high-stakes environments, empowering innovation in software-defined mobility.
               </p>
             </div>
           </section>
@@ -106,9 +107,10 @@ const P3 = () => {
             ❯
           </div>
         </button>
+
       </div>
     </>
   );
 };
 
-export default P3;
+export default P1;
