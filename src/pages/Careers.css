@@ -1,0 +1,142 @@
+:root {
+  --blue: #213c7a;
+  --highlight-gradient: linear-gradient(90deg, #00edfa, #00b3ff);
+}
+
+.careers-container {
+  padding: 8rem 5%;
+  background: #fff; /* White background */
+  min-height: 100vh;
+}
+
+.h1 {
+  /* font-family: "Audiowide", sans-serif; */
+  text-transform: camel-case;
+  font-size: 2.5rem;
+  color: var(--blue); /* Blue heading */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--blue);
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.job-listings {
+  display: flex; /* horizontal layout */
+  gap: 1.5rem;
+  flex-wrap: wrap; /* allow wrapping if too many */
+  justify-content: center;
+}
+
+.job-card {
+  flex: 1 1 250px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: scale(1.05);
+}
+
+.job-card h3 {
+  font-size: 1.3rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.job-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.job-description {
+  color: #444;
+}
+
+/* Modal popup */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-content h2 {
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  white-space: pre-line;
+  margin: 1rem 0;
+}
+
+.close-btn {
+  background: var(--blue);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  background: #162955;
+}
+
+.apply-btn {
+  background: var(--blue);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.apply-btn:hover {
+  background: #162955;
+}
+

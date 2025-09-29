@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeExp from "./pages/Home";
-// import ContactUS from "./pages/ContactUS";
+import ContactUS from "./pages/ContactUS";
 import AboutUS from "./pages/About";
-// import Careers from "./pages/Careers";
+import Careers from "./pages/Careers";
 import P1 from "./pages/P1";
 import P2 from "./pages/P2";
 import P3 from "./pages/P3";
@@ -17,6 +17,8 @@ import S4 from "./pages/S4";
 import S5 from "./pages/S5";
 import NavBar from "./components/Navbar";  
 import Footer from "./components/Footer";
+import Products from "./pages/Products";
+import Services from "./pages/Services";
 import "./index.css";
 
 function App() {
@@ -27,9 +29,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomeExp />} />
-            {/* <Route path="/contact" element={<ContactUS />} /> */}
+            <Route path="/contact" element={<ContactUS />} />
             <Route path="/about" element={<AboutUS />} />
-            {/* <Route path="/careers" element={<Careers />} /> */}
+            <Route path="/careers" element={<Careers />} />
             <Route path="/pages/P1" element={<P1 />} />
             <Route path="/pages/P2" element={<P2 />} />
             <Route path="/pages/P3" element={<P3 />} />
@@ -42,6 +44,8 @@ function App() {
             <Route path="/pages/S3" element={<S3 />} />
             <Route path="/pages/S4" element={<S4 />} />
             <Route path="/pages/S5" element={<S5 />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/services" element={<Services />} />
           </Routes>
         </main>
         <Footer />

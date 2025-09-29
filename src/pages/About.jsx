@@ -144,7 +144,7 @@ export default function About() {
   // Video playback control
   useEffect(() => {
     const videoSection = document.querySelector('.video-section');
-    const heroVideo = document.querySelector('.hero-video');
+    const heroVideo = document.querySelector('.content-video');
     
     if (videoSection && heroVideo) {
       const observer = new IntersectionObserver(
@@ -261,7 +261,7 @@ export default function About() {
             </div>
           </div>
           <p className="counter-tagline">Driving innovation in automotive technology</p>
-        </section>
+        </section> 
 
         {/* Video Section (formerly Hero Section) */}
         <section className="video-section">
@@ -279,7 +279,7 @@ export default function About() {
             </video>
             <div className="video-overlay"></div>
           </div>
-          <div className="hero-content">
+          <div className="hero-contents">
             <h1>About Our Journey</h1>
             <p>Come join us in our journey to growth and betterment.</p>
           </div>

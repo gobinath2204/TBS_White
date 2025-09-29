@@ -52,20 +52,17 @@ const Navbar = () => {
       
 
         <ul className={`nav-items ${isMobileMenuOpen ? 'active' : ''}`} >
-          <li><Link className="font" onClick={() => {
-              window.scrollTo(0, 0);
-            }} to="/">Home</Link></li>
+          <li><Link className="font" onClick={() => {window.scrollTo(0, 0);}} to="/">Home</Link></li>
           
           {/* <li><Link className="font" onClick={() => handleSectionNav("home")}>Home</Link></li>
           <li><Link className="font" onClick={() => handleSectionNav("about")}>About</Link></li> */}
-          <li><Link className="font" onClick={() => handleSectionNav("services")}>Services</Link></li>
-          <li><Link className="font" onClick={() => handleSectionNav("products")}>Products</Link></li>
+          {/* <li><Link className="font" onClick={() => handleSectionNav("services")}>Services</Link></li>
+          <li><Link className="font" onClick={() => handleSectionNav("products")}>Products</Link></li> */}
           {/* Separate pages */}
-          
-          <li><Link className="font" to="/careers">Careers</Link></li>
-          <li><Link className="font" onClick={() => {
-              window.scrollTo(0, 0);
-            }} to="/about">About</Link></li>
+          <li><Link className="font" onClick={() => {window.scrollTo(0, 0);}} to="/services">Services</Link></li>
+          <li><Link className="font" onClick={() => {window.scrollTo(0, 0);}} to="/products">Products</Link></li>
+          <li><Link className="font" onClick={() => {window.scrollTo(0, 0);}} to="/careers">Careers</Link></li>
+          <li><Link className="font"  onClick={() => {window.scrollTo(0, 0);}} to="/about">About</Link></li>
           <li><Link className="font" to="/contact">Contact</Link></li>
         </ul>
       </div>
