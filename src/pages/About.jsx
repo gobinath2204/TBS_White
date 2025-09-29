@@ -273,8 +273,8 @@ export default function About() {
               playsInline 
               className="hero-video"
             >
-              <source src="/src/assets/videos/tbs_short.mp4" type="video/mp4" />
-              <source src="/src/assets/videos/tbs_short.webm" type="video/webm" />
+              <source src="/videos/tbs_short.mp4" type="video/mp4" />
+              {/* <source src="/src/assets/videos/tbs_short.webm" type="video/webm" /> */}
               Your browser does not support the video tag.
             </video>
             <div className="video-overlay"></div>
