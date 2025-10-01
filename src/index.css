@@ -108,7 +108,7 @@ nav {
   padding: 15px 50px;
   background: rgba(118, 118, 118, 0.344);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 10000;
   transition: all 0.3s ease;
   /* border-bottom: 1px solid rgba(0, 255, 255, 0.2); */
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.427);
@@ -379,7 +379,6 @@ nav ul a:hover::after {
   }
 }
 
-
 /* HERO */
 .hero {
   display: flex;
@@ -388,7 +387,8 @@ nav ul a:hover::after {
   justify-content: space-between;
   align-items: center;
   /* padding-left: 2rem; */
-  margin-top: 0;
+  margin-top: 5%;
+  /* padding-top: 20%; */
   /* background: linear-gradient(135deg, #fff, #f0f4fa); */
   position: relative;
   overflow: hidden;
@@ -424,7 +424,7 @@ nav ul a:hover::after {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   /* background: rgba(0, 0, 0, 0.144);  */
   background: linear-gradient(135deg, rgba(33, 60, 122, 0.367), rgba(229, 107, 46, 0.367));
 }
