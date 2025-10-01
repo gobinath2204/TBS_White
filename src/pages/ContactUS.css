@@ -1,5 +1,6 @@
 :root {
   --blue: #213c7a;
+  --orange: #e56b2e;
   --highlight-gradient: linear-gradient(90deg, #00edfa, #00b3ff);
 }
 
@@ -68,7 +69,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background: #52e0c4;
+  background: var(--orange);
+  border-radius: 0.1px;
   transform: translateY(-2px);
 }
 

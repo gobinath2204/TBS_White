@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../pages/ProductShowcase.css";
 
 
 
@@ -61,7 +62,7 @@ export default function ProductSlider() {
 
   return (
     <section className="products" id="products">
-      <h2>Our Products</h2>
+      <h2 style={{ color: "white" }}>Our Products</h2>
 
       <div className="slider-container">
         <span className="arrow left" style={{ color: "white" }} onClick={prevProduct}>
@@ -73,22 +74,25 @@ export default function ProductSlider() {
             <img src={current.img} alt={current.name} />
             <span className="image-overlay"></span>
           </div>
-          <div className="slide-content">
+          <div className="slider-content">
             <h3>{current.name}</h3>
             <p>{current.desc}</p>
             <button
-              className="read-more"
+              className="reads-more"
               onClick={() => {
                 navigate(`/pages/${current.id}`);
                 window.scrollTo(0, 0);
               }}
             >
-              Read More
+              <span>Read More</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" />
+            </svg>
             </button>
           </div>
         </div>
 
-        <span className="arrow right" style={{ color: "white" }} onClick={nextProduct}>
+        <span className="arrow right" style={{ color: "Black" }} onClick={nextProduct}>
           ❯
         </span>
       </div>

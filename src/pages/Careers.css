@@ -34,6 +34,10 @@
   font-size: 1.1rem;
 }
 
+.search-input::placeholder {
+  font-size: 0.9rem;
+}
+
 .job-listings {
   display: flex; /* horizontal layout */
   gap: 1.5rem;
@@ -56,10 +60,31 @@
   transform: scale(1.05);
 }
 
+/* Job ID badge in job cards */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
 .job-card h3 {
   font-size: 1.3rem;
   color: var(--blue);
   margin-bottom: 0.5rem;
+  flex: 1;
+}
+
+.job-id-badge {
+  background: var(--blue);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  min-width: 60px;
+  text-align: center;
+  margin-left: 0.5rem;
 }
 
 .job-meta {
@@ -74,6 +99,15 @@
   color: #444;
 }
 
+/* No jobs message */
+.no-jobs {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
 /* Modal popup */
 .modal-overlay {
   position: fixed;
@@ -86,6 +120,7 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
+  margin-top: 3rem;
 }
 
 .modal-content {
@@ -97,16 +132,60 @@
   color: #333;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-.modal-content h2 {
-  color: var(--blue);
+/* Modal header with job ID */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 1rem;
+}
+
+.modal-header h2 {
+  color: var(--blue);
+  margin: 0;
+  flex: 1;
+}
+
+.modal-job-id {
+  background: var(--blue);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+}
+
+/* Job full details section */
+.job-full-details {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid var(--blue);
 }
 
 .modal-description {
   white-space: pre-line;
   margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
 }
 
 .close-btn {
@@ -116,8 +195,8 @@
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 1rem;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .close-btn:hover {
@@ -131,12 +210,66 @@
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 1rem;
-  margin-right: 1rem;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .apply-btn:hover {
   background: #162955;
 }
 
+/* Responsive design for job cards */
+@media (max-width: 768px) {
+  .careers-container {
+    padding: 6rem 5%;
+  }
+  
+  .h1 {
+    font-size: 2rem;
+  }
+  
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .job-id-badge {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+  
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .modal-job-id {
+    margin-left: 0;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .apply-btn, .close-btn {
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-card {
+    flex: 1 1 100%;
+  }
+  
+  .job-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modal-content {
+    padding: 1.5rem;
+  }
+}

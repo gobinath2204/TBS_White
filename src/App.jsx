@@ -15,11 +15,12 @@ import S2 from "./pages/S2";
 import S3 from "./pages/S3";
 import S4 from "./pages/S4";
 import S5 from "./pages/S5";
-import NavBar from "./components/Navbar";  
+import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import Services from "./pages/Services";
-import "./index.css";
+import Admin from "./pages/Admin";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -46,6 +47,14 @@ function App() {
             <Route path="/pages/S5" element={<S5 />} />
             <Route path="/products" element={<Products />} />
             <Route path="/services" element={<Services />} />
+            <Route 
+              path="/admin" 
+              element={
+                <ProtectedRoute>
+                  <Admin />
+                </ProtectedRoute>
+              } 
+            />
           </Routes>
         </main>
         <Footer />
