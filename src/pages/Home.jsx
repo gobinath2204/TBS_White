@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductSlider from "../components/ProductSlider";
 import ServiceSlider from "../components/ServiceSlider";
@@ -7,31 +6,41 @@ import "../index.css";
 
 export default function Home() {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Fix hydration issue by checking window only after component mounts
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Updated YouTube embed with better parameters
+  const youtubeParams = [
+    'autoplay=1',
+    'mute=1',
+    'loop=1',
+    'playlist=ejx06woQGA0',
+    'controls=0',
+    'rel=0',
+    'playsinline=1',
+    'enablejsapi=1'
+  ].join('&');
 
   return (
     <>
-
-      {/* INTERNAL STYLE (Home-specific) */}
-      <style>
-        {`
-          footer {
-            position: absolute;
-            z-index: 10;
-            top: 395%;
-            left: 0;
-            right: 0;
-          }
-        `}
-      </style>
       {/* HERO */}
       <section className="hero" id="home">
         <div className="video-background">
           <iframe
-            src="https://www.youtube.com/embed/ejx06woQGA0?autoplay=1&mute=1&loop=1&playlist=ejx06woQGA0&controls=0&modestbranding=1&showinfo=0"
+            src={`https://www.youtube.com/embed/ejx06woQGA0?${youtubeParams}`}
             title="Background video"
             frameBorder="0"
-            allow="autoplay; encrypted-media"
+            allow="autoplay; encrypted-media; accelerometer; gyroscope"
             allowFullScreen
+            aria-label="Background video showing our services"
           ></iframe>
         </div>
 
@@ -39,63 +48,79 @@ export default function Home() {
           <div className="hero-left">Partners in Software &amp; Testing</div>
           <div className="hero-right">
             <p>
-              Test Base Solutions Advanced diagnostics, high-performance
-              software, and EV innovation—from OBCs and BMS to DC-DC converters
-              and beyond.<br />
+              Test Base Solutions — Advanced diagnostics, high-performance
+              software, and EV innovation: from OBCs and BMS to DC-DC converters
+              and beyond. <br />
               ASPICE-Aligned. Rigorously Validated. Electrically Engineered.
             </p>
           </div>
         </div>
       </section>
-      <section className="services-section">
-        {/* SERVICES */}
-        <ServiceSlider navigate={navigate} />
+
+      {/* SERVICES */}
+      <section className="services-section" aria-labelledby="services-heading">
+        {/* <h2 id="services-heading">Our Services</h2> */}
+        {isMobile ? (
+          <div className="cards-container">
+            {/* Make sure your ServiceSlider component can handle asCards prop */}
+            <ServiceSlider asCards={true} navigate={navigate} />
+          </div>
+        ) : (
+          <ServiceSlider navigate={navigate} />
+        )}
       </section>
 
-      <section className="products-section">
-        {/* PRODUCTS */}
-        <ProductSlider
-          navigate={navigate}
-        />
+      {/* PRODUCTS */}
+      <section className="products-section" aria-labelledby="products-heading">
+        {/* <h2 id="products-heading">Our Products</h2> */}
+        {isMobile ? (
+          <div className="cards-container">
+            {/* Make sure your ProductSlider component can handle asCards prop */}
+            <ProductSlider asCards={true} navigate={navigate} />
+          </div>
+        ) : (
+          <ProductSlider navigate={navigate} />
+        )}
       </section>
 
       {/* ABOUT */}
-      <section className="about" id="about">
-        <h2>About Us</h2>
+      <section className="about" id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Us</h2>
         <p>
-          <strong>Test Base Solutions</strong> was founded with a clear vision—to shape the future of the
-          automotive industry through innovation, precision, and quality. What began as a small team
-          with big dreams has grown into a trusted engineering partner known for building excellence
-          across every stage of the automotive lifecycle.
+          <strong>Test Base Solutions</strong> was founded with a clear
+          vision—to shape the future of the automotive industry through
+          innovation, precision, and quality. What began as a small team with
+          big dreams has grown into a trusted engineering partner known for
+          building excellence across every stage of the automotive lifecycle.
         </p>
         <p>
-          Today, with nearly 100 dedicated employees, we deliver end-to-end expertise in system design,
-          development, verification, validation, and compliance. Serving clients across the globe, our
-          journey is powered by passion, perseverance, and a commitment to building smarter, safer, and
-          cleaner mobility solutions.</p>
-          {/* <button
-              className="read-more"
-              onClick={() => {
-                navigate(`/about`);
-                window.scrollTo(0, 0);
-              }}
-            >
-              Know About US
-            </button> */}
+          Today, with nearly 100 dedicated employees, we deliver end-to-end
+          expertise in system design, development, verification, validation, and
+          compliance. Serving clients across the globe, our journey is powered
+          by passion, perseverance, and a commitment to building smarter, safer,
+          and cleaner mobility solutions.
+        </p>
+        <p>
+          Our in-house programs focus on real-world automotive challenges—covering system engineering, diagnostics, embedded software, and ASPICE processes. We don't just build teams—we cultivate future-ready engineers who drive innovation, quality, and excellence in every project.
+        </p>
 
-          <button
-            className="about-us-btn"
-            onClick={() => {
-              navigate(`/about`);
-              window.scrollTo(0, 0);
-            }}
-          >
-            <span>Our Story</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" />
-            </svg>
-          </button>
-        
+        <button
+          className="about-us-btn"
+          onClick={() => {
+            navigate(`/about`);
+            window.scrollTo(0, 0);
+          }}
+          aria-label="Read more about our story"
+        >
+          <span>Our Story</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M5 12H19M19 12L12 5M19 12L12 19"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+          </svg>
+        </button>
       </section>
     </>
   );

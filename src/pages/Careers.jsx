@@ -21,16 +21,13 @@ const Careers = () => {
 
   const handleApply = (job) => {
     const subject = `Application for ${job.title} - ${job.id}`;
-    const body = `
-Dear TBS Hiring Team,
-I am writing to apply for the ${job.title} position (ID: ${job.id}) at your company.
+    const body = `I am writing to apply for the ${job.title} position (ID: ${job.id}).
 
 {General Instruction : Inlcude your CV and cover letter (if applicable). Do not change the Subject, Remove the content in this curly braces while sending the email.}
-
 `;
 
     // Encode the subject and body for mailto link
-    const mailtoLink = `mailto:careers@automotivecompany.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:Recruitment@testbasesolutions.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open default email client
     window.location.href = mailtoLink;

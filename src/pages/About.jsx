@@ -291,7 +291,7 @@ export default function About() {
             
             <div className="timeline-item">
               <div className="timeline-content left">
-                <h2>FOUNDED</h2>
+                <h2>FOUND</h2>
                 <p>Founded in Coventry, United Kingdom with a vision to innovate in the automotive engineering space</p>
               </div>
               <div className="timeline-date right">2018</div>

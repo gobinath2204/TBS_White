@@ -8,31 +8,31 @@ const services = [
     id: "S1",
     name: "System Development",
     img: "/hmi.png",
-    desc: "Standalone system engineering services deliver comprehensive solutions for automotive systems",
+    desc: "At TBS, our system engineering services deliver comprehensive solutions for automotive systems, ensuring safety, reliability, and compliance. Our expertise spans requirement elicitation, architecture development, risk analysis, communication protocols, functional safety",
   },
   {
     id: "S2",
     name: "Software Engineering",
     img: "/software.jpg",
-    desc: "Specialize in crafting precise software requirements aligned with ISO 26262 and ASPICE standards",
+    desc: "At TBS, our software engineering services deliver robust, scalable, and compliant solutions for automotive systems. Our expertise spans requirement development, architecture design, software development, detailed design, unit testing, interface validation, and acceptance testing",
   },
   {
     id: "S3",
     name: "Hardware Engineering",
     img: "/HIL.jpg",
-    desc: "Excel in defining precise hardware requirements aligned with automotive standards like ISO 26262",
+    desc: "At TBS, We provide complete ASPICE-compliant Hardware Engineering (HWE) services from HWE.1 to HWE.4. Our structured approach standardizes and improves hardware development, ensuring quality, reliability, and safety in complex automotive systems, while enabling seamless integration ",
   },
   {
     id: "S4",
     name: "System Validation",
     img: "/SMU.jpg",
-    desc: "Comprehensive system validation services to ensure automotive systems meet performance, safety, and regulatory requirements",
+    desc: "At TBS, we provide comprehensive system validation services to ensure automotive systems meet performance, safety, and regulatory requirements. Our expertise encompasses design verification, hardware-in-the-loop (HIL) testing, system integration, and various validation methodologies",
   },
   {
     id: "S5",
     name: "Safety & Regulatory",
     img: "/HWS.png",
-    desc: "Specialize in developing and testing systems compliant with ISO 26262 functional safety standards",
+    desc: "At TBS, we deliver cutting-edge software and hardware solutions to ensure compliance with stringent safety and regulatory standards. Our expertise spans functional safety, cybersecurity, high-voltage (HV) safety, automotive CAN standards, market regulations, electrical testing",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function ServiceSlider() {
     <section className="products" id="services">
       <h2>Our Services</h2>
 
-      <div className="slider-container">
+      <div className="slide-container">
         <span className="arrow left" style={{ color: "white" }} onClick={prevService}>
           ❮
         </span>
