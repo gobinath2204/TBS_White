@@ -4,7 +4,7 @@ import ProductSlider from "../components/ProductSlider";
 const ProductsPage = ({ navigate }) => {
   return (
     <div>
-      <section className="products-section" style={{position: 'relative', zIndex: 1, paddingTop: '10em'}}>
+      <section className="products-section" style={{position: 'relative', zIndex: 1, paddingTop: '9em', marginTop: '0', borderRadius: '0'}}>
               {/* PRODUCTS */}
               <ProductSlider navigate={navigate} />
       </section>

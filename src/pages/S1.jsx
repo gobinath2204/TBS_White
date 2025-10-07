@@ -38,27 +38,26 @@ const P2 = () => {
     <>
       <div ref={contentRef}>
         {/* Hero Section */}
-        {/* <div className="hero-container">
+        <div className="hero-container">
           <video autoPlay muted loop className="hero-video">
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title">In-house Software Stacks</h1>
-        </div> */}
-     <h1 className="hero-title">System Development Services</h1>
+          <h1 className="hero-title">System Development Services</h1>
+        </div>
+     {/* <h1 className="hero-title">System Development Services</h1> */}
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section className="content-section section-with-image">
-            <div className="section-image-wrapper">
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            {/* <div className="section-image-wrapper">
               <img src="/software.jpg" alt="Software Overview" className="section-image" />
               <div className="section-image-overlay"></div>
-            </div>
-            <div className="section-text">
-              <h2>Overview</h2>
-              <p>
+            </div> */}
+            <div >
+              {/* <h2>Overview</h2> */}
+              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
                 At TBS, our system engineering services deliver comprehensive solutions for automotive systems, ensuring safety, reliability, and compliance. Our expertise spans requirement elicitation, architecture development, risk analysis, communication protocols, functional safety, cybersecurity, diagnostics, and end-of-line (EOL) requirements, enabling robust and innovative vehicle systems.
-              
               </p>
             </div>
           </section>
@@ -72,7 +71,6 @@ const P2 = () => {
               <h2>SYS.2 Requirement Elicitation</h2>
               <p>
                 Our SYS.2 requirement elicitation process ensures precise, traceable system requirements. We collaborate with stakeholders to capture functional, performance, and safety needs, aligning with ASPICE and ISO 26262 standards. Using structured methodologies, we refine requirements to support system design, testing, and validation, ensuring clarity and compliance from the project outset.
-              
               </p>
             </div>
           </section>

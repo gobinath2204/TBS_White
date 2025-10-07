@@ -9,12 +9,12 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   
   const demoCredentials = getDemoCredentials();
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setIsLoading(true);
-
+    
     setTimeout(() => {
       const result = login(username, password);
       
@@ -27,12 +27,12 @@ const Login = () => {
       setIsLoading(false);
     }, 500);
   };
-
+  
   const handleDemoLogin = () => {
     setUsername(demoCredentials.username);
     setPassword(demoCredentials.password);
   };
-
+  
   return (
     <div className="login-container">
       <div className="login-card">
@@ -40,14 +40,14 @@ const Login = () => {
           <h1>Admin Portal</h1>
           <p>Enter your credentials to access the job management system</p>
         </div>
-
+  
         <form onSubmit={handleSubmit} className="login-form">
           {error && (
             <div className="error-message">
               {error}
             </div>
           )}
-
+  
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <input
@@ -60,7 +60,7 @@ const Login = () => {
               disabled={isLoading}
             />
           </div>
-
+            
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
@@ -72,7 +72,7 @@ const Login = () => {
               required
               disabled={isLoading}
             />
-          </div>
+          </div> 
 
           <button 
             type="submit" 

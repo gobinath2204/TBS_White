@@ -13,22 +13,6 @@ export default function Footer() {
 
         {/* Social Media */}
         <div className="social-icons">
-          {/* <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M22.675 0h-21.35C.597 0 0 .597 0 
-                1.326v21.348C0 23.403.597 24 1.326 
-                24h11.494v-9.294H9.691v-3.622h3.129V8.413c0-3.1 
-                1.893-4.788 4.659-4.788 1.325 0 2.463.099 
-                2.795.143v3.24l-1.918.001c-1.505 
-                0-1.796.715-1.796 1.763v2.312h3.587l-.467 
-                3.622h-3.12V24h6.116C23.403 24 24 
-                23.403 24 22.674V1.326C24 .597 23.403 
-                0 22.675 0z"/>
-            </svg>
-          </a> */}
-
-
-
           <a href="https://www.linkedin.com/company/testbasesolutions-ltd/?originalSubdomain=uk" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
               <path d="M22.225 0H1.771C.792 0 0 .771 0 
@@ -70,27 +54,6 @@ export default function Footer() {
              4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
           </a>
-
-
-          {/* <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M23.498 6.186a2.974 
-                2.974 0 00-2.096-2.107C19.505 
-                3.5 12 3.5 12 3.5s-7.505 
-                0-9.402.579A2.974 2.974 
-                0 00.502 6.186C0 
-                8.086 0 12 0 12s0 
-                3.914.502 5.814a2.974 2.974 
-                0 002.096 2.107C4.495 
-                20.5 12 20.5 12 
-                20.5s7.505 0 9.402-.579a2.974 
-                2.974 0 002.096-2.107C24 
-                15.914 24 12 24 
-                12s0-3.914-.502-5.814zM9.75 
-                15.568V8.432L15.818 
-                12 9.75 15.568z"/>
-            </svg>
-          </a> */}
         </div>
       </div>
 
@@ -129,7 +92,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      {/* Bottom note */}
+      
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Test Base Solutions | All Rights Reserved</p>
       </div>

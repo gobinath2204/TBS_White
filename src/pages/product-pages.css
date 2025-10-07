@@ -12,9 +12,6 @@
   --nav-accent: #00f5ff;
 }      
 
-
-
-
 /* Hero Section */
 .hero-container {
   position: relative;
@@ -61,7 +58,7 @@
 /* Product Page Content */
 .product-page {
   padding: 1rem 1rem;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -187,8 +184,6 @@
   gap: 2rem;
   margin: 4rem 0;
   flex-wrap: wrap;
-
-  /* height: 100%; */
   width: 100%;
 }
 
@@ -205,7 +200,6 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 } */
-
 
 .section-image-wrapper {
   position: relative;
@@ -270,7 +264,7 @@
 
 
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
     margin-top: 25vh;
@@ -284,4 +278,128 @@
     font-size: 2rem;
     padding: 0 1rem;
   }
+} */
+
+/* ==============================================
+   Mobile + Tablet Optimizations
+   ============================================== */
+@media (max-width: 1024px) {
+  /* GENERAL RESET FOR SMALL SCREENS */
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-container {
+    height: 50vh; /* reduce hero height */
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    margin-top: 10vh;
+    padding: 0 1rem;
+  }
+
+  /* Stack sections vertically and simplify layout */
+  .section-with-image,
+  .section-with-image.reverse {
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Hide all images on mobile and tablet */
+  .section-image-wrapper,
+  .section-image,
+  .section-image-overlay {
+    display: none !important;
+  }
+
+  /* Make text sections full width and readable */
+  .section-text {
+    width: 100% !important;
+    height: auto !important;
+    padding: 1rem 1rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.9);
+    color: #222 !important;
+    border-radius: 8px;
+    box-shadow: none !important;
+    margin:0;
+  }
+
+  .section-text h2 {
+    font-size: 1.4rem;
+    color: var(--blue);
+    margin-bottom: 0.6rem;
+    text-align: center;
+  }
+
+  .section-text p,
+  .section-text ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333 !important;
+  }
+
+  /* Content section adjustments */
+  .content-section {
+    height: auto !important;
+    padding: 1.2rem !important;
+    background: #fff !important;
+    color: #000 !important;
+    border-radius: 10px;
+    backdrop-filter: none !important;
+    margin: 1.5rem auto;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Adjust hero overlay to be subtler on small screens */
+  .hero-overlay {
+    background: linear-gradient(135deg, rgba(33,60,122,0.5), rgba(229,107,46,0.5));
+  }
+
+  /* Navigation buttons simplified for touch devices */
+  .nav-arrow-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    border: none;
+  }
+
+  .nav-arrow-btn.left {
+    left: 0;
+  }
+
+  .nav-arrow-btn.right {
+    right: 0;
+  }
+
+  .nav-arrow-btn-inner {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .nav-arrow-btn:hover .nav-arrow-btn-inner {
+    background: none;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Optional: reduce motion to prevent lag on phones */
+  * {
+    transition: none !important;
+  }
 }
+
+@media (max-width: 768px) {
+  .nav-arrow-btn {
+    display: none !important;
+  }
+}
+
+

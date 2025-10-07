@@ -11,7 +11,7 @@
 
 .slide {
   display: flex;
-  border-radius: 25px;
+  border-radius: 15px;
   overflow: hidden;
   background: #111;
   width: 100%;
@@ -23,7 +23,7 @@
   flex: 0 0 65%;
 }
 
-.image-overlay {
+.images-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -31,7 +31,7 @@
   height: 100%;
   background: linear-gradient(135deg, rgba(33, 60, 122, 0.367), rgba(229,107,46,0.367));
   pointer-events: none; 
-  border-radius: 25px 0 0 25px;
+  border-radius: 0 15px 15px 0;
 }
 
 .slide-image img {
@@ -65,21 +65,11 @@
 }
 
 .read-more {
-  /* background: var(--orange);
-  color: #111;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 12px;
-  width: 8rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease, all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); */
-
   background: var(--orange);
   color: #111;
   padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: clamp(1rem, 0.5vw, 4rem);
   width: 10.3rem;
@@ -106,7 +96,6 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  /* background: rgba(0, 0, 0, 0.6); */
   border: none;
   color: black;
   cursor: pointer;
@@ -118,11 +107,6 @@
   outline: none; 
 }
 
-
-/* .arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
-} */
-
 .arrow.left {
   left: 12px; /* pushes outside */
 }
@@ -130,16 +114,3 @@
 .arrow.right {
   right: 12px;
 }
-
-/* Tag (like EVENT in screenshot) */
-/* .tag {
-  display: inline-block;
-  background: #ffd500;
-  color: #000;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-} */

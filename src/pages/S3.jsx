@@ -38,25 +38,25 @@ const P2 = () => {
     <>
       <div ref={contentRef}>
         {/* Hero Section */}
-        {/* <div className="hero-container">
+        <div className="hero-container">
           <video autoPlay muted loop className="hero-video">
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title">In-house Software Stacks</h1>
-        </div> */}
-     <h1 className="hero-title">Hardware Engineering Services</h1>
+          <h1 className="hero-title">Hardware Engineering Services</h1>
+        </div>
+     {/* <h1 className="hero-title">Hardware Engineering Services</h1> */}
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section className="content-section section-with-image">
-            <div className="section-image-wrapper">
+          <section  style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            {/* <div className="section-image-wrapper">
               <img src="/HWtitle.png" alt="Hardware Overview" className="section-image" />
               <div className="section-image-overlay"></div>
-            </div>
-            <div className="section-text">
-              <h2>Overview</h2>
-              <p>
+            </div> */}
+            <div >
+              {/* <h2>Overview</h2> */}
+              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
                 At TBS, We provide complete ASPICE-compliant Hardware Engineering (HWE) services from HWE.1 to HWE.4. Our structured approach standardizes and improves hardware development, ensuring quality, reliability, and safety in complex automotive systems, while enabling seamless integration with software and system engineering.
               </p>
             </div>

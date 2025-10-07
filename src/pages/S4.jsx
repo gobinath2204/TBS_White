@@ -38,25 +38,25 @@ const P2 = () => {
     <>
       <div ref={contentRef}>
         {/* Hero Section */}
-        {/* <div className="hero-container">
+        <div className="hero-container">
           <video autoPlay muted loop className="hero-video">
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title">In-house Software Stacks</h1>
-        </div> */}
-     <h1 className="hero-title">System Validation Services</h1>
+          <h1 className="hero-title">System Validation Services</h1>
+        </div>
+     {/* <h1 className="hero-title">System Validation Services</h1> */}
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section className="content-section section-with-image">
-            <div className="section-image-wrapper">
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            {/* <div className="section-image-wrapper">
               <img src="/software.jpg" alt="Software Overview" className="section-image" />
               <div className="section-image-overlay"></div>
-            </div>
-            <div className="section-text">
-              <h2>Overview</h2>
-              <p>
+            </div> */}
+            <div >
+              {/* <h2>Overview</h2> */}
+              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
                 At TBS, we provide comprehensive system validation services to ensure automotive systems meet performance, safety, and regulatory requirements. Our expertise encompasses design verification, hardware-in-the-loop (HIL) testing, system integration, and various validation methodologies, delivering reliable and efficient solutions for automotive clients.
               </p>
             </div>
