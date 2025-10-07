@@ -180,7 +180,6 @@
   position: relative;
   min-height: 90vh;
   overflow: hidden;
-  /* background-color: #f5f5f5; */
   margin: 0;
   padding: 0;
   opacity: 0;
@@ -197,8 +196,9 @@
 .section-image-wrapper {
   position: relative;
   top: 20%;
-  flex: 1;
-  overflow: hidden;
+  flex: 0.75;
+  overflow: visible;
+  background: none
 }
 
 .section-image {
@@ -216,7 +216,7 @@
 .section-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(10, 30, 60, 0.6), rgba(10, 30, 60, 0.3));
+  background: none;
   z-index: 2;
 }
 
