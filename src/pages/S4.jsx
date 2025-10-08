@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import './service-pages.css';
+import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
-import "../index.css";
 
 const P2 = () => {
   const contentRef = useRef(null);
@@ -184,18 +183,12 @@ const P2 = () => {
         {/* Navigation Arrows */}
         <button className="nav-arrow-btn left" onClick={handlePrevious}>
           <div className="arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❮
           </div>
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
           <div className=" arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❯
           </div>
         </button>

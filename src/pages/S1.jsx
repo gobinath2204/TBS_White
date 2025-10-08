@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import './service-pages.css';
+import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
-import "../index.css";
 
 const P2 = () => {
   const contentRef = useRef(null);
@@ -84,7 +83,6 @@ const P2 = () => {
               <h2>SYS.3 Architecture Development</h2>
               <p>
                 We develop scalable, modular system architectures for automotive applications, adhering to AUTOSAR and ISO 14229 standards. Our SYS.3 services focus on optimizing system performance, interoperability, and maintainability. We design architectures that integrate hardware and software seamlessly, supporting complex functionalities while ensuring compliance with industry standards.
-              
               </p>
             </div>
           </section>

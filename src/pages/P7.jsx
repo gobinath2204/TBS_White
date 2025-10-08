@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import './product-pages.css';
+import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
-import "../index.css";
 
 const P1 = () => {
   const contentRef = useRef(null);
@@ -49,14 +48,14 @@ const P1 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section className="content-section section-with-image">
-            <div className="section-image-wrapper">
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            {/* <div className="section-image-wrapper">
               <img src="/hmi.png" alt="HMI Core System" className="section-image" />
               <div className="section-image-overlay"></div>
-            </div>
-            <div className="section-text">
-              <h2>Overview</h2>
-              <p className="paragraph-content">
+            </div> */}
+            <div >
+              {/* <h2>Overview</h2> */}
+              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
                 TBS’s Free RTOS Safety Plugin transforms standard FreeRTOS kernels into certified safety-critical foundations for automotive embedded systems, pre-qualified to ISO 26262 ASIL-D and IEC 61508 SIL-3. This lightweight extension enhances robustness with error handling, memory partitioning, and deterministic scheduling, mitigating risks in applications like autonomous driving.
               </p>
             </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import './product-pages.css';
+import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
-import "../index.css";
 
 const P2 = () => {
   const contentRef = useRef(null);
@@ -49,14 +48,14 @@ const P2 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section className="content-section section-with-image">
-            <div className="section-image-wrapper">
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            {/* <div className="section-image-wrapper">
               <img src="/software.jpg" alt="Software Overview" className="section-image" />
               <div className="section-image-overlay"></div>
-            </div>
-            <div className="section-text">
-              <h2>Overview</h2>
-              <p>
+            </div> */}
+            <div>
+              {/* <h2>Overview</h2> */}
+              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
                 TBS’s Smart Hardware-in-the-Loop (HIL) system revolutionizes automotive testing by bridging virtual simulations with real hardware, enabling precise validation of ECUs and control algorithms in a risk-free environment. Using real-time processors, it emulates vehicle dynamics, sensors, and actuators, testing scenarios from normal drives to edge-case faults without physical prototypes.
               </p>
             </div>

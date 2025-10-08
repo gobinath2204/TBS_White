@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import './product-pages.css';
+import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
-import "../index.css";
 
 const P3 = () => {
   const contentRef = useRef(null);
@@ -48,14 +47,14 @@ const P3 = () => {
 
         {/* Creative Content Sections */}
         <div className="product-page">
-          <section className="content-section section-with-image">
-            <div className="section-image-wrapper">
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            {/* <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Smart HIL Overview" className="section-image" />
               <div className="section-image-overlay"></div>
-            </div>
-            <div className="section-text">
-              <h2>Overview</h2>
-              <p>
+            </div> */}
+            <div>
+              {/* <h2>Overview</h2> */}
+              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
                 TBS’s Diagnostics Flashing Unit (DFU) is an all-in-one tool for seamless ECU reprogramming and diagnostics, streamlining maintenance, calibration, and updates across the vehicle lifecycle. Supporting UDS, CCP/XCP, and OBD-II protocols, it enables secure flashing over CAN, Ethernet, or LIN, with encryption to prevent tampering.
               </p>
             </div>

@@ -171,7 +171,7 @@ nav ul a:hover::after {
 .hero {
   /* display: flex; */
   flex-wrap: wrap;
-  height: 110vh;
+  height: 100vh;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -187,7 +187,7 @@ nav ul a:hover::after {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 108vh;
+  height: 100%;
   object-fit: cover;
   pointer-events: none;
   z-index: 1;
@@ -197,7 +197,7 @@ nav ul a:hover::after {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 108vh;
+  height: 100%;
   object-fit: cover;
   transform: scale(1.3);
   transform-origin: center;
@@ -209,10 +209,11 @@ nav ul a:hover::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 110vh;
+  height: 100%;
   width: 100%;
   padding: 0 2rem 2rem;
-  background: linear-gradient(135deg, rgba(33, 60, 122, 0.35), rgba(229, 107, 46, 0.35));
+  /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.35), rgba(229, 107, 46, 0.35)); */
+  background: rgba(26, 26, 26, 0.108);
 }
 
 .hero-left {

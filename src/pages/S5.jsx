@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import './service-pages.css';
+import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
-import "../index.css";
 
 const P2 = () => {
   const contentRef = useRef(null);
