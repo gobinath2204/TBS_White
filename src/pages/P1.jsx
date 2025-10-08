@@ -48,7 +48,7 @@ const P1 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+          <section className="content-section section-with-image">
             {/* <div className="section-image-wrapper">
               <img src="/hmi.png" alt="HMI Core System" className="section-image" />
               <div className="section-image-overlay"></div>
@@ -64,7 +64,7 @@ const P1 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Touchscreen Display" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>In-House Software Stack (COTS)</h2>

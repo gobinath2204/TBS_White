@@ -64,7 +64,7 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/bg_less.png" alt="Custom UI" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Software Requirement Development</h2>
@@ -83,7 +83,7 @@ const P2 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Software Architecture Development</h2>
@@ -106,7 +106,7 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/hmi.png" alt="Software Updates" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Software Development and Tools Expertise</h2>
@@ -127,7 +127,7 @@ const P2 = () => {
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Software Detailed Design (Check)</h2>
@@ -140,7 +140,7 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/hmi.png" alt="Software Updates" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Software Unit Design & Test</h2>
@@ -160,7 +160,7 @@ const P2 = () => {
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Interface Design & Test</h2>
@@ -180,7 +180,7 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/hmi.png" alt="Software Updates" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Acceptance Test</h2>

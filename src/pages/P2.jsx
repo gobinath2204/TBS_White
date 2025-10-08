@@ -64,7 +64,7 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/SMU.jpg" alt="Custom UI" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>EV Generic Deck</h2>
@@ -75,7 +75,7 @@ const P2 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Customizable EV Platform Architecture</h2>

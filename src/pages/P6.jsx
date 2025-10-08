@@ -63,7 +63,7 @@ const P3 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/SMU.jpg" alt="User Interface" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Diagnostics Flashing Unit</h2>
@@ -76,7 +76,7 @@ const P3 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/hmi.png" alt="Hardware Architecture" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Intuitive Diagnostics & Flashing Unit for Modern Vehicles</h2>

@@ -64,7 +64,7 @@ const P1 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Touchscreen Display" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Free RTOS Safety Plugin</h2>
@@ -77,7 +77,7 @@ const P1 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/SMU.jpg" alt="Connectivity" className="section-image" />
-              <div className="section-image-overlay"></div>
+              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Safety-Certified FreeRTOS for Automotive Applications</h2>

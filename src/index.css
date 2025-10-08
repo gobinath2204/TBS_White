@@ -298,7 +298,7 @@ section h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(33, 60, 122, 0.6), rgba(229, 107, 46, 0.6));
+  /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.6), rgba(229, 107, 46, 0.6)); */
 }
 
 .product-info {
@@ -653,7 +653,7 @@ section h2 {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(33, 60, 122, 0.6), rgba(229, 107, 46, 0.6));
+    /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.6), rgba(229, 107, 46, 0.6)); */
   }
 
   .product-info {
