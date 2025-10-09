@@ -1,10 +1,46 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import "../index.css";
 import './About.css';
 
 export default function About() {
   const navigate = useNavigate();
+  const words = ["TBS", "Team"];
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const [blink, setBlink] = useState(true);
+  const [pause, setPause] = useState(false);
+
+  useEffect(() => {
+    if (pause) return;
+
+    if (subIndex === words[index].length + 1 && !deleting) {
+      setPause(true);
+      setTimeout(() => setDeleting(true), 2000);
+      return;
+    }
+
+    if (subIndex === 0 && deleting) {
+      setDeleting(false);
+      setIndex((prev) => (prev + 1) % words.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (deleting ? -1 : 1));
+    }, deleting ? 80 : 120);
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, deleting, pause]);
+
+  useEffect(() => {
+    const blinkTimeout = setInterval(() => setBlink((prev) => !prev), 500);
+    return () => clearInterval(blinkTimeout);
+  }, []);
+
+  useEffect(() => {
+    if (pause && deleting) setPause(false);
+  }, [pause, deleting]);
 
   // Section fade-in animation
   useEffect(() => {
@@ -25,7 +61,7 @@ export default function About() {
     const sections = document.querySelectorAll(
       '.story-card-section, .pillars-of-excellence-section, .fostering-talent-section'
     );
-    
+
     sections.forEach((section) => observer.observe(section));
 
     return () => {
@@ -37,7 +73,7 @@ export default function About() {
   useEffect(() => {
     const animateValue = (obj, start, end, duration, suffix = '') => {
       let startTimestamp = null;
-      const frameDuration = 1000 / 60; 
+      const frameDuration = 1000 / 60;
       let lastFrameTime = 0;
       const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
@@ -67,7 +103,7 @@ export default function About() {
           obj.innerHTML = end + suffix;
         }
       };
-      
+
       window.requestAnimationFrame(step);
     };
 
@@ -80,16 +116,16 @@ export default function About() {
           entries.forEach((entry) => {
             if (entry.isIntersecting && !animationTriggered) {
               animationTriggered = true;
-              
+
               const employeeCounter = document.getElementById("employee-counter");
               const yearsCounter = document.getElementById("years-counter");
-              
+
               if (employeeCounter && yearsCounter) {
                 employeeCounter.innerHTML = '0';
                 yearsCounter.innerHTML = '0';
-                
+
                 animateValue(employeeCounter, 0, 100, 2500, '+');
-                
+
                 setTimeout(() => {
                   animateValue(yearsCounter, 0, 6, 2000, '+');
                 }, 300);
@@ -109,7 +145,7 @@ export default function About() {
 
     return () => {
       if (counterSection) {
-        const observer = new IntersectionObserver(() => {});
+        const observer = new IntersectionObserver(() => { });
         observer.unobserve(counterSection);
       }
     };
@@ -119,7 +155,7 @@ export default function About() {
   useEffect(() => {
     const videoSection = document.querySelector('.video-section');
     const heroVideo = document.querySelector('.content-video');
-    
+
     if (videoSection && heroVideo) {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -144,7 +180,7 @@ export default function About() {
     }
   }, []);
 
-  // 🌟 Timeline scroll animation (ClearMotion-style)
+  // Timeline scroll animation (ClearMotion-style)
   useEffect(() => {
     const timelineItems = document.querySelectorAll(".timeline-item");
     const timelineLine = document.querySelector(".timeline-line");
@@ -190,12 +226,13 @@ export default function About() {
     <>
       <div className="about-container">
         {/* Title Section */}
-        <section className="title-section">
-          <div className="title-content">
-            <h1>About Us</h1>
-            <p>Learn about our journey, values, and the team behind Test Base Solutions</p>
-          </div>
-        </section>
+        <div className="typing-wrapper">
+          <h1 className="typing-text" >
+            We are{" "}
+            <span className="highlight" >{words[index].substring(0, subIndex)}</span>
+            <span className={`cursor ${blink ? "active" : ""}`}  >|</span>
+          </h1>
+        </div>
 
         {/* Story Card Section */}
         <section className="story-card-section">
@@ -203,56 +240,16 @@ export default function About() {
             <div className="story-card-content">
               <h2>Our Story</h2>
               <p>
-                <strong>Test Base Solutions</strong> was founded with a clear vision—to shape the future of the 
-                automotive industry through innovation, precision, and quality. What began as a small team 
-                with big dreams has grown into a trusted engineering partner known for building excellence 
+                <strong>Test Base Solutions</strong> was founded with a clear vision—to shape the future of the
+                automotive industry through innovation, precision, and quality. What began as a small team
+                with big dreams has grown into a trusted engineering partner known for building excellence
                 across every stage of the automotive lifecycle.
               </p>
               <p>
-                Today, with nearly 100 dedicated employees, we deliver end-to-end expertise in system design, 
-                development, verification, validation, and compliance. Serving clients across the globe, our 
-                journey is powered by passion, perseverance, and a commitment to building smarter, safer, and 
+                Today, with nearly 100 dedicated employees, we deliver end-to-end expertise in system design,
+                development, verification, validation, and compliance. Serving clients across the globe, our
+                journey is powered by passion, perseverance, and a commitment to building smarter, safer, and
                 cleaner mobility solutions.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Pillars of Excellence */}
-        <section className="pillars-of-excellence-section">
-          <div className="pillars-of-excellence">
-            <div className="pillars-of-excellence-content">
-              <h2>Pillars of Excellence</h2>
-              <p>
-                At <strong>Test Base Solutions</strong> we specialize in delivering cutting-edge 
-                <strong> ASPICE-compliant solutions</strong> across all areas of System Engineering (SYS), 
-                Software Engineering (SWE), and Hardware Engineering (HWE). 
-              </p>
-              <ul className="excellence-list">
-                <li>Scheduler and Real-Time Operating System (RTOS)</li>
-                <li>AUTOSAR and Non-AUTOSAR drivers</li>
-                <li>CAN, UDS, LIN, FLEXRAY, and CCP/XCP stacks</li>
-                <li>Primary Boot-loader and Security Algorithm Software</li>
-                <li>Application Software and IoT Software Development</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Fostering Talent */}
-        <section className="fostering-talent-section">
-          <div className="fostering-talent">
-            <div className="fostering-talent-content">
-              <h2>Fostering Talents</h2>
-              <p>
-                At <strong>Test Base Solutions</strong>, we believe people are our greatest strength. 
-                From fresh graduates to experienced professionals, we invest in nurturing talent through 
-                structured training, mentorship, and hands-on project experience.
-              </p>
-              <p className="fostering-talent-p">
-                Our in-house programs focus on real-world automotive challenges—covering system engineering, 
-                diagnostics, embedded software, and ASPICE processes. We don't just build teams—we cultivate 
-                future-ready engineers who drive innovation, quality, and excellence in every project.
               </p>
             </div>
           </div>
@@ -272,9 +269,12 @@ export default function About() {
           </div>
           <p className="counter-tagline">Driving innovation in automotive technology</p>
         </section>
-
+        <section style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h2>About Our Journey</h2>
+        </section>
         {/* Video Section */}
         <section className="video-section">
+          
           <div className="video-background">
             <video autoPlay muted loop playsInline className="content-video">
               <source src="/videos/tbs_short.mp4" type="video/mp4" />
@@ -282,17 +282,18 @@ export default function About() {
             </video>
             <div className="video-overlay"></div>
           </div>
-          <div className="hero-contents">
+          {/* <div className="hero-contents">
             <h1>About Our Journey</h1>
             <p>Come join us in our journey to growth and betterment.</p>
-          </div>
+          </div> */}
         </section>
 
         {/* Timeline Section */}
         <section className="timeline-section">
+          <h2>Key milestones</h2>
           <div className="timeline">
             <div className="timeline-line"></div>
-            
+
             <div className="timeline-item">
               <div className="timeline-content left">
                 <h2>FOUND</h2>
@@ -327,6 +328,49 @@ export default function About() {
             </div>
           </div>
         </section>
+
+
+        <div className="Horizontal">
+          {/* Pillars of Excellence */}
+          <section className="pillars-of-excellence-section">
+            {/* <div className="pillars-of-excellence"> */}
+            <div className="pillars-of-excellence-content">
+              <h2>Pillars of Excellence</h2>
+              <p>
+                At <strong>Test Base Solutions</strong> we specialize in delivering cutting-edge
+                <strong> ASPICE-compliant solutions</strong> across all areas of System Engineering (SYS),
+                Software Engineering (SWE), and Hardware Engineering (HWE).
+              </p>
+              <ul className="excellence-list">
+                <li>Scheduler and Real-Time Operating System (RTOS)</li>
+                <li>AUTOSAR and Non-AUTOSAR drivers</li>
+                <li>CAN, UDS, LIN, FLEXRAY, and CCP/XCP stacks</li>
+                <li>Primary Boot-loader and Security Algorithm Software</li>
+                <li>Application Software and IoT Software Development</li>
+              </ul>
+            </div>
+            {/* </div> */}
+          </section>
+
+          {/* Fostering Talent */}
+          <section className="fostering-talent-section">
+            {/* <div className="fostering-talent"> */}
+            <div className="fostering-talent-content">
+              <h2>Fostering Talents</h2>
+              <p>
+                At <strong>Test Base Solutions</strong>, we believe people are our greatest strength.
+                From fresh graduates to experienced professionals, we invest in nurturing talent through
+                structured training, mentorship, and hands-on project experience.
+              </p>
+              <p className="fostering-talent-p">
+                Our in-house programs focus on real-world automotive challenges—covering system engineering,
+                diagnostics, embedded software, and ASPICE processes. We don't just build teams—we cultivate
+                future-ready engineers who drive innovation, quality, and excellence in every project.
+              </p>
+            </div>
+            {/* </div> */}
+          </section>
+        </div>
       </div>
     </>
   );
