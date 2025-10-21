@@ -48,7 +48,7 @@ const P1 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section className="content-section section-with-image">
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             {/* <div className="section-image-wrapper">
               <img src="/hmi.png" alt="HMI Core System" className="section-image" />
               <div className="section-image-overlay"></div>

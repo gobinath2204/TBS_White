@@ -55,7 +55,7 @@ const P2 = () => {
             </div> */}
             <div >
               {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
+              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0"}}>
                 At TBS, we deliver cutting-edge software and hardware solutions to ensure compliance with stringent safety and regulatory standards. Our expertise spans functional safety, cybersecurity, high-voltage (HV) safety, automotive CAN standards, market regulations, electrical testing, and environmental standards, empowering clients to achieve robust, safe, and compliant automotive systems.
               </p>
             </div>

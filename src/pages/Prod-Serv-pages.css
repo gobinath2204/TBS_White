@@ -14,7 +14,7 @@
 /* Hero Section */
 .hero-container {
   position: relative;
-  height: 90vh;
+  height: 58vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -57,11 +57,14 @@
 
 /* Product Page & Content Sections */
 .product-page {
+  max-width: 90% ;
+  width: 90% ;
+  
   display: flex;
   flex-direction: column;
   gap: 6rem;
   padding: 1rem;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -110,14 +113,15 @@
   align-items: center; 
   position: relative;
   height: 60vh;
-  flex: 0.75;
+  /* flex: 0.75; */
+  flex: 1;
   overflow: visible;
   background: none;
 }
 
 .section-image-wrapper .section-image {
   height: 80%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .section-subtitle {
@@ -231,8 +235,9 @@
 .section-text {
   flex: 1;
   color: var(--orange);
-  padding: 6rem 5rem;
+  padding: 6rem 3rem;
   height: 100%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;

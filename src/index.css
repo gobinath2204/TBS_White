@@ -40,7 +40,7 @@ body {
   width: 100%;
   padding: 15px 50px;
   /* background: rgba(118, 118, 118, 0.344); */
-  background: rgba(255, 255, 255, 0.862);
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(10px);
   z-index: 10000;
   transition: all 0.3s ease;
@@ -259,7 +259,7 @@ section h2 {
 .products-section {
   position: relative;
   background-color: #000000;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   /* padding: 6rem 2rem 10rem; */
   padding: 4rem 0 10rem 0;
   width: 100%;
@@ -586,7 +586,7 @@ section h2 {
 
   .navbar {
     position: relative;
-    background: rgba(255, 255, 255, 0);
+    background: rgb(255, 255, 255);
     backdrop-filter: blur(0px);
   }
 

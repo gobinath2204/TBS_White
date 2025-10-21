@@ -55,7 +55,7 @@ const P2 = () => {
             </div> */}
             <div  >
               {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
+              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0"}}>
                 At TBS, our software engineering services deliver robust, scalable, and compliant solutions for automotive systems. Our expertise spans requirement development, architecture design, software development, detailed design, unit testing, interface validation, and acceptance testing, ensuring high-quality software that meets stringent industry standards.
               </p>
             </div>

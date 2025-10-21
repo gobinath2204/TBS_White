@@ -47,14 +47,8 @@ function App() {
             <Route path="/pages/S5" element={<S5 />} />
             <Route path="/products" element={<Products />} />
             <Route path="/services" element={<Services />} />
-            <Route 
-              path="/admin" 
-              element={
-                <ProtectedRoute>
-                  <Admin />
-                </ProtectedRoute>
-              } 
-            />
+            <Route path="/admin"    element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+            {/* <Route path="/admin"    element={<Admin />} /> */}
           </Routes>
         </main>
         <Footer />

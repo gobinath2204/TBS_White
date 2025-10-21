@@ -361,7 +361,7 @@ export default function About() {
                 At <strong>Test Base Solutions</strong>, we believe people are our greatest strength.
                 From fresh graduates to experienced professionals, we invest in nurturing talent through
                 structured training, mentorship, and hands-on project experience.
-              </p>
+              </p> <br />
               <p className="fostering-talent-p">
                 Our in-house programs focus on real-world automotive challenges—covering system engineering,
                 diagnostics, embedded software, and ASPICE processes. We don't just build teams—we cultivate
