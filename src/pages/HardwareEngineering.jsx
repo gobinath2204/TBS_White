@@ -2,17 +2,17 @@ import React, { useEffect, useRef } from "react";
 import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 
-const P2 = () => {
+const S3 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
   const videoPath = "/videos/In-house-Software.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/s2");
+    navigate("/pages/SoftwareEngineering");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/s4");
+    navigate("/pages/SystemValidation");
     window.scrollTo(0, 0);
   };
 
@@ -44,17 +44,10 @@ const P2 = () => {
           <div className="hero-overlay"></div>
           <h1 className="hero-title">Hardware Engineering Services</h1>
         </div>
-     {/* <h1 className="hero-title">Hardware Engineering Services</h1> */}
         {/* Creative Content Sections */}
         <div className="product-page">
-
           <section  style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            {/* <div className="section-image-wrapper">
-              <img src="/HWtitle.png" alt="Hardware Overview" className="section-image" />
-              <div className="section-image-overlay"></div>
-            </div> */}
             <div >
-              {/* <h2>Overview</h2> */}
               <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0"}}>
                 We deliver complete <b>ASPICE-compliant Hardware Engineering (HWE) services</b> tailored for modern automotive systems. Our capabilities span the entire hardware development lifecycle, including requirements engineering, schematic and PCB design, risk analysis (FMEA/DFMEA), advanced simulations, and rigorous verification. With deep compliance to standards, we ensure robust, high-performance hardware that supports functional safety and real-world reliability. Leveraging advanced tools and automotive-grade methodologies, we partner with clients to design solutions that meet stringent industry demands, reduce time-to-market, and improve system resilience. Whether for EV platforms, body control systems, our hardware engineering team delivers results you can depend on.
               </p>
@@ -64,7 +57,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/S3/Picture2.png" alt="Custom UI" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>HWE.1 Hardware Requirement Development</h2>
@@ -77,7 +69,6 @@ const P2 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/S3/Picture3.png" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Schematic Design</h2>
@@ -92,7 +83,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/S3/Picture4.png" alt="Software Updates" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>PCB Design & Development</h2>
@@ -104,11 +94,9 @@ const P2 = () => {
             </div>
           </section>
         
-
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/S3/Picture5.png" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Safety Analysis (FMEA/DFMEA/FMEDA)</h2>
@@ -121,7 +109,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/S3/Picture6.png" alt="Software Updates" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Design Calculations / Simulations</h2>
@@ -135,7 +122,6 @@ const P2 = () => {
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/S3/Picture7.png" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>HARA Development</h2>
@@ -148,7 +134,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/S3/Picture8.png" alt="Software Updates" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Hardware Verification</h2>
@@ -167,18 +152,12 @@ const P2 = () => {
         {/* Navigation Arrows */}
         <button className="nav-arrow-btn left" onClick={handlePrevious}>
           <div className="arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❮
           </div>
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
           <div className=" arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❯
           </div>
         </button>
@@ -187,4 +166,4 @@ const P2 = () => {
   );
 };
 
-export default P2;
+export default S3;

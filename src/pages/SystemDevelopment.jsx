@@ -2,17 +2,17 @@ import React, { useEffect, useRef } from "react";
 import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 
-const P2 = () => {
+const S1 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
   const videoPath = "/videos/In-house-Software.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/s5");
+    navigate("/pages/SafetyandRegulatory");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/s2");
+    navigate("/pages/SoftwareEngineering");
     window.scrollTo(0, 0);
   };
 
@@ -44,15 +44,9 @@ const P2 = () => {
           <div className="hero-overlay"></div>
           <h1 className="hero-title">System Development Services</h1>
         </div>
-        {/* <h1 className="hero-title">System Development Services</h1> */}
-        {/* Creative Content Sections */}
         <div className="product-page">
 
           <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
-            {/* <div className="section-image-wrapper">
-              <img src="/software.jpg" alt="Software Overview" className="section-image" />
-              <div className="section-image-overlay"></div>
-            </div> */}
             <div >
               {/* <h2>Overview</h2> */}
               <p style={{ fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0" }}>
@@ -80,7 +74,6 @@ const P2 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/S1/Picture2.png" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>FMEA Development</h2>
@@ -94,7 +87,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/S1/Picture3.png" alt="Software Updates" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Communication Requirements</h2>
@@ -108,7 +100,6 @@ const P2 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/S1/Picture4.png" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Functional Safety</h2>
@@ -124,7 +115,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/S1/Picture5.png" alt="Software Updates" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Cybersecurity</h2>
@@ -139,7 +129,6 @@ const P2 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/S1/Picture6.png" alt="Connectivity" className="section-image" />
-              {/* <div className="secion-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Diagnostics & EOL Requirements Development</h2>
@@ -156,18 +145,12 @@ const P2 = () => {
         {/* Navigation Arrows */}
         <button className="nav-arrow-btn left" onClick={handlePrevious}>
           <div className="arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❮
           </div>
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
           <div className=" arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❯
           </div>
         </button>
@@ -176,4 +159,4 @@ const P2 = () => {
   );
 };
 
-export default P2;
+export default S1;

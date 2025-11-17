@@ -6,7 +6,6 @@ const ProtectedRoute = ({ children }) => {
   if (!isAuthenticated()) {
     return <Login />;
   }
-
   return children;
 };
 

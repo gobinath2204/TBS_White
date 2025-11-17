@@ -10,10 +10,9 @@
 }
 
 .h1 {
-  /* font-family: "Audiowide", sans-serif; */
   text-transform: camel-case;
   font-size: 2.5rem;
-  color: var(--blue); /* Blue heading */
+  color: var(--blue); 
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -39,9 +38,9 @@
 }
 
 .job-listings {
-  display: flex; /* horizontal layout */
+  display: flex; 
   gap: 1.5rem;
-  flex-wrap: wrap; /* allow wrapping if too many */
+  flex-wrap: wrap; 
   justify-content: center;
 }
 

@@ -59,10 +59,8 @@ export default function Home() {
 
       {/* SERVICES */}
       <section className="services-section" aria-labelledby="services-heading">
-        {/* <h2 id="services-heading">Our Services</h2> */}
         {isMobile ? (
           <div className="cards-container">
-            {/* Make sure your ServiceSlider component can handle asCards prop */}
             <ServiceSlider asCards={true} navigate={navigate} />
           </div>
         ) : (
@@ -72,10 +70,8 @@ export default function Home() {
 
       {/* PRODUCTS */}
       <section className="products-section" aria-labelledby="products-heading">
-        {/* <h2 id="products-heading">Our Products</h2> */}
         {isMobile ? (
           <div className="cards-container">
-            {/* Make sure your ProductSlider component can handle asCards prop */}
             <ProductSlider asCards={true} navigate={navigate} />
           </div>
         ) : (

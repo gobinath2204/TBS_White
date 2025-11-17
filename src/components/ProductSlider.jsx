@@ -4,49 +4,49 @@ import "../pages/ProductShowcase.css";
 
 const products = [
   {
-    id: "P1",
+    id: "Inhousesoftwarestack",
     name: "In house SoftWare stack (COTS)",
     img: "/software.jpg",
     Cdesc: "TBS’s In-House Software Stack (Commercial Off-The-Shelf, or COTS)",
     desc: "TBS’s In-House Software Stack (Commercial Off-The-Shelf, or COTS) is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market.",
   },
   {
-    id: "P2",
+    id: "EVgenericdeck",
     name: "EV generic deck",
     img: "/deck.jpg",
     Cdesc: "TBS’s EV Generic Deck is a versatile, modular powertrain solution",
     desc: "TBS’s EV Generic Deck is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures",
   },
   {
-    id: "P3",
+    id: "HMI",
     name: "HMI",
     img: "/hmi.jpg",
     Cdesc: "TBS’s Automotive Human-Machine Interface (HMI)",
     desc: "TBS’s Automotive Human-Machine Interface (HMI) transforms vehicle cabins into intuitive, connected ecosystems, enhancing driver and passenger experiences while prioritizing safety. Powered by Android Automotive OS, it integrates advanced touchscreens, voice recognition, and gesture controls to unify navigation, multimedia",
   },
   {
-    id: "P4",
+    id: "SMU",
     name: "Secure Manufacturing Unit",
     img: "/SMU.webp",
     Cdesc: "TBS’s Secure Manufacturing Unit (SMU) safeguards automotive production",
     desc: "TBS’s Secure Manufacturing Unit (SMU) safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories",
   },
   {
-    id: "P5",
+    id: "SmartHIL",
     name: "Smart HIL",
     img: "/HIL.jpg",
     Cdesc: "TBS’s Smart Hardware-in-the-Loop (HIL)",
     desc: "TBS’s Smart Hardware-in-the-Loop (HIL) system revolutionizes automotive testing by bridging virtual simulations with real hardware, enabling precise validation of ECUs and control algorithms in a risk-free environment. Using real-time processors, it emulates vehicle dynamics, sensors, and actuators, testing scenarios from normal drives",
   },
   {
-    id: "P6",
+    id: "DFU",
     name: "Diagnostics flashing unit",
     img: "/DFU.jpeg",
     Cdesc: "TBS’s Diagnostics Flashing Unit (DFU)",
     desc: "TBS’s Diagnostics Flashing Unit (DFU) is an all-in-one tool for seamless ECU reprogramming and diagnostics, streamlining maintenance, calibration, and updates across the vehicle lifecycle. Supporting UDS, CCP/XCP, and OBD-II protocols, it enables secure flashing over CAN, Ethernet, or LIN, with encryption to prevent tampering.",
   },
   {
-    id: "P7",
+    id: "RTOS",
     name: "Free RTOS Safety Plugin",
     img: "/RTOS.webp",
     Cdesc: "TBS’s Free RTOS Safety Plugin transforms standard",
@@ -60,15 +60,6 @@ export default function ProductSlider() {
   const current = products[index];
 
   const [isMobile, setIsMobile] = useState(false);
-
-  // Fix hydration issue by checking window only after component mounts
-  // useEffect(() => {
-  //   setIsMobile(window.innerWidth < 768);
-
-  //   const handleResize = () => setIsMobile(window.innerWidth < 768);
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 1024);

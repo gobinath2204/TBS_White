@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // assuming react-router
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -92,7 +92,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Test Base Solutions | All Rights Reserved</p>
       </div>

@@ -282,10 +282,6 @@ export default function About() {
             </video>
             <div className="video-overlay"></div>
           </div>
-          {/* <div className="hero-contents">
-            <h1>About Our Journey</h1>
-            <p>Come join us in our journey to growth and betterment.</p>
-          </div> */}
         </section>
 
         {/* Timeline Section */}
@@ -333,7 +329,6 @@ export default function About() {
         <div className="Horizontal">
           {/* Pillars of Excellence */}
           <section className="pillars-of-excellence-section">
-            {/* <div className="pillars-of-excellence"> */}
             <div className="pillars-of-excellence-content">
               <h2>Pillars of Excellence</h2>
               <p>
@@ -349,12 +344,10 @@ export default function About() {
                 <li>Application Software and IoT Software Development</li>
               </ul>
             </div>
-            {/* </div> */}
           </section>
 
           {/* Fostering Talent */}
           <section className="fostering-talent-section">
-            {/* <div className="fostering-talent"> */}
             <div className="fostering-talent-content">
               <h2>Fostering Talents</h2>
               <p>
@@ -368,7 +361,6 @@ export default function About() {
                 future-ready engineers who drive innovation, quality, and excellence in every project.
               </p>
             </div>
-            {/* </div> */}
           </section>
         </div>
       </div>

@@ -39,7 +39,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.4), rgba(229, 107, 46, 0.4)); */
   background: rgba(26, 26, 26, 0.401);
   z-index: 2;
 }
@@ -59,12 +58,10 @@
 .product-page {
   max-width: 90% ;
   width: 90% ;
-  
   display: flex;
   flex-direction: column;
   gap: 6rem;
   padding: 1rem;
-  /* max-width: 1200px; */
   margin: 0 auto;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -98,12 +95,12 @@
 .section-with-image {
   display: flex;
   justify-content: space-between;
-  align-items: center;          /* ensures image and text are vertically aligned */
+  align-items: center;        
   position: relative;
-  min-height: 50vh;             /* sets section height */
+  min-height: 50vh;            
   overflow: hidden;
   margin: 0;
-  padding: 0 1rem;              /* adds some side breathing room */
+  padding: 0 1rem;             
   gap: 2rem; 
 }
 
@@ -113,7 +110,6 @@
   align-items: center; 
   position: relative;
   height: 60vh;
-  /* flex: 0.75; */
   flex: 1;
   overflow: visible;
   background: none;
@@ -210,8 +206,6 @@
   transform: rotate(-90deg);
 }
 
-
-
 .section-image {
   width: 100%;
   height: 100%;
@@ -264,15 +258,6 @@
 .section-with-image.reverse {
   flex-direction: row-reverse;
 }
-
-/* Subtle shadow between halves */
-/* .section-with-image.reverse .section-text {
-  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.08);
-} */
-
-/* .section-with-image:not(.reverse) .section-text {
-  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.08);
-} */
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {

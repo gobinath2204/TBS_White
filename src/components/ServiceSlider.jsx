@@ -5,35 +5,35 @@ import "../pages/ServiceShowcase.css";
 
 const services = [
   {
-    id: "S1",
+    id: "SystemDevelopment",
     name: "System Development",
     img: "/hmi.png",
     Cdesc: "our system engineering services deliver comprehensive solutions",
     desc: "At TBS, our system engineering services deliver comprehensive solutions for automotive systems, ensuring safety, reliability, and compliance. Our expertise spans requirement elicitation, architecture development, risk analysis, communication protocols, functional safety",
   },
   {
-    id: "S2",
+    id: "SoftwareEngineering",
     name: "Software Engineering",
     img: "/software.jpg",
     Cdesc: "our software engineering services deliver robust, scalable",
     desc: "At TBS, our software engineering services deliver robust, scalable, and compliant solutions for automotive systems. Our expertise spans requirement development, architecture design, software development, detailed design, unit testing, interface validation, and acceptance testing",
   },
   {
-    id: "S3",
+    id: "HardwareEngineering",
     name: "Hardware Engineering",
     img: "/HIL.jpg",
     Cdesc: "We provide complete ASPICE-compliant Hardware Engineering (HWE) services",
     desc: "At TBS, We provide complete ASPICE-compliant Hardware Engineering (HWE) services from HWE.1 to HWE.4. Our structured approach standardizes and improves hardware development, ensuring quality, reliability, and safety in complex automotive systems, while enabling seamless integration ",
   },
   {
-    id: "S4",
+    id: "SystemValidation",
     name: "System Validation",
     img: "/SMU.jpg",
     Cdesc: "we provide comprehensive system validation services to ensure automotive systems",
     desc: "At TBS, we provide comprehensive system validation services to ensure automotive systems meet performance, safety, and regulatory requirements. Our expertise encompasses design verification, hardware-in-the-loop (HIL) testing, system integration, and various validation methodologies",
   },
   {
-    id: "S5",
+    id: "SafetyandRegulatory",
     name: "Safety & Regulatory",
     img: "/HWS.png",
     Cdesc: "we deliver cutting-edge software and hardware solutions to ensure compliance",
@@ -47,15 +47,6 @@ export default function ServiceSlider() {
   const currentService = services[serviceIndex];
 
   const [isMobile, setIsMobile] = useState(false);
-  
-    // Fix hydration issue by checking window only after component mounts
-    // useEffect(() => {
-    //   setIsMobile(window.innerWidth < 768);
-  
-    //   const handleResize = () => setIsMobile(window.innerWidth < 768);
-    //   window.addEventListener("resize", handleResize);
-    //   return () => window.removeEventListener("resize", handleResize);
-    // }, []);
 
     useEffect(() => {
       setIsMobile(window.innerWidth < 1024);

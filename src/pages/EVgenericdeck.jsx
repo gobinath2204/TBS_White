@@ -8,11 +8,11 @@ const P2 = () => {
   const videoPath = "/videos/In-house-Software.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/p1");
+    navigate("/pages/Inhousesoftwarestack");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/p3");
+    navigate("/pages/HMI");
     window.scrollTo(0, 0);
   };
 
@@ -49,12 +49,7 @@ const P2 = () => {
         <div className="product-page">
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            {/* <div className="section-image-wrapper">
-              <img src="/software.jpg" alt="Software Overview" className="section-image" />
-              <div className="section-image-overlay"></div>
-            </div> */}
             <div >
-              {/* <h2>Overview</h2> */}
               <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
                 TBS’s EV Generic Deck is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
               </p>
@@ -64,7 +59,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/SMU.jpg" alt="Custom UI" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>EV Generic Deck</h2>
@@ -75,7 +69,6 @@ const P2 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Customizable EV Platform Architecture</h2>
@@ -89,18 +82,12 @@ const P2 = () => {
         {/* Navigation Arrows */}
         <button className="nav-arrow-btn left" onClick={handlePrevious}>
           <div className="arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❮
           </div>
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
           <div className=" arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❯
           </div>
         </button>

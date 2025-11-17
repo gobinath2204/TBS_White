@@ -7,53 +7,13 @@ const S4 = () => {
   const navigate = useNavigate();
   const videoPath = "/videos/In-house-Software.mp4";
 
-  // Inline override styles — only affect this page
-  // const overrideStyle = `
-  //   .product-page {
-  //     max-width: 90% ;
-  //     width: 90% ;
-  //     margin: 0 auto ;
-  //   }
-
-  //   .content-section.section-with-image {
-  //     display: flex  ;
-  //     justify-content: space-between  ;
-  //     align-items: center  ;
-  //     width: 100%  ;
-  //     gap: 2rem  ;
-  //   }
-
-  //   .section-image-wrapper {
-  //     flex: 1  ;
-  //     width: 50%  ;
-  //     height: auto  ;
-  //   }
-
-  //   .section-text {
-  //     flex: 1  ;
-  //     width: 50%  ;
-  //     padding: 2rem  ;
-  //   }
-
-  //   @media (max-width: 1024px) {
-  //     .content-section.section-with-image {
-  //       flex-direction: column  ;
-  //       width: 100%  ;
-  //     }
-  //     .section-image-wrapper,
-  //     .section-text {
-  //       width: 100%  ;
-  //     }
-  //   }
-  // `;
-
   const handlePrevious = () => {
-    navigate("/pages/s3");
+    navigate("/pages/HardwareEngineering");
     window.scrollTo(0, 0);
   };
 
   const handleNext = () => {
-    navigate("/pages/s5");
+    navigate("/pages/SafetyandRegulatory");
     window.scrollTo(0, 0);
   };
 
@@ -76,9 +36,6 @@ const S4 = () => {
 
   return (
     <>
-      {/* Override styles injected here */}
-      {/* <style>{overrideStyle}</style> */}
-
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
@@ -140,9 +97,6 @@ const S4 = () => {
           </section>
 
           <section className="content-section section-with-image">
-            {/* <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-            </div> */}
             <div className="section-text" style={{width: "100%"}}>
               <h2>System Integration/Dyno Validation</h2>
               <p>
@@ -153,9 +107,6 @@ const S4 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
-            {/* <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
-            </div> */}
             <div className="section-text">
               <h2>LabCar Validation</h2>
               <p>
@@ -179,9 +130,6 @@ const S4 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
-            {/* <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
-            </div> */}
             <div className="section-text">
               <h2>EOL Validation</h2>
               <p>
@@ -192,9 +140,6 @@ const S4 = () => {
           </section>
 
           <section className="content-section section-with-image">
-            {/* <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-            </div> */}
             <div className="section-text">
               <h2>Environmental Validation</h2>
               <p>

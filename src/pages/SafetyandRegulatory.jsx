@@ -2,17 +2,17 @@ import React, { useEffect, useRef } from "react";
 import './Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 
-const P2 = () => {
+const S5 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
   const videoPath = "/videos/In-house-Software.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/s4");
+    navigate("/pages/SystemValidation");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/s1");
+    navigate("/pages/SystemDevelopment");
     window.scrollTo(0, 0);
   };
 
@@ -44,15 +44,10 @@ const P2 = () => {
           <div className="hero-overlay"></div>
           <h1 className="hero-title">Safety & Regulatory Services</h1>
         </div>
-     {/* <h1 className="hero-title">Safety & Regulatory Services</h1> */}
         {/* Creative Content Sections */}
         <div className="product-page">
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            {/* <div className="section-image-wrapper">
-              <img src="/software.jpg" alt="Software Overview" className="section-image" />
-              <div className="section-image-overlay"></div>
-            </div> */}
             <div >
               {/* <h2>Overview</h2> */}
               <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0"}}>
@@ -64,7 +59,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/SMU.jpg" alt="Custom UI" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Functional Safety Development & Testing</h2>
@@ -77,7 +71,6 @@ const P2 = () => {
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Cybersecurity Development & Testing</h2>
@@ -90,7 +83,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/hmi.png" alt="Software Updates" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>HV Safety Development & Testing</h2>
@@ -104,7 +96,6 @@ const P2 = () => {
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Automotive CAN Standard Development & Testing</h2>
@@ -117,7 +108,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/hmi.png" alt="Software Updates" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Market Regulatory Standards</h2>
@@ -130,7 +120,6 @@ const P2 = () => {
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Electrical Testing</h2>
@@ -143,7 +132,6 @@ const P2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <img src="/hmi.png" alt="Software Updates" className="section-image" />
-              {/* <div className="section-image-overlay"></div> */}
             </div>
             <div className="section-text">
               <h2>Environmental Standards</h2>
@@ -157,18 +145,12 @@ const P2 = () => {
         {/* Navigation Arrows */}
         <button className="nav-arrow-btn left" onClick={handlePrevious}>
           <div className="arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❮
           </div>
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
           <div className=" arrow">
-            {/* <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg> */}
             ❯
           </div>
         </button>
@@ -177,4 +159,4 @@ const P2 = () => {
   );
 };
 
-export default P2;
+export default S5;

@@ -103,7 +103,7 @@ export const addJob = (job) => {
       ...job,
       id: getNextTBSJobId() // Use the TBS ID system
     };
-    console.log('Adding new job with ID:', newJob.id); // Debug log
+    console.log('Adding new job with ID:', newJob.id);
     const updatedJobs = [...jobs, newJob];
     setStoredJobs(updatedJobs);
     return newJob;
@@ -118,7 +118,6 @@ export const updateJob = (id, updatedJob) => {
     const jobs = getStoredJobs();
     const index = jobs.findIndex(job => job.id === id);
     if (index !== -1) {
-      // Preserve the original TBS ID when updating
       jobs[index] = { ...updatedJob, id };
       setStoredJobs(jobs);
       return jobs[index];
