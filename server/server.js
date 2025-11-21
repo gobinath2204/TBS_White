@@ -9,7 +9,11 @@ const port = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const resend = new Resend("re_K8DewUTd_DC7qHTc33bF4eJMHeNkx8J6K"); // put your Resend API key
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // API endpoint for your React form
 app.post("/send-email", async (req, res) => {

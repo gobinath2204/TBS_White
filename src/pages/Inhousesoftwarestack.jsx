@@ -12,7 +12,7 @@ const P1 = () => {
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/pEVgenericdeck2");
+    navigate("/pages/EVgenericdeck");
     window.scrollTo(0, 0);
   };
 
@@ -42,15 +42,15 @@ const P1 = () => {
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>In-House Software Stack (COTS)</h1>
+          <h1 className="hero-title" style={{ color: 'white' }}>In-House Software Stack (COTS)</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+          <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
             <div >
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
+              <p style={{ fontSize: "1.5rem", textAlign: "center", padding: "6rem 0" }}>
                 TBS’s In-House Software Stack (Commercial Off-The-Shelf, or COTS) is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market. Validated to ISO 26262 for functional safety, it minimizes costs compared to custom solutions while ensuring high reliability.
               </p>
             </div>
