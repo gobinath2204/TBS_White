@@ -45,7 +45,7 @@ export default function Home() {
         </div>
 
         <div className="hero-content">
-          <div className="hero-left">Partners in Software &amp; Testing</div>
+          <div className="hero-left">Partners in Software and Testing</div>
           <div className="hero-right">
             <p>
               Test Base Solutions — Advanced diagnostics, high-performance

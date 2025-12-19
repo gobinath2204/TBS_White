@@ -1,6 +1,7 @@
 /* ------------------------------
    GOOGLE FONTS
 ------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -169,6 +170,7 @@ nav ul a:hover::after {
    HERO SECTION
 ------------------------------ */
 .hero {
+  font-family: "Playfair Display", serif;
   /* display: flex; */
   flex-wrap: wrap;
   height: 100vh;
@@ -594,7 +596,7 @@ section h2 {
     padding: 15px 20px;
   }
 
-  nav a{
+  nav a {
     color: var(--light);
     font-weight: 500;
   }
@@ -687,7 +689,7 @@ section h2 {
   .footer-right {
     display: flex;
     flex-direction: column;
-    gap:0;
+    gap: 0;
   }
 
   .footer .social-icons {
@@ -713,7 +715,7 @@ section h2 {
     font-size: 1rem;
   }
 
- 
+
 
   nav {
     padding: 15px 20px;
@@ -765,13 +767,13 @@ section h2 {
     text-align: center;
     margin-right: 0;
     padding-right: 0;
-  }  
+  }
 
   .footer .footer-right {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap:0;
+    gap: 0;
   }
 
   .footer .social-icons {
