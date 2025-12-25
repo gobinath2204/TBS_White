@@ -88,14 +88,9 @@ export default function About() {
         const progress = Math.min(elapsed / duration, 1);
         const easedProgress = easeOutCubic(progress);
 
-        let value;
-        if (end - start <= 10) {
-          value = (easedProgress * (end - start) + start).toFixed(1);
-        } else {
-          value = Math.floor(easedProgress * (end - start) + start);
-        }
-
+        const value = Math.floor(easedProgress * (end - start) + start);
         obj.innerHTML = value + suffix;
+
 
         if (progress < 1) {
           window.requestAnimationFrame(step);
@@ -257,18 +252,24 @@ export default function About() {
 
         {/* Counter Section */}
         <section className="counter-section">
-          <div className="counter-container">
-            <div className="counter-item">
-              <div id="employee-counter" className="counter-number">0</div>
-              <div className="counter-label">Employees</div>
-            </div>
-            <div className="counter-item">
-              <div id="years-counter" className="counter-number">0</div>
-              <div className="counter-label">Years of Excellence</div>
-            </div>
-          </div>
-          <p className="counter-tagline">Driving innovation in automotive technology</p>
-        </section>
+  <div className="counter-columns">
+    <div className="counter-column">
+      <div id="employee-counter" className="counter-number-box"></div>
+      <div className="counter-label-box">Employees</div>
+    </div>
+
+    <div className="counter-column">
+      <div id="years-counter" className="counter-number-box"></div>
+      <div className="counter-label-box">Years of Excellence</div>
+    </div>
+  </div>
+
+  <p className="counter-tagline">
+    Driving innovation in automotive technology
+  </p>
+</section> 
+  
+
         <section style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <h2>About Our Journey</h2>
         </section>

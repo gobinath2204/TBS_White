@@ -126,8 +126,7 @@
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  height: auto;
-  min-height: 100%;
+  align-items: stretch;
   box-sizing: border-box;
   opacity: 0;
   transform: translateY(50px);
@@ -238,6 +237,7 @@
   margin-bottom: 12px;
   position: relative;
   padding-left: 10px;
+  list-style: none;
 }
 
 .excellence-list li::before {
@@ -259,39 +259,38 @@
   border-radius: 15px;
 }
 
-.counter-container {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  margin-bottom: 30px;
-}
-
-.counter-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.counter-number {
-  font-size: 4rem;
-  font-weight: 800;
-  color: #3498db;
-  margin-bottom: 10px;
-  font-family: system-ui, -apple-system, sans-serif;
-}
-
-.counter-label {
-  font-size: 1.2rem;
-  color: #2c3e50;
-  font-weight: 500;
-}
-
 .counter-tagline {
   font-size: 1.4rem;
   color: #7f8c8d;
   font-weight: 400;
   font-style: italic;
   margin-top: 20px;
+}
+
+.counter-columns {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.counter-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers label under number */
+}
+
+.counter-number-box {
+  min-width: 4ch;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #3498db;
+  line-height: 1;
+}
+
+.counter-label-box {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: #333;
 }
 
 /* Video Section */
