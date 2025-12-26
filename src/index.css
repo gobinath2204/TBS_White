@@ -228,7 +228,7 @@ nav ul a:hover::after {
 
 .hero-left {
   flex: 1 1 40%;
-  font-size: clamp(4rem, 6.5vw, 15rem);
+  font-size: clamp(5rem, 4vw, 8rem);
   font-weight: 700;
   margin-left: 4rem;
   color: var(--orange);
