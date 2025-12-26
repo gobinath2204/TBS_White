@@ -50,7 +50,7 @@ const P2 = () => {
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div >
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
+              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
                 TBS’s EV Generic Deck is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
               </p>
             </div>

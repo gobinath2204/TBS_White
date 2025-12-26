@@ -50,7 +50,7 @@ const P3 = () => {
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div >
               {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
+              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
                 TBS’s Automotive Human-Machine Interface (HMI) transforms vehicle cabins into intuitive, connected ecosystems, enhancing driver and passenger experiences while prioritizing safety. Powered by Android Automotive OS, it integrates advanced touchscreens, voice recognition, and gesture controls to unify navigation, multimedia, climate control, and ADAS feedback into a customizable dashboard.
               </p>
             </div>

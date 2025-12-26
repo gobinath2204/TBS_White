@@ -8,7 +8,7 @@
   max-width: 80%;
   margin: 5rem auto 0 auto;
   padding: 40px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'SST', sans-serif;
   color: #2c3e50;
 }
 
@@ -486,7 +486,7 @@
 }
 
 .text-animation-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Sabon Next', serif;
   font-weight: 100;
   font-size: 36px;
   color: #2c3e50;
@@ -641,7 +641,7 @@
   font-size: 48px;
   font-weight: 100;
   color: #030b55;
-  font-family: "Poppins", sans-serif;
+  font-family: "Calluna Sans", sans-serif;
 }
 
 .highlight {

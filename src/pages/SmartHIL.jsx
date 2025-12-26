@@ -50,7 +50,7 @@ const P5 = () => {
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div>
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
+              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
                 TBS’s Smart Hardware-in-the-Loop (HIL) system revolutionizes automotive testing by bridging virtual simulations with real hardware, enabling precise validation of ECUs and control algorithms in a risk-free environment. Using real-time processors, it emulates vehicle dynamics, sensors, and actuators, testing scenarios from normal drives to edge-case faults without physical prototypes.
               </p>
             </div>

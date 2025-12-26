@@ -49,7 +49,7 @@ const P7 = () => {
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div >
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
+              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
                 TBS’s Free RTOS Safety Plugin transforms standard FreeRTOS kernels into certified safety-critical foundations for automotive embedded systems, pre-qualified to ISO 26262 ASIL-D and IEC 61508 SIL-3. This lightweight extension enhances robustness with error handling, memory partitioning, and deterministic scheduling, mitigating risks in applications like autonomous driving.
               </p>
             </div>

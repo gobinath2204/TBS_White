@@ -119,10 +119,10 @@ export default function About() {
                 employeeCounter.innerHTML = '0';
                 yearsCounter.innerHTML = '0';
 
-                animateValue(employeeCounter, 0, 100, 2500, '+');
+                animateValue(employeeCounter, 0, 90, 2500, '+');
 
                 setTimeout(() => {
-                  animateValue(yearsCounter, 0, 6, 2000, '+');
+                  animateValue(yearsCounter, 0, 7, 2000, '+');
                 }, 300);
               }
               observer.unobserve(counterSection);

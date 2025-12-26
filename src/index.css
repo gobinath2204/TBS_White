@@ -1,9 +1,13 @@
 /* ------------------------------
    GOOGLE FONTS
 ------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Axiforma:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Numans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SST&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calluna+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sabon+Next:wght@400;500;600;700&display=swap');
 
 /* ------------------------------
    RESET & GLOBAL
@@ -15,12 +19,16 @@
 }
 
 body {
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: "Numans", "Inter", "Segoe UI", sans-serif;
   background: #ffffff;
   /* background: #0a0a0a; */
   color: #333;
   line-height: 1.6;
   width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Axiforma', sans-serif;
 }
 
 :root {
@@ -170,7 +178,7 @@ nav ul a:hover::after {
    HERO SECTION
 ------------------------------ */
 .hero {
-  font-family: "Playfair Display", serif;
+  font-family: "Audiowide", sans-serif;
   /* display: flex; */
   flex-wrap: wrap;
   height: 100vh;

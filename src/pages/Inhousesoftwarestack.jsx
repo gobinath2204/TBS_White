@@ -50,7 +50,7 @@ const P1 = () => {
 
           <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
             <div >
-              <p style={{ fontSize: "1.5rem", textAlign: "center", padding: "6rem 0" }}>
+              <p style={{ fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0" }}>
                 TBS’s In-House Software Stack (Commercial Off-The-Shelf, or COTS) is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market. Validated to ISO 26262 for functional safety, it minimizes costs compared to custom solutions while ensuring high reliability.
               </p>
             </div>

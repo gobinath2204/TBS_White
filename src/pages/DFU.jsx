@@ -49,7 +49,7 @@ const P6 = () => {
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div>
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0"}}>
+              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
                 TBS’s Diagnostics Flashing Unit (DFU) is an all-in-one tool for seamless ECU reprogramming and diagnostics, streamlining maintenance, calibration, and updates across the vehicle lifecycle. Supporting UDS, CCP/XCP, and OBD-II protocols, it enables secure flashing over CAN, Ethernet, or LIN, with encryption to prevent tampering.
               </p>
             </div>
