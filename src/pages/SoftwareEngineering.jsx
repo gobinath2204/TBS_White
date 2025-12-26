@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const S2 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/In-house-Software.mp4";
+  const imagePath = "/swengg.jpg";
 
   const handlePrevious = () => {
     navigate("/pages/SystemDevelopment");
@@ -38,9 +38,7 @@ const S2 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src={imagePath} alt="SW Engineering services" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title">Software Engineering Services</h1>
         </div>
@@ -50,8 +48,8 @@ const S2 = () => {
           <section  style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div  >
               {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0"}}>
-                At TBS, our software engineering services deliver robust, scalable, and compliant solutions for automotive systems. Our expertise spans requirement development, architecture design, software development, detailed design, unit testing, interface validation, and acceptance testing, ensuring high-quality software that meets stringent industry standards.
+              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
+                TBS delivers comprehensive software engineering services for automotive systems, covering requirement development, architecture design, and rigorous testing methodologies. Our expertise spans AUTOSAR and non-AUTOSAR development, ensuring compliance with ISO 26262 and ASPICE standards for safety-critical applications. We provide end-to-end solutions from detailed design to unit testing, delivering robust, scalable software that meets stringent industry requirements.
               </p>
             </div>
           </section>

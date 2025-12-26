@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const S5 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/In-house-Software.mp4";
+  const imagePath = "/s&r.jpg";
 
   const handlePrevious = () => {
     navigate("/pages/SystemValidation");
@@ -38,9 +38,7 @@ const S5 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src={imagePath} alt="Safety & Regulatory Services" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title">Safety & Regulatory Services</h1>
         </div>
@@ -50,8 +48,8 @@ const S5 = () => {
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div >
               {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0"}}>
-                At TBS, we deliver cutting-edge software and hardware solutions to ensure compliance with stringent safety and regulatory standards. Our expertise spans functional safety, cybersecurity, high-voltage (HV) safety, automotive CAN standards, market regulations, electrical testing, and environmental standards, empowering clients to achieve robust, safe, and compliant automotive systems.
+              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
+                TBS delivers cutting-edge safety and regulatory compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. Our expertise spans ISO 26262, ISO 21434, automotive CAN protocols, and global market regulations, ensuring robust system protection and compliance. We provide comprehensive testing, validation, and certification support to help clients achieve safe, reliable, and market-ready automotive solutions.
               </p>
             </div>
           </section>

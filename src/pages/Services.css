@@ -1,0 +1,83 @@
+/* Services page layout */
+
+.services-section {
+  padding: 4rem 0 6rem 0;
+}
+
+/* Grid that holds all service cards */
+.services-section .product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;       /* wider, closer to homepage hero width */
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Individual service card */
+.services-section .product-card {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #111;
+  height: 360px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.services-section .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* RIGHT: image block */
+.services-section .product-card img {
+  flex: 0 0 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LEFT: text panel */
+.services-section .product-info {
+  flex: 0 0 40%;
+  background: #111;
+  color: #fff;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.services-section .product-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Description */
+.services-section .product-info p {
+  color: #ddd;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Optional: small responsive tweak */
+@media (max-width: 900px) {
+  .services-section .product-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .services-section .product-card img,
+  .services-section .product-info {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .services-section .product-info {
+    padding: 2rem 1.5rem;
+  }
+}

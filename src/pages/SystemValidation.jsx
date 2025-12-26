@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const S4 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/In-house-Software.mp4";
+  const imagePath = "/sysval.jpg";
 
   const handlePrevious = () => {
     navigate("/pages/HardwareEngineering");
@@ -39,9 +39,7 @@ const S4 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src={imagePath} alt="System validation services" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title">System Validation Services</h1>
         </div>
@@ -49,10 +47,8 @@ const S4 = () => {
         {/* Main Product Page */}
         <div className="product-page">
           <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
-            <p style={{ fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0" }}>
-              At our innovative engineering company, we excel in System Validation through <b>Sys4.DVP, Test and Design</b>, delivering a robust framework that integrates Design Validation Planning (DVP) with sophisticated testing and design strategies. This service is tailored for automotive and embedded systems, ensuring they adhere to critical standards like ISO 26262 for functional safety. Our process starts with a comprehensive requirements analysis, where we map out validation objectives and incorporate model-based development tools to simulate and refine designs early on. By employing automated test environments, we conduct thorough verifications covering functional, performance, and reliability aspects, identifying potential issues before they escalate.
-              <br />
-              Our team of seasoned engineers utilizes advanced methodologies such as fault tree analysis and simulation-driven testing to optimize system architecture. This not only enhances product quality but also reduces development timelines by integrating continuous feedback loops. Clients in the electric vehicle sector have leveraged our expertise to achieve seamless compliance, resulting in products that perform reliably under diverse conditions. We emphasize scalability, allowing our services to adapt from small prototypes to full-scale production validations. With a commitment to excellence, our Sys4.DVP, Test and Design ensure your systems are not just validated but engineered for superior performance, safety, and market success in a competitive landscape.
+            <p style={{ fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
+              TBS excels in System Validation through comprehensive SYS.4 DVP, Test and Design frameworks, delivering robust validation solutions for automotive and embedded systems. Our services integrate Design Validation Planning with sophisticated testing methodologies, ensuring compliance with ISO 26262 and other critical safety standards. We provide end-to-end validation from HIL testing to vehicle validation, utilizing advanced automation and model-based development to optimize system performance and reliability.
             </p>
           </section>
 

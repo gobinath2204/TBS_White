@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const S1 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/In-house-Software.mp4";
+  const imagePath = "/sysenggdev.jpg";
 
   const handlePrevious = () => {
     navigate("/pages/SafetyandRegulatory");
@@ -38,9 +38,7 @@ const S1 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src={imagePath} alt="System engineering development" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title">System Development Services</h1>
         </div>
@@ -49,11 +47,9 @@ const S1 = () => {
           <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
             <div >
               {/* <h2>Overview</h2> */}
-              <p style={{ fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0" }}>
-                TBS's <b>SYS.2 Requirement Elicitation</b> framework provides exceptional system engineering, generating accurate, fully traceable requirements that drive cutting-edge automotive advancements.
-                Collaborating with stakeholders—including OEMs, suppliers, and end-users—we capture essential needs: functional specs, performance metrics (modes, measurements, ranges, derating, slew rates), efficiency goals, set points, protections, and safety protocols compliant with ISO 26262 and ASPICE.
-                Using structured methodologies, we generate requirements from varied origins: generic features, HV safety norms (LV123, LV124, VDA 320), OEM standards regulations (GBT, FMVSS), and standards such as ISO 26262, 21434. Coverage spans diagnostics, calibration, communications (CAN, LIN, Wi-Fi/ISO 15118, Ethernet), and applications like power transfer, positioning, object detection, motor control, and boost/buck converters.
-                With tools enabling bi-directional traceability— Cameo/Catia Magic, Polarion, DOORS, Enterprise Architect, etc., We deliver categorized, reusable requirements integrated with ASIL/SIL, vehicle builds, verification, and acceptance criteria. This strategy eliminates ambiguities, streamlines design-to-validation, ensures compliance, cuts risks, and boosts reliability.
+              <p style={{ fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
+                TBS's <b>SYS.2 Requirement Elicitation</b> framework delivers exceptional system engineering with accurate, fully traceable requirements for cutting-edge automotive advancements.We collaborate with stakeholders to capture functional specs, performance metrics, safety protocols, and compliance requirements across diagnostics, communications, and automotive applications.
+                Using advanced traceability tools, we deliver categorized, reusable requirements that eliminate ambiguities, ensure compliance, and boost system reliability.
               </p>
             </div>
           </section>

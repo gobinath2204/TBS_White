@@ -90,7 +90,7 @@ export default function Home() {
           building excellence across every stage of the automotive lifecycle.
         </p>
         <p>
-          Today, with nearly 100 dedicated employees, we deliver end-to-end
+          Today, dedicated employees, we deliver end-to-end
           expertise in system design, development, verification, validation, and
           compliance. Serving clients across the globe, our journey is powered
           by passion, perseverance, and a commitment to building smarter, safer,

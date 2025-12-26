@@ -367,7 +367,7 @@
   width: 3px;
   background: linear-gradient(to bottom, #3498db, #2c3e50);
   top: 0;
-  bottom: 0;
+  height: 100%;
   transform: translateX(-50%);
 }
 

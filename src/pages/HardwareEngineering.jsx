@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const S3 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/In-house-Software.mp4";
+  const imagePath = "/hwengg.jpg";
 
   const handlePrevious = () => {
     navigate("/pages/SoftwareEngineering");
@@ -38,9 +38,7 @@ const S3 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src={imagePath} alt="HW Engineering services" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title">Hardware Engineering Services</h1>
         </div>
@@ -48,8 +46,8 @@ const S3 = () => {
         <div className="product-page">
           <section  style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div >
-              <p style={{fontSize: "1.5rem", textAlign: "center", padding: "6rem 0 0 0"}}>
-                We deliver complete <b>ASPICE-compliant Hardware Engineering (HWE) services</b> tailored for modern automotive systems. Our capabilities span the entire hardware development lifecycle, including requirements engineering, schematic and PCB design, risk analysis (FMEA/DFMEA), advanced simulations, and rigorous verification. With deep compliance to standards, we ensure robust, high-performance hardware that supports functional safety and real-world reliability. Leveraging advanced tools and automotive-grade methodologies, we partner with clients to design solutions that meet stringent industry demands, reduce time-to-market, and improve system resilience. Whether for EV platforms, body control systems, our hardware engineering team delivers results you can depend on.
+              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
+                TBS provides comprehensive ASPICE-compliant Hardware Engineering services for modern automotive systems, covering the complete development lifecycle from requirements to verification. Our expertise includes schematic and PCB design, safety analysis (FMEA/DFMEA), advanced simulations, and rigorous testing methodologies. We deliver robust, high-performance hardware solutions that ensure functional safety, compliance with industry standards, and accelerated time-to-market.
               </p>
             </div>
           </section>
