@@ -84,9 +84,9 @@ export default function ProductSlider() {
           <div className="product-grid">
             {products.map((product) => (
               <div className="product-card" key={product.id} onClick={() => {
-                  navigate(`/pages/${current.id}`);
-                  window.scrollTo(0, 0);
-                }}>
+                navigate(`/pages/${current.id}`);
+                window.scrollTo(0, 0);
+              }}>
                 <img src={product.img} alt={product.name} />
                 <div className="product-info">
                   <h3>{product.name}</h3>
@@ -103,7 +103,7 @@ export default function ProductSlider() {
               ❮
             </span>
 
-            <div className="slide">
+            <div className="slide" key={current.id} style={{ boxShadow: "0 12px 20px rgba(253, 253, 253, 0.37)" }}>
               <div className="slide-image">
                 <img src={current.img} alt={current.name} />
                 <span className="image-overlay"></span>

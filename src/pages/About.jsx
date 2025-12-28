@@ -127,7 +127,7 @@ export default function About() {
                 animateValue(employeeCounter, 0, 100, 2500, '+');
 
                 setTimeout(() => {
-                  animateValue(yearsCounter, 0, 6, 2000, '+');
+                  animateValue(yearsCounter, 0, 7, 2000, '+');
                 }, 300);
               }
               observer.unobserve(counterSection);
@@ -246,7 +246,7 @@ export default function About() {
                 across every stage of the automotive lifecycle.
               </p>
               <p>
-                Today, with nearly 100 dedicated employees, we deliver end-to-end expertise in system design,
+                Today, with dedicated employees, we deliver end-to-end expertise in system design,
                 development, verification, validation, and compliance. Serving clients across the globe, our
                 journey is powered by passion, perseverance, and a commitment to building smarter, safer, and
                 cleaner mobility solutions.
@@ -274,7 +274,7 @@ export default function About() {
         </section>
         {/* Video Section */}
         <section className="video-section">
-          
+
           <div className="video-background">
             <video autoPlay muted loop playsInline className="content-video">
               <source src="/videos/tbs_short.mp4" type="video/mp4" />
