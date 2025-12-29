@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const P3 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/2792370-hd_1920_1080_30fps.mp4";
+  const videoPath = "/HMI.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/EVgenericdeck");
@@ -38,7 +38,7 @@ const P3 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
+          <video autoPlay muted loop className="hero-video" style={{ transform: 'scale(1.2)' }}>
             <source src={videoPath} type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>

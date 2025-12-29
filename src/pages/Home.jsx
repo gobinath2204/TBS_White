@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductSlider from "../components/ProductSlider";
 import ServiceSlider from "../components/ServiceSlider";
@@ -7,8 +7,8 @@ import "../index.css";
 export default function Home() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
+  const videoRef = useRef(null);
 
-  // Fix hydration issue by checking window only after component mounts
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
 
@@ -17,31 +17,34 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Updated YouTube embed with better parameters
-  const youtubeParams = [
-    'autoplay=1',
-    'mute=1',
-    'loop=1',
-    'playlist=ejx06woQGA0',
-    'controls=0',
-    'rel=0',
-    'playsinline=1',
-    'enablejsapi=1'
-  ].join('&');
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const handleEnded = () => {
+        video.playbackRate = -1;
+        video.play();
+      };
+      
+      video.addEventListener('ended', handleEnded);
+      return () => video.removeEventListener('ended', handleEnded);
+    }
+  }, []);
 
   return (
     <>
       {/* HERO */}
       <section className="hero" id="home">
         <div className="video-background">
-          <iframe
-            src={`https://www.youtube.com/embed/ejx06woQGA0?${youtubeParams}`}
-            title="Background video"
-            frameBorder="0"
-            allow="autoplay; encrypted-media; accelerometer; gyroscope"
-            allowFullScreen
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            playsInline
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             aria-label="Background video showing our services"
-          ></iframe>
+          >
+            <source src="/Grok hero.mp4" type="video/mp4" />
+          </video>
         </div>
 
         <div className="hero-content">

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const P4 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/videos/HMI.mp4";
+  const videoPath = "/SMU.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/HMI");
