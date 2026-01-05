@@ -20,7 +20,7 @@
 }
 
 .slide-image {
-  flex: 0 0 65%;
+  flex: 0 0 50%;
 }
 
 .images-overlay {
@@ -40,7 +40,7 @@
 }
 
 .slide-content {
-  flex: 0 0 35%;
+  flex: 0 0 50%;
   background: #111;
   color: #fff;
   padding: 3rem 2rem;
