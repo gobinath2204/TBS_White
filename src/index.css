@@ -187,7 +187,7 @@ nav ul a:hover::after {
   position: relative;
   overflow: hidden;
   /* margin-top: 11vh; */
-  color: white;
+  color: #ffffff;
 }
 
 .video-background {

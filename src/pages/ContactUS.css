@@ -16,7 +16,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   max-width: 1200px;
-  margin-left: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
 .form-section {
@@ -25,6 +27,27 @@
   border-radius: 15px;
   border: 1px solid #e5e7eb; 
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group:last-of-type {
+  flex: 1;
+}
+
+.form-group:last-of-type textarea {
+  height: 100%;
+  min-height: 100px;
 }
 
 .form-section h2 {
@@ -80,7 +103,7 @@ button[type="submit"]:hover {
 }
 
 .map-section {
-  height: 500px;
+  height: 625px;
   border-radius: 15px;
   overflow: hidden;
 }

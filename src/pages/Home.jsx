@@ -17,19 +17,6 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      const handleEnded = () => {
-        video.playbackRate = -1;
-        video.play();
-      };
-      
-      video.addEventListener('ended', handleEnded);
-      return () => video.removeEventListener('ended', handleEnded);
-    }
-  }, []);
-
   return (
     <>
       {/* HERO */}
@@ -39,11 +26,12 @@ export default function Home() {
             ref={videoRef}
             autoPlay
             muted
+            loop
             playsInline
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             aria-label="Background video showing our services"
           >
-            <source src="/Grok hero.mp4" type="video/mp4" />
+            <source src="/Grok%20Hero%20New.mp4" type="video/mp4" />
           </video>
         </div>
 

@@ -62,24 +62,24 @@ export default function Footer() {
         <div className="footer-section">
           <h4>Services</h4>
           <ul>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/S1">System Development</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/S2">Software Engineering</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/S3">Hardware Engineering</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/S4">System Validation</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/S5">Safety & Regulatory</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/SystemDevelopment">System Development</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/SoftwareEngineering">Software Engineering</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/HardwareEngineering">Hardware Engineering</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/SystemValidation">System Validation</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/SafetyandRegulatory">Safety & Regulatory</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h4>Products</h4>
           <ul>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/P1">In house Software stack</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/P2">EV generic deck</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/P3">HMI</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/P4">Secure Manufacturing Unit</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/P5">Smart HIL</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/P6">Diagnostics flashing unit</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/P7">Free RTOS Safety Plugin</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Inhousesoftwarestack">In house Software stack</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/EVgenericdeck">EV generic deck</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/HMI">HMI</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/SMU">Secure Manufacturing Unit</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/SmartHIL">Smart HIL</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/DFU">Diagnostics flashing unit</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/RTOS">Free RTOS Safety Plugin</Link></li>
           </ul>
         </div>
 

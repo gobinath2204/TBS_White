@@ -36,7 +36,7 @@
 .services-section .product-card img {
   flex: 0 0 60%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
 }
 
 /* LEFT: text panel */
