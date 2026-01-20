@@ -7,18 +7,19 @@
 .contact-container {
   padding: 1rem 5%;
   background: #ffffff; 
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .contact-content {
-  margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 80vh;
 }
 
 .form-section {
@@ -29,6 +30,7 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .form-section form {
@@ -103,7 +105,7 @@ button[type="submit"]:hover {
 }
 
 .map-section {
-  height: 625px;
+  height: 100%;
   border-radius: 15px;
   overflow: hidden;
 }

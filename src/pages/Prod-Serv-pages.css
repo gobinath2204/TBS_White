@@ -60,7 +60,7 @@
   width: 90% ;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 3rem;
   padding: 1rem;
   margin: 0 auto;
   font-family: 'Segoe UI', sans-serif;
@@ -95,19 +95,23 @@
 .section-with-image {
   display: flex;
   justify-content: space-between;
-  align-items: center;        
+  align-items: center;
   position: relative;
-  min-height: 50vh;            
+  min-height: 70vh;
   overflow: hidden;
   margin: 0;
-  padding: 0 1rem;             
-  gap: 2rem; 
+  padding: 0 1rem;
+  gap: 2rem;
+  border-radius: 15px;
+  background: #efefef;
+  border: solid 1px rgb(205, 205, 205);
+  backdrop-filter: blur(12px);
 }
 
 /* Section with Image + Text Layout */
 .section-image-wrapper {
-  display: flex;  
-  align-items: center; 
+  display: flex;
+  align-items: center;
   position: relative;
   height: 60vh;
   flex: 1;
@@ -228,30 +232,64 @@
 /* Text Side */
 .section-text {
   flex: 1;
-  color: var(--orange);
-  padding: 6rem 3rem;
+  color: black;
+  padding: 3rem 2rem;
   height: 100%;
   width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 3;
+  background: transparent;
 }
 
 .section-text h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--orange);
+  text-align: center;
 }
 
 .section-text p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #333;
-  max-width: 600px;
+  color: black;
+  max-width: 500px;
   text-align: justify;
+  margin: 0;
+}
+
+.section-text strong {
+  color: var(--orange);
+}
+
+.section-text b {
+  color: var(--orange);
+}
+
+.section-text ul {
+  max-width: 500px;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.section-text li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: black;
+  margin: 0.2rem 0;
+  list-style-type: disc;
+}
+
+.section-text li strong {
+  color: var(--orange);
+}
+
+.section-text li b {
+  color: var(--orange);
 }
 
 /* Reverse Layout */
@@ -260,119 +298,30 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1024px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .hero-container {
-    height: 50vh;
-  }
-
-  .hero-title {
-    font-size: 1.8rem;
-    margin-top: 10vh;
-    padding: 0 1rem;
-  }
-
-  /* Stack sections vertically */
+@media (max-width: 768px) {
   .section-with-image,
   .section-with-image.reverse {
     flex-direction: column;
-    align-items: center;
-    min-height: auto;
-    margin: 2rem 0;
+    height: auto;
   }
 
-  /* Hide all images on mobile and tablet */
-  .section-image-wrapper,
-  .section-image,
-  .section-image-overlay {
-    display: none;
+  .section-image-wrapper {
+    height: 50vh;
   }
 
   .section-text {
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-    text-align: left;
-    color: #222;
-    border-radius: 8px;
-    box-shadow: none;
-    margin: 0;
+    padding: 2rem;
   }
 
   .section-text h2 {
-    font-size: 1.6rem;
-    text-align: center;
+    font-size: 2rem;
   }
 
   .section-text p {
     font-size: 1rem;
-    color: #333;
-    box-shadow: none;
   }
 
-  .content-section {
-    margin: 1rem 0;
-    padding: 4rem 1rem;
-    border-radius: 15px;
-    background: #efefef;
-    border: solid 1px rgb(205, 205, 205);
-    backdrop-filter: blur(12px);
-    color: var(--text-primary);
-  }
-
-  
-
-  .nav-arrow-btn {
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    border: none;
-  }
-
-  .nav-arrow-btn.left {
-    left: 0;
-  }
-
-  .nav-arrow-btn.right {
-    right: 0;
-  }
-
-  .nav-arrow-btn-inner {
-    border: none;
-    background: transparent;
-    color: white;
-    font-size: 1.5rem;
-  }
-
-  .nav-arrow-btn:hover .nav-arrow-btn-inner {
-    background: none;
-    transform: none;
-    box-shadow: none;
-  }
-
-  * {
-    transition: none;
-  }
-}
-
-/* Hide arrows on smaller screens */
-@media (max-width: 768px) {
   .nav-arrow-btn {
     display: none;
-  }
-
-  .section-text {
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-    text-align: left;
-    color: #222;
-    border-radius: 8px;
-    box-shadow: none;
-    margin: 0;
   }
 }

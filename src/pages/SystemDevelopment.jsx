@@ -48,9 +48,29 @@ const S1 = () => {
             <div >
               {/* <h2>Overview</h2> */}
               <p style={{ fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
-                TBS's <b>SYS.2 Requirement Elicitation</b> framework delivers exceptional system engineering with accurate, fully traceable requirements for cutting-edge automotive advancements.We collaborate with stakeholders to capture functional specs, performance metrics, safety protocols, and compliance requirements across diagnostics, communications, and automotive applications.
-                Using advanced traceability tools, we deliver categorized, reusable requirements that eliminate ambiguities, ensure compliance, and boost system reliability.
+                Our <b>system engineering team</b> delivers exceptional system engineering with accurate, fully traceable requirements for functional, non-functional (electrical, mechanical, and environmental), communication, diagnostics, and EOL for cutting-edge automotive ECUs. Our <b>system engineering team</b> delivers the system engineering in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards (UN R100).
               </p>
+            </div>
+          </section>
+
+          <section className="content-section section-with-image">
+            <div className="section-image-wrapper">
+              <img src="/S1/Picture0.webp" alt="SYS.2 Requirements Elicitation" className="section-image" />
+            </div>
+            <div className="section-text">
+              <h2>SYS.2 Requirements Elicitation</h2>
+              <p>
+                Our comprehensive SYS.2 requirements elicitation process ensures complete system specification through systematic analysis and documentation:
+              </p>
+              <ul>
+                <li><strong>Functional Requirements Elicitation:</strong> Operating modes, measurement capabilities, control functions, and system behaviors</li>
+                <li><strong>Non-Functional Requirements:</strong> Performance metrics, efficiency standards, lifetime expectations, and operational constraints</li>
+                <li><strong>Compliance Standards:</strong> Functional safety (ISO 26262), cybersecurity (ISO 21434), and market regulatory standards</li>
+                <li><strong>Environmental Requirements:</strong> Temperature ranges, chemical resistance, mechanical durability, and electrical specifications</li>
+                <li><strong>Communication Requirements:</strong> CAN, UDS, LIN, Ethernet, ISO 15118, and other protocol specifications</li>
+                <li><strong>End-of-Line Requirements:</strong> Manufacturing test procedures and process validation requirements</li>
+                <li><strong>Test Requirements:</strong> Verification and validation strategies for comprehensive system testing</li>
+              </ul>
             </div>
           </section>
 
@@ -61,9 +81,17 @@ const S1 = () => {
             <div className="section-text">
               <h2>SYS.3 Architecture Development</h2>
               <p>
-                At TBS, we excel in SYS.3 system architecture analysis, delivering scalable, modular designs tailored for automotive applications. Adhering strictly to AUTOSAR standards, we meticulously evaluate technical design aspects across the product lifecycle—from concept to deployment and maintenance. We optimize for peak performance, seamless interoperability, and long-term maintainability, ensuring hardware and software integrate flawlessly to support complicated functionalities.
-                Our comprehensive services include deriving precise estimates for project management, identifying special hardware characteristics, and documenting robust rationales for every architectural decision. This approach minimizes risks, accelerates time-to-market, and guarantees compliance with industry benchmarks. Partner with TBS to architect resilient, future-proof systems that drive innovation and efficiency in the automotive sector.
+                At TBS, we excel in SYS.3 system architecture analysis, delivering scalable, modular designs tailored for automotive applications. Adhering strictly to AUTOSAR standards, we optimize for peak performance and long-term maintainability:
               </p>
+              <ul>
+                <li><strong>Technical Design Evaluation:</strong> Comprehensive analysis across product lifecycle from concept to deployment and maintenance</li>
+                <li><strong>Performance Optimization:</strong> Peak performance, seamless interoperability, and hardware-software integration</li>
+                <li><strong>Project Management Support:</strong> Precise estimates and special hardware characteristic identification</li>
+                <li><strong>Architectural Documentation:</strong> Robust rationales for every architectural decision</li>
+                <li><strong>Risk Mitigation:</strong> Minimized risks and accelerated time-to-market</li>
+                <li><strong>Industry Compliance:</strong> Guaranteed compliance with AUTOSAR and industry benchmarks</li>
+                <li><strong>Future-Proof Systems:</strong> Resilient, scalable architectures that drive automotive innovation</li>
+              </ul>
             </div>
           </section>
 
@@ -74,9 +102,17 @@ const S1 = () => {
             <div className="section-text">
               <h2>FMEA Development</h2>
               <p>
-                At TBS, our FMEA expertise empowers automotive innovation through rigorous Design FMEA (DFMEA) and Process FMEA (PFMEA) methodologies. We meticulously identify project boundaries using targeted questions on customer needs, design control, and regulatory compliance, ensuring focused analyses that exclude non-essential scopes. Our DFMEA uncovers potential design failures via Fault tree analysis (FTA), simulations, and root cause analysis etc., optimizing reliability and safety. Complementing this, PFMEA targets manufacturing, assembly, and logistics variances to pre-empt defects, enhancing controls pre-production.
-                Leveraging cross-functional core and extended teams, we integrate prior experiences, business case preparations, and expert insights for comprehensive risk mitigation. Compliant with AUTOSAR and ISO standards, TBS delivers resilient systems that minimize warranty claims, accelerate market entry, and safeguard cyber-physical integrity. Partner with us for proactive, data-driven FMEA excellence.
+                At TBS, our FMEA expertise empowers automotive innovation through rigorous Design FMEA (DFMEA) and Process FMEA (PFMEA) methodologies. We deliver comprehensive risk mitigation strategies:
               </p>
+              <ul>
+                <li><strong>Project Boundary Identification:</strong> Targeted questions on customer needs, design control, and regulatory compliance</li>
+                <li><strong>Design FMEA (DFMEA):</strong> Fault tree analysis (FTA), simulations, and root cause analysis for design failure prevention</li>
+                <li><strong>Process FMEA (PFMEA):</strong> Manufacturing, assembly, and logistics variance analysis for defect prevention</li>
+                <li><strong>Cross-Functional Teams:</strong> Integration of prior experiences, business case preparations, and expert insights</li>
+                <li><strong>Standards Compliance:</strong> AUTOSAR and ISO standards adherence for industry benchmarks</li>
+                <li><strong>Risk Mitigation:</strong> Minimized warranty claims and accelerated market entry</li>
+                <li><strong>Cyber-Physical Integrity:</strong> Comprehensive protection for connected automotive systems</li>
+              </ul>
             </div>
           </section>
 
