@@ -5,56 +5,27 @@ export default function Footer() {
   return (
     <footer className="footer">
       {/* Left Side */}
-      <div className="footer-left">
-        <h2>Test Base Solutions</h2>
-        <p>
-          Test Base Solutions Advanced diagnostics, high-performance software, and EV innovation—from OBCs and BMS to DC-DC converters and beyond.
-        </p>
-
-        {/* Social Media */}
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/company/testbasesolutions-ltd/?originalSubdomain=uk" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M22.225 0H1.771C.792 0 0 .771 0 
-                1.771v20.451C0 23.229.792 
-                24 1.771 24h20.451C23.2 
-                24 24 23.229 24 
-                22.222V1.771C24 .771 23.2 0 
-                22.225 0zM7.119 20.452H3.556V9h3.563v11.452zM5.338 
-                7.433c-1.141 0-2.063-.926-2.063-2.065 
-                0-1.14.922-2.066 
-                2.063-2.066s2.063.926 
-                2.063 2.066c0 
-                1.139-.922 2.065-2.063 
-                2.065zm15.115 
-                13.019h-3.562v-5.605c0-1.337-.025-3.056-1.861-3.056-1.861 
-                0-2.146 1.453-2.146 2.955v5.706h-3.562V9h3.419v1.561h.049c.476-.9 
-                1.637-1.849 3.37-1.849 3.6 0 4.267 
-                2.369 4.267 5.452v6.288z"/>
-            </svg>
-          </a>
-
-          <a href="tel:+447918107720" aria-label="Phone">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 
-             1 0 011.05-.24c1.12.37 2.33.57 3.54.57.55 
-             0 1 .45 1 1v3.5c0 .55-.45 1-1 
-             1C10.07 21 3 13.93 3 5c0-.55.45-1 
-             1-1H7.5c.55 0 1 .45 1 1 0 
-             1.21.2 2.42.57 3.54.1.35.03.73-.24 
-             1.05l-2.2 2.2z"/>
-            </svg>
-          </a>
-
-          <a href="mailto:info@testbasesolutions.co.uk" aria-label="Email">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 4H4c-1.1 0-2 .9-2 
-             2v12c0 1.1.9 2 2 2h16c1.1 
-             0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
-             4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-          </a>
-        </div>
+      <div className="footer-left" style={{width: '30%', padding: '20px', display: 'flex', flexDirection: 'column', gap: '20px'}}>
+        <a href="https://www.linkedin.com/company/testbasesolutions-ltd/?originalSubdomain=uk" target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit'}}>
+          <svg width="24" height="24" fill="white" viewBox="0 0 24 24" style={{backgroundColor: '#0077B5', borderRadius: '2px'}}>
+            <path d="M22.225 0H1.771C.792 0 0 .771 0 1.771v20.451C0 23.229.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.222V1.771C24 .771 23.2 0 22.225 0zM7.119 20.452H3.556V9h3.563v11.452zM5.338 7.433c-1.141 0-2.063-.926-2.063-2.065 0-1.14.922-2.066 2.063-2.066s2.063.926 2.063 2.066c0 1.139-.922 2.065-2.063 2.065zm15.115 13.019h-3.562v-5.605c0-1.337-.025-3.056-1.861-3.056-1.861 0-2.146 1.453-2.146 2.955v5.706h-3.562V9h3.419v1.561h.049c.476-.9 1.637-1.849 3.37-1.849 3.6 0 4.267 2.369 4.267 5.452v6.288z"/>
+          </svg>
+          <span>@testbasesolutions</span>
+        </a>
+        
+        <a href="tel:+447918107720" style={{display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit'}}>
+          <svg width="24" height="24" fill="black" viewBox="0 0 24 24" style={{backgroundColor: 'white', borderRadius: '2px', padding: '2px'}}>
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24c1.12.37 2.33.57 3.54.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1H7.5c.55 0 1 .45 1 1 0 1.21.2 2.42.57 3.54.1.35.03.73-.24 1.05l-2.2 2.2z"/>
+          </svg>
+          <span>+44 | 7918 10720</span>
+        </a>
+        
+        <a href="mailto:info@testbasesolutions.co.uk" style={{display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit'}}>
+          <svg width="24" height="24" fill="black" viewBox="0 0 24 24" style={{backgroundColor: 'white', borderRadius: '2px', padding: '2px'}}>
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span>info@testbasesolutions.co.uk</span>
+        </a>
       </div>
 
       {/* Right Side */}

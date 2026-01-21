@@ -123,9 +123,17 @@ const S1 = () => {
             <div className="section-text">
               <h2>Communication Requirements</h2>
               <p>
-                At TBS, Our Communication expertise delivers meticulously crafted requirements for vehicle networks, spanning CAN, LIN, Ethernet and wireless protocols. We specify robust physical layers—including baud rates, termination resistors, and bus-off conditions—alongside network management for ECU knockout, partial networking, and secure wake-up/sleep cycles. Our RX/TX message definitions encompass timing, signal allocation, cyclic/on-event properties, and error handling, ensuring low-latency data exchange, seamless diagnostics, and fail-safe designs informed by extensive testing experience.
-                We are experts in the ISO 15118 protocol and have delivered successful projects recently. Pioneers in wireless EV charging, we leverage tools like CANoe, CANalyzer, CANape, and CANdela Studio to preempt network failures, optimize topologies, and guarantee interoperability. Partner with TBS for resilient, standards-driven communication architectures that drive automotive innovation.
+                At TBS, our communication expertise delivers meticulously crafted requirements for vehicle networks, spanning CAN, LIN, Ethernet, and wireless protocols:
               </p>
+              <ul>
+                <li><strong>Physical Layer Specifications:</strong> Robust physical layers with comprehensive test requirements for reliable network performance</li>
+                <li><strong>Communication Standards:</strong> Message format specifications, signal properties, network management, and sleep/wake-up mechanisms</li>
+                <li><strong>Error Handling Mechanisms:</strong> Clearly defined protocols supporting low-latency data exchange, seamless diagnostics, and fail-safe designs</li>
+                <li><strong>ISO 15118 Protocol Expertise:</strong> Comprehensive implementation capabilities covering parts 1, 2, 3, 8, and 20</li>
+                <li><strong>Communication Tools Proficiency:</strong> Extensive experience with simulation tools for rest bus operations and monitoring bus traffic</li>
+                <li><strong>Design Verification Standards:</strong> Expert implementation of ISO 11898, ISO 14229, ISO 15765, and ASM 1.1 compliance</li>
+                <li><strong>Network Optimization:</strong> Advanced topology design and interoperability assurance for automotive communication systems</li>
+              </ul>
             </div>
           </section>
 
@@ -136,11 +144,17 @@ const S1 = () => {
             <div className="section-text">
               <h2>Functional Safety</h2>
               <p>
-                Our functional safety services guarantee ISO 26262 compliance, empowering automotive innovation with unwavering reliability. We perform in-depth hazard analysis and risk assessments to pinpoint potential threats, then craft precise safety requirements tailored for ASIL levels, ensuring robust mitigation strategies.
-                Partnering closely with clients, we map the entire safety lifecycle: from defining technical safety requirements (TSR) and developing the technical safety concept—including detailed system design—to outlining integration and testing steps, comprehensive validation processes, and thorough functional safety assessments.
-                Through meticulous safety case development and end-to-end validation, we minimize risks across all development phases—from concept to deployment—elevating vehicle safety, performance, and trustworthiness in every project.
-
+                At TBS, our functional safety expertise ensures comprehensive ISO 26262 compliance through systematic risk analysis and robust safety engineering:
               </p>
+              <ul>
+                <li><strong>Technical Safety Requirements (TSR) Development:</strong> Expert support in defining TSR from safety goals with comprehensive fault tree analysis backing</li>
+                <li><strong>ASIL-Tailored Safety Requirements:</strong> Customized safety requirements specifically designed for each ASIL level with robust mitigation strategies</li>
+                <li><strong>Hazard Analysis & Risk Assessment:</strong> In-depth analysis to identify and assess potential threats throughout the system lifecycle</li>
+                <li><strong>Safety Standards Compliance:</strong> Rigorous design validation ensuring adherence to strict safety standards through systematic failure identification</li>
+                <li><strong>Diagnostic Coverage Analysis:</strong> Comprehensive measurement of diagnostic effectiveness and coverage capabilities</li>
+                <li><strong>Safety Metrics Calculation:</strong> Expert computation of critical metrics including SPFM, LFM, and PMHF for quantitative safety assessment</li>
+                <li><strong>FMEDA Development:</strong> Advanced failure modes, effects, and diagnostic analysis to predict failure rates and assess diagnostic effectiveness</li>
+              </ul>
             </div>
           </section>
 
