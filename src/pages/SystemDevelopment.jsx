@@ -165,10 +165,15 @@ const S1 = () => {
             <div className="section-text">
               <h2>Cybersecurity</h2>
               <p>
-                TBS’s HV Cyber Security services strengthen automotive systems against evolving threats, ensuring compliance with ISO 21434, ISO 26262, UN R155/R156, and ENISA guidelines. We integrate HARA inputs and customer needs into a structured process: Threat Assessment and Management (TARA analysis for risk reports and plans), Security Requirements Engineering (STRIDE-based ITEMS, C2A specs via JIRA, Polarion, GitHub), Verification and Validation (CAL 2 fuzz testing, code analysis tools), and Cybersecurity Concept & Implementation.
-                For EV components, our SYS.2 generic deck delivers robust SYS.2 requirements—secure firmware updates (M16), hardware root of trust, bootloader integrity, HSM/VKMS protections against replay/unauthorized attacks (M10), cryptographic safeguards (M11), and denial-of-service mitigations (M11). This yields traceability matrices, architecture documents, implementation plans, test procedures, and reports, enabling resilient, connected vehicles.
-
+                Our Cybersecurity team strengthens automotive systems against evolving threats, ensuring compliance with ISO 21434, UN R155/R156, and ENISA guidelines. We integrate HARA inputs and customer needs into a structured process:
               </p>
+              <ul>
+                <li><strong>Threat Assessment and Management:</strong> TARA analysis for risk reports and plans</li>
+                <li><strong>Security Requirements Engineering:</strong> STRIDE-based ITEMS, C2A specs via JIRA, Polarion, GitHub</li>
+                <li><strong>Verification and Validation:</strong> CAL 2 fuzz testing, code analysis tools</li>
+                <li><strong>Cybersecurity Concept & Implementation:</strong> Development of robust security concepts and their practical implementation</li>
+                <li><strong>End-to-End Validation:</strong> Complete validation of secure firmware updates (M16), hardware root of trust, bootloader integrity, HSM/VKMS protections against replay/unauthorized attacks (M10), cryptographic safeguards (M11), and denial-of-service mitigations (M11)</li>
+              </ul>
             </div>
           </section>
 
@@ -179,11 +184,14 @@ const S1 = () => {
             <div className="section-text">
               <h2>Diagnostics & EOL Requirements Development</h2>
               <p>
-                At TBS, our Diagnostics and End-of-Line (EOL) expertise crafts comprehensive requirements that strengthen system reliability and manufacturability in automotive production. Aligned with ISO 14229 (UDS), we expertly define diagnostic protocols, fault codes, and tailored EOL test procedures to streamline troubleshooting, calibration, and quality assurance on the assembly line.
-                As experts in UDS ISO 14229, our engineers draw from decades of hands-on experience in vehicle manufacturing to author precise EOL requirements and diagnostic architectures. This enables rapid issue detection, efficient debugging, and seamless fixes, minimizing downtime and warranty risks while ensuring compliance and peak performance.
-                Partner with TBS for proactive, production-ready diagnostics that accelerate market readiness and safeguard vehicle integrity.
-
+                Our Diagnostics team specializes in deriving SYS.2 diagnostics requirements in full compliance with ISO 14229 and ISO 15765 standards. We deliver comprehensive solutions for vehicle diagnostics and manufacturing:
               </p>
+              <ul>
+                <li><strong>Diagnostic Definition:</strong> Expert definition of diagnostic services, fault codes, Data Identifiers (DIDs), and routine controls</li>
+                <li><strong>Manufacturing Alignment:</strong> Development of EOL requirements that align with manufacturing team processes and guidelines for smooth delivery</li>
+                <li><strong>Market Readiness:</strong> Proactive, production-ready diagnostics designed to accelerate market readiness and safeguard vehicle integrity</li>
+                <li><strong>Test Automation:</strong> Readily available test procedures and automation scripts compliant with GGDS for service, communication, and software download</li>
+              </ul>
             </div>
           </section>
         </div>

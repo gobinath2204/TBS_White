@@ -38,9 +38,7 @@ const P2 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src="/EVdeck.png" alt="EV Generic Deck" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>EV Generic Deck</h1>
         </div>

@@ -38,9 +38,7 @@ const P5 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src="/SmartHIL.png" alt="Smart HIL (Hardware-in-the-Loop)" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>Smart HIL (Hardware-in-the-Loop)</h1>
         </div>

@@ -38,9 +38,7 @@ const P3 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video" style={{ transform: 'scale(1.2)' }}>
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src="/HMI.png" alt="HMI (Human-Machine Interface)" className="hero-video" style={{ transform: 'scale(1.2)' }} />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>HMI (Human-Machine Interface)</h1>
         </div>

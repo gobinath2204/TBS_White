@@ -20,7 +20,7 @@ const products = [
   {
     id: "HMI",
     name: "HMI",
-    img: "/HMI.jpg",
+    img: "/hmi.jpg",
     Cdesc: "TBS’s Automotive Human-Machine Interface (HMI)",
     desc: "TBS’s Automotive Human-Machine Interface (HMI) transforms vehicle cabins into intuitive, connected ecosystems, enhancing driver and passenger experiences while prioritizing safety. Powered by Android Automotive OS, it integrates advanced touchscreens, voice recognition, and gesture controls to unify navigation, multimedia",
   },

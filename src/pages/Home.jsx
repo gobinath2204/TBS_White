@@ -7,7 +7,9 @@ import "../index.css";
 export default function Home() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
-  const videoRef = useRef(null);
+  const videoRef1 = useRef(null);
+  const videoRef2 = useRef(null);
+  const [activeVideo, setActiveVideo] = useState(1);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
@@ -17,21 +19,61 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleVideoEnded = () => {
+    const nextVideo = activeVideo === 1 ? 2 : 1;
+    const nextRef = nextVideo === 1 ? videoRef1 : videoRef2;
+    const currentRef = activeVideo === 1 ? videoRef1 : videoRef2;
+
+    if (nextRef.current) {
+      nextRef.current.currentTime = 0;
+      nextRef.current.play();
+      setActiveVideo(nextVideo);
+      
+      setTimeout(() => {
+        if (currentRef.current) {
+          currentRef.current.pause();
+        }
+      }, 1000);
+    }
+  };
+
   return (
     <>
       {/* HERO */}
       <section className="hero" id="home">
         <div className="video-background">
           <video
-            ref={videoRef}
+            ref={videoRef1}
             autoPlay
             muted
-            loop
             playsInline
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            onEnded={handleVideoEnded}
+            style={{ 
+              position: 'absolute', top: 0, left: 0,
+              width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%', 
+              opacity: activeVideo === 1 ? 1 : 0, 
+              transition: 'opacity 1s ease-in-out',
+              zIndex: activeVideo === 1 ? 2 : 1
+            }}
             aria-label="Background video showing our services"
           >
-            <source src="/Grok%20Hero%20New.mp4" type="video/mp4" />
+            <source src="/Grok%20Hero%20Pan.mp4" type="video/mp4" />
+          </video>
+          <video
+            ref={videoRef2}
+            muted
+            playsInline
+            onEnded={handleVideoEnded}
+            style={{ 
+              position: 'absolute', top: 0, left: 0,
+              width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%', 
+              opacity: activeVideo === 2 ? 1 : 0, 
+              transition: 'opacity 1s ease-in-out',
+              zIndex: activeVideo === 2 ? 2 : 1
+            }}
+            aria-label="Background video showing our services"
+          >
+            <source src="/Grok%20Hero%20Pan.mp4" type="video/mp4" />
           </video>
         </div>
 

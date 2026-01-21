@@ -14,7 +14,8 @@
 /* Hero Section */
 .hero-container {
   position: relative;
-  height: 58vh;
+  font-size: 1rem;
+  height: 25vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -133,9 +134,9 @@
 }
 
 .paragraph-content {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--bg-dark);
-  line-height: 1.6;
+  line-height: 1;
 }
 
 .specs-list {
@@ -276,11 +277,14 @@
 }
 
 .section-text li {
-  font-size: 1rem;        /* Change this for bullet point font size */
-  line-height: 1.6;       /* Change this for line spacing within bullets */
+  font-size: 1.1rem;        /* Change this for bullet point font size */
+  line-height: 1.5;       /* Change this for line spacing within bullets */
   color: black;
   margin: 0.5rem 0;       /* Change this for gaps between bullet points */
   list-style-type: disc;
+  text-align: justify;
+  list-style-position: outside;
+  padding-left: 0.5rem;
 }
 
 .section-text li strong {

@@ -38,9 +38,7 @@ const P6 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <video autoPlay muted loop className="hero-video">
-            <source src={videoPath} type="video/mp4" />
-          </video>
+          <img src="/DFU.png" alt="Diagnostics Flashing Unit" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>Diagnostics Flashing Unit</h1>
         </div>
