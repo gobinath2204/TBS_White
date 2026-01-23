@@ -268,7 +268,7 @@ section h2 {
 ------------------------------ */
 .products-section {
   position: relative;
-  background-color: #000000;
+  background-color: #ffffff;
   /* border-radius: 25px; */
   /* padding: 6rem 2rem 10rem; */
   padding: 4rem 0 10rem 0;
@@ -387,7 +387,7 @@ section h2 {
 }
 
 .footer-left h2 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
   color: var(--primary);
 }

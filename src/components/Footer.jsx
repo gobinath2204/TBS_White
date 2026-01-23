@@ -5,7 +5,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       {/* Left Side */}
-      <div className="footer-left" style={{width: '30%', padding: '20px', display: 'flex', flexDirection: 'column', gap: '20px'}}>
+      <div className="footer-left" style={{width: '30%', padding: '0px', display: 'flex', flexDirection: 'column', gap: '20px', alignSelf: 'flex-start'}}>
+        <h2 style={{margin: '-10px 0 10px 0', fontSize: '3rem', fontWeight: 'bold', color: 'var(--primary)'}}>Test Base Solutions</h2>
         <a href="https://www.linkedin.com/company/testbasesolutions-ltd/?originalSubdomain=uk" target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit'}}>
           <svg width="24" height="24" fill="white" viewBox="0 0 24 24" style={{backgroundColor: '#0077B5', borderRadius: '2px'}}>
             <path d="M22.225 0H1.771C.792 0 0 .771 0 1.771v20.451C0 23.229.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.222V1.771C24 .771 23.2 0 22.225 0zM7.119 20.452H3.556V9h3.563v11.452zM5.338 7.433c-1.141 0-2.063-.926-2.063-2.065 0-1.14.922-2.066 2.063-2.066s2.063.926 2.063 2.066c0 1.139-.922 2.065-2.063 2.065zm15.115 13.019h-3.562v-5.605c0-1.337-.025-3.056-1.861-3.056-1.861 0-2.146 1.453-2.146 2.955v5.706h-3.562V9h3.419v1.561h.049c.476-.9 1.637-1.849 3.37-1.849 3.6 0 4.267 2.369 4.267 5.452v6.288z"/>
@@ -29,7 +30,7 @@ export default function Footer() {
       </div>
 
       {/* Right Side */}
-      <div className="footer-right">
+      <div className="footer-right" style={{alignSelf: 'flex-start'}}>
         <div className="footer-section">
           <h4>Services</h4>
           <ul>

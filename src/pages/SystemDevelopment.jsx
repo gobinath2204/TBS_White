@@ -55,7 +55,7 @@ const S1 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S1/Picture0.webp" alt="SYS.2 Requirements Elicitation" className="section-image" />
+              <img src="/S1/Picture0.png" alt="SYS.2 Requirements Elicitation" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SYS.2 Requirements Elicitation</h2>
@@ -74,7 +74,7 @@ const S1 = () => {
             </div>
           </section>
 
-          <section className="content-section section-with-image reverse" style={{ backgroundColor: "#ebebeb" }}>
+          <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper" style={{ marginLeft: '0' }}>
               <img src="/S1/Picture1.png" alt="Custom UI" className="section-image" />
             </div>

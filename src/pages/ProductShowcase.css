@@ -41,7 +41,7 @@
 
 .slider-content {
   flex: 0 0 50%;
-  background: white;
+  background: #333333;
   color: #fff;
   padding: 5rem 2rem;
   display: flex;
@@ -53,14 +53,14 @@
 .slider-content h3 {
   font-size: clamp(1.8rem, 2.5vw, 8.5rem);
   margin-bottom: 1rem;
-  color: black
+  color: white
 }
 
 .slider-content p {
   font-size: clamp(1rem, 1vw, 5rem);
   margin-bottom: 2rem;
   padding-right: 20px;
-  color: black;
+  color: white;
   text-align: justify;
 }
 

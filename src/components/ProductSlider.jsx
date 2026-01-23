@@ -77,7 +77,7 @@ export default function ProductSlider() {
 
   return (
     <div>
-      <h2 style={{ color: "white" }}>Our Products</h2>
+      <h2 style={{ color: "black" }}>Our Products</h2>
 
       {isMobile ? (
         <section className="products" >
