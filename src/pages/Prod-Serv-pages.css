@@ -255,8 +255,8 @@
 }
 
 .section-text p {
-  font-size: 1.1rem;
-  line-height: 1.3;
+  font-size: 1rem;
+  line-height: 1.2;
   color: black;
   max-width: 500px;
   text-align: justify;
@@ -278,8 +278,8 @@
 }
 
 .section-text li {
-  font-size: 1.1rem;        /* Change this for bullet point font size */
-  line-height: 1.3;       /* Change this for line spacing within bullets */
+  font-size: 1rem;        /* Change this for bullet point font size */
+  line-height: 1.2;       /* Change this for line spacing within bullets */
   color: black;
   margin: 0.5rem 0;       /* Change this for gaps between bullet points */
   list-style-type: disc;
