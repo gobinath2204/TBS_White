@@ -110,6 +110,7 @@ export default function About() {
 
                 setTimeout(() => {
                   animateValue(yearsCounter, 0, 7, 2000, '+');
+                  animateValue(yearsCounter, 0, 7, 2000, '+');
                 }, 300);
               }
             }
@@ -224,7 +225,7 @@ export default function About() {
                 across every stage of the automotive lifecycle.
               </p>
               <p>
-                Today, with nearly 100 dedicated employees, we deliver end-to-end expertise in system design,
+                Today, with dedicated employees, we deliver end-to-end expertise in system design,
                 development, verification, validation, and compliance. Serving clients across the globe, our
                 journey is powered by passion, perseverance, and a commitment to building smarter, safer, and
                 cleaner mobility solutions.

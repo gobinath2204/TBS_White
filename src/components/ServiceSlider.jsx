@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../pages/ServiceShowcase.css";
 
-
 const services = [
   {
     id: "SystemDevelopment",
@@ -48,13 +47,13 @@ export default function ServiceSlider() {
 
   const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-      setIsMobile(window.innerWidth < 1024);
-  
-      const handleResize = () => setIsMobile(window.innerWidth < 1024);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 1024);
+
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const prevService = () =>
     setServiceIndex((prev) =>
@@ -67,16 +66,16 @@ export default function ServiceSlider() {
     );
 
   return (
-      <div>
+    <div>
       <h2>Our Services</h2>
       {isMobile ? (
         <section className="products">
           <div className="product-grid">
             {services.map((service) => (
               <div className="product-card" key={service.id} onClick={() => {
-                  navigate(`/pages/${currentService.id}`);
-                  window.scrollTo(0, 0);
-                }}>
+                navigate(`/pages/${currentService.id}`);
+                window.scrollTo(0, 0);
+              }}>
                 <img src={service.img} alt={service.name} />
                 <div className="product-info">
                   <h3>{service.name}</h3>
@@ -88,49 +87,49 @@ export default function ServiceSlider() {
         </section>
       ) : (
         <section className="products" id="services">
-        <div className="slide-container">
-          <span className="arrow left" style={{ color: "white" }} onClick={prevService}>
-            ❮
-          </span>
+          <div className="slide-container">
+            <span className="arrow left" style={{ color: "white" }} onClick={prevService}>
+              ❮
+            </span>
 
-          <div className="slide reverse">
-            <div className="slide-content" style={{ paddingLeft: "4rem" }}>
-              <h3>{currentService.name}</h3>
-              <p>{currentService.desc}</p>
-              <button
-                className="read-more"
-                onClick={() => {
-                  navigate(`/pages/${currentService.id}`);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <span>Read More</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" />
-                </svg>
-              </button>
+            <div className="slide reverse" key={currentService.id}>
+              <div className="slide-content" style={{ paddingLeft: "4rem" }}>
+                <h3>{currentService.name}</h3>
+                <p>{currentService.desc}</p>
+                <button
+                  className="read-more"
+                  onClick={() => {
+                    navigate(`/pages/${currentService.id}`);
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  <span>Read More</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" />
+                  </svg>
+                </button>
+              </div>
+              <div className="slide-image">
+                <img src={currentService.img} alt={currentService.name} />
+                <span
+                  className="images-overlay"
+                  style={{
+                    width: "65%",
+                    left: "35%",
+                    borderRadius: "0 25px 25px 0",
+                  }}
+                ></span>
+              </div>
             </div>
-            <div className="slide-image">
-              <img src={currentService.img} alt={currentService.name} />
-              <span
-                className="images-overlay"
-                style={{
-                  width: "65%",
-                  left: "35%",
-                  borderRadius: "0 25px 25px 0",
-                }}
-              ></span>
-            </div>
+
+            <span className="arrow right" style={{ color: "white" }} onClick={nextService}>
+              ❯
+            </span>
           </div>
-
-          <span className="arrow right" style={{ color: "white" }} onClick={nextService}>
-            ❯
-          </span>
-        </div>
         </section>
       )}
 
     </div>
-    
+
   );
 }
