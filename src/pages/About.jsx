@@ -73,24 +73,14 @@ export default function About() {
   useEffect(() => {
     const animateValue = (obj, start, end, duration, suffix = '') => {
       let startTimestamp = null;
-      const frameDuration = 1000 / 60;
-      let lastFrameTime = 0;
-      const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
       const step = (timestamp) => {
         if (!startTimestamp) startTimestamp = timestamp;
-        if (timestamp - lastFrameTime < frameDuration) {
-          window.requestAnimationFrame(step);
-          return;
-        }
-        lastFrameTime = timestamp;
         const elapsed = timestamp - startTimestamp;
         const progress = Math.min(elapsed / duration, 1);
-        const easedProgress = easeOutCubic(progress);
 
-        const value = Math.floor(easedProgress * (end - start) + start);
+        const value = Math.floor(progress * (end - start) + start);
         obj.innerHTML = value + suffix;
-
 
         if (progress < 1) {
           window.requestAnimationFrame(step);
@@ -103,15 +93,12 @@ export default function About() {
     };
 
     const counterSection = document.querySelector('.counter-section');
-    let animationTriggered = false;
 
     if (counterSection) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting && !animationTriggered) {
-              animationTriggered = true;
-
+            if (entry.isIntersecting) {
               const employeeCounter = document.getElementById("employee-counter");
               const yearsCounter = document.getElementById("years-counter");
 
@@ -125,7 +112,6 @@ export default function About() {
                   animateValue(yearsCounter, 0, 7, 2000, '+');
                 }, 300);
               }
-              observer.unobserve(counterSection);
             }
           });
         },
@@ -136,14 +122,11 @@ export default function About() {
       );
 
       observer.observe(counterSection);
-    }
 
-    return () => {
-      if (counterSection) {
-        const observer = new IntersectionObserver(() => { });
+      return () => {
         observer.unobserve(counterSection);
-      }
-    };
+      };
+    }
   }, []);
 
   // Video play/pause on scroll
@@ -220,7 +203,7 @@ export default function About() {
   return (
     <>
       <div className="about-container">
-        {/* Title Section */}
+        {/* 1. We are team, TBS animation */}
         <div className="typing-wrapper">
           <h1 className="typing-text" >
             We are{" "}
@@ -229,7 +212,7 @@ export default function About() {
           </h1>
         </div>
 
-        {/* Story Card Section */}
+        {/* 2. Our story container */}
         <section className="story-card-section">
           <div className="story-card">
             <div className="story-card-content">
@@ -250,39 +233,62 @@ export default function About() {
           </div>
         </section>
 
-        {/* Counter Section */}
+        {/* 3. Pillars container and fostering talents */}
+        <div className="Horizontal">
+          {/* Pillars of Excellence */}
+          <section className="pillars-of-excellence-section">
+            <div className="pillars-of-excellence-content">
+              <h2>Pillars of Excellence</h2>
+              <p>
+                At <strong>Test Base Solutions</strong> we specialize in delivering cutting-edge
+                <strong> ASPICE-compliant solutions</strong> across all areas of System Engineering (SYS),
+                Software Engineering (SWE), and Hardware Engineering (HWE).
+              </p>
+              <ul className="excellence-list">
+                <li>Scheduler and Real-Time Operating System (RTOS)</li>
+                <li>AUTOSAR and Non-AUTOSAR drivers</li>
+                <li>CAN, UDS, LIN, FLEXRAY, and CCP/XCP stacks</li>
+                <li>Primary Boot-loader and Security Algorithm Software</li>
+                <li>Application Software and IoT Software Development</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Fostering Talent */}
+          <section className="fostering-talent-section">
+            <div className="fostering-talent-content">
+              <h2>Fostering Talents</h2>
+              <p>
+                At <strong>Test Base Solutions</strong>, we believe people are our greatest strength.
+                From fresh graduates to experienced professionals, we invest in nurturing talent through
+                structured training, mentorship, and hands-on project experience.
+              </p> <br />
+              <p className="fostering-talent-p">
+                Our in-house programs focus on real-world automotive challenges—covering system engineering,
+                diagnostics, embedded software, and ASPICE processes. We don't just build teams—we cultivate
+                future-ready engineers who drive innovation, quality, and excellence in every project.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        {/* 4. Employee counter and year counter */}
         <section className="counter-section">
-  <div className="counter-columns">
-    <div className="counter-column">
-      <div id="employee-counter" className="counter-number-box"></div>
-      <div className="counter-label-box">Employees</div>
-    </div>
+          <div className="counter-columns">
+            <div className="counter-column">
+              <div id="employee-counter" className="counter-number-box"></div>
+              <div className="counter-label-box">Employees</div>
+            </div>
 
-    <div className="counter-column">
-      <div id="years-counter" className="counter-number-box"></div>
-      <div className="counter-label-box">Years of Excellence</div>
-    </div>
-  </div>
-
-  <p className="counter-tagline">
-    Driving innovation in automotive technology
-  </p>
-</section> 
-  
-
-        <section style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <h2>About Our Journey</h2>
-        </section>
-        {/* Video Section */}
-        <section className="video-section">
-          
-          <div className="video-background">
-            <video autoPlay muted loop playsInline className="content-video">
-              <source src="/videos/tbs_short.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="video-overlay"></div>
+            <div className="counter-column">
+              <div id="years-counter" className="counter-number-box"></div>
+              <div className="counter-label-box">Years of Excellence</div>
+            </div>
           </div>
+
+          <p className="counter-tagline">
+            Driving innovation in automotive technology
+          </p>
         </section>
 
         {/* Timeline Section */}
@@ -326,44 +332,20 @@ export default function About() {
           </div>
         </section>
 
-
-        <div className="Horizontal">
-          {/* Pillars of Excellence */}
-          <section className="pillars-of-excellence-section">
-            <div className="pillars-of-excellence-content">
-              <h2>Pillars of Excellence</h2>
-              <p>
-                At <strong>Test Base Solutions</strong> we specialize in delivering cutting-edge
-                <strong> ASPICE-compliant solutions</strong> across all areas of System Engineering (SYS),
-                Software Engineering (SWE), and Hardware Engineering (HWE).
-              </p>
-              <ul className="excellence-list">
-                <li>Scheduler and Real-Time Operating System (RTOS)</li>
-                <li>AUTOSAR and Non-AUTOSAR drivers</li>
-                <li>CAN, UDS, LIN, FLEXRAY, and CCP/XCP stacks</li>
-                <li>Primary Boot-loader and Security Algorithm Software</li>
-                <li>Application Software and IoT Software Development</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Fostering Talent */}
-          <section className="fostering-talent-section">
-            <div className="fostering-talent-content">
-              <h2>Fostering Talents</h2>
-              <p>
-                At <strong>Test Base Solutions</strong>, we believe people are our greatest strength.
-                From fresh graduates to experienced professionals, we invest in nurturing talent through
-                structured training, mentorship, and hands-on project experience.
-              </p> <br />
-              <p className="fostering-talent-p">
-                Our in-house programs focus on real-world automotive challenges—covering system engineering,
-                diagnostics, embedded software, and ASPICE processes. We don't just build teams—we cultivate
-                future-ready engineers who drive innovation, quality, and excellence in every project.
-              </p>
-            </div>
-          </section>
-        </div>
+        <section style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h2>About Our Journey</h2>
+        </section>
+        {/* Video Section */}
+        <section className="video-section">
+          
+          <div className="video-background">
+            <video autoPlay muted loop playsInline className="content-video">
+              <source src="/videos/tbs_short.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="video-overlay"></div>
+          </div>
+        </section>
       </div>
     </>
   );
