@@ -179,7 +179,7 @@ nav ul a:hover::after {
 ------------------------------ */
 .hero {
   font-family: "Audiowide", sans-serif;
-  /* display: flex; */
+  display: flex;
   flex-wrap: wrap;
   height: 100vh;
   justify-content: space-between;
@@ -214,7 +214,7 @@ nav ul a:hover::after {
 }
 
 .hero-content {
-  position: relative;
+  position: center;
   z-index: 2;
   display: flex;
   justify-content: space-between;
@@ -273,7 +273,7 @@ section h2 {
   /* padding: 6rem 2rem 10rem; */
   padding: 4rem 0 10rem 0;
   width: 100%;
-  margin-top: -7vh;
+  margin-top: -12vh;
   z-index: 4;
 }
 
@@ -332,7 +332,7 @@ section h2 {
   padding: 6rem 2rem 8rem;
   width: 100%;
   /* border-radius: 25px 25px 0 0; */
-  /* margin-top: -4vh; */
+  margin-top: -20vh;
   text-align: center;
   z-index: 6;
 }

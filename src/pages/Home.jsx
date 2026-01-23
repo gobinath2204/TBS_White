@@ -66,7 +66,7 @@ export default function Home() {
             onEnded={handleVideoEnded}
             style={{ 
               position: 'absolute', top: 0, left: 0,
-              width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%', 
+              width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 30%', 
               opacity: activeVideo === 2 ? 1 : 0, 
               transition: 'opacity 1s ease-in-out',
               zIndex: activeVideo === 2 ? 2 : 1
