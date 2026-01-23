@@ -48,7 +48,7 @@ const S1 = () => {
             <div >
               {/* <h2>Overview</h2> */}
               <p style={{ fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
-                Our <b>system engineering team</b> delivers exceptional system engineering with accurate, fully traceable requirements for functional, non-functional (electrical, mechanical, and environmental), communication, diagnostics, and EOL for cutting-edge automotive ECUs. Our <b>system engineering team</b> delivers the system engineering in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards (UN R100).
+                Our <b>system engineering team</b> delivers exceptional system engineering with accurate, fully traceable requirements for functional, non-functional (electrical, mechanical, and environmental), communication, diagnostics, and EOL for cutting-edge automotive ECUs. We deliver the system engineering in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards (UN R100).
               </p>
             </div>
           </section>

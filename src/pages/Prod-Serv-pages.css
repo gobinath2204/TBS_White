@@ -98,10 +98,10 @@
   align-items: center;
   position: relative;
   min-height: 80vh;
-  overflow: hidden;
+  overflow: visible;
   margin: 0;
-  padding: 0 1rem;
-  gap: 2rem;
+  padding: 0 3rem;
+  gap: 3rem;
   border-radius: 15px;
   background: transparent;
   border: none;
@@ -112,10 +112,11 @@
 .section-image-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   height: 70vh;
   flex: 0 0 50%;
-  overflow: hidden;
+  overflow: visible;
   background: none;
 }
 
@@ -214,8 +215,8 @@
 .section-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(1.1);
+  object-fit: contain;
+  transform: scale(1);
   transition: transform 1.5s ease;
 }
 
@@ -254,8 +255,8 @@
 }
 
 .section-text p {
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.2;
   color: black;
   max-width: 500px;
   text-align: justify;
@@ -263,11 +264,11 @@
 }
 
 .section-text strong {
-  color: var(--orange);
+  color: var(--black);
 }
 
 .section-text b {
-  color: var(--orange);
+  color: var(--black);
 }
 
 .section-text ul {
@@ -277,8 +278,8 @@
 }
 
 .section-text li {
-  font-size: 1.1rem;        /* Change this for bullet point font size */
-  line-height: 1.5;       /* Change this for line spacing within bullets */
+  font-size: 1rem;        /* Change this for bullet point font size */
+  line-height: 1.2;       /* Change this for line spacing within bullets */
   color: black;
   margin: 0.5rem 0;       /* Change this for gaps between bullet points */
   list-style-type: disc;
@@ -288,11 +289,11 @@
 }
 
 .section-text li strong {
-  color: var(--orange);
+  color: var(--black);
 }
 
 .section-text li b {
-  color: var(--orange);
+  color: var(--black);
 }
 
 /* Reverse Layout */

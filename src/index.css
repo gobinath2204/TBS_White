@@ -393,7 +393,7 @@ section h2 {
 }
 
 .footer-left p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--light);
   margin: 1.5rem 0 2rem;
 }
@@ -421,7 +421,7 @@ section h2 {
 .footer-section h4 {
   color: var(--primary);
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .footer-section ul {
@@ -431,6 +431,7 @@ section h2 {
 
 .footer-section li {
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .footer-section a {
