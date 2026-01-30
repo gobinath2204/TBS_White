@@ -7,9 +7,8 @@ import "../index.css";
 export default function Home() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
-  const videoRef1 = useRef(null);
-  const videoRef2 = useRef(null);
-  const [activeVideo, setActiveVideo] = useState(1);
+  const videoRef = useRef(null);
+  const [isLooping, setIsLooping] = useState(false);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
@@ -19,21 +18,22 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleVideoEnded = () => {
-    const nextVideo = activeVideo === 1 ? 2 : 1;
-    const nextRef = nextVideo === 1 ? videoRef1 : videoRef2;
-    const currentRef = activeVideo === 1 ? videoRef1 : videoRef2;
-
-    if (nextRef.current) {
-      nextRef.current.currentTime = 0;
-      nextRef.current.play();
-      setActiveVideo(nextVideo);
+  const handleVideoTimeUpdate = () => {
+    if (videoRef.current && !isLooping) {
+      const duration = videoRef.current.duration;
+      const currentTime = videoRef.current.currentTime;
       
-      setTimeout(() => {
-        if (currentRef.current) {
-          currentRef.current.pause();
-        }
-      }, 1000);
+      // Start crossfade 1 second before video ends
+      if (duration - currentTime <= 1) {
+        setIsLooping(true);
+        setTimeout(() => {
+          if (videoRef.current) {
+            videoRef.current.currentTime = 0;
+            videoRef.current.play();
+            setIsLooping(false);
+          }
+        }, 1000);
+      }
     }
   };
 
@@ -43,37 +43,20 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="video-background">
           <video
-            ref={videoRef1}
+            ref={videoRef}
             autoPlay
             muted
             playsInline
-            onEnded={handleVideoEnded}
+            onTimeUpdate={handleVideoTimeUpdate}
             style={{ 
               position: 'absolute', top: 0, left: 0,
-              width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%', 
-              opacity: activeVideo === 1 ? 1 : 0, 
-              transition: 'opacity 1s ease-in-out',
-              zIndex: activeVideo === 1 ? 2 : 1
+              width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%',
+              opacity: isLooping ? 0.5 : 1,
+              transition: 'opacity 1s ease-in-out'
             }}
             aria-label="Background video showing our services"
           >
-            <source src="/Grok%20Hero%20Pan.mp4" type="video/mp4" />
-          </video>
-          <video
-            ref={videoRef2}
-            muted
-            playsInline
-            onEnded={handleVideoEnded}
-            style={{ 
-              position: 'absolute', top: 0, left: 0,
-              width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%', 
-              opacity: activeVideo === 2 ? 1 : 0, 
-              transition: 'opacity 1s ease-in-out',
-              zIndex: activeVideo === 2 ? 2 : 1
-            }}
-            aria-label="Background video showing our services"
-          >
-            <source src="/Grok%20Hero%20Pan.mp4" type="video/mp4" />
+            <source src="/Hero%20Video.mp4" type="video/mp4" />
           </video>
         </div>
 
