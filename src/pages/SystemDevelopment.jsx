@@ -81,7 +81,7 @@ const S1 = () => {
             <div className="section-text">
               <h2>SYS.3 Architecture Development</h2>
               <p>
-                At TBS, we excel in SYS.3 system architecture analysis, delivering scalable, modular designs tailored for automotive applications. Adhering strictly to AUTOSAR standards, we optimize for peak performance and long-term maintainability:
+                We excel in SYS.3 system architecture analysis, delivering scalable, modular designs tailored for automotive applications. Adhering strictly to AUTOSAR standards, we optimize for peak performance and long-term maintainability:
               </p>
               <ul>
                 <li><strong>Technical Design Evaluation:</strong> Comprehensive analysis across product lifecycle from concept to deployment and maintenance</li>
@@ -102,7 +102,7 @@ const S1 = () => {
             <div className="section-text">
               <h2>FMEA Development</h2>
               <p>
-                At TBS, our FMEA expertise empowers automotive innovation through rigorous Design FMEA (DFMEA) and Process FMEA (PFMEA) methodologies. We deliver comprehensive risk mitigation strategies:
+                Our FMEA expertise empowers automotive innovation through rigorous Design FMEA (DFMEA) and Process FMEA (PFMEA) methodologies. We deliver comprehensive risk mitigation strategies:
               </p>
               <ul>
                 <li><strong>Project Boundary Identification:</strong> Targeted questions on customer needs, design control, and regulatory compliance</li>
@@ -123,7 +123,7 @@ const S1 = () => {
             <div className="section-text">
               <h2>Communication Requirements</h2>
               <p>
-                At TBS, our communication expertise delivers meticulously crafted requirements for vehicle networks, spanning CAN, LIN, Ethernet, and wireless protocols:
+                Our communication expertise delivers meticulously crafted requirements for vehicle networks, spanning CAN, LIN, Ethernet, and wireless protocols:
               </p>
               <ul>
                 <li><strong>Physical Layer Specifications:</strong> Robust physical layers with comprehensive test requirements for reliable network performance</li>
@@ -144,7 +144,7 @@ const S1 = () => {
             <div className="section-text">
               <h2>Functional Safety</h2>
               <p>
-                At TBS, our functional safety expertise ensures comprehensive ISO 26262 compliance through systematic risk analysis and robust safety engineering:
+                Our functional safety expertise ensures comprehensive ISO 26262 compliance through systematic risk analysis and robust safety engineering:
               </p>
               <ul>
                 <li><strong>Technical Safety Requirements (TSR) Development:</strong> Expert support in defining TSR from safety goals with comprehensive fault tree analysis backing</li>
