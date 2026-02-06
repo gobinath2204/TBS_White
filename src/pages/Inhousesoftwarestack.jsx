@@ -48,8 +48,8 @@ const P1 = () => {
 
           <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
             <div >
-              <p style={{ fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0" }}>
-                TBS’s In-House Software Stack (Commercial Off-The-Shelf, or COTS) is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market. Validated to ISO 26262 for functional safety, it minimizes costs compared to custom solutions while ensuring high reliability.
+              <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0" }}>
+                Our <b>In-House Software Stack (Commercial Off-The-Shelf, or COTS)</b> is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market. Validated to ISO 26262 for functional safety, it minimizes costs compared to custom solutions while ensuring high reliability.
               </p>
             </div>
           </section>
@@ -61,8 +61,17 @@ const P1 = () => {
             <div className="section-text">
               <h2>In-House Software Stack (COTS)</h2>
               <p>
-                Supporting multi-core processors and AUTOSAR architectures, it’s ideal for engine management, infotainment, and ADAS applications. Features like hypervisor extensions and board support packages enable rapid prototyping on commercial hardware without compromising performance or security. Clients benefit from lower lifecycle costs, scalability, and seamless upgrades, keeping pace with trends like software-defined vehicles. With TBS’s COTS stack, engineering teams can focus on innovation, delivering safer, smarter, and more efficient vehicles.
+                Supporting multi-core processors and AUTOSAR architectures, our COTS stack delivers comprehensive capabilities:
               </p>
+              <ul>
+                <li><strong>Multi-Core Support:</strong> Advanced multi-core processor compatibility with AUTOSAR architecture integration</li>
+                <li><strong>Versatile Applications:</strong> Ideal for engine management, infotainment, and ADAS applications</li>
+                <li><strong>Hypervisor Extensions:</strong> Advanced virtualization capabilities enabling rapid prototyping</li>
+                <li><strong>Board Support Packages:</strong> Commercial hardware compatibility without compromising performance or security</li>
+                <li><strong>Lifecycle Cost Reduction:</strong> Lower total cost of ownership with enhanced scalability</li>
+                <li><strong>Seamless Upgrades:</strong> Keeping pace with software-defined vehicle trends and innovations</li>
+                <li><strong>Innovation Focus:</strong> Enabling engineering teams to concentrate on core innovation and development</li>
+              </ul>
             </div>
           </section>
         </div>

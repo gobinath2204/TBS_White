@@ -46,8 +46,8 @@ const S3 = () => {
         <div className="product-page">
           <section  style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div >
-              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
-                TBS provides comprehensive ASPICE-compliant Hardware Engineering services for modern automotive systems, covering the complete development lifecycle from requirements to verification. Our expertise includes schematic and PCB design, safety analysis (FMEA/DFMEA), advanced simulations, and rigorous testing methodologies. We deliver robust, high-performance hardware solutions that ensure functional safety, compliance with industry standards, and accelerated time-to-market.
+              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
+                Our <b>hardware engineering team</b> delivers exceptional ASPICE-compliant hardware solutions covering the complete development lifecycle from requirements to verification. We excel in schematic and PCB design, safety analysis (FMEA/DFMEA), advanced simulations, and rigorous testing methodologies. From concept to production, we deliver robust, high-performance hardware that ensures functional safety, industry compliance, and accelerated time-to-market.
               </p>
             </div>
           </section>
@@ -59,8 +59,17 @@ const S3 = () => {
             <div className="section-text">
               <h2>HWE.1 Hardware Requirement Development</h2>
               <p>
-                We specialize in developing detailed, traceable hardware requirements aligned with all relevant automotive standards. Our experts work closely with customers to understand system-level needs and translate them into hardware requirements based on function, performance, and electrical characteristics. Also, we derive Hardware Safety Requirements (HSR) systematically from Technical Safety Requirements (TSR) aligned with the safety standard ISO 26262 to ensure that safety goals defined in the system level are implemented in the hardware design. By leveraging requirement management using tools like Polarion, maintaining bi-directional traceability with high-level system requirements and allocating it to the corresponding elements in the architecture, we ensure that every hardware feature aligns with vehicle-level goals. Our approach minimizes rework, accelerates development, and supports effective hardware- software integration. We deliver hardware requirements as a final work product by adopting an iterative approach to refine and validate requirements, ensuring they are testable, complete, and consistent across the lifecycle and are formally agreed and communicated to the customers.
+                We specialize in developing detailed, traceable hardware requirements aligned with automotive standards and ISO 26262 safety compliance:
               </p>
+              <ul>
+                <li><strong>System-Level Translation:</strong> Converting system requirements into detailed hardware specifications based on function, performance, and electrical characteristics</li>
+                <li><strong>Hardware Safety Requirements (HSR):</strong> Systematic derivation from Technical Safety Requirements (TSR) aligned with ISO 26262</li>
+                <li><strong>Requirement Management:</strong> Bi-directional traceability using tools like Polarion with high-level system requirements</li>
+                <li><strong>Architecture Allocation:</strong> Mapping requirements to corresponding elements ensuring vehicle-level goal alignment</li>
+                <li><strong>Iterative Refinement:</strong> Continuous validation ensuring testable, complete, and consistent requirements</li>
+                <li><strong>Customer Communication:</strong> Formal agreement and communication of finalized hardware requirements</li>
+                <li><strong>Development Optimization:</strong> Minimizing rework and accelerating hardware-software integration</li>
+              </ul>
             </div>
           </section>
 
@@ -71,10 +80,17 @@ const S3 = () => {
             <div className="section-text">
               <h2>Schematic Design</h2>
               <p>
-                Our team excels in schematic design for advanced automotive electronic systems, delivering solutions that combine deep technical expertise with innovation and uncompromising quality. We provide end-to-end schematic design services for ECUs, sensors, control modules and all automotive components with a strong focus on optimal architecture definition, accurate component selection and derating, and rigorous validation through simulation and design rule checks. Using industry-leading EDA tools such as Altium Designer, Autodesk Fusion, and Ki-Cad, we ensure precision, reliability, and seamless hardware-software integration.<br />
-                Every design is developed in strict adherence to global automotive standards including ISO 26262 for functional safety, AEC-Q100 and AEC-Q200 for component qualification, CISPR 25 for EMI/EMC compliance, IEC 60617 for schematic symbols, and IATF 16949 for quality management. Guided by Design for Manufacturability (DFM), Design for Testability (DFT), and Design for Safety (DFS) principles, we deliver scalable, production-ready hardware platforms that meet the demanding requirements of the automotive sector.<br />
-                Along with design, we emphasize thorough design reviews and complete documentation to ensure transparency, traceability, and compliance. Our team follows established industry practices and EMI/EMC guidelines, enabling us to transform customer requirements into robust, reliable, and market-ready solutions.
-                </p>
+                Our team excels in schematic design for advanced automotive electronic systems, delivering innovative solutions with uncompromising quality:
+              </p>
+              <ul>
+                <li><strong>End-to-End Design Services:</strong> Complete schematic design for ECUs, sensors, control modules, and automotive components</li>
+                <li><strong>Architecture & Component Selection:</strong> Optimal architecture definition, accurate component selection and derating with validation</li>
+                <li><strong>Industry-Leading Tools:</strong> Altium Designer, Autodesk Fusion, and Ki-Cad for precision and reliability</li>
+                <li><strong>Global Standards Compliance:</strong> ISO 26262, AEC-Q100/Q200, CISPR 25, IEC 60617, and IATF 16949</li>
+                <li><strong>Design Principles:</strong> Design for Manufacturability (DFM), Design for Testability (DFT), and Design for Safety (DFS)</li>
+                <li><strong>Comprehensive Documentation:</strong> Thorough design reviews ensuring transparency, traceability, and compliance</li>
+                <li><strong>EMI/EMC Guidelines:</strong> Industry practices enabling robust, reliable, and market-ready solutions</li>
+              </ul>
             </div>
           </section>
 
@@ -84,11 +100,18 @@ const S3 = () => {
             </div>
             <div className="section-text">
               <h2>PCB Design & Development</h2>
-            <p>
-              We provide complete PCB design and development services tailored for the automotive industry, ensuring reliable performance in demanding environments. Our expertise covers multilayer PCB design, controlled impedance, signal integrity analysis, high-speed routing, and thermal management. Every design is developed in compliance with IPC standards, AEC-Q100/200 component qualification, and automotive-specific requirements such as ISO 26262 functional safety and IATF 16949 quality standards.<br />
-              We pay special attention to proper component selection, creepage and clearance requirements, and accurate component footprints to ensure safety and long-term durability. Our engineers carefully integrate electrical, thermal, and mechanical constraints while conducting Design for Manufacturability (DFM) and Design for Testability (DFT) reviews, minimizing risks and ensuring reliable production outcomes.<br />
-              By validating layouts for electrical, thermal, and mechanical reliability, we deliver PCBs that meet stringent automotive operating conditions. From concept to production-ready designs, we ensure robust, compliant, and optimized PCB solutions for advanced automotive electronics.
+              <p>
+                We provide complete PCB design and development services tailored for demanding automotive environments:
               </p>
+              <ul>
+                <li><strong>Advanced PCB Design:</strong> Multilayer PCB design, controlled impedance, signal integrity analysis, and high-speed routing</li>
+                <li><strong>Thermal Management:</strong> Comprehensive thermal analysis and management for reliable performance</li>
+                <li><strong>Standards Compliance:</strong> IPC standards, AEC-Q100/200, ISO 26262, and IATF 16949 quality standards</li>
+                <li><strong>Component Integration:</strong> Proper selection, creepage and clearance requirements, and accurate footprints</li>
+                <li><strong>Design Reviews:</strong> Design for Manufacturability (DFM) and Design for Testability (DFT) reviews</li>
+                <li><strong>Reliability Validation:</strong> Electrical, thermal, and mechanical reliability for automotive conditions</li>
+                <li><strong>Production-Ready Solutions:</strong> Robust, compliant, and optimized PCB designs for advanced automotive electronics</li>
+              </ul>
             </div>
           </section>
         
@@ -99,8 +122,17 @@ const S3 = () => {
             <div className="section-text">
               <h2>Safety Analysis (FMEA/DFMEA/FMEDA)</h2>
               <p>
-                We integrate safety analysis into every stage of product development to ensure functional reliability and compliance with ISO 26262 and IEC 61508 standards. During the concept and design phases, we perform DFMEA (Design Failure Mode and Effects Analysis) to evaluate the causes and effects and implement mitigation strategies before hardware validation for automotive ECUs. We use tools like ANSYS Medini Analyze to systematically identify potential design risks by determining the severity, occurrence and detection levels, and prioritize them using the Risk Priority Numbers (RPNs). As designs mature, we conduct FMEA (Failure Mode and Effects Analysis) and FMEDA (Failure Modes, Effects, and Diagnostic Analysis) to quantify failure rates, assess diagnostic coverage, and confirm system robustness against single-point and latent faults. At the system level, FTA (Fault Tree Analysis) is applied to trace root causes of critical failures and validate safety integrity levels. Our work product includes detailed safety reports, verified analysis of documentation, and compliance-ready datasets, empowering customers to achieve certified, reliable, and safety-compliant hardware designs.
+                We integrate comprehensive safety analysis into every development stage ensuring functional reliability and standards compliance:
               </p>
+              <ul>
+                <li><strong>DFMEA Implementation:</strong> Design Failure Mode and Effects Analysis during concept and design phases</li>
+                <li><strong>Risk Assessment Tools:</strong> ANSYS Medini Analyze for systematic risk identification and prioritization</li>
+                <li><strong>Standards Compliance:</strong> ISO 26262 and IEC 61508 alignment with severity, occurrence, and detection analysis</li>
+                <li><strong>FMEA & FMEDA:</strong> Quantified failure rates, diagnostic coverage, and system robustness validation</li>
+                <li><strong>Fault Tree Analysis (FTA):</strong> Root cause tracing and safety integrity level validation</li>
+                <li><strong>Comprehensive Deliverables:</strong> Detailed safety reports, verified documentation, and compliance datasets</li>
+                <li><strong>Certified Solutions:</strong> Reliable, safety-compliant hardware designs ready for certification</li>
+              </ul>
             </div>
           </section>
 
@@ -110,10 +142,18 @@ const S3 = () => {
             </div>
             <div className="section-text">
               <h2>Design Calculations / Simulations</h2>
-            <p>
-              We perform detailed schematic design calculations for every section of a system to ensure precision, stability, and long-term reliability. Each circuit is carefully analyzed using established engineering rules, theoretical formulas, datasheet parameters, and validated industry values. This structured and systematic approach enables us to detect discrepancies early, confirm design accuracy, and optimize overall hardware performance before implementation. <br />
-              Our experienced engineers complement these calculations with advanced simulations using industry-standard tools such as LT Spice, PSpice, ANSYS, and MATLAB/Simulink. These simulations are essential to verify circuit behavior, analyze worst-case conditions, evaluate voltage and current margins, and assess component stress across a wide range of operating scenarios. By combining rigorous design calculations with predictive simulations, we minimize redesign costs, accelerate development cycles, and deliver robust, compliant, and production-ready hardware that meets the stringent requirements of modern automotive applications.
+              <p>
+                We perform detailed design calculations and advanced simulations ensuring precision, stability, and long-term reliability:
               </p>
+              <ul>
+                <li><strong>Systematic Analysis:</strong> Detailed schematic calculations using engineering rules, theoretical formulas, and datasheet parameters</li>
+                <li><strong>Early Detection:</strong> Structured approach detecting discrepancies and confirming design accuracy before implementation</li>
+                <li><strong>Advanced Simulation Tools:</strong> LT Spice, PSpice, ANSYS, and MATLAB/Simulink for comprehensive analysis</li>
+                <li><strong>Comprehensive Verification:</strong> Circuit behavior, worst-case conditions, voltage and current margins analysis</li>
+                <li><strong>Component Stress Analysis:</strong> Assessment across wide range of operating scenarios and conditions</li>
+                <li><strong>Cost Optimization:</strong> Minimized redesign costs and accelerated development cycles</li>
+                <li><strong>Production-Ready Hardware:</strong> Robust, compliant solutions meeting stringent automotive requirements</li>
+              </ul>
             </div>
           </section>
 
@@ -124,8 +164,17 @@ const S3 = () => {
             <div className="section-text">
               <h2>HARA Development</h2>
               <p>
-                We provide a comprehensive Hazard Analysis and Risk Assessment (HARA) in compliance with ISO 26262, ensuring the functional safety of automotive electronic systems. We initiate the HARA at the concept phase, where our experts systematically identify potential hazards that may occur during vehicle operation due to hardware or system malfunctions. Each identified hazard with different operating scenarios is analyzed based on severity, exposure, and controllability, leading to the determination of the corresponding Automotive Safety Integrity Level (ASIL A–D). From this analysis, we define high-level safety goals that form the foundation for detailed hardware and system design. We will develop specific Functional Safety Requirements (FSRs) from the identified safety goals that define how the system will prevent or control hazardous events. Our structured approach ensures that diagnostic measures are effective in detecting and mitigating failures, while maintaining full traceability throughout the safety lifecycle. The final work products we deliver include detailed HARA reports, ASIL classification summaries, and safety goal documentation, enabling our customers to achieve robust, functionally safe, and reliable automotive ECU systems.
-                </p>
+                We provide comprehensive Hazard Analysis and Risk Assessment (HARA) in compliance with ISO 26262 for functional safety:
+              </p>
+              <ul>
+                <li><strong>Concept Phase Analysis:</strong> Systematic hazard identification during vehicle operation due to hardware malfunctions</li>
+                <li><strong>ASIL Classification:</strong> Severity, exposure, and controllability analysis determining Automotive Safety Integrity Levels (A-D)</li>
+                <li><strong>Safety Goals Definition:</strong> High-level safety goals forming the foundation for detailed hardware design</li>
+                <li><strong>Functional Safety Requirements:</strong> Specific FSRs defining system prevention and control of hazardous events</li>
+                <li><strong>Diagnostic Measures:</strong> Effective detection and mitigation strategies with full lifecycle traceability</li>
+                <li><strong>Comprehensive Deliverables:</strong> HARA reports, ASIL classification summaries, and safety goal documentation</li>
+                <li><strong>Reliable ECU Systems:</strong> Robust, functionally safe, and reliable automotive ECU systems</li>
+              </ul>
             </div>
           </section>
 
@@ -135,14 +184,18 @@ const S3 = () => {
             </div>
             <div className="section-text">
               <h2>Hardware Verification</h2>
-            <p>
-              Our experts perform detailed hardware verification process aligned with all relevant automotive standards along with ASPICE HWE.4 process guidelines. We derive-up and functional validation comprehensive test cases for every stage of validation and verification against both hardware requirements and hardware design. This includes board bring-up, functional testing, unit-level testing, integration testing, and destructive testing, using well-defined test setups and advanced testing equipment.<br/>
-              Our engineers perform initial board bring-up testing and functional validation to verify component placement, Board impedance,  power sequencing, and communication interfaces. <br/>
-              We conduct unit-level testing to evaluate circuit functionality, signal integrity, and power behaviour at the component and subsystem levels. Each test case is derived directly from hardware requirements, ensuring full coverage and compliance. <br/>
-              In addition, we developed detailed test procedures for destructive testing and performed the tests under extreme voltage, temperature, and load conditions to validate component tolerance, long-term durability, and identify failure modes. <br/>
-              Also, our experts conduct bench-level testing using controlled setups that replicate real-world automotive conditions where we perform detailed power-on checks, signal verification, and interface testing for digital, analog and communication channels like CAN. All tests are meticulously measured, logged and analyzed to detect potential issues. <br/>
-              Our deliverables include detailed test reports, waveform captures, fault analysis, and traceability to design specifications, ensuring that our customers receive reliable hardware ready for integration and system-level testing.
-               </p>
+              <p>
+                Our experts perform detailed hardware verification aligned with automotive standards and ASPICE HWE.4 process guidelines:
+              </p>
+              <ul>
+                <li><strong>Comprehensive Test Cases:</strong> Functional validation against hardware requirements and design at every stage</li>
+                <li><strong>Multi-Stage Testing:</strong> Board bring-up, functional, unit-level, integration, and destructive testing</li>
+                <li><strong>Initial Validation:</strong> Component placement, board impedance, power sequencing, and communication interfaces</li>
+                <li><strong>Circuit Analysis:</strong> Signal integrity, power behavior evaluation at component and subsystem levels</li>
+                <li><strong>Extreme Condition Testing:</strong> Voltage, temperature, and load validation for component tolerance and durability</li>
+                <li><strong>Real-World Simulation:</strong> Bench-level testing replicating automotive conditions with detailed analysis</li>
+                <li><strong>Complete Documentation:</strong> Test reports, waveform captures, fault analysis, and design specification traceability</li>
+              </ul>
             </div>
           </section>
         </div>

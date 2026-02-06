@@ -46,34 +46,70 @@ const P7 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div >
-              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
-                TBS’s Free RTOS Safety Plugin transforms standard FreeRTOS kernels into certified safety-critical foundations for automotive embedded systems, pre-qualified to ISO 26262 ASIL-D and IEC 61508 SIL-3. This lightweight extension enhances robustness with error handling, memory partitioning, and deterministic scheduling, mitigating risks in applications like autonomous driving.
+            <div>
+              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+                Our comprehensive <b>Real-Time Operating System Solutions</b> deliver safety-critical foundations for automotive embedded systems, featuring Free RTOS Safety Plugin, SMU (Safety Management Unit), and Smart HIL testing platforms. These integrated solutions ensure ISO 26262 ASIL-D compliance while providing robust development and validation environments for next-generation automotive applications.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Touchscreen Display" className="section-image" />
+              <img src="/RTOS.png" alt="Free RTOS Safety Plugin" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Free RTOS Safety Plugin</h2>
               <p>
-                Seamlessly integrating with FreeRTOS codebases, it adds safety features like stack overflow protection and traceable APIs without requiring full recertification. Ideal for resource-constrained MCUs in ECUs, it supports AUTOSAR OS compliance and multi-threading. Developed via HAZOP analysis and TÜV SÜD-verified, it includes safety manuals for easy auditing.
+                Transform standard FreeRTOS kernels into certified safety-critical foundations with our comprehensive safety plugin:
               </p>
+              <ul>
+                <li><strong>Safety Certification:</strong> Pre-qualified to ISO 26262 ASIL-D and IEC 61508 SIL-3 standards</li>
+                <li><strong>Enhanced Robustness:</strong> Error handling, memory partitioning, and deterministic scheduling</li>
+                <li><strong>Seamless Integration:</strong> Stack overflow protection and traceable APIs without full recertification</li>
+                <li><strong>AUTOSAR Compliance:</strong> Supports AUTOSAR OS compliance and multi-threading capabilities</li>
+                <li><strong>TÜV SÜD Verified:</strong> Developed via HAZOP analysis with comprehensive safety manuals</li>
+                <li><strong>Effortless Migration:</strong> Preserves familiarity while gaining safety assurances</li>
+              </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="Connectivity" className="section-image" />
+              <img src="/SMU.jpg" alt="Safety Management Unit" className="section-image" />
             </div>
             <div className="section-text">
-              <h2>Safety-Certified FreeRTOS for Automotive Applications</h2>
+              <h2>SMU (Safety Management Unit)</h2>
               <p>
-                Clients upgrading from vanilla FreeRTOS benefit from an effortless migration, preserving familiarity while gaining safety assurances. TBS’s plugin enables faster certification, reduced costs, and reliable performance in high-stakes environments, empowering innovation in software-defined mobility.
+                Advanced safety management capabilities ensuring system integrity and compliance across automotive applications:
               </p>
+              <ul>
+                <li><strong>Real-Time Monitoring:</strong> Continuous system health monitoring and fault detection</li>
+                <li><strong>Safety Mechanisms:</strong> Integrated watchdog timers and fail-safe operation modes</li>
+                <li><strong>Diagnostic Capabilities:</strong> Comprehensive self-test and diagnostic functions</li>
+                <li><strong>Fault Management:</strong> Automated fault isolation and recovery procedures</li>
+                <li><strong>Compliance Support:</strong> Built-in support for automotive safety standards</li>
+                <li><strong>Performance Optimization:</strong> Minimal overhead while maintaining safety integrity</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="content-section section-with-image reverse">
+            <div className="section-image-wrapper">
+              <img src="/HIL.jpg" alt="Smart HIL Testing" className="section-image" />
+            </div>
+            <div className="section-text">
+              <h2>Smart HIL (Hardware-in-the-Loop)</h2>
+              <p>
+                Comprehensive testing and validation platform for automotive embedded systems development:
+              </p>
+              <ul>
+                <li><strong>Real-Time Simulation:</strong> High-fidelity vehicle dynamics and environmental modeling</li>
+                <li><strong>Automated Testing:</strong> Comprehensive test case execution and validation workflows</li>
+                <li><strong>Multi-Protocol Support:</strong> CAN, LIN, Ethernet, and FlexRay communication interfaces</li>
+                <li><strong>Scalable Architecture:</strong> Modular design supporting various ECU configurations</li>
+                <li><strong>Advanced Analytics:</strong> Real-time data analysis and performance metrics</li>
+                <li><strong>Integration Ready:</strong> Seamless integration with development toolchains and CI/CD pipelines</li>
+              </ul>
             </div>
           </section>
         </div>

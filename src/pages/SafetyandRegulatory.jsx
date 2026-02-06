@@ -48,8 +48,8 @@ const S5 = () => {
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div >
               {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
-                TBS delivers cutting-edge safety and regulatory compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. Our expertise spans ISO 26262, ISO 21434, automotive CAN protocols, and global market regulations, ensuring robust system protection and compliance. We provide comprehensive testing, validation, and certification support to help clients achieve safe, reliable, and market-ready automotive solutions.
+              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
+                Our <b>safety and regulatory team</b> delivers cutting-edge compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. We excel in ISO 26262, ISO 21434, automotive CAN protocols, and global market regulations, ensuring robust system protection and full compliance. From comprehensive testing to validation and certification support, we help clients achieve safe, reliable, and market-ready automotive solutions.
               </p>
             </div>
           </section>
@@ -61,8 +61,17 @@ const S5 = () => {
             <div className="section-text">
               <h2>Functional Safety Development & Testing</h2>
               <p>
-                We specialize in developing and testing systems compliant with ISO 26262 functional safety standards. Our team conducts risk assessments, defines safety requirements, and implements safety mechanisms to mitigate hazards. From concept to production, we perform rigorous testing, including fault injection and safety case analysis, ensuring your systems meet ASIL (Automotive Safety Integrity Level) requirements, enhancing vehicle reliability and passenger safety.
+                We specialize in developing and testing systems compliant with ISO 26262 functional safety standards:
               </p>
+              <ul>
+                <li><strong>Risk Assessment & Safety Requirements:</strong> Comprehensive hazard analysis and safety requirement definition</li>
+                <li><strong>Safety Mechanism Implementation:</strong> Robust safety mechanisms to mitigate identified hazards and risks</li>
+                <li><strong>ASIL Compliance:</strong> Full Automotive Safety Integrity Level (ASIL) requirements from concept to production</li>
+                <li><strong>Rigorous Testing:</strong> Fault injection and safety case analysis ensuring system reliability</li>
+                <li><strong>Complete Lifecycle Support:</strong> From concept through production ensuring continuous compliance</li>
+                <li><strong>Vehicle Safety Enhancement:</strong> Enhanced vehicle reliability and passenger safety assurance</li>
+                <li><strong>Standards Compliance:</strong> Full ISO 26262 compliance with comprehensive documentation</li>
+              </ul>
             </div>
           </section>
 
@@ -73,8 +82,17 @@ const S5 = () => {
             <div className="section-text">
               <h2>Cybersecurity Development & Testing</h2>
               <p>
-                Our cybersecurity solutions protect automotive systems from evolving threats. Aligned with ISO/SAE 21434, we integrate secure-by-design principles, conduct vulnerability assessments, and implement robust encryption and authentication protocols. Our testing includes penetration testing and threat modeling to ensure resilience against cyberattacks, safeguarding connected vehicles and user data.
+                Our cybersecurity solutions protect automotive systems from evolving threats with comprehensive security measures:
               </p>
+              <ul>
+                <li><strong>ISO/SAE 21434 Compliance:</strong> Secure-by-design principles integrated throughout development lifecycle</li>
+                <li><strong>Vulnerability Assessment:</strong> Comprehensive security assessments identifying potential system weaknesses</li>
+                <li><strong>Robust Security Implementation:</strong> Advanced encryption and authentication protocols for system protection</li>
+                <li><strong>Penetration Testing:</strong> Thorough testing ensuring resilience against sophisticated cyberattacks</li>
+                <li><strong>Threat Modeling:</strong> Systematic threat analysis and mitigation strategy development</li>
+                <li><strong>Connected Vehicle Protection:</strong> Comprehensive safeguarding of connected vehicles and user data</li>
+                <li><strong>Evolving Threat Response:</strong> Adaptive security measures addressing emerging cybersecurity challenges</li>
+              </ul>
             </div>
           </section>
 
@@ -84,9 +102,18 @@ const S5 = () => {
             </div>
             <div className="section-text">
               <h2>HV Safety Development & Testing</h2>
-            <p>
-              We ensure high-voltage (HV) systems in electric vehicles meet safety standards like ISO 6469. Our services include designing HV architectures, insulation monitoring, and fail-safe mechanisms. We conduct comprehensive testing, such as dielectric strength and thermal stress tests, to validate system safety, protecting users and components from electrical hazards.
-            </p>
+              <p>
+                We ensure high-voltage (HV) systems in electric vehicles meet comprehensive safety standards:
+              </p>
+              <ul>
+                <li><strong>ISO 6469 Compliance:</strong> Complete adherence to high-voltage safety standards for electric vehicles</li>
+                <li><strong>HV Architecture Design:</strong> Safe and efficient high-voltage system architectures</li>
+                <li><strong>Insulation Monitoring:</strong> Advanced monitoring systems ensuring electrical safety and integrity</li>
+                <li><strong>Fail-Safe Mechanisms:</strong> Robust safety mechanisms protecting against electrical hazards</li>
+                <li><strong>Comprehensive Testing:</strong> Dielectric strength and thermal stress tests validating system safety</li>
+                <li><strong>User Protection:</strong> Complete protection of users and components from electrical hazards</li>
+                <li><strong>EV Safety Standards:</strong> Full compliance with electric vehicle safety requirements and regulations</li>
+              </ul>
             </div>
           </section>
         
@@ -98,8 +125,17 @@ const S5 = () => {
             <div className="section-text">
               <h2>Automotive CAN Standard Development & Testing</h2>
               <p>
-                Our expertise in Controller Area Network (CAN) standards ensures reliable in-vehicle communication. We develop and test CAN protocols, including CAN FD and CAN XL, for seamless data exchange. Our services include network design, conformance testing, and diagnostics, ensuring compliance with ISO 11898 and robust performance in automotive applications.
+                Our expertise in Controller Area Network (CAN) standards ensures reliable in-vehicle communication:
               </p>
+              <ul>
+                <li><strong>CAN Protocol Development:</strong> Comprehensive CAN, CAN FD, and CAN XL protocol development and testing</li>
+                <li><strong>Seamless Data Exchange:</strong> Reliable in-vehicle communication ensuring optimal system performance</li>
+                <li><strong>Network Design:</strong> Robust CAN network architectures for automotive applications</li>
+                <li><strong>Conformance Testing:</strong> Rigorous testing ensuring protocol compliance and reliability</li>
+                <li><strong>Diagnostic Capabilities:</strong> Advanced diagnostics for network troubleshooting and maintenance</li>
+                <li><strong>ISO 11898 Compliance:</strong> Full adherence to international CAN communication standards</li>
+                <li><strong>Automotive Performance:</strong> Robust performance ensuring reliable automotive communication systems</li>
+              </ul>
             </div>
           </section>
 
@@ -109,9 +145,18 @@ const S5 = () => {
             </div>
             <div className="section-text">
               <h2>Market Regulatory Standards</h2>
-            <p>
-              We guide clients through global automotive regulatory requirements, including UNECE, FMVSS, and regional standards. Our team provides compliance roadmaps, documentation, and homologation support, ensuring vehicles meet market-specific regulations. We streamline certification processes, reducing time-to-market while maintaining compliance with safety and performance standards.
-            </p>
+              <p>
+                We guide clients through global automotive regulatory requirements ensuring comprehensive market compliance:
+              </p>
+              <ul>
+                <li><strong>Global Standards Expertise:</strong> UNECE, FMVSS, and regional automotive regulatory requirements</li>
+                <li><strong>Compliance Roadmaps:</strong> Clear pathways to regulatory compliance with detailed documentation</li>
+                <li><strong>Homologation Support:</strong> Complete support for vehicle certification and approval processes</li>
+                <li><strong>Market-Specific Compliance:</strong> Ensuring vehicles meet regional safety and performance standards</li>
+                <li><strong>Streamlined Certification:</strong> Efficient processes reducing time-to-market while maintaining compliance</li>
+                <li><strong>Documentation Excellence:</strong> Comprehensive regulatory documentation and compliance records</li>
+                <li><strong>Global Market Access:</strong> Enabling successful vehicle deployment across international markets</li>
+              </ul>
             </div>
           </section>
 
@@ -122,8 +167,17 @@ const S5 = () => {
             <div className="section-text">
               <h2>Electrical Testing</h2>
               <p>
-                Our electrical testing services validate the performance and safety of automotive electrical systems. We conduct tests for EMC (electromagnetic compatibility), load analysis, and circuit integrity, adhering to standards like CISPR 25. Our state-of-the-art facilities ensure components withstand real-world conditions, enhancing durability and compliance.
+                Our electrical testing services validate the performance and safety of automotive electrical systems:
               </p>
+              <ul>
+                <li><strong>EMC Testing:</strong> Electromagnetic compatibility testing ensuring system interference immunity</li>
+                <li><strong>Load Analysis:</strong> Comprehensive electrical load analysis and circuit integrity validation</li>
+                <li><strong>CISPR 25 Compliance:</strong> Full adherence to automotive electromagnetic compatibility standards</li>
+                <li><strong>State-of-the-Art Facilities:</strong> Advanced testing equipment ensuring accurate and reliable results</li>
+                <li><strong>Real-World Validation:</strong> Testing ensuring components withstand actual operating conditions</li>
+                <li><strong>Durability Enhancement:</strong> Comprehensive testing improving component longevity and reliability</li>
+                <li><strong>Standards Compliance:</strong> Full compliance with automotive electrical testing requirements</li>
+              </ul>
             </div>
           </section>
 
@@ -133,9 +187,18 @@ const S5 = () => {
             </div>
             <div className="section-text">
               <h2>Environmental Standards</h2>
-            <p>
-              We support compliance with environmental standards like ISO 14001 and regional regulations. Our services include lifecycle assessments, emissions testing, and material compliance (e.g., RoHS, REACH). We help clients design sustainable systems, reducing environmental impact while meeting regulatory demands and promoting eco-friendly automotive solutions.
-            </p>
+              <p>
+                We support compliance with environmental standards promoting sustainable automotive solutions:
+              </p>
+              <ul>
+                <li><strong>ISO 14001 Compliance:</strong> Environmental management systems and regional environmental regulations</li>
+                <li><strong>Lifecycle Assessments:</strong> Comprehensive environmental impact analysis throughout product lifecycle</li>
+                <li><strong>Emissions Testing:</strong> Rigorous testing ensuring compliance with environmental emission standards</li>
+                <li><strong>Material Compliance:</strong> RoHS, REACH, and other material safety and environmental regulations</li>
+                <li><strong>Sustainable Design:</strong> Eco-friendly system design reducing environmental impact</li>
+                <li><strong>Regulatory Compliance:</strong> Meeting environmental demands and promoting sustainable practices</li>
+                <li><strong>Eco-Friendly Solutions:</strong> Supporting development of environmentally responsible automotive technologies</li>
+              </ul>
             </div>
           </section>
         </div>

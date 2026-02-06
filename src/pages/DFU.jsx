@@ -47,8 +47,8 @@ const P6 = () => {
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div>
-              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
-                TBS’s Diagnostics Flashing Unit (DFU) is an all-in-one tool for seamless ECU reprogramming and diagnostics, streamlining maintenance, calibration, and updates across the vehicle lifecycle. Supporting UDS, CCP/XCP, and OBD-II protocols, it enables secure flashing over CAN, Ethernet, or LIN, with encryption to prevent tampering.
+              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+                Our <b>Diagnostics Flashing Unit (DFU)</b> is an all-in-one tool for seamless ECU reprogramming and diagnostics, streamlining maintenance, calibration, and updates across the vehicle lifecycle. Supporting UDS, CCP/XCP, and OBD-II protocols, it enables secure flashing over CAN, Ethernet, or LIN, with advanced encryption to prevent tampering and ensure system integrity.
               </p>
             </div>
           </section>
@@ -60,8 +60,16 @@ const P6 = () => {
             <div className="section-text">
               <h2>Diagnostics Flashing Unit</h2>
               <p>
-                Designed for lab, production, and service environments, the DFU offers automated workflows via ODX/OTX data, parallel processing for multiple ECUs, and remote capabilities through telematics. It diagnoses trouble codes in real-time, supporting VIN-specific adaptations for precision. For aftermarket and fleet operators, it facilitates OTA-like updates without specialized hardware, ensuring compliance with efficiency and emissions standards.
+                Designed for lab, production, and service environments, the DFU offers comprehensive automation and remote capabilities:
               </p>
+              <ul>
+                <li><strong>Automated Workflows:</strong> ODX/OTX data integration with parallel processing for multiple ECUs</li>
+                <li><strong>Remote Capabilities:</strong> Telematics integration enabling remote diagnostics and updates</li>
+                <li><strong>Real-Time Diagnostics:</strong> Trouble code diagnosis with VIN-specific adaptations for precision</li>
+                <li><strong>OTA-Like Updates:</strong> Aftermarket and fleet operator support without specialized hardware</li>
+                <li><strong>Compliance Assurance:</strong> Ensuring adherence to efficiency and emissions standards</li>
+                <li><strong>Multi-Environment Support:</strong> Optimized for lab, production, and service applications</li>
+              </ul>
             </div>
           </section>
 
@@ -72,8 +80,15 @@ const P6 = () => {
             <div className="section-text">
               <h2>Intuitive Diagnostics & Flashing Unit for Modern Vehicles</h2>
               <p>
-                With an intuitive interface and live support, TBS’s DFU empowers technicians to handle complex tasks confidently, reducing downtime and costs. Clients achieve reliable, future-ready diagnostics, keeping vehicles at peak performance.
+                With an intuitive interface and comprehensive support, TBS's DFU empowers technicians for confident operation:
               </p>
+              <ul>
+                <li><strong>Intuitive Interface:</strong> User-friendly design enabling confident handling of complex tasks</li>
+                <li><strong>Live Support:</strong> Real-time assistance reducing technician downtime and operational costs</li>
+                <li><strong>Reliable Diagnostics:</strong> Future-ready diagnostic capabilities ensuring optimal vehicle performance</li>
+                <li><strong>Cost Reduction:</strong> Minimized downtime and maintenance costs through efficient operations</li>
+                <li><strong>Peak Performance:</strong> Keeping vehicles at optimal performance levels throughout their lifecycle</li>
+              </ul>
             </div>
           </section>
         </div>

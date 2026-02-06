@@ -45,37 +45,51 @@ const P4 = () => {
 
         {/* Creative Content Sections */}
         <div className="product-page">
-
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div>
-              {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
-                TBS’s Secure Manufacturing Unit (SMU) safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
+              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+                Our <b>Secure Manufacturing Unit (SMU)</b> safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Touchscreen Display" className="section-image" />
+              <img src="/HIL.jpg" alt="Secure Manufacturing" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Secure Manufacturing Unit</h2>
               <p>
-                Featuring encrypted firmware flashing, AI-driven anomaly detection, and role-based access controls, it prevents unauthorized interventions. The SMU supports parallel processing, flashing up to eight vehicles simultaneously via gateways, and embeds PKI for device authentication and secure OTA updates. Compliant with WP.29 regulations, it mitigates risks like ransomware and supply chain disruptions, with built-in auditing for regulatory compliance.
+                Featuring encrypted firmware flashing, AI-driven anomaly detection, and role-based access controls for comprehensive manufacturing security:
               </p>
+              <ul>
+                <li><strong>Encrypted Firmware Flashing:</strong> Secure flashing protocols preventing unauthorized code modifications</li>
+                <li><strong>AI-Driven Anomaly Detection:</strong> Real-time threat identification and automated response systems</li>
+                <li><strong>Role-Based Access Controls:</strong> Granular permissions ensuring only authorized personnel access</li>
+                <li><strong>Parallel Processing:</strong> Simultaneous flashing of up to eight vehicles via secure gateways</li>
+                <li><strong>PKI Integration:</strong> Device authentication and secure OTA update capabilities</li>
+                <li><strong>WP.29 Compliance:</strong> Meeting automotive cybersecurity regulations and standards</li>
+              </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="Connectivity" className="section-image" />
+              <img src="/SMU.jpg" alt="Resilient Manufacturing" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Embedded Security for Resilient Manufacturing</h2>
               <p>
-                By embedding security at the design stage, including standardized encryption for AUTOSAR architectures, TBS’s SMU protects intellectual property and accelerates certification. Manufacturers gain resilient, future-proof production lines, turning potential threats into opportunities for trusted, high-quality output.
+                By embedding security at the design stage, TBS's SMU delivers comprehensive protection and operational excellence:
               </p>
+              <ul>
+                <li><strong>Design-Stage Security:</strong> Embedded protection from initial development through production</li>
+                <li><strong>AUTOSAR Encryption:</strong> Standardized security protocols for automotive architectures</li>
+                <li><strong>IP Protection:</strong> Safeguarding intellectual property and proprietary manufacturing processes</li>
+                <li><strong>Accelerated Certification:</strong> Streamlined compliance processes reducing time-to-market</li>
+                <li><strong>Threat Mitigation:</strong> Protection against ransomware and supply chain disruptions</li>
+                <li><strong>Future-Proof Design:</strong> Scalable security architecture adapting to emerging threats</li>
+              </ul>
             </div>
           </section>
         </div>

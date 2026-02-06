@@ -48,8 +48,8 @@ const P5 = () => {
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div>
-              <p style={{fontSize: "1.5rem", textAlign: "justify", padding: "6rem 0"}}>
-                TBS’s Smart Hardware-in-the-Loop (HIL) system revolutionizes automotive testing by bridging virtual simulations with real hardware, enabling precise validation of ECUs and control algorithms in a risk-free environment. Using real-time processors, it emulates vehicle dynamics, sensors, and actuators, testing scenarios from normal drives to edge-case faults without physical prototypes.
+              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+                TBS's Smart HIL platform transforms automotive validation through intelligent hardware-software integration. Our system delivers real-time ECU testing with advanced fault simulation, multi-protocol connectivity, and AI-driven automation. Designed for next-generation vehicle development, it accelerates testing cycles while ensuring ISO 26262 compliance and seamless integration with industry-standard development tools.
               </p>
             </div>
           </section>
@@ -60,9 +60,16 @@ const P5 = () => {
             </div>
             <div className="section-text">
               <h2>Smart HIL (Hardware-in-the-Loop)</h2>
-              <p>
-                Supporting fault insertion, scalable I/O for CAN, LIN, and Ethernet, and MATLAB/Simulink integration, it complies with ISO 26262 ASIL-D standards, ensuring deterministic timing and traceability. AI-optimized test automation reduces cycles by up to 50%, enhancing efficiency. Ideal for ADAS, powertrain, and electrification development, TBS’s Smart HIL minimizes costly road tests while maximizing coverage.
-              </p>
+              <div className="bento-box" style={{borderRadius: '12px', padding: '1.5rem', backgroundColor: '#fff'}}>
+                <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• Advanced fault insertion capabilities for comprehensive testing scenarios</li>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• Scalable I/O architecture supporting CAN, LIN, and Ethernet protocols</li>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• Seamless MATLAB/Simulink integration for model-based development</li>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• ISO 26262 ASIL-D compliance ensuring deterministic timing and traceability</li>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• AI-optimized test automation reducing development cycles by up to 50%</li>
+                  <li style={{paddingLeft: '1rem', position: 'relative'}}>• Ideal for ADAS, powertrain, and electrification development projects</li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -72,9 +79,15 @@ const P5 = () => {
             </div>
             <div className="section-text">
               <h2>Advanced HIL Testing for Software-Defined Vehicles</h2>
-              <p>
-                Clients achieve early defect detection and seamless transitions to vehicle-in-the-loop phases, fostering robust, safe designs. TBS’s HIL accelerates time-to-market and enhances reliability in software-defined vehicles, driving innovation in automotive testing.
-              </p>
+              <div className="bento-box" style={{borderRadius: '12px', padding: '1.5rem', backgroundColor: '#fff'}}>
+                <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• Early defect detection capabilities throughout development lifecycle</li>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• Seamless transitions to vehicle-in-the-loop testing phases</li>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• Robust and safe design validation for critical automotive systems</li>
+                  <li style={{marginBottom: '0.8rem', paddingLeft: '1rem', position: 'relative'}}>• Accelerated time-to-market for software-defined vehicle platforms</li>
+                  <li style={{paddingLeft: '1rem', position: 'relative'}}>• Enhanced reliability driving innovation in automotive testing methodologies</li>
+                </ul>
+              </div>
             </div>
           </section>
 
