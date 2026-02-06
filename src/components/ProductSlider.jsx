@@ -77,14 +77,14 @@ export default function ProductSlider() {
 
   return (
     <div>
-      <h2 style={{ color: "black" }}>Our Products</h2>
+      <h2 >Our Products</h2>
 
       {isMobile ? (
         <section className="products" >
           <div className="product-grid">
             {products.map((product) => (
               <div className="product-card" key={product.id} onClick={() => {
-                navigate(`/pages/${current.id}`);
+                navigate(`/pages/Our Products/${current.id}`);
                 window.scrollTo(0, 0);
               }}>
                 <img src={product.img} alt={product.name} />
@@ -114,7 +114,7 @@ export default function ProductSlider() {
                 <button
                   className="reads-more"
                   onClick={() => {
-                    navigate(`/pages/${current.id}`);
+                    navigate(`/pages/Our Products/${current.id}`);
                     window.scrollTo(0, 0);
                   }}
                 >
@@ -125,7 +125,7 @@ export default function ProductSlider() {
                 </button>
               </div>
             </div>
-            <span className="arrow right" style={{ color: "Black" }} onClick={nextProduct}>
+            <span className="arrow right" style={{ color: "white" }} onClick={nextProduct}>
               ❯
             </span>
           </div>

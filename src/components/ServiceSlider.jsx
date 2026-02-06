@@ -73,7 +73,7 @@ export default function ServiceSlider() {
           <div className="product-grid">
             {services.map((service) => (
               <div className="product-card" key={service.id} onClick={() => {
-                navigate(`/pages/${currentService.id}`);
+                navigate(`/pages/Services/${currentService.id}`);
                 window.scrollTo(0, 0);
               }}>
                 <img src={service.img} alt={service.name} />
@@ -99,7 +99,7 @@ export default function ServiceSlider() {
                 <button
                   className="read-more"
                   onClick={() => {
-                    navigate(`/pages/${currentService.id}`);
+                    navigate(`/pages/Services/${currentService.id}`);
                     window.scrollTo(0, 0);
                   }}
                 >
