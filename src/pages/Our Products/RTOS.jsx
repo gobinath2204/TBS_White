@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import './Prod-Serv-pages.css';
+import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 
 const P7 = () => {
@@ -8,11 +8,11 @@ const P7 = () => {
   const videoPath = "/RTOS.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/DFU");
+    navigate("/pages/Our Products/DFU");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/Inhousesoftwarestack");
+    navigate("/pages/Our Products/Inhousesoftwarestack");
     window.scrollTo(0, 0);
   };
 

@@ -47,20 +47,27 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px 50px;
-  /* background: rgba(118, 118, 118, 0.344); */
-  background: rgb(255, 255, 255);
-  backdrop-filter: blur(10px);
+  padding: 12px 60px; /* Slimmer padding */
+  background: var(--glass-white); 
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
   z-index: 10000;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.427);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Thin subtle line instead of heavy shadow */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03); 
+}
+
+/* Scrolled state (Optional: Add this class via JS if you want it to shrink) */
+.navbar.scrolled {
+  padding: 8px 60px;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-height: 11vh;
+  max-width: 1400px; /* Better constraint for wide screens */
   margin: 0 auto;
 }
 
@@ -526,6 +533,63 @@ section h2 {
 .apply-btn:hover {
   background: var(--orange);
 }
+/* Trigger on hover */
+/* --- CLASSY TECH DROPDOWN --- */
+.dropdown {
+  position: relative; /* Change from fixed to relative */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Center it under the link */
+  background: #ffffff;
+  min-width: 220px;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover State */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li a {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 0.85rem !important;
+  padding: 10px 15px !important;
+  border-radius: 8px;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+.dropdown-menu li a:hover {
+  background: #f8f9fa !important;
+  padding-left: 18px !important; /* Tiny slide effect */
+}
+
+/* Individual Item Styling */
+.dropdown-menu li {
+  width: 100%;
+}
+
+/* Remove underline on hover for dropdown items */
+.dropdown-menu li a::after {
+  display: none !important;
+}
+
 
 /* ------------------------------
    RESPONSIVE TWEAKS
@@ -704,6 +768,23 @@ section h2 {
   .footer .social-icons {
     justify-content: left;
   }
+  
+  .dropdown-menu {
+    position: static; /* Let it flow naturally in the mobile drawer */
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0 0 0 20px; /* Indent sub-items */
+    display: block; /* Show nested items in the drawer */
+  }
+
+  .dropdown-menu li a {
+    color: var(--light) !important; /* Make text white for the dark mobile menu */
+    font-size: 0.9rem !important;
+  }
 
 
 }
@@ -789,3 +870,30 @@ section h2 {
     justify-content: center;
   }
 }
+
+/* --- 1. GLOBAL DROPDOWN LOGIC (Desktop First) --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  /* Adjust 'top' based on your navbar height (~11vh or 80px) */
+  top: 100%; 
+  left: 0;
+  background-color: #ffffff;
+  min-width: 260px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 10px 0;
+  list-style: none;
+  
+  /* Hidden state */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+  z-index: 11000; /* Must be higher than navbar z-index */
+  border-top: 3px solid var(--orange);
+}
+

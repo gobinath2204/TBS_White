@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import './Prod-Serv-pages.css';
+import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 
 const P4 = () => {
@@ -8,11 +8,11 @@ const P4 = () => {
   const videoPath = "/SMU.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/HMI");
+    navigate("/pages/Our Products/HMI");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/SmartHIL");
+    navigate("/pages/Our Products/SmartHIL");
     window.scrollTo(0, 0);
   };
 

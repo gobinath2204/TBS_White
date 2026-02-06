@@ -1,83 +1,86 @@
-/* Services page layout */
-
-.services-section {
-  padding: 4rem 0 6rem 0;
-}
-
-/* Grid that holds all service cards */
-.services-section .product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 1200px;       /* wider, closer to homepage hero width */
+.services-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 6rem 2rem;
 }
 
-/* Individual service card */
-.services-section .product-card {
+.services-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+  color: #333;
+}
+
+.services-list {
   display: flex;
-  border-radius: 20px;
+  flex-direction: column;
+  gap: 4rem; /* Space between each service row */
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 25px;
   overflow: hidden;
-  background: #111;
-  height: 360px;
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
 }
 
-/* Hover effect */
-.services-section .product-card:hover {
+.service-row:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* RIGHT: image block */
-.services-section .product-card img {
-  flex: 0 0 60%;
+/* Alternating layout logic */
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image {
+  flex: 1;
+  height: 400px;
+}
+
+.service-image img {
+  width: 100%;
   height: 100%;
-  object-fit:cover;
+  object-fit: cover;
 }
 
-/* LEFT: text panel */
-.services-section .product-info {
-  flex: 0 0 40%;
-  background: #111;
-  color: #fff;
-  padding: 3rem 2.5rem;
+.service-content {
+  flex: 1;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Title */
-.services-section .product-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
+.service-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #111;
 }
 
-/* Description */
-.services-section .product-info p {
-  color: #ddd;
+.service-content p {
+  font-size: 1.1rem;
   line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
   text-align: justify;
 }
 
-/* Optional: small responsive tweak */
-@media (max-width: 900px) {
-  .services-section .product-card {
+/* Responsive: Stack vertically on mobile */
+@media (max-width: 780px) {
+  .service-row, .service-row.reverse {
     flex-direction: column;
-    height: auto;
   }
-
-  .services-section .product-card img,
-  .services-section .product-info {
-    flex: 1 1 auto;
+  
+  .service-image {
     width: 100%;
+    height: 250px;
   }
 
-  .services-section .product-info {
-    padding: 2rem 1.5rem;
+  .service-content {
+    padding: 2rem;
   }
 }

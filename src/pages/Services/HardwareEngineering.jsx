@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import './Prod-Serv-pages.css';
+import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 
 const S3 = () => {
@@ -8,11 +8,11 @@ const S3 = () => {
   const imagePath = "/hwengg.jpg";
 
   const handlePrevious = () => {
-    navigate("/pages/SoftwareEngineering");
+    navigate("/pages/Services/SoftwareEngineering");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/SystemValidation");
+    navigate("/pages/Services/SystemValidation");
     window.scrollTo(0, 0);
   };
 

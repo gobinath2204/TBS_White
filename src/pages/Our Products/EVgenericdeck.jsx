@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import './Prod-Serv-pages.css';
+import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 
 const P2 = () => {
@@ -8,11 +8,11 @@ const P2 = () => {
   const videoPath = "/EVdeck.mp4";
 
   const handlePrevious = () => {
-    navigate("/pages/Inhousesoftwarestack");
+    navigate("/pages/Our Products/Inhousesoftwarestack");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/HMI");
+    navigate("/pages/Our Products/HMI");
     window.scrollTo(0, 0);
   };
 

@@ -73,13 +73,36 @@ const Navbar = () => {
         {/* Nav Links */}
         <ul className={`nav-items ${isMobileMenuOpen ? "active" : ""}`}>
           <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/">Home</Link></li>
-          <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/services">Services</Link></li>
-          <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/products">Products</Link></li>
+
+          {/* Services Dropdown */}
+          <li className="dropdown">
+            <Link to="/Services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <ul className="dropdown-menu">
+              <li><Link to="/pages/Services/SystemDevelopment" onClick={() => setMobileMenuOpen(false)}>System Development</Link></li>
+              <li><Link to="/pages/Services/SoftwareEngineering" onClick={() => setMobileMenuOpen(false)}>Software Engineering</Link></li>
+              <li><Link to="/pages/Services/HardwareEngineering" onClick={() => setMobileMenuOpen(false)}>Hardware Engineering</Link></li>
+              <li><Link to="/pages/Services/SystemValidation" onClick={() => setMobileMenuOpen(false)}>System Validation</Link></li>
+              <li><Link to="/pages/Services/SafetyandRegulatory" onClick={() => setMobileMenuOpen(false)}>Safety and Regulatory</Link></li>
+            </ul>
+          </li>
+
+          {/* Products Dropdown */}
+          <li className="dropdown">
+            <Link to="/products" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+            <ul className="dropdown-menu">
+              <li><Link to="/pages/Our Products/Inhousesoftwarestack" onClick={() => setMobileMenuOpen(false)}>In House Software Stack (COTS)</Link></li>
+              <li><Link to="/pages/Our Products/EVgenericdeck" onClick={() => setMobileMenuOpen(false)}>EV Generic Deck</Link></li>
+              <li><Link to="/pages/Our Products/HMI" onClick={() => setMobileMenuOpen(false)}>Human Machine Interface (HMI)</Link></li>
+              <li><Link to="/pages/Our Products/SMU" onClick={() => setMobileMenuOpen(false)}>Secure Manufacturing Unit</Link></li>
+              <li><Link to="/pages/Our Products/SmartHIL" onClick={() => setMobileMenuOpen(false)}>Smart HIL</Link></li>
+              <li><Link to="/pages/Our Products/DFU" onClick={() => setMobileMenuOpen(false)}>Diagnostics Flashing Unit</Link></li>
+              <li><Link to="/pages/Our Products/RTOS" onClick={() => setMobileMenuOpen(false)}>Free RTOS Safety Plugin</Link></li>
+            </ul>
+          </li>
           <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/careers">Careers</Link></li>
           <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/about">About</Link></li>
           <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/contact">Contact</Link></li>
         </ul>
-
         {/* Overlay for mobile */}
         {isMobileMenuOpen && (
           <div className="menu-overlay" onClick={() => setMobileMenuOpen(false)}></div>
