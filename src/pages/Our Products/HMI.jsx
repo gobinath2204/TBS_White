@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const P3 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/HMI2.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/Our Products/EVgenericdeck");
@@ -46,12 +45,9 @@ const P3 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div >
-              {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
                 Our <b>Automotive Human-Machine Interface (HMI)</b> transforms vehicle cabins into intuitive, connected ecosystems, enhancing driver and passenger experiences while prioritizing safety. Powered by Android Automotive OS, it integrates advanced touchscreens, voice recognition, and gesture controls to unify navigation, multimedia, climate control, and ADAS feedback into a customizable dashboard.
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
@@ -103,7 +99,7 @@ const P3 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

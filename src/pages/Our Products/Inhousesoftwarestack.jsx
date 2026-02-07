@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const P1 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/IHSS.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/Our Products/RTOS");
@@ -46,12 +45,10 @@ const P1 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
-            <div >
-              <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0" }}>
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
                 Our <b>In-House Software Stack (Commercial Off-The-Shelf, or COTS)</b> is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market. Validated to ISO 26262 for functional safety, it minimizes costs compared to custom solutions while ensuring high reliability.
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
@@ -83,7 +80,7 @@ const P1 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

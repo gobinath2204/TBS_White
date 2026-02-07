@@ -45,13 +45,10 @@ const S2 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section  style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div  >
-              {/* <h2>Overview</h2> */}
-              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
                 Our <b>software engineering team</b> delivers exceptional software solutions with comprehensive requirement development, architecture design, and rigorous testing methodologies for automotive ECUs. We excel in AUTOSAR and non-AUTOSAR development, ensuring full compliance with ISO 26262 and ASPICE standards for safety-critical applications. From detailed design to unit testing, we deliver robust, scalable software that meets the most stringent automotive industry requirements.
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
@@ -208,7 +205,7 @@ const S2 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const P5 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/SmartHIL2.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/Our Products/SMU");
@@ -47,11 +46,9 @@ const P5 = () => {
         <div className="product-page">
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div>
-              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
                 TBS's Smart HIL platform transforms automotive validation through intelligent hardware-software integration. Our system delivers real-time ECU testing with advanced fault simulation, multi-protocol connectivity, and AI-driven automation. Designed for next-generation vehicle development, it accelerates testing cycles while ensuring ISO 26262 compliance and seamless integration with industry-standard development tools.
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
@@ -101,7 +98,7 @@ const P5 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

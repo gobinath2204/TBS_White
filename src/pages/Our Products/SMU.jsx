@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const P4 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/SMU.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/Our Products/HMI");
@@ -46,11 +45,9 @@ const P4 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div>
-              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
                 The <b>Secure Manufacturing Unit (SMU)</b> safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
@@ -98,7 +95,7 @@ const P4 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

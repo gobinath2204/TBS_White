@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const P7 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/RTOS.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/Our Products/DFU");
@@ -46,11 +45,9 @@ const P7 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div>
-              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
                 Our comprehensive <b>Real-Time Operating System Solutions</b> deliver safety-critical foundations for automotive embedded systems, featuring Free RTOS Safety Plugin, SMU (Safety Management Unit), and Smart HIL testing platforms. These integrated solutions ensure ISO 26262 ASIL-D compliance while providing robust development and validation environments for next-generation automotive applications.
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
@@ -122,7 +119,7 @@ const P7 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

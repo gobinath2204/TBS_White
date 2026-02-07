@@ -44,13 +44,10 @@ const S1 = () => {
         </div>
         <div className="product-page">
 
-          <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
-            <div >
-              {/* <h2>Overview</h2> */}
-              <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
                 Our <b>system engineering team</b> delivers exceptional system engineering with accurate, fully traceable requirements for functional, non-functional (electrical, mechanical, and environmental), communication, diagnostics, and EOL for cutting-edge automotive ECUs. We deliver the system engineering in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards (UN R100).
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image">
@@ -75,7 +72,7 @@ const S1 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
-            <div className="section-image-wrapper" style={{ marginLeft: '0' }}>
+            <div className="section-image-wrapper">
               <img src="/S_SD/Picture1.png" alt="Custom UI" className="section-image" />
             </div>
             <div className="section-text">
@@ -204,7 +201,7 @@ const S1 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

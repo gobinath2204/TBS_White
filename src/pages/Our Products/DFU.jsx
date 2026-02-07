@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const P6 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/DFU.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/Our Products/SmartHIL");
@@ -46,11 +45,9 @@ const P6 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div>
-              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
                 Our <b>Diagnostics Flashing Unit (DFU)</b> is an all-in-one tool for seamless ECU reprogramming and diagnostics, streamlining maintenance, calibration, and updates across the vehicle lifecycle. Supporting UDS, CCP/XCP, and OBD-II protocols, it enables secure flashing over CAN, Ethernet, or LIN, with advanced encryption to prevent tampering and ensure system integrity.
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
@@ -101,7 +98,7 @@ const P6 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

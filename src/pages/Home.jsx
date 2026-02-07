@@ -56,7 +56,7 @@ export default function Home() {
             }}
             aria-label="Background video showing our services"
           >
-            <source src="/Hero%20Video.mp4" type="video/mp4" />
+            <source src="/videos/Hero%20Video.mp4" type="video/mp4" />
           </video>
         </div>
 

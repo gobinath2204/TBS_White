@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const P2 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/EVdeck.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/Our Products/Inhousesoftwarestack");
@@ -47,11 +46,9 @@ const P2 = () => {
         <div className="product-page">
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div >
-              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
                 Our <b>EV Generic Deck</b> is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
@@ -103,7 +100,7 @@ const P2 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

@@ -21,7 +21,6 @@
 body {
   font-family: "Numans", "Inter", "Segoe UI", sans-serif;
   background: #ffffff;
-  /* background: #0a0a0a; */
   color: #333;
   line-height: 1.6;
   width: 100%;
@@ -83,7 +82,6 @@ nav ul {
 
 nav a {
   font-family: 'Audiowide', sans-serif;
-  /* color: var(--light); */
   color: var(--bg-dark);
   text-decoration: none;
   position: relative;
@@ -186,14 +184,12 @@ nav ul a:hover::after {
 ------------------------------ */
 .hero {
   font-family: "Audiowide", sans-serif;
-  /* display: flex; */
   flex-wrap: wrap;
   height: 100vh;
   justify-content: space-between;
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* margin-top: 11vh; */
   color: #ffffff;
 }
 
@@ -229,7 +225,6 @@ nav ul a:hover::after {
   height: 100%;
   width: 100%;
   padding: 0 2rem 2rem;
-  /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.35), rgba(229, 107, 46, 0.35)); */
   background: rgba(26, 26, 26, 0.108);
 }
 
@@ -276,8 +271,6 @@ section h2 {
 .products-section {
   position: relative;
   background-color: #ffffff;
-  /* border-radius: 25px; */
-  /* padding: 6rem 2rem 10rem; */
   padding: 4rem 0 10rem 0;
   width: 100%;
   margin-top: -7vh;
@@ -288,7 +281,6 @@ section h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
@@ -315,7 +307,6 @@ section h2 {
   content: "";
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.6), rgba(229, 107, 46, 0.6)); */
 }
 
 .product-info {
@@ -338,8 +329,6 @@ section h2 {
   background: #fff;
   padding: 6rem 2rem 8rem;
   width: 100%;
-  /* border-radius: 25px 25px 0 0; */
-  /* margin-top: -4vh; */
   text-align: center;
   z-index: 6;
 }
@@ -365,7 +354,6 @@ section h2 {
   display: inline-flex;
   align-items: center;
   font-size: clamp(1rem, 1vw, 5rem);
-  ;
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -620,7 +608,6 @@ section h2 {
     padding: 2rem;
     background: url('./hmi.png') no-repeat center center;
     background-size: cover;
-    /* make sure it covers fully */
   }
 
   /* Add black overlay */
@@ -632,9 +619,7 @@ section h2 {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.618);
-    /* Black with 40% opacity */
     z-index: -1;
-    /* Place behind the content */
   }
 
   .hero-left {
@@ -656,7 +641,6 @@ section h2 {
 
   .video-background {
     display: none;
-    /* hide video on tablet/mobile if using bg image */
   }
 
   .navbar {
@@ -728,7 +712,6 @@ section h2 {
     content: "";
     position: absolute;
     inset: 0;
-    /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.6), rgba(229, 107, 46, 0.6)); */
   }
 
   .product-info {
@@ -871,14 +854,13 @@ section h2 {
   }
 }
 
-/* --- 1. GLOBAL DROPDOWN LOGIC (Desktop First) --- */
+/* --- GLOBAL DROPDOWN LOGIC (Desktop First) --- */
 .dropdown {
   position: relative;
 }
 
 .dropdown-menu {
   position: absolute;
-  /* Adjust 'top' based on your navbar height (~11vh or 80px) */
   top: 100%; 
   left: 0;
   background-color: #ffffff;
@@ -888,12 +870,11 @@ section h2 {
   padding: 10px 0;
   list-style: none;
   
-  /* Hidden state */
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease-in-out;
-  z-index: 11000; /* Must be higher than navbar z-index */
+  z-index: 11000;
   border-top: 3px solid var(--orange);
 }
 
