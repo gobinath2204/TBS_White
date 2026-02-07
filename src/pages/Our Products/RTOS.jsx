@@ -38,7 +38,7 @@ const P7 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <img src="/RTOS.png" alt="Free RTOS Safety Plugin" className="hero-video" />
+          <img src="/Hero_P/RTOS.png" alt="Free RTOS Safety Plugin" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>Free RTOS Safety Plugin</h1>
         </div>

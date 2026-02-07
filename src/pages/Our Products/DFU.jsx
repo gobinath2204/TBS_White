@@ -38,7 +38,7 @@ const P6 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <img src="/DFU.png" alt="Diagnostics Flashing Unit" className="hero-video" />
+          <img src="/Hero_P/DFU.png" alt="Diagnostics Flashing Unit" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>Diagnostics Flashing Unit</h1>
         </div>

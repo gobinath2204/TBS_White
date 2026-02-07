@@ -38,7 +38,7 @@ const P3 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <img src="/HMI.png" alt="HMI (Human-Machine Interface)" className="hero-video" style={{ transform: 'scale(1.2)' }} />
+          <img src="/Hero_P/HMI.png" alt="HMI (Human-Machine Interface)" className="hero-video" style={{ transform: 'scale(1.2)' }} />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>HMI (Human-Machine Interface)</h1>
         </div>

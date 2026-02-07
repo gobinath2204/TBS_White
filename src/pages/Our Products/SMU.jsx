@@ -38,7 +38,7 @@ const P4 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <img src="/SMU.png" alt="Secure Manufacturing Unit" className="hero-video" />
+          <img src="/Hero_P/SMU.png" alt="Secure Manufacturing Unit" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>Secure Manufacturing Unit</h1>
         </div>
@@ -48,47 +48,43 @@ const P4 = () => {
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <div>
               <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
-                Our <b>Secure Manufacturing Unit (SMU)</b> safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
+                The <b>Secure Manufacturing Unit (SMU)</b> safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
               </p>
             </div>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Secure Manufacturing" className="section-image" />
+              <img src="/P_SMU/SMU1.png" alt="Secure Manufacturing" className="section-image" />
             </div>
             <div className="section-text">
-              <h2>Secure Manufacturing Unit</h2>
-              <p>
-                Featuring encrypted firmware flashing, AI-driven anomaly detection, and role-based access controls for comprehensive manufacturing security:
-              </p>
+              <h2>Core Capabilities</h2>
               <ul>
-                <li><strong>Encrypted Firmware Flashing:</strong> Secure flashing protocols preventing unauthorized code modifications</li>
-                <li><strong>AI-Driven Anomaly Detection:</strong> Real-time threat identification and automated response systems</li>
-                <li><strong>Role-Based Access Controls:</strong> Granular permissions ensuring only authorized personnel access</li>
-                <li><strong>Parallel Processing:</strong> Simultaneous flashing of up to eight vehicles via secure gateways</li>
-                <li><strong>PKI Integration:</strong> Device authentication and secure OTA update capabilities</li>
-                <li><strong>WP.29 Compliance:</strong> Meeting automotive cybersecurity regulations and standards</li>
+                <li><strong>Secure Firmware & Software Flashing</strong> – Ensures only authenticated and trusted software is flashed to the ECU</li>
+                <li><strong>Secure OEM Connectivity</strong> – Connects securely with the OEM backend to fetch firmware and production data</li>
+                <li><strong>End‑of‑Line (EOL) Flashing</strong> – Performs firmware flashing and writes production/product data directly to the ECU at the EOL station</li>
+                <li><strong>Server‑Connected Provisioning</strong> – Automatically retrieves the correct firmware for each registered device</li>
+                <li><strong>Secure Key Injection</strong> – Enables encrypted and secure cryptographic key injection into devices</li>
+                <li><strong>Anti‑Cloning Protection</strong> – Prevents unauthorized duplication and tampering</li>
+                <li><strong>Traceability & Logging</strong> – Maintains tamper‑proof logs for compliance and quality audits</li>
+                <li><strong>Multi‑Protocol Support</strong> – Compatible with CAN, CAN FD, DoIP (Diagnostics over IP), and CANopen</li>
               </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="Resilient Manufacturing" className="section-image" />
+              <img src="/P_SMU/SMU2.png" alt="Resilient Manufacturing" className="section-image" />
             </div>
             <div className="section-text">
-              <h2>Embedded Security for Resilient Manufacturing</h2>
-              <p>
-                By embedding security at the design stage, TBS's SMU delivers comprehensive protection and operational excellence:
-              </p>
+              <h2>Key Advantages & Operational Excellence</h2>
               <ul>
-                <li><strong>Design-Stage Security:</strong> Embedded protection from initial development through production</li>
-                <li><strong>AUTOSAR Encryption:</strong> Standardized security protocols for automotive architectures</li>
-                <li><strong>IP Protection:</strong> Safeguarding intellectual property and proprietary manufacturing processes</li>
-                <li><strong>Accelerated Certification:</strong> Streamlined compliance processes reducing time-to-market</li>
-                <li><strong>Threat Mitigation:</strong> Protection against ransomware and supply chain disruptions</li>
-                <li><strong>Future-Proof Design:</strong> Scalable security architecture adapting to emerging threats</li>
+                <li><strong>Modular & Future-Ready Architecture:</strong> Plugin-based design enabling seamless integration and upgrades</li>
+                <li><strong>Customizable Flash Sequences:</strong> Easily configurable plugin-based scripts tailored to specific production requirements</li>
+                <li><strong>Scalable Infrastructure:</strong> Grows seamlessly with production demands and manufacturing expansion</li>
+                <li><strong>Flexible Communication Options:</strong> Multiple IPC protocols including CAN and Ethernet connectivity</li>
+                <li><strong>Enhanced Security & Compliance:</strong> Strengthens manufacturing security posture while ensuring regulatory adherence</li>
+                <li><strong>Complete Traceability:</strong> Full lifecycle tracking from production through after-sales service</li>
               </ul>
             </div>
           </section>

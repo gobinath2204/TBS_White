@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const S5 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const imagePath = "/s&r.jpg";
+  const imagePath = "/Hero_S/s&r.jpg";
 
   const handlePrevious = () => {
     navigate("/pages/Services/SystemValidation");
