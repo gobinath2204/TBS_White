@@ -84,11 +84,11 @@ export default function ProductSlider() {
           <div className="product-grid">
             {products.map((product) => (
               <div className="product-card" key={product.id} onClick={() => {
-                navigate(`/pages/Our Products/${current.id}`);
+                navigate(`/pages/Our Products/${product.id}`);
                 window.scrollTo(0, 0);
               }}>
                 <img src={product.img} alt={product.name} />
-                <div className="product-info">
+                <div className="product-info product-card-content">
                   <h3>{product.name}</h3>
                   <p>{product.Cdesc}</p>
                 </div>

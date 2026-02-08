@@ -73,11 +73,11 @@ export default function ServiceSlider() {
           <div className="product-grid">
             {services.map((service) => (
               <div className="product-card" key={service.id} onClick={() => {
-                navigate(`/pages/Services/${currentService.id}`);
+                navigate(`/pages/Services/${service.id}`);
                 window.scrollTo(0, 0);
               }}>
                 <img src={service.img} alt={service.name} />
-                <div className="product-info">
+                <div className="product-info service-card-content">
                   <h3>{service.name}</h3>
                   <p>{service.Cdesc}</p>
                 </div>

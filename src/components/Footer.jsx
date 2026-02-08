@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <footer className="footer">
       {/* Left Side */}
-      <div className="footer-left" style={{width: '30%', padding: '0px', display: 'flex', flexDirection: 'column', gap: '20px', alignSelf: 'flex-start'}}>
+      <div className="footer-left" style={{width: isMobile ? '100%' : '30%', padding: '0px', display: 'flex', flexDirection: 'column', gap: '20px', alignSelf: isMobile ? 'center' : 'flex-start', alignItems: isMobile ? 'center' : 'flex-start'}}>
         <h2 style={{margin: '-10px 0 10px 0', fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--primary)'}}>Test Base Solutions</h2>
         <a href="https://www.linkedin.com/company/testbasesolutions-ltd/?originalSubdomain=uk" target="_blank" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: 'inherit'}}>
           <svg width="24" height="24" fill="white" viewBox="0 0 24 24" style={{backgroundColor: '#000000', borderRadius: '2px'}}>

@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo img {
   height: 40px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
 nav ul {
@@ -145,7 +146,7 @@ nav ul a:hover::after {
   position: fixed;
   top: 0;
   right: 0;
-  height: 60vh;
+  height: 100vh;
   width: 60%;
   background: #111;
   flex-direction: column;
@@ -153,6 +154,7 @@ nav ul a:hover::after {
   gap: 1.5rem;
   transform: translateX(0);
   z-index: 1000;
+  overflow-y: auto;
 }
 
 /* visible state */
@@ -260,7 +262,7 @@ section h2 {
   position: relative;
   background-color: #ffffff;
   border-radius: 0;
-  padding: 4rem 0 10rem 0;
+  padding: 4rem 0 6rem 0;
   width: 100%;
   z-index: 3;
 }
@@ -271,7 +273,7 @@ section h2 {
 .products-section {
   position: relative;
   background-color: #ffffff;
-  padding: 4rem 0 10rem 0;
+  padding: 4rem 0 6rem 0;
   width: 100%;
   margin-top: -7vh;
   z-index: 4;
@@ -327,7 +329,7 @@ section h2 {
 .about {
   position: relative;
   background: #fff;
-  padding: 6rem 2rem 8rem;
+  padding: 4rem 2rem 8rem;
   width: 100%;
   text-align: center;
   z-index: 6;
@@ -337,7 +339,7 @@ section h2 {
   margin-bottom: 1rem;
   font-size: clamp(1rem, 1vw, 5rem);
   color: #444;
-  max-width: 70%;
+  max-width: 85%;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
@@ -375,6 +377,8 @@ section h2 {
   justify-content: space-between;
   padding: 3rem 6rem 1rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 
 .footer-left {
@@ -534,7 +538,7 @@ section h2 {
   left: 50%;
   transform: translateX(-50%) scaleY(0.92);
   background: #ffffff;
-  min-width: 170px;
+  min-width: 200px;
   border-radius: 12px;
   padding: 8px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -673,6 +677,12 @@ section h2 {
   }
 
   .video-background {
+    display: block;
+  }
+
+  .product-info p,
+  .service-card-content p,
+  .product-card-content p {
     display: none;
   }
 
@@ -759,6 +769,15 @@ section h2 {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   }
 
+  .services-section {
+    padding: 2rem 0 3rem 0;
+  }
+
+  .products-section {
+    padding: 2rem 0 3rem 0;
+    margin-top: -7vh;
+  }
+
   .about p {
     max-width: 90%;
   }
@@ -785,24 +804,33 @@ section h2 {
     justify-content: left;
   }
   
-  .dropdown-menu {
-    position: static; /* Let it flow naturally in the mobile drawer */
+  .services-dropdown .dropdown-menu,
+  .products-dropdown .dropdown-menu {
+    position: static !important; /* Let it flow naturally in the mobile drawer */
     opacity: 1;
     visibility: visible;
-    transform: none;
+    transform: none !important;
     background-color: transparent;
     box-shadow: none;
     border: none;
     padding: 0 0 0 20px; /* Indent sub-items */
     display: block; /* Show nested items in the drawer */
+    min-width: auto;
+    transition: none;
   }
 
   .dropdown-menu li a {
     color: var(--light) !important; /* Make text white for the dark mobile menu */
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
+    font-family: 'Audiowide', sans-serif !important;
+    transition: none !important;
   }
 
-
+  .dropdown-menu li a:hover {
+    background: transparent !important;
+    color: var(--light) !important;
+    transform: none !important;
+  }
 }
 
 
@@ -886,63 +914,3 @@ section h2 {
     justify-content: center;
   }
 }
-
-/* --- GLOBAL DROPDOWN LOGIC (Mobile/Responsive) --- */
-.dropdown {
-  position: relative;
-}
-
-/* Services Dropdown - Mobile */
-.services-dropdown .dropdown-menu {
-  position: absolute;
-  top: 100%; 
-  left: 0;
-  background-color: #ffffff;
-  min-width: 190px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 10px 0;
-  list-style: none;
-  
-  opacity: 0;
-  visibility: hidden;
-  transform: scaleY(0.92);
-  transform-origin: top center;
-  transition: all 0.25s ease;
-  z-index: 11000;
-  border-top: 3px solid var(--orange);
-}
-
-/* Products Dropdown - Mobile */
-.products-dropdown .dropdown-menu {
-  position: absolute;
-  top: 100%; 
-  left: 0;
-  background-color: #ffffff;
-  min-width: 280px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 10px 0;
-  list-style: none;
-  
-  opacity: 0;
-  visibility: hidden;
-  transform: scaleY(0.92);
-  transform-origin: top center;
-  transition: all 0.25s ease;
-  z-index: 11000;
-  border-top: 3px solid var(--orange);
-}
-
-.services-dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: scaleY(1);
-}
-
-.products-dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: scaleY(1);
-}
-

@@ -94,7 +94,7 @@ const ContactUS = () => {
         </div>
 
         <div className="map-section" data-aos="fade-left">
-          <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+          <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ zIndex: 0 }}>
             <LayersControl position="topright">
               <LayersControl.BaseLayer checked name="OpenStreetMap">
                 <TileLayer
