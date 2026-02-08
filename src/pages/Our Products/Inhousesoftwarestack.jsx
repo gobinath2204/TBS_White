@@ -47,27 +47,92 @@ const P1 = () => {
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
-                Our <b>In-House Software Stack (Commercial Off-The-Shelf, or COTS)</b> is a robust, ready-to-deploy foundation for automotive embedded systems. Built on proven COTS principles, this modular stack integrates real-time operating systems, middleware, and application layers to streamline development and reduce time-to-market. Validated to ISO 26262 for functional safety, it minimizes costs compared to custom solutions while ensuring high reliability.
+                Our <b>In-House Software Stack (COTS)</b> delivers a comprehensive, robust foundation for automotive embedded systems. It integrates a secure <b>Flash Bootloader Stack</b>, reliable <b>NVM Manager</b>, and high-performance communication stacks including <b>CAN</b>, <b>UDS</b>, and <b>XCP</b>. This modular solution ensures secure boot processes, efficient diagnostics, real-time calibration, and dependable data management, streamlining development while meeting critical safety and performance standards.
             </p>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Touchscreen Display" className="section-image" />
+              <img src="/P_COTS/Picture0.png" alt="Flash Bootloader Stack" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
             </div>
             <div className="section-text">
-              <h2>In-House Software Stack (COTS)</h2>
+              <h2>Flash Bootloader Stack</h2>
               <p>
-                Supporting multi-core processors and AUTOSAR architectures, our COTS stack delivers comprehensive capabilities:
+                Ensures secure system startup and reliable software updates through a multi-stage boot process:
               </p>
               <ul>
-                <li><strong>Multi-Core Support:</strong> Advanced multi-core processor compatibility with AUTOSAR architecture integration</li>
-                <li><strong>Versatile Applications:</strong> Ideal for engine management, infotainment, and ADAS applications</li>
-                <li><strong>Hypervisor Extensions:</strong> Advanced virtualization capabilities enabling rapid prototyping</li>
-                <li><strong>Board Support Packages:</strong> Commercial hardware compatibility without compromising performance or security</li>
-                <li><strong>Lifecycle Cost Reduction:</strong> Lower total cost of ownership with enhanced scalability</li>
-                <li><strong>Seamless Upgrades:</strong> Keeping pace with software-defined vehicle trends and innovations</li>
-                <li><strong>Innovation Focus:</strong> Enabling engineering teams to concentrate on core innovation and development</li>
+                <li><strong>Primary Bootloader (PBL):</strong> Responsible for hardware initialization and validating the integrity of the Secondary Bootloader.</li>
+                <li><strong>Secondary Bootloader (SBL):</strong> Manages secure flash programming, diagnostics, and critical application updates.</li>
+                <li><strong>Application (App):</strong> Contains the core ECU functionality and executes only after successful boot validation.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="content-section section-with-image">
+            <div className="section-image-wrapper">
+              <img src="/P_COTS/Picture1.png" alt="NVM manager" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+            </div>
+            <div className="section-text">
+              <h2>NVM Manager</h2>
+              <p>
+                Delivers robust non-volatile memory management for critical data retention and system configuration:
+              </p>
+              <ul>
+                <li><strong>Reliable Storage:</strong> Provides flash memory management for dependable data storage and system updates.</li>
+                <li><strong>EEPROM Emulation:</strong> Supports emulation using flash memory for non-volatile data storage.</li>
+                <li><strong>Data Integrity:</strong> Utilizes backup RAM to retain critical information during system resets or power loss.</li>
+                <li><strong>Customization:</strong> Includes a dedicated configuration tool for streamlined setup and easy customization.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="content-section section-with-image reverse">
+            <div className="section-image-wrapper">
+              <img src="/P_COTS/Picture2.png" alt="CAN Stack" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+            </div>
+            <div className="section-text">
+              <h2>CAN Stack (Controller Area Network)</h2>
+              <p>
+                Ensures reliable and efficient data communication across the vehicle network:
+              </p>
+              <ul>
+                <li><strong>Reliable Communication:</strong> Provides a robust framework for high-speed data exchange between ECUs.</li>
+                <li><strong>Signal Management:</strong> Handles complex message filtering, periodic transmission, and reception with minimal CPU overhead.</li>
+                <li><strong>Fault Handling:</strong> Integrated network management to detect and recover from communication bus errors.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="content-section section-with-image">
+            <div className="section-image-wrapper">
+              <img src="/P_COTS/Picture3.png" alt="UDS Stack" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+            </div>
+            <div className="section-text">
+              <h2>UDS Stack (Unified Diagnostic Services - ISO 14229)</h2>
+              <p>
+                Provides comprehensive diagnostic capabilities compliant with ISO 14229:
+              </p>
+              <ul>
+                <li><strong>Diagnostics & Servicing:</strong> Full implementation of diagnostic services for fault memory (DTC) reading, data sampling, and routine controls.</li>
+                <li><strong>Security Access:</strong> Managed authentication levels to protect sensitive ECU functions during workshop or factory access.</li>
+                <li><strong>Standard Compliance:</strong> Fully aligned with automotive standards for seamless integration with external tester tools.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="content-section section-with-image reverse">
+            <div className="section-image-wrapper">
+              <img src="/P_COTS/Picture4.png" alt="XCP Stack" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+            </div>
+            <div className="section-text">
+              <h2>XCP Stack (Universal Measurement and Calibration Protocol)</h2>
+              <p>
+                Facilitates real-time measurement and calibration for optimal ECU performance:
+              </p>
+              <ul>
+                <li><strong>Real-Time Calibration:</strong> Enables high-performance measurement and calibration of internal ECU variables during runtime.</li>
+                <li><strong>Transport Independence:</strong> Operates efficiently over CAN, Ethernet, or FlexRay interfaces.</li>
+                <li><strong>Optimization:</strong> Optimized for low memory footprint while maintaining high data throughput for developers and testers.</li>
               </ul>
             </div>
           </section>

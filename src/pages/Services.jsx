@@ -39,7 +39,7 @@ export default function ServiceShowcase() {
   const navigate = useNavigate();
 
   const handleNavigate = (id) => {
-    navigate(`/pages/${id}`);
+    navigate(`/pages/Services/${id}`);
     window.scrollTo(0, 0);
   };
 
