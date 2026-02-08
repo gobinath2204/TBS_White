@@ -47,9 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: 100%;
   padding: 12px 60px; /* Slimmer padding */
-  background: var(--glass-white); 
-  backdrop-filter: blur(15px) saturate(180%);
-  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  background: #ffffff;
   z-index: 10000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Thin subtle line instead of heavy shadow */
@@ -72,7 +70,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo img {
   height: 40px;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
 nav ul {

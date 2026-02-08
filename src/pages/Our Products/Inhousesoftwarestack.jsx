@@ -47,7 +47,7 @@ const P1 = () => {
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
-                Our <b>In-House Software Stack (COTS)</b> delivers a comprehensive, robust foundation for automotive embedded systems. It integrates a secure <b>Flash Bootloader Stack</b>, reliable <b>NVM Manager</b>, and high-performance communication stacks including <b>CAN</b>, <b>UDS</b>, and <b>XCP</b>. This modular solution ensures secure boot processes, efficient diagnostics, real-time calibration, and dependable data management, streamlining development while meeting critical safety and performance standards.
+                Our <b>In House Commercial off the shelf software stack</b> developed for Automotive communication (CAN), Diagnostics(UDS),UDS on CAN,  Calibration(XCP), Safe RTOS(Free RTOS + Safety Plugin), Flash Boot Loaders(PBL +SBL+App), NVM Manager & BSW Low Level Drivers. Our stacks are in compliance with respective ISO Standards. Our stacks are already in production vehicles. Our all stack have configuration Tools. 
             </p>
           </section>
 

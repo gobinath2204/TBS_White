@@ -123,7 +123,7 @@ const S4 = () => {
               <img src="/S_SV/Picture3.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
             </div>
             <div className="section-text">
-              <h2>System Integration/Dyno Validation</h2>
+              <h2>Dyno Validation</h2>
               <p>
                 System Integration and Dyno Validation form the backbone of our comprehensive validation services:
               </p>

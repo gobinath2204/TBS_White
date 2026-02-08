@@ -46,47 +46,25 @@ const P2 = () => {
         <div className="product-page">
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "3rem 0"}}>
                 Our <b>EV Generic Deck</b> is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
             </p>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="Custom UI" className="section-image" />
+              <img src="/P_EVdeck/Picture.png" alt="Strategic EV Development" className="section-image" />
             </div>
             <div className="section-text">
-              <h2>EV Generic Deck</h2>
-              <p>
-                Designed for efficiency, it incorporates advanced features and comprehensive testing capabilities:
-              </p>
+              <h2>Strategic EV Development Framework</h2>
               <ul>
-                <li><strong>Advanced Thermal Management:</strong> Optimized thermal control systems for enhanced performance and range</li>
-                <li><strong>Regenerative Braking:</strong> Integrated regenerative braking technology maximizing energy recovery</li>
-                <li><strong>ISO 15118 Compliance:</strong> Charging interoperability ensuring seamless integration with charging infrastructure</li>
-                <li><strong>Diagnostic Integration:</strong> Real-time monitoring protocols with OTA update capabilities</li>
-                <li><strong>Development Risk Reduction:</strong> Real-world scenario simulation including fault insertion and load testing</li>
-                <li><strong>Versatile Applications:</strong> Suitable for R&D environments and assembly line integration</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="content-section section-with-image">
-            <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
-            </div>
-            <div className="section-text">
-              <h2>Customizable EV Platform Architecture</h2>
-              <p>
-                Clients can customize the platform to specific needs while leveraging TBS's pre-validated components:
-              </p>
-              <ul>
-                <li><strong>Modular Customization:</strong> Flexible platform adaptation to specific vehicle requirements and applications</li>
-                <li><strong>Pre-Validated Components:</strong> Proven, tested components reducing development time and costs</li>
-                <li><strong>Faster Market Entry:</strong> Accelerated development cycles enabling quicker time-to-market</li>
-                <li><strong>Cost Savings:</strong> Reduced development costs through reusable, validated platform components</li>
-                <li><strong>Superior Drivability:</strong> Enhanced vehicle performance and driving experience optimization</li>
-                <li><strong>Sustainable Solutions:</strong> Empowering manufacturers to deliver high-performing, environmentally friendly vehicles</li>
+                <li><strong>Ensure ASPICE Compliance:</strong> Position compliance as a strategic differentiator to meet OEM mandates (~70% require Level 2/3).</li>
+                <li><strong>Scalable EV Feature Library:</strong> Concentrates on BMS, Inverter, DC-DC, and OBC, embedding ASPICE-compliant processes for reuse.</li>
+                <li><strong>Measurable Outcomes (KPIs):</strong> Target 40% reduction in development time, 90% improved defect detection, and 20% cost reduction.</li>
+                <li><strong>Address Organizational Challenges:</strong> Mitigate talent shortages with training/templates and automate documentation for massive artifact requirements.</li>
+                <li><strong>Emphasize Business Value:</strong> Focus on faster RFQ turnarounds and long-term savings through standardized workflows.</li>
+                <li><strong>Global Expansion:</strong> Adapt framework for Europe/Asia and create opportunities for consulting and strategic partnerships.</li>
+                <li><strong>Integrate Standards Alignment:</strong> Ensure compatibility with ISO 26262 (Functional Safety) and ISO 21434 (Cybersecurity).</li>
               </ul>
             </div>
           </section>
