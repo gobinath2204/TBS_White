@@ -48,76 +48,81 @@ const S4 = () => {
         <div className="product-page">
           <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
             <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
-              Our <b>system validation team</b> excels in comprehensive SYS.4 DVP, Test and Design frameworks, delivering robust validation solutions for automotive and embedded systems. We integrate Design Validation Planning with sophisticated testing methodologies, ensuring full compliance with ISO 26262 and critical safety standards. From HIL testing to vehicle validation, we provide end-to-end solutions utilizing advanced automation and model-based development for optimal system performance and reliability.
+              Our <b>System Validation team</b> provides industry-leading DVP and design assurance for automotive and embedded platforms. Specializing in ISO 26262, we deliver comprehensive coverage through HIL, SIL, and automated testing. Our end-to-end approach ensures seamless integration, rapid defect detection, and peak reliability, guaranteeing your systems meet the highest performance and safety standards.
             </p>
           </section>
 
           {/* Content Sections */}
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S4/Picture1.svg" alt="Custom UI" className="section-image" />
+              <img src="/S_SV/Picture0.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
             </div>
             <div className="section-text">
               <h2>SYS.4 HIL Design Test & Automation</h2>
               <p>
-                Our SYS.4 HIL Design Test & Automation services represent excellence in validating complex hardware-software integrations for automotive applications:
+                Our SYS.4 HIL services deliver high-precision validation for automotive systems using advanced simulation and automation. We accelerate development, enhance reliability, and ensure safety compliance.
               </p>
               <ul>
-                <li><strong>Advanced HIL Platforms:</strong> dSPACE and National Instruments for real-world scenario simulation in controlled environments</li>
-                <li><strong>Early Detection Capabilities:</strong> ECU behavior, sensor fusion, and control algorithm validation reducing physical prototyping costs</li>
-                <li><strong>Automated Testing Pipeline:</strong> Python and MATLAB scripts for regression tests, scenario-based validations, and fault injections</li>
-                <li><strong>ASPICE Level 4 Compliance:</strong> Comprehensive coverage focusing on traceability and repeatability requirements</li>
-                <li><strong>CI/CD Integration:</strong> Automation frameworks facilitating agile development with swift change validation</li>
-                <li><strong>Proven Results:</strong> 35% reduction in validation errors for ADAS development projects</li>
-                <li><strong>Customized Solutions:</strong> Modular HIL environments tailored from powertrain controls to infotainment systems</li>
+                <li><strong>Advanced HIL Platforms:</strong> dSPACE & NI systems for safe, repeatable real-world scenario validation.</li>
+                <li><strong>Early Detection:</strong> Validates ECU behavior and control algorithms early, reducing prototyping costs.</li>
+                <li><strong>Automated Pipelines:</strong> Python/MATLAB-driven regression testing and fault injection for consistent coverage.</li>
+                <li><strong>ASPICE Level 4 Compliance:</strong> Ensures full traceability and structured test planning for high process maturity.</li>
+                <li><strong>Multi-Domain Coverage:</strong> Validates powertrain, ADAS, EV, and AUTOSAR systems comprehensively.</li>
+                <li><strong>Robustness Validation:</strong> Automated fault injection stress-tests ECUs under failure scenarios.</li>
+                <li><strong>Network Simulation:</strong> Simulates CAN, LIN, Ethernet, and FlexRay for timing and load validation.</li>
+                <li><strong>Proven Results:</strong> Reduces validation errors significantly through streamlined, automated workflows.</li>
               </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S4/Picture2.svg" alt="Connectivity" className="section-image" />
+              <img src="/S_SV/Picture1.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
             </div>
             <div className="section-text">
               <h2>SYS5. DVP, Test and Design</h2>
               <p>
-                Our SYS5. DVP, Test and Design services elevate system validation to ASPICE Level 5 standards with advanced optimization techniques:
+                Our SYS5 DVP services deliver high-maturity validation aligned with ASPICE Level 5. Integrating predictive analytics and simulation, we accelerate development, enhance reliability, and ensure efficiency for automotive systems.
               </p>
               <ul>
-                <li><strong>ASPICE Level 5 Standards:</strong> Predictive modeling and AI-enhanced design optimizations for high-maturity processes</li>
-                <li><strong>Comprehensive DVP:</strong> Detailed Design Validation Plans with quantitative risk assessment metrics</li>
-                <li><strong>Advanced Tools Integration:</strong> Simulink for model refinement and Vector tools for requirement traceability</li>
-                <li><strong>Proactive Defect Prevention:</strong> Monte Carlo simulations and machine learning-driven test case generation</li>
-                <li><strong>Predictive Analysis:</strong> Historical data analysis for failure mode prediction and design refinement</li>
-                <li><strong>Proven Efficiency:</strong> 25% efficiency improvement in autonomous systems compliance</li>
-                <li><strong>Holistic Validation:</strong> Cross-disciplinary collaboration from concept to certification</li>
+                <li><strong>ASPICE Level 5 Excellence:</strong> Predictive modeling and mature controls for continuous improvement.</li>
+                <li><strong>Comprehensive DVP:</strong> Detailed validation strategies with quantitative risk assessment across all domains.</li>
+                <li><strong>Requirement Verification:</strong> Continuous mapping of requirements to tests for full lifecycle traceability.</li>
+                <li><strong>Tools Integration:</strong> Seamless Simulink and Vector toolchain integration for design and verification.</li>
+                <li><strong>Predictive Analysis:</strong> Uses historical data and analytics to anticipate bottlenecks and failures.</li>
+                <li><strong>Efficiency Gains:</strong> Optimized workflows improve validation efficiency by up to 25% for safety-critical systems.</li>
+                <li><strong>Holistic Validation:</strong> Cross-disciplinary collaboration ensuring a cohesive validation ecosystem.</li>
+                <li><strong>Automated Compliance:</strong> Real-time tracking of regulatory and safety standards readiness.</li>
               </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S4/Picture3.svg" alt="Software Updates" className="section-image" />
+              <img src="/S_SV/Picture2.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
             </div>
             <div className="section-text">
               <h2>SYS.5 HIL Design Test & Automation</h2>
               <p>
-                Our SYS.5 HIL Design Test & Automation pushes validation boundaries for safety-critical systems at the highest ASPICE maturity levels:
+                Our SYS.5 HIL services push validation limits for safety-critical systems with ASPICE Level 5 maturity. We deliver ultra-precise simulation, intelligent automation, and scalable environments for exceptional reliability and compliance.
               </p>
               <ul>
-                <li><strong>Advanced HIL Configurations:</strong> FPGA-based simulators with ultra-precise timing and response for complex environments</li>
-                <li><strong>Comprehensive Testing:</strong> Exhaustive validation of interconnected modules from ECUs to network protocols</li>
-                <li><strong>Sophisticated Automation:</strong> Custom C++ and LabVIEW frameworks orchestrating thousands of adaptive test scenarios</li>
-                <li><strong>Security & Safety Validation:</strong> Cybersecurity measures and ASIL-D functional safety requirements</li>
-                <li><strong>Regulatory Compliance:</strong> Integrated reporting for regulatory audits and compliance validation</li>
-                <li><strong>Proven Results:</strong> 40% reduction in validation cycles for medical device sector clients</li>
-                <li><strong>Cloud-Based Scalability:</strong> Distributed HIL for global team collaboration and enhanced accessibility</li>
+                <li><strong>High-Performance HIL:</strong> FPGA-based simulators for ultra-precise timing and complex environment replication.</li>
+                <li><strong>System-Level Testing:</strong> Exhaustive validation of ECUs, interfaces, and network protocols.</li>
+                <li><strong>Intelligent Automation:</strong> C++/LabVIEW frameworks orchestrating thousands of adaptive test cases.</li>
+                <li><strong>Security & Safety:</strong> Cybersecurity, ASIL-D functional safety, and robustness testing under stress.</li>
+                <li><strong>Regulatory Reporting:</strong> Automated documentation pipelines for streamlined audit preparation.</li>
+                <li><strong>Cloud Scalability:</strong> Distributed HIL environments enabling global collaboration and parallel execution.</li>
+                <li><strong>Proven Reliability:</strong> Accelerates validation cycles and strengthens safety-critical product reliability.</li>
               </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image">
-            <div className="section-text" style={{width: "100%"}}>
+            <div className="section-image-wrapper">
+              <img src="/S_SV/Picture3.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+            </div>
+            <div className="section-text">
               <h2>System Integration/Dyno Validation</h2>
               <p>
                 System Integration and Dyno Validation form the backbone of our comprehensive validation services:
@@ -135,6 +140,9 @@ const S4 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
+            <div className="section-image-wrapper">
+              <img src="/S_SV/Picture4.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+            </div>
             <div className="section-text">
               <h2>LabCar Validation</h2>
               <p>
@@ -154,7 +162,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S4/Picture5.jpg" alt="Connectivity" className="section-image" />
+              <img src="/S_SV/Picture5.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
             </div>
             <div className="section-text">
               <h2>Vehicle Validation</h2>
@@ -174,6 +182,9 @@ const S4 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
+            <div className="section-image-wrapper">
+              <img src="/S_SV/Picture6.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+            </div>
             <div className="section-text">
               <h2>EOL Validation</h2>
               <p>
@@ -192,6 +203,9 @@ const S4 = () => {
           </section>
 
           <section className="content-section section-with-image">
+            <div className="section-image-wrapper">
+             <img src="/S_SV/Picture7.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+            </div>
             <div className="section-text">
               <h2>Environmental Validation</h2>
               <p>
