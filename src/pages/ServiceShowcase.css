@@ -152,6 +152,19 @@
   line-height: 1.6;
 }
 
+/* Service Card Content Wrapper - Mobile View */
+.service-card-content {
+  background-color: #1a1a1a !important;
+}
+
+.service-card-content h3 {
+  color: #ffffff !important;
+}
+
+.service-card-content p {
+  color: #cccccc !important;
+}
+
 /* Arrows */
 .arrow {
   position: absolute;
@@ -175,4 +188,34 @@
 
 .arrow.right {
   right: 12px;
+}
+
+/* Mobile View - Product Card Layout */
+@media (max-width: 1024px) {
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .product-info {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .service-card-content {
+    background-color: #1a1a1a !important;
+  }
+
+  .service-card-content h3 {
+    color: #ffffff !important;
+  }
+
+  .service-card-content p {
+    color: #cccccc !important;
+  }
 }

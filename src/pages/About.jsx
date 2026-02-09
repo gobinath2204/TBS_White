@@ -341,7 +341,7 @@ export default function About() {
           
           <div className="video-background">
             <video autoPlay muted loop playsInline className="content-video">
-              <source src="/videos/tbs_short.mp4" type="video/mp4" />
+              <source src="/videos/About.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="video-overlay"></div>

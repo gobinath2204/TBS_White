@@ -6,31 +6,31 @@ const services = [
   {
     id: "SystemDevelopment",
     name: "System Development",
-    img: "/sysenggdev.jpg",
+    img: "/Hero_S/sysenggdev.jpg",
     desc: "Our system engineering team delivers exceptional system engineering with accurate, fully traceable requirements for automotive ECUs. We deliver solutions in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards.",
   },
   {
     id: "SoftwareEngineering",
     name: "Software Engineering",
-    img: "/swengg.jpg",
+    img: "/Hero_S/swengg.jpg",
     desc: "TBS delivers comprehensive software engineering services for automotive systems, covering requirement development, architecture design, and rigorous testing methodologies. Our expertise spans AUTOSAR and non-AUTOSAR development with ISO 26262 compliance.",
   },
   {
     id: "HardwareEngineering",
     name: "Hardware Engineering",
-    img: "/hwengg.jpg",
+    img: "/Hero_S/hwengg.jpg",
     desc: "TBS provides comprehensive ASPICE-compliant Hardware Engineering services covering the complete development lifecycle from requirements to verification. Our expertise includes schematic and PCB design, safety analysis, and rigorous testing methodologies.",
   },
   {
     id: "SystemValidation",
     name: "System Validation",
-    img: "/sysval.jpg",
+    img: "/Hero_S/sysval.jpg",
     desc: "TBS excels in System Validation through comprehensive SYS.4 DVP frameworks, delivering robust validation solutions for automotive systems. Our services ensure compliance with ISO 26262 and utilize advanced automation for optimal performance.",
   },
   {
     id: "SafetyandRegulatory",
     name: "Safety & Regulatory",
-    img: "/s&r.jpg",
+    img: "/Hero_S/s&r.jpg",
     desc: "TBS delivers cutting-edge safety and regulatory compliance solutions covering functional safety, cybersecurity, and high-voltage safety standards. Our expertise spans ISO 26262, ISO 21434, and global market regulations.",
   },
 ];
@@ -39,14 +39,18 @@ export default function ServiceShowcase() {
   const navigate = useNavigate();
 
   const handleNavigate = (id) => {
-    navigate(`/pages/${id}`);
+    navigate(`/pages/Services/${id}`);
     window.scrollTo(0, 0);
   };
 
   return (
     <section className="services-container">
       <h2 className="services-title">Our Services</h2>
-      <h2 className="services-content">Type content here, Very blank with just the heading</h2>
+      <p className="services-description" style={{ textAlign: 'justify', marginBottom: '3rem' }}>
+        At Test Base Solutions, we deliver end-to-end automotive engineering services across the complete development lifecycle. 
+        From system architecture to validation, our ASPICE-compliant solutions ensure safety, quality, and regulatory compliance 
+        for next-generation vehicles.
+      </p>
       <div className="services-list">
         {services.map((service, index) => (
           <div 

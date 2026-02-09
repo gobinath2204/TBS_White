@@ -11,9 +11,9 @@ export default function Home() {
   const [isLooping, setIsLooping] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
+    setIsMobile(window.innerWidth < 1024);
 
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -56,7 +56,7 @@ export default function Home() {
             }}
             aria-label="Background video showing our services"
           >
-            <source src="/Hero%20Video.mp4" type="video/mp4" />
+            <source src="/videos/Hero%20Video.mp4" type="video/mp4" />
           </video>
         </div>
 

@@ -21,7 +21,6 @@
 body {
   font-family: "Numans", "Inter", "Segoe UI", sans-serif;
   background: #ffffff;
-  /* background: #0a0a0a; */
   color: #333;
   line-height: 1.6;
   width: 100%;
@@ -48,9 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: 100%;
   padding: 12px 60px; /* Slimmer padding */
-  background: var(--glass-white); 
-  backdrop-filter: blur(15px) saturate(180%);
-  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  background: #ffffff;
   z-index: 10000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Thin subtle line instead of heavy shadow */
@@ -83,7 +80,6 @@ nav ul {
 
 nav a {
   font-family: 'Audiowide', sans-serif;
-  /* color: var(--light); */
   color: var(--bg-dark);
   text-decoration: none;
   position: relative;
@@ -147,7 +143,7 @@ nav ul a:hover::after {
   position: fixed;
   top: 0;
   right: 0;
-  height: 60vh;
+  height: 100vh;
   width: 60%;
   background: #111;
   flex-direction: column;
@@ -155,6 +151,7 @@ nav ul a:hover::after {
   gap: 1.5rem;
   transform: translateX(0);
   z-index: 1000;
+  overflow-y: auto;
 }
 
 /* visible state */
@@ -186,14 +183,12 @@ nav ul a:hover::after {
 ------------------------------ */
 .hero {
   font-family: "Audiowide", sans-serif;
-  /* display: flex; */
   flex-wrap: wrap;
   height: 100vh;
   justify-content: space-between;
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* margin-top: 11vh; */
   color: #ffffff;
 }
 
@@ -229,7 +224,6 @@ nav ul a:hover::after {
   height: 100%;
   width: 100%;
   padding: 0 2rem 2rem;
-  /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.35), rgba(229, 107, 46, 0.35)); */
   background: rgba(26, 26, 26, 0.108);
 }
 
@@ -265,7 +259,7 @@ section h2 {
   position: relative;
   background-color: #ffffff;
   border-radius: 0;
-  padding: 4rem 0 10rem 0;
+  padding: 4rem 0 6rem 0;
   width: 100%;
   z-index: 3;
 }
@@ -276,9 +270,7 @@ section h2 {
 .products-section {
   position: relative;
   background-color: #ffffff;
-  /* border-radius: 25px; */
-  /* padding: 6rem 2rem 10rem; */
-  padding: 4rem 0 10rem 0;
+  padding: 4rem 0 6rem 0;
   width: 100%;
   margin-top: -7vh;
   z-index: 4;
@@ -288,7 +280,6 @@ section h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
@@ -315,7 +306,6 @@ section h2 {
   content: "";
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.6), rgba(229, 107, 46, 0.6)); */
 }
 
 .product-info {
@@ -336,10 +326,8 @@ section h2 {
 .about {
   position: relative;
   background: #fff;
-  padding: 6rem 2rem 8rem;
+  padding: 4rem 2rem 8rem;
   width: 100%;
-  /* border-radius: 25px 25px 0 0; */
-  /* margin-top: -4vh; */
   text-align: center;
   z-index: 6;
 }
@@ -348,7 +336,7 @@ section h2 {
   margin-bottom: 1rem;
   font-size: clamp(1rem, 1vw, 5rem);
   color: #444;
-  max-width: 70%;
+  max-width: 85%;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
@@ -365,7 +353,6 @@ section h2 {
   display: inline-flex;
   align-items: center;
   font-size: clamp(1rem, 1vw, 5rem);
-  ;
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -387,6 +374,8 @@ section h2 {
   justify-content: space-between;
   padding: 3rem 6rem 1rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 
 .footer-left {
@@ -539,13 +528,14 @@ section h2 {
   position: relative; /* Change from fixed to relative */
 }
 
-.dropdown-menu {
+/* Services Dropdown - Desktop */
+.services-dropdown .dropdown-menu {
   position: absolute;
   top: calc(100% + 15px);
   left: 50%;
-  transform: translateX(-50%) translateY(10px); /* Center it under the link */
+  transform: translateX(-50%) scaleY(0.92);
   background: #ffffff;
-  min-width: 220px;
+  min-width: 200px;
   border-radius: 12px;
   padding: 8px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -553,31 +543,63 @@ section h2 {
   
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.25s ease;
+  transform-origin: top center;
   display: flex;
   flex-direction: column;
 }
 
-/* Hover State */
-.dropdown:hover .dropdown-menu {
+/* Products Dropdown - Desktop */
+.products-dropdown .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%) scaleY(0.92);
+  background: #ffffff;
+  min-width: 280px;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  transform-origin: top center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover State - Services */
+.services-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) scaleY(1);
+}
+
+/* Hover State - Products */
+.products-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scaleY(1);
 }
 
 .dropdown-menu li a {
   font-family: 'Inter', sans-serif !important;
   font-weight: 400 !important;
   font-size: 0.85rem !important;
-  padding: 10px 15px !important;
+  padding: 10px 10px !important;
   border-radius: 8px;
   text-transform: none !important;
   letter-spacing: 0 !important;
+  transition: all 0.3s ease !important;
+  position: relative;
 }
 
 .dropdown-menu li a:hover {
-  background: #f8f9fa !important;
-  padding-left: 18px !important; /* Tiny slide effect */
+  background: #f0f0f0 !important;
+  transform: scale(1.06);
+  color: var(--orange) !important;
 }
 
 /* Individual Item Styling */
@@ -620,7 +642,6 @@ section h2 {
     padding: 2rem;
     background: url('./hmi.png') no-repeat center center;
     background-size: cover;
-    /* make sure it covers fully */
   }
 
   /* Add black overlay */
@@ -632,9 +653,7 @@ section h2 {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.618);
-    /* Black with 40% opacity */
     z-index: -1;
-    /* Place behind the content */
   }
 
   .hero-left {
@@ -655,8 +674,13 @@ section h2 {
   }
 
   .video-background {
+    display: block;
+  }
+
+  .product-info p,
+  .service-card-content p,
+  .product-card-content p {
     display: none;
-    /* hide video on tablet/mobile if using bg image */
   }
 
   .navbar {
@@ -728,7 +752,6 @@ section h2 {
     content: "";
     position: absolute;
     inset: 0;
-    /* background: linear-gradient(135deg, rgba(33, 60, 122, 0.6), rgba(229, 107, 46, 0.6)); */
   }
 
   .product-info {
@@ -741,6 +764,15 @@ section h2 {
   .product-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .services-section {
+    padding: 2rem 0 3rem 0;
+  }
+
+  .products-section {
+    padding: 2rem 0 3rem 0;
+    margin-top: -7vh;
   }
 
   .about p {
@@ -769,24 +801,33 @@ section h2 {
     justify-content: left;
   }
   
-  .dropdown-menu {
-    position: static; /* Let it flow naturally in the mobile drawer */
+  .services-dropdown .dropdown-menu,
+  .products-dropdown .dropdown-menu {
+    position: static !important; /* Let it flow naturally in the mobile drawer */
     opacity: 1;
     visibility: visible;
-    transform: none;
+    transform: none !important;
     background-color: transparent;
     box-shadow: none;
     border: none;
     padding: 0 0 0 20px; /* Indent sub-items */
     display: block; /* Show nested items in the drawer */
+    min-width: auto;
+    transition: none;
   }
 
   .dropdown-menu li a {
     color: var(--light) !important; /* Make text white for the dark mobile menu */
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
+    font-family: 'Audiowide', sans-serif !important;
+    transition: none !important;
   }
 
-
+  .dropdown-menu li a:hover {
+    background: transparent !important;
+    color: var(--light) !important;
+    transform: none !important;
+  }
 }
 
 
@@ -870,30 +911,3 @@ section h2 {
     justify-content: center;
   }
 }
-
-/* --- 1. GLOBAL DROPDOWN LOGIC (Desktop First) --- */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  /* Adjust 'top' based on your navbar height (~11vh or 80px) */
-  top: 100%; 
-  left: 0;
-  background-color: #ffffff;
-  min-width: 260px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 10px 0;
-  list-style: none;
-  
-  /* Hidden state */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease-in-out;
-  z-index: 11000; /* Must be higher than navbar z-index */
-  border-top: 3px solid var(--orange);
-}
-

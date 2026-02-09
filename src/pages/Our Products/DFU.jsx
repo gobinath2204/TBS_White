@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const P6 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const videoPath = "/DFU.mp4";
 
   const handlePrevious = () => {
     navigate("/pages/Our Products/SmartHIL");
@@ -38,7 +37,7 @@ const P6 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <img src="/DFU.png" alt="Diagnostics Flashing Unit" className="hero-video" />
+          <img src="/Hero_P/DFU.png" alt="Diagnostics Flashing Unit" className="hero-video" />
           <div className="hero-overlay"></div>
           <h1 className="hero-title" style={{color: 'white'}}>Diagnostics Flashing Unit</h1>
         </div>
@@ -46,48 +45,60 @@ const P6 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <div>
-              <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
-                Our <b>Diagnostics Flashing Unit (DFU)</b> is an all-in-one tool for seamless ECU reprogramming and diagnostics, streamlining maintenance, calibration, and updates across the vehicle lifecycle. Supporting UDS, CCP/XCP, and OBD-II protocols, it enables secure flashing over CAN, Ethernet, or LIN, with advanced encryption to prevent tampering and ensure system integrity.
-              </p>
-            </div>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "3rem 0"}}>
+                Our <b>Diagnostics Flashing Unit (DFU)</b> supports DoIP, CAN FD, and standard CAN protocols, ensuring compatibility with multiple flash specifications. It features independent flashing tool support for various CAN interfaces, including Vector, NI, Intrepid, and Pak. With integrated DHCP for DoIP, XML-configurable sequences, and detailed logging, it enables quick verification for EOL and aftersales deployment while exposing COM APIs for integration.
+            </p>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="User Interface" className="section-image" />
+              <img src="/P_DFU/Picture0.png" alt="Protocol Support" className="section-image" style={{objectFit: "cover", height: "auto"}}/>
             </div>
             <div className="section-text">
-              <h2>Diagnostics Flashing Unit</h2>
-              <p>
-                Designed for lab, production, and service environments, the DFU offers comprehensive automation and remote capabilities:
-              </p>
+              <h2>Comprehensive Protocol & Tool Support</h2>
               <ul>
-                <li><strong>Automated Workflows:</strong> ODX/OTX data integration with parallel processing for multiple ECUs</li>
-                <li><strong>Remote Capabilities:</strong> Telematics integration enabling remote diagnostics and updates</li>
-                <li><strong>Real-Time Diagnostics:</strong> Trouble code diagnosis with VIN-specific adaptations for precision</li>
-                <li><strong>OTA-Like Updates:</strong> Aftermarket and fleet operator support without specialized hardware</li>
-                <li><strong>Compliance Assurance:</strong> Ensuring adherence to efficiency and emissions standards</li>
-                <li><strong>Multi-Environment Support:</strong> Optimized for lab, production, and service applications</li>
+                <li><strong>Multi-Protocol Support:</strong> Supports DoIP, CAN FD, and standard CAN protocols.</li>
+                <li><strong>Flash Compatibility:</strong> Compatible with multiple flash specifications.</li>
+                <li><strong>Interface Support:</strong> Independent flashing tools support various CAN interfaces, including Vector, NI, Intrepid, and Pak.</li>
+                <li><strong>Advanced Logging:</strong> Provides human-readable UDS logs and raw CAN dumps; DoIP includes UDS logs and Wireshark dumps.</li>
+                <li><strong>Integrated DHCP:</strong> Built-in DHCP server for DoIP connections.</li>
+                <li><strong>Detailed Analysis:</strong> User logs include detailed failure reasons for thorough analysis.</li>
+                <li><strong>Configurable Sequences:</strong> Flash sequences can be configured and controlled via XML.</li>
+                <li><strong>Rapid Verification:</strong> Flash specification updates can be quickly verified before deployment in EOL or aftersales tools.</li>
+                <li><strong>Integration APIs:</strong> Exposes COM APIs for integration with other tools.</li>
               </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Hardware Architecture" className="section-image" />
+             <img src="/P_DFU/Picture1.png" alt="Protocol Support" className="section-image" style={{objectFit: "cover", height: "auto"}}/>
             </div>
             <div className="section-text">
-              <h2>Intuitive Diagnostics & Flashing Unit for Modern Vehicles</h2>
-              <p>
-                With an intuitive interface and comprehensive support, TBS's DFU empowers technicians for confident operation:
-              </p>
+              <h2>Flexible Module Flashing</h2>
               <ul>
-                <li><strong>Intuitive Interface:</strong> User-friendly design enabling confident handling of complex tasks</li>
-                <li><strong>Live Support:</strong> Real-time assistance reducing technician downtime and operational costs</li>
-                <li><strong>Reliable Diagnostics:</strong> Future-ready diagnostic capabilities ensuring optimal vehicle performance</li>
-                <li><strong>Cost Reduction:</strong> Minimized downtime and maintenance costs through efficient operations</li>
-                <li><strong>Peak Performance:</strong> Keeping vehicles at optimal performance levels throughout their lifecycle</li>
+                <li><strong>Universal Flashing:</strong> Capable of flashing any module.</li>
+                <li><strong>Configurable Setup:</strong> User can change the Canoe configuration based on the vehicle line.</li>
+                <li><strong>Dual Logging:</strong> Two logs are available (Readable log and Canoe CAN log file).</li>
+                <li><strong>Failure Analysis:</strong> User log provides failure reasons to aid analysis.</li>
+                <li><strong>XML Control:</strong> Sequence can be controlled with XML configuration.</li>
+                <li><strong>Verification:</strong> Flash specification updates are quickly verified with this tool before updating EOL or Aftersales tools.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="content-section section-with-image reverse">
+            <div className="section-image-wrapper">
+             <img src="/P_DFU/Picture2.png" alt="Protocol Support" className="section-image" style={{objectFit: "cover", height: "auto"}}/>
+            </div>
+            <div className="section-text">
+              <h2>Vehicle-Wide Diagnostics & Reporting</h2>
+              <ul>
+                <li><strong>Vehicle Readout:</strong> Read Part numbers and DTC information for the whole vehicle.</li>
+                <li><strong>Adaptable Configuration:</strong> User can change the Canoe configuration based on the vehicle line.</li>
+                <li><strong>Comprehensive Reporting:</strong> Two logs are available (HTML report and Canoe CAN log file).</li>
+                <li><strong>DTC Parsing:</strong> Parses DTCs, including snapshot and extended data.</li>
+                <li><strong>Part Number Comparison:</strong> Highlights differentiation in Part numbers using Excel files with proper color coding.</li>
               </ul>
             </div>
           </section>
@@ -101,7 +112,7 @@ const P6 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>

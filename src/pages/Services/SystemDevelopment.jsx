@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const S1 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const imagePath = "/sysenggdev.jpg";
+  const imagePath = "/Hero_S/sysenggdev.jpg";
 
   const handlePrevious = () => {
     navigate("/pages/Services/SafetyandRegulatory");
@@ -44,18 +44,15 @@ const S1 = () => {
         </div>
         <div className="product-page">
 
-          <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
-            <div >
-              {/* <h2>Overview</h2> */}
-              <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
+          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
                 Our <b>system engineering team</b> delivers exceptional system engineering with accurate, fully traceable requirements for functional, non-functional (electrical, mechanical, and environmental), communication, diagnostics, and EOL for cutting-edge automotive ECUs. We deliver the system engineering in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards (UN R100).
-              </p>
-            </div>
+            </p>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S1/Picture0.png" alt="SYS.2 Requirements Elicitation" className="section-image" />
+              <img src="/S_SD/Picture0.png" alt="SYS.2 Requirements Elicitation" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SYS.2 Requirements Elicitation</h2>
@@ -75,8 +72,8 @@ const S1 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
-            <div className="section-image-wrapper" style={{ marginLeft: '0' }}>
-              <img src="/S1/Picture1.png" alt="Custom UI" className="section-image" />
+            <div className="section-image-wrapper">
+              <img src="/S_SD/Picture1.png" alt="Custom UI" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SYS.3 Architecture Development</h2>
@@ -97,7 +94,7 @@ const S1 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S1/Picture2.png" alt="Connectivity" className="section-image" />
+              <img src="/S_SD/Picture2.png" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>FMEA Development</h2>
@@ -118,7 +115,7 @@ const S1 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S1/Picture3.png" alt="Software Updates" className="section-image" />
+              <img src="/S_SD/Picture3.png" alt="Software Updates" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Communication Requirements</h2>
@@ -139,7 +136,7 @@ const S1 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S1/Picture4.png" alt="Connectivity" className="section-image" />
+              <img src="/S_SD/Picture4.png" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Functional Safety</h2>
@@ -160,7 +157,7 @@ const S1 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S1/Picture5.png" alt="Software Updates" className="section-image" />
+              <img src="/S_SD/Picture5.png" alt="Software Updates" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Cybersecurity</h2>
@@ -179,7 +176,7 @@ const S1 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S1/Picture6.png" alt="Connectivity" className="section-image" />
+              <img src="/S_SD/Picture6.png" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Diagnostics & EOL Requirements Development</h2>
@@ -204,7 +201,7 @@ const S1 = () => {
         </button>
 
         <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className=" arrow">
+          <div className="arrow">
             ❯
           </div>
         </button>
