@@ -53,28 +53,28 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/SMU.jpg" alt="Custom UI" className="section-image" />
+              <img src="/S_SR/Picture0.png" alt="FS" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
             </div>
             <div className="section-text">
-              <h2>Functional Safety Development & Testing</h2>
+              <h2>Functional Safety</h2>
               <p>
-                We specialize in developing and testing systems compliant with ISO 26262 functional safety standards:
+                TBS provides comprehensive ISO 26262 compliance and functional safety engineering. Our systematic approach ensures that every safety-critical automotive system meets international regulatory standards through expert development and rigorous testing.
               </p>
               <ul>
-                <li><strong>Risk Assessment & Safety Requirements:</strong> Comprehensive hazard analysis and safety requirement definition</li>
-                <li><strong>Safety Mechanism Implementation:</strong> Robust safety mechanisms to mitigate identified hazards and risks</li>
-                <li><strong>ASIL Compliance:</strong> Full Automotive Safety Integrity Level (ASIL) requirements from concept to production</li>
-                <li><strong>Rigorous Testing:</strong> Fault injection and safety case analysis ensuring system reliability</li>
-                <li><strong>Complete Lifecycle Support:</strong> From concept through production ensuring continuous compliance</li>
-                <li><strong>Vehicle Safety Enhancement:</strong> Enhanced vehicle reliability and passenger safety assurance</li>
-                <li><strong>Standards Compliance:</strong> Full ISO 26262 compliance with comprehensive documentation</li>
+                <li><strong>Communication Integrity:</strong> We implement hardware redundancy and monitoring to prevent message corruption across vehicle buses.</li>
+                <li><strong>Processing Unit Safety:</strong> TBS develops software self-tests and lockstep configurations to ensure core processing reliability.</li>
+                <li><strong>Electrical Element Analysis:</strong> We provide online monitoring solutions for relays and harnesses to detect electrical failures.</li>
+                <li><strong>Sensor & Actuator Validation:</strong> Our team implements voting logic and correlation checks for precise, safe system performance.</li>
+                <li><strong>I/O Safeguard Implementation:</strong> We deploy test patterns and code protection to secure analog and digital interface data.</li>
+                <li><strong>Clock & Sequence Monitoring:</strong> We integrate advanced watchdogs to maintain perfect software execution timing and logical flow.</li>
+                <li><strong>Power Supply Regulation:</strong> TBS designs voltage and current control mechanisms to protect systems from power-related failures.</li>
               </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
+              <img src="/S_SR/Picture1.png" alt="" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
             </div>
             <div className="section-text">
               <h2>Cybersecurity Development & Testing</h2>
@@ -82,11 +82,11 @@ const S5 = () => {
                 Our cybersecurity solutions protect automotive systems from evolving threats with comprehensive security measures:
               </p>
               <ul>
-                <li><strong>ISO/SAE 21434 Compliance:</strong> Secure-by-design principles integrated throughout development lifecycle</li>
+                <li><strong>ISO/SAE 21434 & UNECE R155 Compliance:</strong> Secure-by-design principles integrated throughout development lifecycle</li>
                 <li><strong>Vulnerability Assessment:</strong> Comprehensive security assessments identifying potential system weaknesses</li>
                 <li><strong>Robust Security Implementation:</strong> Advanced encryption and authentication protocols for system protection</li>
                 <li><strong>Penetration Testing:</strong> Thorough testing ensuring resilience against sophisticated cyberattacks</li>
-                <li><strong>Threat Modeling:</strong> Systematic threat analysis and mitigation strategy development</li>
+                <li><strong>Tara Analysis:</strong> Provide expert TARA services to identify and mitigate cybersecurity risks</li>
                 <li><strong>Connected Vehicle Protection:</strong> Comprehensive safeguarding of connected vehicles and user data</li>
                 <li><strong>Evolving Threat Response:</strong> Adaptive security measures addressing emerging cybersecurity challenges</li>
               </ul>
@@ -95,7 +95,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
+              <img src="/S_SR/Picture2.png" alt="HV" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
             </div>
             <div className="section-text">
               <h2>HV Safety Development & Testing</h2>
@@ -117,7 +117,7 @@ const S5 = () => {
 
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
+             <img src="/S_SR/Picture3.png" alt="CAN" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
             </div>
             <div className="section-text">
               <h2>Automotive CAN Standard Development & Testing</h2>
@@ -138,7 +138,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
+              <img src="/S_SR/Picture4.png" alt="Market" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
             </div>
             <div className="section-text">
               <h2>Market Regulatory Standards</h2>
@@ -159,7 +159,7 @@ const S5 = () => {
 
         <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/HIL.jpg" alt="Connectivity" className="section-image" />
+             <img src="/S_SR/Picture5.png" alt="Electrical" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
             </div>
             <div className="section-text">
               <h2>Electrical Testing</h2>
@@ -180,7 +180,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/hmi.png" alt="Software Updates" className="section-image" />
+              <img src="/S_SR/Picture6.png" alt="Environmental" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
             </div>
             <div className="section-text">
               <h2>Environmental Standards</h2>
