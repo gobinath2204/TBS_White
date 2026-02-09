@@ -47,15 +47,16 @@ export default function ServiceShowcase() {
     <section className="services-container">
       <h2 className="services-title">Our Services</h2>
       <p className="services-description" style={{ textAlign: 'justify', marginBottom: '3rem' }}>
-        At Test Base Solutions, we deliver end-to-end automotive engineering services across the complete development lifecycle. 
-        From system architecture to validation, our ASPICE-compliant solutions ensure safety, quality, and regulatory compliance 
+        At Test Base Solutions, we deliver end-to-end automotive engineering services across the complete development lifecycle.
+        From system architecture to validation, our ASPICE-compliant solutions ensure safety, quality, and regulatory compliance
         for next-generation vehicles.
       </p>
       <div className="services-list">
         {services.map((service, index) => (
-          <div 
-            className={`service-row ${index % 2 !== 0 ? "reverse" : ""}`} 
+          <div
+            className={`service-row ${index % 2 !== 0 ? "reverse" : ""}`}
             key={service.id}
+            onClick={() => handleNavigate(service.id)}
           >
             <div className="service-image">
               <img src={service.img} alt={service.name} />

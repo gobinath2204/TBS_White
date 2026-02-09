@@ -22,7 +22,7 @@ export default function Home() {
     if (videoRef.current && !isLooping) {
       const duration = videoRef.current.duration;
       const currentTime = videoRef.current.currentTime;
-      
+
       // Start crossfade 1 second before video ends
       if (duration - currentTime <= 1) {
         setIsLooping(true);
@@ -48,7 +48,7 @@ export default function Home() {
             muted
             playsInline
             onTimeUpdate={handleVideoTimeUpdate}
-            style={{ 
+            style={{
               position: 'absolute', top: 0, left: 0,
               width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%',
               opacity: isLooping ? 0.5 : 1,
@@ -64,7 +64,7 @@ export default function Home() {
           <div className="hero-left">Partners in Software and Testing</div>
           <div className="hero-right">
             <p>
-              Test Base Solutions — Advanced diagnostics, high-performance
+              Advanced diagnostics, high-performance
               software, and EV innovation: from OBCs and BMS to DC-DC converters
               and beyond. <br />
               ASPICE-Aligned. Rigorously Validated. Electrically Engineered.

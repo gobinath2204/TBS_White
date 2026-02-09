@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import HomeExp from "./pages/Home";
 import ContactUS from "./pages/ContactUS";
 import AboutUS from "./pages/About";
@@ -21,39 +22,64 @@ import Products from "./pages/Products";
 import Services from "./pages/Services";
 import Admin from "./pages/Admin";
 import ProtectedRoute from "./components/ProtectedRoute";
+import PageLoader from "./components/PageLoader";
+
+function AppContent() {
+  const location = useLocation();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    // Trigger loading on location change
+    setIsLoading(true);
+
+    // Simulate loading delay (or wait for resources if needed in future)
+    // A small delay ensures the user sees the transition
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // Increased to 2.5s for better viewing
+
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  return (
+    <div className="app">
+      <PageLoader isLoading={isLoading} />
+      <NavBar />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomeExp />} />
+          <Route path="/contact" element={<ContactUS />} />
+          <Route path="/about" element={<AboutUS />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/pages/Our Products/Inhousesoftwarestack" element={<P1 />} />
+          <Route path="/pages/Our Products/EVgenericdeck" element={<P2 />} />
+          <Route path="/pages/Our Products/HMI" element={<P3 />} />
+          <Route path="/pages/Our Products/SMU" element={<P4 />} />
+          <Route path="/pages/Our Products/SmartHIL" element={<P5 />} />
+          <Route path="/pages/Our Products/DFU" element={<P6 />} />
+          <Route path="/pages/Our Products/RTOS" element={<P7 />} />
+          <Route path="/pages/Services/SystemDevelopment" element={<S1 />} />
+          <Route path="/pages/Services/SoftwareEngineering" element={<S2 />} />
+          <Route path="/pages/Services/HardwareEngineering" element={<S3 />} />
+          <Route path="/pages/Services/SystemValidation" element={<S4 />} />
+          <Route path="/pages/Services/SafetyandRegulatory" element={<S5 />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="app">
-        <NavBar />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomeExp />} />
-            <Route path="/contact" element={<ContactUS />} />
-            <Route path="/about" element={<AboutUS />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/pages/Our Products/Inhousesoftwarestack" element={<P1 />} />
-            <Route path="/pages/Our Products/EVgenericdeck" element={<P2 />} />
-            <Route path="/pages/Our Products/HMI" element={<P3 />} />
-            <Route path="/pages/Our Products/SMU" element={<P4 />} />
-            <Route path="/pages/Our Products/SmartHIL" element={<P5 />} />
-            <Route path="/pages/Our Products/DFU" element={<P6 />} />
-            <Route path="/pages/Our Products/RTOS" element={<P7 />} />
-            <Route path="/pages/Services/SystemDevelopment" element={<S1 />} />
-            <Route path="/pages/Services/SoftwareEngineering" element={<S2 />} />
-            <Route path="/pages/Services/HardwareEngineering" element={<S3 />} />
-            <Route path="/pages/Services/SystemValidation" element={<S4 />} />
-            <Route path="/pages/Services/SafetyandRegulatory" element={<S5 />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/admin"    element={<ProtectedRoute><Admin /></ProtectedRoute>} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <AppContent />
     </BrowserRouter>
   );
 }
+
 
 export default App;

@@ -14,7 +14,8 @@
 .services-list {
   display: flex;
   flex-direction: column;
-  gap: 4rem; /* Space between each service row */
+  gap: 4rem;
+  /* Space between each service row */
 }
 
 .service-row {
@@ -25,6 +26,8 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  cursor: pointer;
+  /* Clickable card */
 }
 
 .service-row:hover {
@@ -71,10 +74,12 @@
 
 /* Responsive: Stack vertically on mobile */
 @media (max-width: 780px) {
-  .service-row, .service-row.reverse {
+
+  .service-row,
+  .service-row.reverse {
     flex-direction: column;
   }
-  
+
   .service-image {
     width: 100%;
     height: 250px;
@@ -82,5 +87,10 @@
 
   .service-content {
     padding: 2rem;
+  }
+
+  /* Hide read more button on mobile */
+  .read-more {
+    display: none;
   }
 }

@@ -59,15 +59,16 @@ const ProductsPage = () => {
     <section className="services-container">
       <h2 className="services-title">Our Products</h2>
       <p className="services-description" style={{ textAlign: 'justify', marginBottom: '3rem' }}>
-        Test Base Solutions offers innovative automotive products designed to accelerate development and enhance vehicle performance. 
-        Our portfolio includes safety-certified software stacks, advanced testing platforms, and secure manufacturing solutions 
+        Test Base Solutions offers innovative automotive products designed to accelerate development and enhance vehicle performance.
+        Our portfolio includes safety-certified software stacks, advanced testing platforms, and secure manufacturing solutions
         that empower OEMs and Tier-1 suppliers to deliver next-generation automotive systems.
       </p>
       <div className="services-list">
         {products.map((product, index) => (
-          <div 
-            className={`service-row ${index % 2 !== 0 ? "reverse" : ""}`} 
+          <div
+            className={`service-row ${index % 2 !== 0 ? "reverse" : ""}`}
             key={product.id}
+            onClick={() => handleNavigate(product.id)}
           >
             <div className="service-image">
               <img src={product.img} alt={product.name} />

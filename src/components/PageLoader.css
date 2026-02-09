@@ -1,0 +1,87 @@
+/* PageLoader.css */
+.page-loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.page-loader-container.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Exquisite Multi-Wave Animation */
+.sine-wave-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.wave-path {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    /* Smooth glowing effect */
+    filter: drop-shadow(0px 0px 2px rgba(33, 60, 122, 0.3));
+    opacity: 0.8;
+    stroke-dasharray: 100 200;
+    /* Dash Gap */
+    stroke-dashoffset: 0;
+}
+
+/* Specific Wave Styles */
+.wave-1 {
+    stroke: url(#gradient-blue);
+    animation: wave-flow 3s linear infinite;
+    opacity: 0.9;
+    stroke-width: 4;
+}
+
+.wave-2 {
+    stroke: url(#gradient-orange);
+    animation: wave-flow 4s linear infinite reverse;
+    opacity: 0.7;
+    stroke-width: 3;
+}
+
+.wave-3 {
+    stroke: var(--blue);
+    animation: wave-flow 6s linear infinite;
+    opacity: 0.4;
+    stroke-width: 2;
+}
+
+@keyframes wave-flow {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -300;
+        /* Moves the dashes along the line */
+    }
+}
+
+/* Optional: If we want it to move sideways, we need a different path setup. 
+   For now, the 'draw' effect is very elegant. 
+   Let's stick to the drawing effect or a simple dash-flow.
+*/
