@@ -32,11 +32,34 @@ function AppContent() {
     // Trigger loading on location change
     setIsLoading(true);
 
+    // Update Page Title
+    const path = location.pathname;
+    let title = "Test Base Solutions Ltd.";
+
+    if (path === "/") title = "Test Base Solutions Ltd.";
+    else if (path === "/contact") title = "Contact Us | TBS";
+    else if (path === "/about") title = "About Us | TBS";
+    else if (path === "/careers") title = "Careers | TBS";
+    else if (path === "/products") title = "Our Products | TBS";
+    else if (path === "/services") title = "Our Services | TBS";
+    else if (path.includes("/pages/Our Products/")) {
+      // Extract product name from path
+      const product = path.split("/").pop().replace(/([A-Z])/g, ' $1').trim();
+      title = `${product} | Products | TBS`;
+    }
+    else if (path.includes("/pages/Services/")) {
+      const service = path.split("/").pop().replace(/([A-Z])/g, ' $1').trim();
+      title = `${service} | Services | TBS`;
+    }
+    else if (path === "/admin") title = "Admin | TBS";
+
+    document.title = title;
+
     // Simulate loading delay (or wait for resources if needed in future)
     // A small delay ensures the user sees the transition
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500); // Increased to 2.5s for better viewing
+    }, 1470);
 
     return () => clearTimeout(timer);
   }, [location]);
