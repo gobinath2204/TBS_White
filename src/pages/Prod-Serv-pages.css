@@ -101,15 +101,18 @@
 
 .section-with-image {
   display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping for full-width headers */
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
+  /* Ensure Image and Content match height */
   position: relative;
   min-height: auto;
   overflow: visible;
   margin: 0;
   padding: 1rem 0;
-  gap: clamp(3rem, 6vw, 8rem);
-  /* Responsive gap between image and text */
+  gap: 2rem;
+  /* Reduced gap since items are wrapped */
   border-radius: 0;
   background: transparent;
   border: none;
@@ -126,11 +129,15 @@
   min-height: clamp(300px, 40vw, 600px);
   /* Scaling height */
   flex: 1;
+  min-width: 45%;
+  /* Ensure visuals take roughly half */
   overflow: hidden;
   background: none;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   transition: all 0.4s ease;
+  order: 3;
+  /* Image Order */
 }
 
 .section-image-wrapper:hover {
@@ -155,28 +162,27 @@
   font-family: 'Axiforma', sans-serif;
 }
 
-/* Text Side */
+/* Text Side - Ungrouped to control H2 and Content separately */
 .section-text {
-  flex: 1;
-  color: #333;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  z-index: 3;
+  display: contents;
+  /* Magic property to ungroup children */
 }
 
 .section-text h2 {
   font-size: clamp(2rem, 3.5vw, 3.5rem);
   /* Fluid heading size */
   font-weight: 700;
-  margin-bottom: clamp(1rem, 2vw, 2rem);
+  margin-bottom: 1.5rem;
   color: var(--blue);
-  text-align: left;
+  text-align: center;
+  /* Centered as requested */
   font-family: 'Axiforma', sans-serif;
   line-height: 1.1;
+  width: 100%;
+  /* Full Width */
+  flex-basis: 100%;
+  order: 1;
+  /* First */
 }
 
 .section-text p {
@@ -187,16 +193,36 @@
   margin-bottom: 2rem;
   text-align: justify;
   font-family: 'Inter', sans-serif;
+  width: 100%;
+  flex-basis: 100%;
+  order: 2;
+  /* Below Heading */
 }
 
 .section-text ul {
-  width: 100%;
-  margin: 1.5rem 0;
+  width: auto;
+  /* Adjust to flex */
+  flex: 1;
+  min-width: 45%;
+  margin: 0;
   padding-left: 0;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center content vertically against image */
   gap: clamp(1rem, 1.5vw, 2rem);
   list-style: none;
+  order: 4;
+  /* Next to Image */
+}
+
+/* Reverse Logic for Wrapped Items */
+.section-with-image.reverse .section-image-wrapper {
+  order: 4;
+}
+
+.section-with-image.reverse .section-text ul {
+  order: 3;
 }
 
 .section-text li {
@@ -364,13 +390,35 @@
   }
 
   .section-text {
+    display: contents;
+  }
+
+  .section-text h2,
+  .section-text p,
+  .section-text ul {
     width: 100%;
+    /* Stack vertically */
     padding: 0 5px;
-    text-align: left;
+    /* Add padding to children */
   }
 
   .section-text h2 {
     text-align: center;
+    order: 1;
+  }
+
+  .section-text p {
+    order: 2;
+  }
+
+  .section-image-wrapper {
+    width: 100%;
+    order: 3;
+    flex: none;
+  }
+
+  .section-text ul {
+    order: 4;
   }
 
   .nav-arrow-btn {

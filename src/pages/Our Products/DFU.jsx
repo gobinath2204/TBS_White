@@ -39,23 +39,23 @@ const P6 = () => {
         <div className="hero-container">
           <img src="/Hero_P/DFU.png" alt="Diagnostics Flashing Unit" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>Diagnostics Flashing Unit</h1>
+          <h1 className="hero-title" style={{ color: 'white' }}>Diagnostics Flashing Unit</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "3rem 0"}}>
-                Our <b>Diagnostics Flashing Unit (DFU)</b> supports DoIP, CAN FD, and standard CAN protocols, ensuring compatibility with multiple flash specifications. It features independent flashing tool support for various CAN interfaces, including Vector, NI, Intrepid, and Pak. With integrated DHCP for DoIP, XML-configurable sequences, and detailed logging, it enables quick verification for EOL and aftersales deployment while exposing COM APIs for integration.
+          <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
+            <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "3rem 0" }}>
+              Our <b>Diagnostics Tools </b> supports DoIP, CAN FD, and standard CAN protocols, ensuring compatibility with multiple flash specifications. It features independent flashing tool support for various CAN interfaces, including Vector, NI, Intrepid, and Pak. With integrated DHCP for DoIP, XML-configurable sequences, and detailed logging, it enables quick verification for EOL and aftersales deployment while exposing COM APIs for integration.
             </p>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_DFU/Picture0.png" alt="Protocol Support" className="section-image" style={{objectFit: "cover", height: "auto"}}/>
+              <img src="/P_DFU/Picture0.png" alt="Protocol Support" className="section-image" style={{ objectFit: "cover", height: "auto" }} />
             </div>
             <div className="section-text">
-              <h2>Comprehensive Protocol & Tool Support</h2>
+              <h2>TbsFLASH</h2>
               <ul>
                 <li><strong>Multi-Protocol Support:</strong> Supports DoIP, CAN FD, and standard CAN protocols.</li>
                 <li><strong>Flash Compatibility:</strong> Compatible with multiple flash specifications.</li>
@@ -72,10 +72,10 @@ const P6 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-             <img src="/P_DFU/Picture1.png" alt="Protocol Support" className="section-image" style={{objectFit: "cover", height: "auto"}}/>
+              <img src="/P_DFU/Picture1.png" alt="Protocol Support" className="section-image" style={{ objectFit: "cover", height: "auto" }} />
             </div>
             <div className="section-text">
-              <h2>Flexible Module Flashing</h2>
+              <h2>Flashing Script (CANoe)</h2>
               <ul>
                 <li><strong>Universal Flashing:</strong> Capable of flashing any module.</li>
                 <li><strong>Configurable Setup:</strong> User can change the Canoe configuration based on the vehicle line.</li>
@@ -89,10 +89,10 @@ const P6 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-             <img src="/P_DFU/Picture2.png" alt="Protocol Support" className="section-image" style={{objectFit: "cover", height: "auto"}}/>
+              <img src="/P_DFU/Picture2.png" alt="Protocol Support" className="section-image" style={{ objectFit: "cover", height: "auto" }} />
             </div>
             <div className="section-text">
-              <h2>Vehicle-Wide Diagnostics & Reporting</h2>
+              <h2>Part Number Reader</h2>
               <ul>
                 <li><strong>Vehicle Readout:</strong> Read Part numbers and DTC information for the whole vehicle.</li>
                 <li><strong>Adaptable Configuration:</strong> User can change the Canoe configuration based on the vehicle line.</li>
