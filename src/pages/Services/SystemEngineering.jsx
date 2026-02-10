@@ -60,13 +60,13 @@ const SystemEngineering = () => {
                 Our comprehensive SYS.2 requirements elicitation process ensures complete system specification through systematic analysis and documentation:
               </p>
               <ul>
-                <li><strong>Functional Requirements Elicitation:</strong> Operating modes, measurement capabilities, control functions, and system behaviors</li>
+                <li><strong>Functional Requirements Elicitation:</strong> Operating modes, measurements, control functions, Protection, Vehicle functions and system behaviors</li>
                 <li><strong>Non-Functional Requirements:</strong> Performance metrics, efficiency standards, lifetime expectations, and operational constraints</li>
-                <li><strong>Compliance Standards:</strong> Functional safety (ISO 26262), cybersecurity (ISO 21434), and market regulatory standards</li>
-                <li><strong>Environmental Requirements:</strong> Temperature ranges, chemical resistance, mechanical durability, and electrical specifications</li>
-                <li><strong>Communication Requirements:</strong> CAN, UDS, LIN, Ethernet, ISO 15118, and other protocol specifications</li>
+                <li><strong>Compliance Standards:</strong> Functional safety (ISO 26262), cybersecurity (ISO 21434,R155,R156), and Regulatory standards(R100)</li>
+                <li><strong>Environmental Requirements:</strong> Temperature ranges(ISO 16750), chemical resistance(ISO 16750), mechanical durability(ISO 16750), HV safety(ISO 16750, ISO 16469) and electrical specifications(ISO ISO 21498, LV123, LV124)</li>
+                <li><strong>Communication Requirements:</strong> CAN & CANFD(ISO 11898), UDS(ISO 14229), LIN(ISO 17987), Ethernet(ISO 13400), V2G(ISO 15118), and Low level drivers</li>
                 <li><strong>End-of-Line Requirements:</strong> Manufacturing test procedures and process validation requirements</li>
-                <li><strong>Test Requirements:</strong> Verification and validation strategies for comprehensive system testing</li>
+                <li><strong>Test Requirements:</strong> Design validation, process validation and system validation startergies for the comprehesive system testing</li>
               </ul>
             </div>
           </section>
@@ -106,7 +106,6 @@ const SystemEngineering = () => {
                 <li><strong>Design FMEA (DFMEA):</strong> Fault tree analysis (FTA), simulations, and root cause analysis for design failure prevention</li>
                 <li><strong>Process FMEA (PFMEA):</strong> Manufacturing, assembly, and logistics variance analysis for defect prevention</li>
                 <li><strong>Cross-Functional Teams:</strong> Integration of prior experiences, business case preparations, and expert insights</li>
-                <li><strong>Standards Compliance:</strong> AUTOSAR and ISO standards adherence for industry benchmarks</li>
                 <li><strong>Risk Mitigation:</strong> Minimized warranty claims and accelerated market entry</li>
                 <li><strong>Cyber-Physical Integrity:</strong> Comprehensive protection for connected automotive systems</li>
               </ul>
@@ -126,7 +125,7 @@ const SystemEngineering = () => {
                 <li><strong>Physical Layer Specifications:</strong> Robust physical layers with comprehensive test requirements for reliable network performance</li>
                 <li><strong>Communication Standards:</strong> Message format specifications, signal properties, network management, and sleep/wake-up mechanisms</li>
                 <li><strong>Error Handling Mechanisms:</strong> Clearly defined protocols supporting low-latency data exchange, seamless diagnostics, and fail-safe designs</li>
-                <li><strong>ISO 15118 Protocol Expertise:</strong> Comprehensive implementation capabilities covering parts 1, 2, 3, 8, and 20</li>
+                <li><strong>ISO 15118 Protocol Expertise:</strong> Comprehensive implementation capabilities covering parts 1, 2, 3, 8, and 20 to cover V2G Charging</li>
                 <li><strong>Communication Tools Proficiency:</strong> Extensive experience with simulation tools for rest bus operations and monitoring bus traffic</li>
                 <li><strong>Design Verification Standards:</strong> Expert implementation of ISO 11898, ISO 14229, ISO 15765, and ASM 1.1 compliance</li>
                 <li><strong>Network Optimization:</strong> Advanced topology design and interoperability assurance for automotive communication systems</li>
@@ -168,7 +167,7 @@ const SystemEngineering = () => {
                 <li><strong>Threat Assessment and Management:</strong> TARA analysis for risk reports and plans</li>
                 <li><strong>Security Requirements Engineering:</strong> STRIDE-based ITEMS, C2A specs via JIRA, Polarion, GitHub</li>
                 <li><strong>Verification and Validation:</strong> CAL 2 fuzz testing, code analysis tools</li>
-                <li><strong>Cybersecurity Concept & Implementation:</strong> Development of robust security concepts and their practical implementation</li>
+                <li><strong>Cybersecurity Concept & Implementation:</strong> Development of robust security concepts and their practical implementation through M0 to M24</li>
                 <li><strong>End-to-End Validation:</strong> Complete validation of secure firmware updates (M16), hardware root of trust, bootloader integrity, HSM/VKMS protections against replay/unauthorized attacks (M10), cryptographic safeguards (M11), and denial-of-service mitigations (M11)</li>
               </ul>
             </div>

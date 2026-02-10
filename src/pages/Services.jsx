@@ -30,7 +30,7 @@ const services = [
   {
     id: "SafetyandRegulatory",
     name: "Safety & Regulatory",
-    img: "/Hero_S/s&r.jpg",
+    img: "/Hero_S/S&R.png",
     desc: "TBS delivers cutting-edge safety and regulatory compliance solutions covering functional safety, cybersecurity, and high-voltage safety standards. Our expertise spans ISO 26262, ISO 21434, and global market regulations.",
   },
 ];

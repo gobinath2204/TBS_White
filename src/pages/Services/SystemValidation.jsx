@@ -48,7 +48,7 @@ const S4 = () => {
         <div className="product-page">
           <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
             <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
-              Our <b>System Validation team</b> provides industry-leading DVP and design assurance for automotive and embedded platforms. Specializing in ISO 26262, we deliver comprehensive coverage through HIL, SIL, and automated testing. Our end-to-end approach ensures seamless integration, rapid defect detection, and peak reliability, guaranteeing your systems meet the highest performance and safety standards.
+              Our <b>System Validation team</b> excels in system validation through comperhensive system understanding and  HIL design, development and comissionsing to achieve the end to end component validation to cover functional, fault inserstion, communicaiton, DVP validation and end of line validation.
             </p>
           </section>
 

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const S5 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const imagePath = "/Hero_S/s&r.jpg";
+  const imagePath = "/Hero_S/S&R.png";
 
   const handlePrevious = () => {
     navigate("/pages/Services/SystemValidation");
@@ -47,7 +47,7 @@ const S5 = () => {
 
           <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
             <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
-                Our <b>safety and regulatory team</b> delivers cutting-edge compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. We excel in ISO 26262, ISO 21434, automotive CAN protocols, and global market regulations, ensuring robust system protection and full compliance. From comprehensive testing to validation and certification support, we help clients achieve safe, reliable, and market-ready automotive solutions.
+                Our <b>safety and regulatory team</b> delivers cutting-edge compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. We excel in ISO 26262, ISO 21434, R155, R156, LV123, LV124, HV safety automotive CAN protocols, and global market regulations, ensuring robust system protection and full compliance. From comprehensive testing to validation and certification support, we help clients achieve safe, reliable, and market-ready automotive solutions.
             </p>
           </section>
 
