@@ -11,7 +11,7 @@ import P4 from "./pages/Our Products/SMU";
 import P5 from "./pages/Our Products/SmartHIL";
 import P6 from "./pages/Our Products/DFU";
 import P7 from "./pages/Our Products/RTOS";
-import S1 from "./pages/Services/SystemDevelopment";
+import S1 from "./pages/Services/SystemEngineering";
 import S2 from "./pages/Services/SoftwareEngineering";
 import S3 from "./pages/Services/HardwareEngineering";
 import S4 from "./pages/Services/SystemValidation";
@@ -81,7 +81,7 @@ function AppContent() {
           <Route path="/pages/Our Products/SmartHIL" element={<P5 />} />
           <Route path="/pages/Our Products/DFU" element={<P6 />} />
           <Route path="/pages/Our Products/RTOS" element={<P7 />} />
-          <Route path="/pages/Services/SystemDevelopment" element={<S1 />} />
+          <Route path="/pages/Services/SystemEngineering" element={<S1 />} />
           <Route path="/pages/Services/SoftwareEngineering" element={<S2 />} />
           <Route path="/pages/Services/HardwareEngineering" element={<S3 />} />
           <Route path="/pages/Services/SystemValidation" element={<S4 />} />

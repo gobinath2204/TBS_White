@@ -8,7 +8,7 @@ const S2 = () => {
   const imagePath = "/Hero_S/swengg.jpg";
 
   const handlePrevious = () => {
-    navigate("/pages/Services/SystemDevelopment");
+    navigate("/pages/Services/SystemEngineering");
     window.scrollTo(0, 0);
   };
   const handleNext = () => {

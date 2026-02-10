@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 
-const S1 = () => {
+const SystemEngineering = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-  const imagePath = "/Hero_S/sysenggdev.jpg";
+  const imagePath = "/Hero_S/Sysengg.png";
 
   const handlePrevious = () => {
     navigate("/pages/Services/SafetyandRegulatory");
@@ -40,7 +40,7 @@ const S1 = () => {
         <div className="hero-container">
           <img src={imagePath} alt="System engineering development" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title">System Development Services</h1>
+          <h1 className="hero-title">System Engineering Services</h1>
         </div>
         <div className="product-page">
 
@@ -210,4 +210,4 @@ const S1 = () => {
   );
 };
 
-export default S1;
+export default SystemEngineering;

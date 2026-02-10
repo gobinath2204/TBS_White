@@ -4,9 +4,9 @@ import "../pages/Services.css";
 
 const services = [
   {
-    id: "SystemDevelopment",
-    name: "System Development",
-    img: "/Hero_S/sysenggdev.jpg",
+    id: "SystemEngineering",
+    name: "System Engineering",
+    img: "/Hero_S/Sysengg.png",
     desc: "Our system engineering team delivers exceptional system engineering with accurate, fully traceable requirements for automotive ECUs. We deliver solutions in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards.",
   },
   {

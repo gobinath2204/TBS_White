@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="footer-section">
           <h4>Services</h4>
           <ul>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Services/SystemDevelopment">System Development</Link></li>
+            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Services/SystemEngineering">System Engineering</Link></li>
             <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Services/SoftwareEngineering">Software Engineering</Link></li>
             <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Services/HardwareEngineering">Hardware Engineering</Link></li>
             <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Services/SystemValidation">System Validation</Link></li>

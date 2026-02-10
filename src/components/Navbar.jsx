@@ -61,7 +61,7 @@ const Navbar = () => {
           <li className="dropdown services-dropdown">
             <Link to="/Services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             <ul className="dropdown-menu services-menu">
-              <li><Link to="/pages/Services/SystemDevelopment" onClick={() => setMobileMenuOpen(false)}>System Development</Link></li>
+              <li><Link to="/pages/Services/SystemEngineering" onClick={() => setMobileMenuOpen(false)}>System Engineering</Link></li>
               <li><Link to="/pages/Services/SoftwareEngineering" onClick={() => setMobileMenuOpen(false)}>Software Engineering</Link></li>
               <li><Link to="/pages/Services/HardwareEngineering" onClick={() => setMobileMenuOpen(false)}>Hardware Engineering</Link></li>
               <li><Link to="/pages/Services/SystemValidation" onClick={() => setMobileMenuOpen(false)}>System Validation</Link></li>

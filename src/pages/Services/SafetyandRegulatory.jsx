@@ -12,7 +12,7 @@ const S5 = () => {
     window.scrollTo(0, 0);
   };
   const handleNext = () => {
-    navigate("/pages/Services/SystemDevelopment");
+    navigate("/pages/Services/SystemEngineering");
     window.scrollTo(0, 0);
   };
 
