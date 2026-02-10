@@ -74,7 +74,7 @@ const S3 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper" style={{ height: "auto" }}>
-              <img src="/S_HW/Picture1.jpeg" alt="Design" className="section-image" style={{ objectFit: "cover", height: "auto" }}/>
+              <img src="/S_HW/Picture1.png" alt="Design" className="section-image" style={{ objectFit: "cover", height: "auto" }}/>
             </div>
             <div className="section-text">
               <h2>Schematic Design</h2>
