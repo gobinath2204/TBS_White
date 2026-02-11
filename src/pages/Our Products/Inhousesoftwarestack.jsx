@@ -45,8 +45,8 @@ const P1 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+          <section >
+            <p style={{fontSize: "1.2rem", textAlign: "justify", }}>
                 Our <b>In House Commercial off the shelf software stack</b> developed for Automotive communication (CAN), Diagnostics(UDS),UDS on CAN,  Calibration(XCP), Safe RTOS(Free RTOS + Safety Plugin), Flash Boot Loaders(PBL +SBL+App), NVM Manager & BSW Low Level Drivers. Our stacks are in compliance with respective ISO Standards. Our stacks are already in production vehicles. Our all stack have configuration Tools. 
             </p>
           </section>

@@ -46,7 +46,7 @@ const S4 = () => {
 
         {/* Main Product Page */}
         <div className="product-page">
-          <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
+          <section >
             <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
               Our <b>System Validation team</b> excels in system validation through comperhensive system understanding and  HIL design, development and comissionsing to achieve the end to end component validation to cover functional, fault inserstion, communicaiton, DVP validation and end of line validation.
             </p>

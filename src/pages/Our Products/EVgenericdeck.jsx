@@ -39,15 +39,16 @@ const P2 = () => {
         <div className="hero-container">
           <img src="/Hero_P/EVdeck.png" alt="EV Generic Deck" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>EV Generic Deck</h1>
+          <h1 className="hero-title" style={{ color: 'white' }}>EV Generic Deck</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "3rem 0"}}>
-                Our <b>EV Generic Deck</b> is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
+
+          <section>
+            <p style={{ fontSize: "1.2rem", textAlign: "justify" }}>
+              Our <b>EV Generic Deck</b> is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
             </p>
           </section>
 

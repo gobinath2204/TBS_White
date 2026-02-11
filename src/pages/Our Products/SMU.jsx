@@ -44,8 +44,8 @@ const P4 = () => {
 
         {/* Creative Content Sections */}
         <div className="product-page">
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+          <section >
+            <p style={{fontSize: "1.2rem", textAlign: "justify", }}>
                 The <b>Secure Manufacturing Unit (SMU)</b> safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
             </p>
           </section>

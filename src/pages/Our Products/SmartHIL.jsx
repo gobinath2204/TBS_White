@@ -45,8 +45,8 @@ const P5 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
 
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+          <section >
+            <p style={{fontSize: "1.2rem", textAlign: "justify", }}>
                 TBS's Smart HIL platform transforms automotive validation through intelligent hardware-software integration. Our system delivers real-time ECU testing with advanced fault simulation, multi-protocol connectivity, and AI-driven automation. Designed for next-generation vehicle development, it accelerates testing cycles while ensuring ISO 26262 compliance and seamless integration with industry-standard development tools.
             </p>
           </section>

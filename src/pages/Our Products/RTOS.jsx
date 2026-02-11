@@ -44,8 +44,8 @@ const P7 = () => {
 
         {/* Creative Content Sections */}
         <div className="product-page">
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
-            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0"}}>
+          <section >
+            <p style={{fontSize: "1.2rem", textAlign: "justify", }}>
                 Our <b>Free RTOS Safety Plugin</b> empowers automotive embedded systems with ISO 26262 ASIL-D compliance. It enhances standard FreeRTOS with critical safety features, including data integrity verification, secure data exchange, and real-time kernel monitoring, ensuring reliability for next-generation vehicles.
             </p>
           </section>

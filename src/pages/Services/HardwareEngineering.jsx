@@ -44,7 +44,7 @@ const S3 = () => {
         </div>
         {/* Creative Content Sections */}
         <div className="product-page">
-          <section style={{marginTop: "0", paddingTop: "0.5rem"}}>
+          <section >
             <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
                 Our <b>hardware engineering team</b> delivers exceptional ASPICE-compliant hardware solutions covering the complete development lifecycle from requirements to verification. We excel in schematic and PCB design, safety analysis (FMEA/DFMEA), advanced simulations, and rigorous testing methodologies. From concept to production, we deliver robust, high-performance hardware that ensures functional safety, industry compliance, and accelerated time-to-market.
             </p>

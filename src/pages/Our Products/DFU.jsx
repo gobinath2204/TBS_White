@@ -44,8 +44,8 @@ const P6 = () => {
 
         {/* Creative Content Sections */}
         <div className="product-page">
-          <section style={{ marginTop: "0", paddingTop: "0.5rem" }}>
-            <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "3rem 0" }}>
+          <section>
+            <p style={{ fontSize: "1.2rem", textAlign: "justify" }}>
               Our <b>Diagnostics Tools </b> supports DoIP, CAN FD, and standard CAN protocols, ensuring compatibility with multiple flash specifications. It features independent flashing tool support for various CAN interfaces, including Vector, NI, Intrepid, and Pak. With integrated DHCP for DoIP, XML-configurable sequences, and detailed logging, it enables quick verification for EOL and aftersales deployment while exposing COM APIs for integration.
             </p>
           </section>

@@ -9,6 +9,8 @@
   --orange: #e56b2e;
   --light: #ffffff;
   --nav-accent: #00f5ff;
+  scroll-behavior: smooth;
+  /* Smooth scrolling for snap sections */
 }
 
 /* Hero Section */
@@ -66,11 +68,14 @@
   width: 92%;
   display: flex;
   flex-direction: column;
-  gap: clamp(3rem, 5vw, 6rem);
-  /* Responsive gap */
-  padding: clamp(2rem, 4vw, 5rem) 1rem;
+  gap: 0;
+  /* No gap between full-screen sections */
+  padding: 0;
+  /* No padding for full-screen layout */
   margin: 0 auto;
   font-family: 'Inter', sans-serif;
+  scroll-snap-type: y proximity;
+  /* Proximity allows more natural scrolling while still snapping */
 }
 
 .content-section,
@@ -89,14 +94,17 @@
 .content-section {
   display: flex;
   align-items: center;
-  margin: 2rem 0;
-  padding: clamp(2rem, 4vw, 4rem);
   justify-content: center;
+  margin: 0;
+  padding: 2rem 1rem;
+  min-height: 50vh;
+  /* Half viewport for intro section */
   border-radius: 20px;
   background: transparent;
   border: none;
   backdrop-filter: none;
   color: var(--blue);
+  scroll-snap-align: start;
 }
 
 .section-with-image {
@@ -104,19 +112,22 @@
   flex-wrap: wrap;
   /* Allow wrapping for full-width headers */
   justify-content: space-between;
-  align-items: stretch;
-  /* Ensure Image and Content match height */
+  align-items: center;
+  /* Center content vertically in viewport */
   position: relative;
-  min-height: auto;
+  min-height: 100vh;
+  /* Full viewport height for each section */
   overflow: visible;
   margin: 0;
-  padding: 1rem 0;
-  gap: 2rem;
-  /* Reduced gap since items are wrapped */
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+  /* Increased gap for better separation */
   border-radius: 0;
   background: transparent;
   border: none;
   backdrop-filter: none;
+  scroll-snap-align: start;
+  /* Snap to section when scrolling */
 }
 
 /* Section with Image + Text Layout */
@@ -126,11 +137,12 @@
   justify-content: center;
   position: relative;
   height: auto;
-  min-height: clamp(300px, 40vw, 600px);
-  /* Scaling height */
-  flex: 1;
-  min-width: 45%;
-  /* Ensure visuals take roughly half */
+  max-height: 500px;
+  /* Prevent excessive stretching */
+  flex: 0 0 calc(40% - 0.6rem);
+  /* 40% width minus gap proportion */
+  min-width: calc(40% - 0.6rem);
+  max-width: calc(40% - 0.6rem);
   overflow: hidden;
   background: none;
   border-radius: 20px;
@@ -172,7 +184,7 @@
   font-size: clamp(2rem, 3.5vw, 3.5rem);
   /* Fluid heading size */
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   color: var(--blue);
   text-align: center;
   /* Centered as requested */
@@ -186,11 +198,11 @@
 }
 
 .section-text p {
-  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  font-size: clamp(1rem, 1.0vw, 1.0rem);
   /* Fluid paragraph text */
-  line-height: 1.7;
+  line-height: 1.2;
   color: #444;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: justify;
   font-family: 'Inter', sans-serif;
   width: 100%;
@@ -199,18 +211,34 @@
   /* Below Heading */
 }
 
+/* Override global section styles from index.css */
+.product-page section h2,
+.section-with-image h2,
+.section-text h2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.product-page p,
+.section-with-image p,
+.section-text p {
+  margin-bottom: 0.5rem !important;
+}
+
 .section-text ul {
   width: auto;
   /* Adjust to flex */
-  flex: 1;
-  min-width: 45%;
+  flex: 0 0 calc(60% - 0.9rem);
+  /* 60% width minus gap proportion */
+  min-width: calc(60% - 0.9rem);
+  max-width: calc(60% - 0.9rem);
   margin: 0;
   padding-left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* Center content vertically against image */
-  gap: clamp(1rem, 1.5vw, 2rem);
+  justify-content: flex-start;
+  /* Align to top instead of center */
+  gap: clamp(0.4rem, 0.6vw, 0.7rem);
+  /* Tighter gap between items */
   list-style: none;
   order: 4;
   /* Next to Image */
@@ -229,14 +257,14 @@
   background: #f8f9fa;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-left: 5px solid var(--orange);
-  border-radius: 10px;
-  padding: clamp(1rem, 1.5vw, 1.5rem);
-  /* Responsive padding */
+  border-radius: 8px;
+  padding: clamp(0.6rem, 1vw, 0.9rem);
+  /* Reduced responsive padding */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
-  font-size: clamp(0.95rem, 1.1vw, 1.2rem);
-  /* Fluid list text */
-  line-height: 1.5;
+  font-size: clamp(0.85rem, 0.95vw, 1rem);
+  /* Smaller fluid list text */
+  line-height: 1.4;
   color: #333;
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -353,6 +381,12 @@
   .section-image-wrapper {
     min-height: 300px;
   }
+
+  .section-text li {
+    font-size: 0.95rem;
+    /* Slightly smaller on tablets */
+    padding: 0.8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -370,8 +404,8 @@
   .section-with-image,
   .section-with-image.reverse {
     flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 2rem;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
     border-radius: 0;
   }
 
@@ -419,6 +453,16 @@
 
   .section-text ul {
     order: 4;
+    gap: 0.5rem;
+    /* Tighter gap on mobile */
+  }
+
+  .section-text li {
+    font-size: 0.9rem;
+    /* Smaller text on mobile */
+    padding: 0.7rem;
+    /* Reduced padding on mobile */
+    line-height: 1.4;
   }
 
   .nav-arrow-btn {
