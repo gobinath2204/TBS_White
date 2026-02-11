@@ -8,7 +8,6 @@ export default function Home() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef(null);
-  const [isLooping, setIsLooping] = useState(false);
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 1024);
@@ -18,24 +17,13 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleVideoTimeUpdate = () => {
-    if (videoRef.current && !isLooping) {
-      const duration = videoRef.current.duration;
-      const currentTime = videoRef.current.currentTime;
-
-      // Start crossfade 1 second before video ends
-      if (duration - currentTime <= 1) {
-        setIsLooping(true);
-        setTimeout(() => {
-          if (videoRef.current) {
-            videoRef.current.currentTime = 0;
-            videoRef.current.play();
-            setIsLooping(false);
-          }
-        }, 1000);
-      }
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log("Video autoplay failed:", error);
+      });
     }
-  };
+  }, []);
 
   return (
     <>
@@ -46,13 +34,11 @@ export default function Home() {
             ref={videoRef}
             autoPlay
             muted
+            loop
             playsInline
-            onTimeUpdate={handleVideoTimeUpdate}
             style={{
               position: 'absolute', top: 0, left: 0,
               width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%',
-              opacity: isLooping ? 0.5 : 1,
-              transition: 'opacity 1s ease-in-out'
             }}
             aria-label="Background video showing our services"
           >

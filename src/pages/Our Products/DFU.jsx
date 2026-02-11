@@ -37,16 +37,16 @@ const P6 = () => {
       <div ref={contentRef}>
         {/* Hero Section */}
         <div className="hero-container">
-          <img src="/Hero_P/DFU.png" alt="Diagnostics Flashing Unit" className="hero-video" />
+          <img src="/Hero_P/DFU.png" alt="Diagnostic Tools" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{ color: 'white' }}>Diagnostics Flashing Unit</h1>
+          <h1 className="hero-title" style={{ color: 'white' }}>Diagnostic Tools</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
           <section>
             <p style={{ fontSize: "1.2rem", textAlign: "justify" }}>
-              Our <b>Diagnostics Tools </b> supports DoIP, CAN FD, and standard CAN protocols, ensuring compatibility with multiple flash specifications. It features independent flashing tool support for various CAN interfaces, including Vector, NI, Intrepid, and Pak. With integrated DHCP for DoIP, XML-configurable sequences, and detailed logging, it enables quick verification for EOL and aftersales deployment while exposing COM APIs for integration.
+              Our <b>Diagnostic Tools </b> supports DoIP, CAN FD, and standard CAN protocols, ensuring compatibility with multiple flash specifications. It features independent flashing tool support for various CAN interfaces, including Vector, NI, Intrepid, and Pak. With integrated DHCP for DoIP, XML-configurable sequences, and detailed logging, it enables quick verification for EOL and aftersales deployment while exposing COM APIs for integration.
             </p>
           </section>
 
@@ -59,10 +59,9 @@ const P6 = () => {
               <ul>
                 <li><strong>Multi-Protocol Support:</strong> Supports DoIP, CAN FD, and standard CAN protocols.</li>
                 <li><strong>Flash Compatibility:</strong> Compatible with multiple flash specifications.</li>
-                <li><strong>Interface Support:</strong> Independent flashing tools support various CAN interfaces, including Vector, NI, Intrepid, and Pak.</li>
-                <li><strong>Advanced Logging:</strong> Provides human-readable UDS logs and raw CAN dumps; DoIP includes UDS logs and Wireshark dumps.</li>
+                <li><strong>Interface Support:</strong> Supports various CAN interfaces, including Vector, NI, Intrepid, and Peak.</li>
+                <li><strong>Advanced Logging:</strong> Provides human-readable UDS logs and raw CAN dumps; DoIP includes UDS logs and Wireshark dumps.User logs include detailed failure reasons for thorough analysis.</li>
                 <li><strong>Integrated DHCP:</strong> Built-in DHCP server for DoIP connections.</li>
-                <li><strong>Detailed Analysis:</strong> User logs include detailed failure reasons for thorough analysis.</li>
                 <li><strong>Configurable Sequences:</strong> Flash sequences can be configured and controlled via XML.</li>
                 <li><strong>Rapid Verification:</strong> Flash specification updates can be quickly verified before deployment in EOL or aftersales tools.</li>
                 <li><strong>Integration APIs:</strong> Exposes COM APIs for integration with other tools.</li>

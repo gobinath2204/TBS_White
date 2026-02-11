@@ -40,10 +40,10 @@ const products = [
   },
   {
     id: "DFU",
-    name: "Diagnostics flashing unit",
+    name: "Diagnostic Tools",
     img: "/Hero_P/DFU.png",
-    Cdesc: "TBS's Diagnostics Flashing Unit (DFU)",
-    desc: "TBS's Diagnostics Flashing Unit is an all-in-one tool for seamless ECU reprogramming and diagnostics, supporting UDS, CCP/XCP, and OBD-II protocols with secure flashing capabilities.",
+    Cdesc: "TBS's Diagnostic Tools (DFU)",
+    desc: "TBS's Diagnostic Tools is an all-in-one tool for seamless ECU reprogramming and diagnostics, supporting UDS, CCP/XCP, and OBD-II protocols with secure flashing capabilities.",
   },
   {
     id: "RTOS",

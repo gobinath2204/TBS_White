@@ -78,7 +78,7 @@ const Navbar = () => {
               <li><Link to="/pages/Our Products/HMI" onClick={() => setMobileMenuOpen(false)}>Human Machine Interface (HMI)</Link></li>
               <li><Link to="/pages/Our Products/SMU" onClick={() => setMobileMenuOpen(false)}>Secure Manufacturing Unit</Link></li>
               <li><Link to="/pages/Our Products/SmartHIL" onClick={() => setMobileMenuOpen(false)}>Smart HIL</Link></li>
-              <li><Link to="/pages/Our Products/DFU" onClick={() => setMobileMenuOpen(false)}>Diagnostics Flashing Unit</Link></li>
+              <li><Link to="/pages/Our Products/DFU" onClick={() => setMobileMenuOpen(false)}>Diagnostic Tools</Link></li>
               <li><Link to="/pages/Our Products/RTOS" onClick={() => setMobileMenuOpen(false)}>Free RTOS Safety Plugin</Link></li>
             </ul>
           </li>
