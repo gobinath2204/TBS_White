@@ -48,7 +48,7 @@ const S4 = () => {
         <div className="product-page">
           <section >
             <p style={{ fontSize: "1.2rem", textAlign: "justify" }}>
-              Our <b>System Validation team</b> excels in system validation through comperhensive system understanding and  HIL design, development and comissionsing to achieve the end to end component validation to cover functional, fault inserstion, communicaiton, DVP validation and end of line validation.
+              Our <b>System Validation team</b> excels in system validation through comperhensive system understanding and  HIL design, development and comissionsing to achieve the end to end component validation to cover functional, fault inserstion, communicaiton, DV PV validation and end of line validation.
             </p>
           </section>
 
