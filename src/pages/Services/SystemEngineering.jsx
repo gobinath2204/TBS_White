@@ -63,7 +63,7 @@ const SystemEngineering = () => {
                 <li><strong>Functional Requirements Elicitation:</strong> Operating modes, measurements, control functions, Protection, Vehicle functions and system behaviors</li>
                 <li><strong>Non-Functional Requirements:</strong> Performance metrics, efficiency standards, lifetime expectations, and operational constraints</li>
                 <li><strong>Compliance Standards:</strong> Functional safety (ISO 26262), cybersecurity (ISO 21434,R155,R156), and Regulatory standards(R100)</li>
-                <li><strong>Environmental Requirements:</strong> Temperature ranges(ISO 16750), chemical resistance(ISO 16750), mechanical durability(ISO 16750), HV safety(ISO 16750, ISO 16469) and electrical specifications(ISO ISO 21498, LV123, LV124)</li>
+                <li><strong>Environmental Requirements:</strong> Temperature (ISO 16750), chemical (ISO 16750), mechanical (ISO 16750), HV safety(ISO 16750, ISO 16469) and electrical specifications(ISO ISO 21498, LV123, LV124)</li>
                 <li><strong>Communication Requirements:</strong> CAN & CANFD(ISO 11898), UDS(ISO 14229), LIN(ISO 17987), Ethernet(ISO 13400), V2G(ISO 15118), and Low level drivers</li>
                 <li><strong>End-of-Line Requirements:</strong> Manufacturing test procedures and process validation requirements</li>
                 <li><strong>Test Requirements:</strong> Design validation, process validation and system validation startergies for the comprehesive system testing</li>
