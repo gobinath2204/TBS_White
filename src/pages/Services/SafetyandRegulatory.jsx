@@ -46,7 +46,7 @@ const S5 = () => {
         <div className="product-page">
 
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0"}}>
+            <p style={{fontSize: "1.2rem", textAlign: "justify"}}>
                 Our <b>safety and regulatory team</b> delivers cutting-edge compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. We excel in ISO 26262, ISO 21434, R155, R156, LV123, LV124, HV safety automotive CAN protocols, and global market regulations, ensuring robust system protection and full compliance. From comprehensive testing to validation and certification support, we help clients achieve safe, reliable, and market-ready automotive solutions.
             </p>
           </section>
@@ -185,16 +185,17 @@ const S5 = () => {
             <div className="section-text">
               <h2>Environmental Standards</h2>
               <p>
-                We support compliance with environmental standards promoting sustainable automotive solutions:
+                Design, development, and validation of automotive software, systems, and hardware compliant with global environmental test standards.
               </p>
               <ul>
-                <li><strong>ISO 14001 Compliance:</strong> Environmental management systems and regional environmental regulations</li>
-                <li><strong>Lifecycle Assessments:</strong> Comprehensive environmental impact analysis throughout product lifecycle</li>
-                <li><strong>Emissions Testing:</strong> Rigorous testing ensuring compliance with environmental emission standards</li>
-                <li><strong>Material Compliance:</strong> RoHS, REACH, and other material safety and environmental regulations</li>
-                <li><strong>Sustainable Design:</strong> Eco-friendly system design reducing environmental impact</li>
-                <li><strong>Regulatory Compliance:</strong> Meeting environmental demands and promoting sustainable practices</li>
-                <li><strong>Eco-Friendly Solutions:</strong> Supporting development of environmentally responsible automotive technologies</li>
+                <li><strong>Applicable Standards:</strong> Environmental compliance aligned to ISO 16750‑4, ISO 19453‑4, and AIS029 validation frameworks.</li>
+                <li><strong>Temperature Testing:</strong> High/low and cyclic temperature validation per IEC 60068‑2‑1, IEC 60068‑2‑2, and GB/T 2423.1.</li>
+                <li><strong>Thermal Shock:</strong> Rapid temperature transition testing as per IEC 60068‑2‑14.</li>
+                <li><strong>Humidity & Damp Heat:</strong> Cyclic and steady humidity endurance per IEC 60068‑2‑30 and IEC 60068‑2‑78.</li>
+                <li><strong>Water Ingress Protection:</strong> IP rating validation aligned to IEC 60529 and ISO 20653.</li>
+                <li><strong>Corrosion & Salt Spray:</strong> Corrosion resistance testing per IEC 60068‑2‑11 and IEC 60068‑2‑52.</li>
+                <li><strong>Solar & Climate Exposure:</strong> UV and radiation durability validation per IEC 60068‑2‑5.</li>
+                <li><strong>Chemical Resistance:</strong> Harmful gas and chemical exposure testing per IEC 60068‑2‑60.</li>
               </ul>
             </div>
           </section>

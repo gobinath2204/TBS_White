@@ -47,7 +47,7 @@ const S4 = () => {
         {/* Main Product Page */}
         <div className="product-page">
           <section >
-            <p style={{ fontSize: "1.2rem", textAlign: "justify", padding: "6rem 0 0 0" }}>
+            <p style={{ fontSize: "1.2rem", textAlign: "justify" }}>
               Our <b>System Validation team</b> excels in system validation through comperhensive system understanding and  HIL design, development and comissionsing to achieve the end to end component validation to cover functional, fault inserstion, communicaiton, DVP validation and end of line validation.
             </p>
           </section>
@@ -125,16 +125,17 @@ const S4 = () => {
             <div className="section-text">
               <h2>Dyno Validation</h2>
               <p>
-                System Integration and Dyno Validation form the backbone of our comprehensive validation services:
+                Our System Integration and Dyno Validation services ensure complete subsystem harmony and high‑accuracy performance verification across automotive, hybrid, and electrified platforms.
               </p>
               <ul>
-                <li><strong>Advanced Dyno Testing:</strong> Chassis and engine dynos with high-fidelity load simulation for torque, efficiency, and emissions</li>
-                <li><strong>Interface Integration:</strong> CAN and Ethernet tools ensuring seamless data flow and synchronization</li>
-                <li><strong>Comprehensive Validation:</strong> Transient testing and durability cycles with data analytics optimization</li>
-                <li><strong>Hybrid System Expertise:</strong> Battery management integration with combustion engines achieving 20% fuel reduction</li>
-                <li><strong>ISO 17025 Compliance:</strong> Environmental controls for accurate altitude and temperature effect replication</li>
-                <li><strong>Automated Testing:</strong> Scripts handling repetitive tests enabling deeper engineering analysis</li>
-                <li><strong>Performance Optimization:</strong> Bridging simulation and physical testing for reliable, high-performance outcomes</li>
+                <li><strong>Advanced Dyno Testing:</strong> High-fidelity chassis and engine dynamometers for torque, efficiency, and emissions evaluation.</li>
+                <li><strong>Interface Integration:</strong> Reliable communication validation using CAN, CAN-FD, LIN, and Ethernet tools.</li>
+                <li><strong>Comprehensive Validation:</strong> Transient response, endurance cycles, and durability analysis for enhanced reliability.</li>
+                <li><strong>Hybrid System Expertise:</strong> Validation of BMS, energy flow, and hybrid control strategies.</li>
+                <li><strong>Automated Testing:</strong> Scripts for repetitive and long-duration sequences to increase throughput.</li>
+                <li><strong>Performance Optimization:</strong> Fine-tuning calibrations using simulation predictions and dyno results.</li>
+                <li><strong>Failure Mode Investigation:</strong> Root-cause analysis via stress conditions and controlled faults.</li>
+                <li><strong>Data Visualization:</strong> Advanced dashboards for test results and key performance indicators.</li>
               </ul>
             </div>
           </section>
@@ -146,16 +147,16 @@ const S4 = () => {
             <div className="section-text">
               <h2>LabCar Validation</h2>
               <p>
-                LabCar Validation offers flexible, bench-based alternatives to full vehicle testing with precise component validation:
+                Our LabCar Validation environment enables fast, reliable, and cost‑effective validation of complex automotive functions long before vehicle prototypes are available. By integrating complete electrical architectures, state-of-the-art calibration tools, and automated test frameworks, we empower engineering teams to detect issues early, accelerate development, and ensure ASPICE‑compliant quality.
               </p>
               <ul>
-                <li><strong>Modular Bench Systems:</strong> Complete vehicle electrical architectures with ECUs, wiring harnesses, and actuators</li>
-                <li><strong>Early Stage Debugging:</strong> Software updates and hardware iterations in simulated vehicle contexts</li>
-                <li><strong>Advanced Calibration Tools:</strong> INCA for calibration and monitoring with comprehensive testing capabilities</li>
-                <li><strong>Comprehensive Test Suite:</strong> Functional, endurance, and fault-injection tests with automated sequences</li>
-                <li><strong>AUTOSAR Support:</strong> Rapid prototyping reducing dependency on scarce physical prototypes</li>
-                <li><strong>Proven Results:</strong> 50% faster validation in infotainment projects with early integration issue identification</li>
-                <li><strong>Complete Facilities:</strong> EMC testing and thermal cycling for comprehensive automotive electronics insights</li>
+                <li><strong>Modular Bench Systems:</strong> Replicates full vehicle electrical topologies with production-grade ECUs.</li>
+                <li><strong>Early-Stage Debugging:</strong> High-fidelity simulated environments for rapid software and hardware evaluation.</li>
+                <li><strong>Calibration Tools:</strong> Advanced calibration and monitoring using industry-standard tools like INCA.</li>
+                <li><strong>Automated Test Suite:</strong> Extensive functional, endurance, and fault-injection test scenarios.</li>
+                <li><strong>AUTOSAR-Ready:</strong> Full support for AUTOSAR Classic and Adaptive prototyping.</li>
+                <li><strong>Engineering Impact:</strong> Proven efficiency with up to 50% faster validation cycles.</li>
+                <li><strong>End-to-End Testing:</strong> Integrated environmental, EMC, and thermal testing capabilities.</li>
               </ul>
             </div>
           </section>
@@ -167,16 +168,16 @@ const S4 = () => {
             <div className="section-text">
               <h2>Vehicle Validation</h2>
               <p>
-                Vehicle Validation brings our expertise to authentic environments with comprehensive on-road and track testing:
+                Our Vehicle Validation services ensure that every system performs flawlessly under real‑world driving conditions. Leveraging advanced instrumentation, global test fleets, and AI‑driven analytics, we validate vehicle behavior across environments, ensuring safety, compliance, and market readiness.
               </p>
               <ul>
-                <li><strong>Advanced Instrumentation:</strong> GPS, accelerometers, and data loggers capturing handling, braking, and ADAS metrics</li>
-                <li><strong>Comprehensive Testing:</strong> Diverse terrains and weather conditions following FMVSS and Euro NCAP guidelines</li>
-                <li><strong>Scenario-Based Validation:</strong> Edge case testing identifying real-world discrepancies not caught in labs</li>
-                <li><strong>Specialized Applications:</strong> Vibration-induced failures, thermal impacts, and environmental stress analysis</li>
-                <li><strong>Electric Vehicle Optimization:</strong> Range and regenerative braking optimization achieving 30% efficiency gains</li>
-                <li><strong>AI-Enhanced Analysis:</strong> Automated data processing with AI highlighting anomalies and optimization opportunities</li>
-                <li><strong>Global Test Fleets:</strong> Cultural and regulatory relevance ensuring market-ready vehicle deployment</li>
+                <li><strong>Advanced Instrumentation:</strong> High-precision data logging for handling, braking, and ADAS metrics.</li>
+                <li><strong>Comprehensive Testing:</strong> Rigorous evaluation across terrains and weather per FMVSS/Euro NCAP.</li>
+                <li><strong>Real-World Validation:</strong> Structured scenario testing including edge-case and boundary assessments.</li>
+                <li><strong>Stress & Durability:</strong> Analysis of vibration, thermal impacts, and environmental stress.</li>
+                <li><strong>EV Optimization:</strong> Workflows to optimize range, charging, and regenerative braking.</li>
+                <li><strong>AI-Enhanced Insights:</strong> AI analytics for performance anomalies and safety risks.</li>
+                <li><strong>Global Test Fleets:</strong> Validation under diverse cultural and regulatory contexts globally.</li>
               </ul>
             </div>
           </section>
@@ -188,16 +189,16 @@ const S4 = () => {
             <div className="section-text">
               <h2>EOL Validation</h2>
               <p>
-                End-of-Line (EOL) Validation serves as our final quality gate with automated checks ensuring specification compliance:
+                Our End‑of‑Line Validation systems ensure every product leaving the manufacturing line is fully compliant, defect‑free, and production‑ready. By combining automated inspection technologies, real‑time traceability, and advanced analytics, we help manufacturers deliver consistent quality at scale while protecting brand integrity.
               </p>
               <ul>
-                <li><strong>Automated Quality Control:</strong> PLC-controlled stations with vision systems and electrical testers for high-volume lines</li>
-                <li><strong>Manufacturing Integration:</strong> Real-time traceability with manufacturing execution systems compliant with IATF 16949</li>
-                <li><strong>Comprehensive Testing:</strong> Parametric testing and diagnostic scripting catching defects like misalignments and firmware glitches</li>
-                <li><strong>Proven Results:</strong> 25% yield improvement for consumer electronics clients minimizing product returns</li>
-                <li><strong>Predictive Analytics:</strong> Process drift forecasting enhancing overall production efficiency</li>
-                <li><strong>Global Scalability:</strong> Scalable solutions for global manufacturing plants</li>
-                <li><strong>Brand Protection:</strong> Rigorous automated assurance safeguarding brand integrity and customer satisfaction</li>
+                <li><strong>Automated Quality Control:</strong> PLC-controlled stations with vision systems and electrical testers.</li>
+                <li><strong>Manufacturing Integration:</strong> Seamless MES integration for full traceability and IATF 16949 compliance.</li>
+                <li><strong>Functional Testing:</strong> Detailed parametric testing and diagnostic scripting for defect detection.</li>
+                <li><strong>Yield Enhancements:</strong> Strategies achieving up to 25% yield improvement in production.</li>
+                <li><strong>Predictive Analytics:</strong> AI monitoring to identify process drift and ensure stability.</li>
+                <li><strong>Global Scalability:</strong> Scalable architectures for consistent testing across multiple plants.</li>
+                <li><strong>Brand Assurance:</strong> Rigorous testing to ensure product quality and reputation.</li>
               </ul>
             </div>
           </section>
@@ -209,16 +210,16 @@ const S4 = () => {
             <div className="section-text">
               <h2>Environmental Validation</h2>
               <p>
-                Environmental Validation rigorously evaluates system endurance against harsh conditions ensuring long-term reliability:
+                Our Environmental Validation services ensure that products deliver consistent performance under the harshest operating conditions. By leveraging advanced test chambers, accelerated aging methodologies, and aerospace‑grade validation expertise, we help engineering teams build solutions that meet global standards for durability, safety, and long‑term reliability.
               </p>
               <ul>
-                <li><strong>Comprehensive Testing Chambers:</strong> Temperature, humidity, vibration, and corrosion tests per MIL-STD and IEC standards</li>
-                <li><strong>Accelerated Aging:</strong> HALT/HASS methods predicting lifespans with FMEA analysis for design improvements</li>
-                <li><strong>Aerospace Applications:</strong> Avionics validation against extreme altitudes reducing field failures by 45%</li>
-                <li><strong>Advanced Facilities:</strong> EMC testing and thermal imaging for comprehensive system assessments</li>
-                <li><strong>Sustainability Optimization:</strong> Physical and simulation data combination for EV battery optimization</li>
-                <li><strong>Real-World Adversity:</strong> Ensuring products thrive in challenging environmental conditions</li>
-                <li><strong>Long-Term Reliability:</strong> Delivering compliance and sustained performance across diverse applications</li>
+                <li><strong>Testing Chambers:</strong> Equipped for temperature, humidity, vibration, and corrosion testing.</li>
+                <li><strong>Accelerated Aging:</strong> HALT/HASS methodologies for lifespan prediction and design improvement.</li>
+                <li><strong>Aerospace Expertise:</strong> Validation for extreme altitudes and pressure variations.</li>
+                <li><strong>Advanced Facilities:</strong> EMC test suites, thermal imaging, and high-precision monitoring.</li>
+                <li><strong>EV Optimization:</strong> Data-driven support for battery efficiency and thermal stability.</li>
+                <li><strong>Real-World Performance:</strong> Reliability testing against extreme environmental challenges.</li>
+                <li><strong>Global Compliance:</strong> End-to-end validation aligned with international standards.</li>
               </ul>
             </div>
           </section>
