@@ -277,7 +277,7 @@ section h2 {
   position: relative;
   background-color: #ffffff;
   border-radius: 0;
-  padding: 4rem 0 6rem 0;
+  padding: 3rem 0;
   width: 100%;
   z-index: 3;
 }
@@ -288,9 +288,8 @@ section h2 {
 .products-section {
   position: relative;
   background-color: #ffffff;
-  padding: 4rem 0 6rem 0;
+  padding: 3rem 0;
   width: 100%;
-  margin-top: -7vh;
   z-index: 4;
 }
 
@@ -344,7 +343,7 @@ section h2 {
 .about {
   position: relative;
   background: #fff;
-  padding: 4rem 1rem 8rem;
+  padding: 3rem 1rem;
   /* Reduced horizontal padding */
   width: 100%;
   text-align: center;
@@ -392,7 +391,7 @@ section h2 {
   color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 3rem 3rem 1rem;
+  padding: 2rem 3rem 2rem;
   /* Reduced horizontal padding */
   flex-wrap: wrap;
   position: relative;
@@ -850,12 +849,16 @@ section h2 {
   }
 
   .services-section {
-    padding: 2rem 0 3rem 0;
+    padding: 2rem 0;
   }
 
   .products-section {
-    padding: 2rem 0 3rem 0;
-    margin-top: -7vh;
+    padding: 2rem 0;
+    margin-top: 0;
+  }
+
+  .about {
+    padding: 2rem 1rem;
   }
 
   .about p {
@@ -864,7 +867,7 @@ section h2 {
 
   .footer {
     flex-direction: row;
-    padding: 4rem 10% 2rem 10%;
+    padding: 2rem 10% 2rem 10%;
     justify-content: left;
     gap: 20%;
   }

@@ -57,19 +57,17 @@ const P5 = () => {
             </div>
             <div className="section-text">
               <h2>Smart HIL (Hardware-in-the-Loop)</h2>
-              <div className="bento-box" style={{borderRadius: '12px', padding: '1.5rem', backgroundColor: '#fff'}}>
-                <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
-                  <li style={{marginBottom: '0.1rem', paddingLeft: '1rem', position: 'relative'}}>• Enables simplified and accurate simulation of physical systems</li>
-                  <li style={{marginBottom: '0.1rem', paddingLeft: '1rem', position: 'relative'}}>• Compatible with Vector CAN and Peak CAN tools</li>
-                  <li style={{marginBottom: '0.1rem', paddingLeft: '1rem', position: 'relative'}}>• Designed for ease of use and cost efficiency</li>
-                  <li style={{marginBottom: '0.1rem', paddingLeft: '1rem', position: 'relative'}}>• Outputs are simulated via CAN Panel & CAPL at 1–10 ms intervals</li>
-                  <li style={{marginBottom: '0.1rem', paddingLeft: '1rem', position: 'relative'}}>• Inputs are measured and broadcasted to CAN at 1–10 ms intervals</li>
-                  <li style={{marginBottom: '0.1rem', paddingLeft: '1rem', position: 'relative'}}>• Operates independently of complex software dependencies</li>
-                  <li style={{marginBottom: '0.1rem', paddingLeft: '1rem', position: 'relative'}}>• Offers configurable I/O tailored to project-specific needs</li>
-                  <li style={{marginBottom: '0.1rem', paddingLeft: '1rem', position: 'relative'}}>• Supports programmable CAN communication and sensor emulation</li>
-                  <li style={{paddingLeft: '1rem', position: 'relative'}}>• Supports multi-domain applications: Automotive, Aerospace, Railways</li>
-                </ul>
-              </div>
+              <ul>
+                <li>Enables simplified and accurate simulation of physical systems</li>
+                <li>Compatible with Vector CAN and Peak CAN tools</li>
+                <li>Designed for ease of use and cost efficiency</li>
+                <li>Outputs are simulated via CAN Panel & CAPL at 1–10 ms intervals</li>
+                <li>Inputs are measured and broadcasted to CAN at 1–10 ms intervals</li>
+                <li>Operates independently of complex software dependencies</li>
+                <li>Offers configurable I/O tailored to project-specific needs</li>
+                <li>Supports programmable CAN communication and sensor emulation</li>
+                <li>Supports multi-domain applications: Automotive, Aerospace, Railways</li>
+              </ul>
             </div>
           </section>
 

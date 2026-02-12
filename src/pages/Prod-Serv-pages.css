@@ -68,10 +68,8 @@
   width: 92%;
   display: flex;
   flex-direction: column;
-  gap: 0;
-  /* No gap between full-screen sections */
-  padding: 0;
-  /* No padding for full-screen layout */
+  gap: 4rem;
+  padding: 4rem 0;
   margin: 0 auto;
   font-family: 'Inter', sans-serif;
   scroll-snap-type: y proximity;
@@ -96,9 +94,8 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 2rem 1rem;
-  min-height: 50vh;
-  /* Half viewport for intro section */
+  padding: 0 1rem;
+  min-height: auto;
   border-radius: 20px;
   background: transparent;
   border: none;
@@ -115,11 +112,10 @@
   align-items: center;
   /* Center content vertically in viewport */
   position: relative;
-  min-height: 100vh;
-  /* Full viewport height for each section */
+  min-height: auto;
   overflow: visible;
   margin: 0;
-  padding: 2rem 1rem;
+  padding: 0 1rem;
   gap: 1.5rem;
   /* Increased gap for better separation */
   border-radius: 0;
@@ -181,7 +177,7 @@
 }
 
 .section-text h2 {
-  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
   /* Fluid heading size */
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -203,7 +199,7 @@
   line-height: 1.2;
   color: #444;
   margin-bottom: 1rem;
-  text-align: justify;
+  text-align: center;
   font-family: 'Inter', sans-serif;
   width: 100%;
   flex-basis: 100%;
@@ -244,15 +240,6 @@
   /* Next to Image */
 }
 
-/* Reverse Logic for Wrapped Items */
-.section-with-image.reverse .section-image-wrapper {
-  order: 4;
-}
-
-.section-with-image.reverse .section-text ul {
-  order: 3;
-}
-
 .section-text li {
   background: #f8f9fa;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -283,9 +270,17 @@
   /* Slightly larger emphasis */
 }
 
-/* Reverse Layout */
-.section-with-image.reverse {
-  flex-direction: row-reverse;
+/* Alternating Layout for Desktop */
+@media (min-width: 769px) {
+  .section-with-image:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  /* Flip orange border to the right for odd sections (Image Left, Text Right) */
+  .section-with-image:nth-of-type(odd) .section-text li {
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 5px solid var(--orange);
+  }
 }
 
 /* Navigation Arrows */
@@ -395,7 +390,8 @@
   }
 
   .product-page {
-    padding: 1rem 0;
+    padding: 2rem 0;
+    gap: 2rem;
     width: 100%;
     max-width: 100%;
   }

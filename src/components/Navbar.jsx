@@ -74,12 +74,12 @@ const Navbar = () => {
             <Link to="/products" onClick={() => setMobileMenuOpen(false)}>Products</Link>
             <ul className="dropdown-menu products-menu">
               <li><Link to="/pages/Our Products/Inhousesoftwarestack" onClick={() => setMobileMenuOpen(false)}>In House Software Stack (COTS)</Link></li>
+              <li><Link to="/pages/Our Products/RTOS" onClick={() => setMobileMenuOpen(false)}>Free RTOS Safety Plugin</Link></li>
               <li><Link to="/pages/Our Products/EVgenericdeck" onClick={() => setMobileMenuOpen(false)}>EV Generic Deck</Link></li>
               <li><Link to="/pages/Our Products/HMI" onClick={() => setMobileMenuOpen(false)}>Human Machine Interface (HMI)</Link></li>
               <li><Link to="/pages/Our Products/SMU" onClick={() => setMobileMenuOpen(false)}>Secure Manufacturing Unit</Link></li>
               <li><Link to="/pages/Our Products/SmartHIL" onClick={() => setMobileMenuOpen(false)}>Smart HIL</Link></li>
               <li><Link to="/pages/Our Products/DFU" onClick={() => setMobileMenuOpen(false)}>Diagnostic Tools</Link></li>
-              <li><Link to="/pages/Our Products/RTOS" onClick={() => setMobileMenuOpen(false)}>Free RTOS Safety Plugin</Link></li>
             </ul>
           </li>
           <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/careers">Careers</Link></li>
