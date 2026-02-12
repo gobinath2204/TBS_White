@@ -60,7 +60,7 @@ const SystemEngineering = () => {
                 Our comprehensive SYS.2 requirements elicitation process ensures complete system specification through systematic analysis and documentation:
               </p>
               <ul>
-                <li><strong>Functional Requirements Elicitation:</strong> Operating modes, measurements, control functions, Protection, Vehicle functions and system behaviors</li>
+                <li><strong>Functional Requirements Elicitation:</strong> Measurements, Control functions, Protection, Vehicle functions and system behaviors</li>
                 <li><strong>Non-Functional Requirements:</strong> Performance metrics, efficiency standards, lifetime expectations, and operational constraints</li>
                 <li><strong>Compliance Standards:</strong> Functional safety (ISO 26262), cybersecurity (ISO 21434,R155,R156), and Regulatory standards(R100)</li>
                 <li><strong>Environmental Requirements:</strong> Temperature (ISO 16750), chemical (ISO 16750), mechanical (ISO 16750), HV safety(ISO 16750, ISO 16469) and electrical specifications(ISO ISO 21498, LV123, LV124)</li>
