@@ -45,13 +45,6 @@ const products = [
     Cdesc: "TBS's Diagnostic Tools (DFU)",
     desc: "TBS's Diagnostic Tools is an all-in-one tool for seamless ECU reprogramming and diagnostics, supporting UDS, CCP/XCP, and OBD-II protocols with secure flashing capabilities.",
   },
-  {
-    id: "RTOS",
-    name: "Free RTOS Safety Plugin",
-    img: "/Hero_P/RTOS.png",
-    Cdesc: "TBS's Free RTOS Safety Plugin transforms standard",
-    desc: "TBS's Free RTOS Safety Plugin transforms standard FreeRTOS kernels into certified safety-critical foundations, pre-qualified to ISO 26262 ASIL-D and IEC 61508 SIL-3 for automotive systems.",
-  },
 ];
 
 export default function ProductSlider() {

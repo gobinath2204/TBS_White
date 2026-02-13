@@ -60,7 +60,7 @@ export default function Footer() {
             <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Our Products/SMU">Secure Manufacturing Unit</Link></li>
             <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Our Products/SmartHIL">Smart HIL</Link></li>
             <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Our Products/DFU">Diagnostic Tools</Link></li>
-            <li><Link onClick={() => { window.scrollTo(0, 0); }} to="/pages/Our Products/RTOS">Free RTOS Safety Plugin</Link></li>
+
           </ul>
         </div>
 
