@@ -172,12 +172,17 @@
 
 /* Text Side - Ungrouped to control H2 and Content separately */
 .section-text {
-  display: contents;
-  /* Magic property to ungroup children */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 calc(60% - 0.9rem);
+  min-width: calc(60% - 0.9rem);
+  max-width: calc(60% - 0.9rem);
+  order: 1;
 }
 
 .section-text h2 {
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   /* Fluid heading size */
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -187,10 +192,6 @@
   font-family: 'Axiforma', sans-serif;
   line-height: 1.1;
   width: 100%;
-  /* Full Width */
-  flex-basis: 100%;
-  order: 1;
-  /* First */
 }
 
 .section-text p {
@@ -202,9 +203,6 @@
   text-align: Justify;
   font-family: 'Inter', sans-serif;
   width: 100%;
-  flex-basis: 100%;
-  order: 2;
-  /* Below Heading */
 }
 
 /* Override global section styles from index.css */
@@ -221,23 +219,16 @@
 }
 
 .section-text ul {
-  width: auto;
-  /* Adjust to flex */
-  flex: 0 0 calc(60% - 0.9rem);
-  /* 60% width minus gap proportion */
-  min-width: calc(60% - 0.9rem);
-  max-width: calc(60% - 0.9rem);
+  width: 100%;
   margin: 0;
   padding-left: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   /* Align to top instead of center */
-  gap: clamp(0.4rem, 0.6vw, 0.7rem);
+  gap: clamp(0.2rem, 0.1vw, 0.3rem);
   /* Tighter gap between items */
   list-style: none;
-  order: 4;
-  /* Next to Image */
 }
 
 .section-text li {
@@ -253,6 +244,7 @@
   margin: 0;
   font-family: 'Inter', sans-serif;
   position: relative;
+  text-align: justify;
 }
 
 .section-text li::before {
@@ -423,7 +415,12 @@
   }
 
   .section-text {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    order: 2;
   }
 
   .section-text h2,
@@ -437,21 +434,18 @@
 
   .section-text h2 {
     text-align: center;
-    order: 1;
   }
 
   .section-text p {
-    order: 2;
   }
 
   .section-image-wrapper {
     width: 100%;
-    order: 3;
+    order: 1;
     flex: none;
   }
 
   .section-text ul {
-    order: 4;
     gap: 0.5rem;
     /* Tighter gap on mobile */
   }
