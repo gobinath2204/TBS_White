@@ -109,7 +109,7 @@
   flex-wrap: wrap;
   /* Allow wrapping for full-width headers */
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   /* Center content vertically in viewport */
   position: relative;
   min-height: auto;
@@ -174,7 +174,7 @@
 .section-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 0 0 calc(60% - 0.9rem);
   min-width: calc(60% - 0.9rem);
   max-width: calc(60% - 0.9rem);
@@ -183,12 +183,11 @@
 
 .section-text h2 {
   font-size: clamp(1rem, 2vw, 2rem);
-  /* Fluid heading size */
   font-weight: 700;
   margin-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
   color: var(--blue);
-  text-align: center;
-  /* Centered as requested */
+  text-align: left;
   font-family: 'Axiforma', sans-serif;
   line-height: 1.1;
   width: 100%;
@@ -237,8 +236,7 @@
   padding: 0.5rem 0 0.5rem 2rem;
   box-shadow: none;
   transition: all 0.3s ease;
-  font-size: clamp(0.85rem, 0.95vw, 1rem);
-  /* Smaller fluid list text */
+  font-size: clamp(1rem, 1.0vw, 1.0rem);
   line-height: 1.4;
   color: #333;
   margin: 0;
@@ -249,14 +247,16 @@
 
 .section-text li::before {
   content: "";
-  background-image: url("/check.png");
+  background-image: url("/Check.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 1.2rem;
   height: 1.2rem;
   position: absolute;
   left: 0;
-  top: 0.4rem;
+  display: block;
+  z-index: 1;
+  background-position: center;
 }
 
 .section-text li strong {
@@ -434,9 +434,6 @@
 
   .section-text h2 {
     text-align: center;
-  }
-
-  .section-text p {
   }
 
   .section-image-wrapper {
