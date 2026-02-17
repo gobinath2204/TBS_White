@@ -57,13 +57,15 @@ const P1 = () => {
             </div>
             <div className="section-text">
               <h2>CAN Stack (Controller Area Network)</h2>
-              <p>
-                Ensures reliable and efficient data communication across the vehicle network:
-              </p>
               <ul>
-                <li><strong>Reliable Communication:</strong> Provides a robust framework for high-speed data exchange between ECUs.</li>
-                <li><strong>Signal Management:</strong> Handles complex message filtering, periodic transmission, and reception with minimal CPU overhead.</li>
-                <li><strong>Fault Handling:</strong> Integrated network management to detect and recover from communication bus errors.</li>
+                <li>Multi Channel Support, GUI Config Auto Code Tool, ISO11898 Compliance, ASIL – B Support, Autosar Architecture framework, In production Vehicles</li>
+                <li><strong>CAN NM:</strong> Manages Wakeup & Sleep CAN Modes</li>
+                <li><strong>CAN Manager:</strong> Exposes signals to the application layer</li>
+                <li><strong>CAN Pdur:</strong> PDUR (PDU Router) routes protocol-independent I-PDUs between upper layers and lower bus-specific layers (CANIf/LINIf) in CAN stack.</li>
+                <li><strong>CAN TP:</strong> Segments large N-PDUs (&gt;8 bytes) into multiple CAN frames and reassembles them on reception.</li>
+                <li><strong>CAN IF:</strong> Interacts with Upper layer & hardware.</li>
+                <li><strong>CAN Driver:</strong> Interacts with CAN Controller & CAN Transceiver</li>
+                <li><strong>ISO11898 Compliance</strong> CAN Physical and Communication Test procedure and evidence</li>
               </ul>
             </div>
           </section>
@@ -74,13 +76,12 @@ const P1 = () => {
             </div>
             <div className="section-text">
               <h2>UDS Stack (Unified Diagnostic Services - ISO 14229)</h2>
-              <p>
-                Provides comprehensive diagnostic capabilities compliant with ISO 14229:
-              </p>
               <ul>
-                <li><strong>Diagnostics & Servicing:</strong> Full implementation of diagnostic services for fault memory (DTC) reading, data sampling, and routine controls.</li>
-                <li><strong>Security Access:</strong> Managed authentication levels to protect sensitive ECU functions during workshop or factory access.</li>
-                <li><strong>Standard Compliance:</strong> Fully aligned with automotive standards for seamless integration with external tester tools.</li>
+                <li>UDSonCAN Support​, ISO14229 Compliance​, ISO15765 Compliance​</li>
+                <li>Interactive GUI Tool for Configuration​, AutoSaR Framework Architecure​, In Production Vehciles​</li>
+                <li>UDS Core, UDS app, UDS app support, UDS SecAcc, DTC Core & DTC application</li>
+                <li><strong>Automated Test script</strong> to Prove the stack compliance of Services(ISO14229) Test procedure and evidences for applicable and no applicable services and sub functions for both Physical and Functional addressing</li>
+                <li><strong>Automated Test script</strong>to Prove the stack compliance of Communication UDSonCAN(ISO15765) Test procedure and evidences for applicable and no applicable services and sub functions for both Physical and Functional addressing</li>
               </ul>
             </div>
           </section>
@@ -91,31 +92,31 @@ const P1 = () => {
             </div>
             <div className="section-text">
               <h2>XCP Stack (Universal Measurement and Calibration Protocol)</h2>
-              <p>
-                Facilitates real-time measurement and calibration for optimal ECU performance:
-              </p>
               <ul>
-                <li><strong>Real-Time Calibration:</strong> Enables high-performance measurement and calibration of internal ECU variables during runtime.</li>
-                <li><strong>Transport Independence:</strong> Operates efficiently over CAN, Ethernet, or FlexRay interfaces.</li>
-                <li><strong>Optimization:</strong> Optimized for low memory footprint while maintaining high data throughput for developers and testers.</li>
+                <li>XCPonCAN Support</li>
+                <li>ASAM 1.1 Part 2 Protocol Layer Compliance</li>
+                <li>ASAM 1.1 Part 3 Transport Layer Compliance</li>
+                <li>In production Vehicles</li>
+                <li>Configuration Tool to support selection of services and NRCs</li>
+                <li>Supports measurement, calibration, and flash programming in automotive systems.</li>
+                <li>Synchronous data acquisition</li>
+                <li>Synchronous data stimulation</li>
+                <li>Online memory calibration (read / write access)</li>
+                <li>Flash Programming for ECU development purposes.</li>
               </ul>
             </div>
           </section>
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture1.png" alt="NVM manager" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+              <img src="/P_COTS/Picture1.png" alt="NVM manager" className="section-image" style={{ objectFit: "fill", height: "100%" }} />
             </div>
             <div className="section-text">
-              <h2>NVM Manager</h2>
-              <p>
-                Delivers robust non-volatile memory management for critical data retention and system configuration:
-              </p>
+              <h2>NVM Manager, Watchdog & Drivers</h2>
               <ul>
-                <li><strong>Reliable Storage:</strong> Provides flash memory management for dependable data storage and system updates.</li>
-                <li><strong>EEPROM Emulation:</strong> Supports emulation using flash memory for non-volatile data storage.</li>
-                <li><strong>Data Integrity:</strong> Utilizes backup RAM to retain critical information during system resets or power loss.</li>
-                <li><strong>Customization:</strong> Includes a dedicated configuration tool for streamlined setup and easy customization.</li>
+                <li><strong>NVM Manager:</strong> Flash Management, EEPROM Emulation, Backup RAM, Config Tool. Ensures reliable data storage and retrieval across power cycles.</li>
+                <li><strong>Watchdog Manager:</strong> Multi Window, Event alert, Configurable</li>
+                <li><strong>Low Level Drivers:</strong> Bluetooth Stack, Sound Manager, Timers, PWM, ADC, Port, UART, I2C, SPI, Real Time Clock, EEPROM Driver, Flash Driver</li>
               </ul>
             </div>
           </section>
@@ -126,13 +127,17 @@ const P1 = () => {
             </div>
             <div className="section-text">
               <h2>Flash Bootloader Stack</h2>
-              <p>
-                Ensures secure system startup and reliable software updates through a multi-stage boot process:
-              </p>
               <ul>
-                <li><strong>Primary Bootloader (PBL):</strong> Responsible for hardware initialization and validating the integrity of the Secondary Bootloader.</li>
-                <li><strong>Secondary Bootloader (SBL):</strong> Manages secure flash programming, diagnostics, and critical application updates.</li>
-                <li><strong>Application (App):</strong> Contains the core ECU functionality and executes only after successful boot validation.</li>
+                <li>A reliable and robust Flash programming solution for safe and consistent ECU software updates.</li>
+                <li>Supports secure download, erase, and programming flows for seamless in‑field reprogramming.</li>
+                <li>Ensures controlled startup and update handling with built‑in integrity checks.</li>
+                <li>Designed for smooth integration with OEM diagnostic tools and standard communication protocols.</li>
+                <li>ASIL‑based safety requirements to avoid unsafe states.</li>
+                <li>Provides standard architecture and interfaces for communication, memory, and diagnostics used in the bootloader.</li>
+                <li>Standard for CAN communication used during flashing and diagnostics.</li>
+                <li>Standard diagnostics protocol for ECU reprogramming.</li>
+                <li>Defines download, data transfer, and security access for flashing.</li>
+                <li>Readily available for TI – Sitara & TI R4F & R5F & ST Platform & Infineon Family</li>
               </ul>
             </div>
           </section>

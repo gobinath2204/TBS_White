@@ -109,13 +109,13 @@
   flex-wrap: wrap;
   /* Allow wrapping for full-width headers */
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   /* Center content vertically in viewport */
   position: relative;
   min-height: auto;
   overflow: visible;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   gap: 1.5rem;
   /* Increased gap for better separation */
   border-radius: 0;
@@ -175,9 +175,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 0 0 calc(60% - 0.9rem);
-  min-width: calc(60% - 0.9rem);
-  max-width: calc(60% - 0.9rem);
+  flex: 0 0 calc(50% - 0.9rem);
+  min-width: calc(50% - 0.9rem);
+  max-width: calc(50% - 0.9rem);
   order: 1;
 }
 
