@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const P2 = () => {
   const contentRef = useRef(null);
@@ -35,11 +36,16 @@ const P2 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="EV Generic Deck"
+          description="TBS EV Generic Deck is a versatile, modular powertrain solution accelerating electric vehicle development."
+          keywords="EV Generic Deck, EV Development, TBS, Powertrain, BMS, Inverter, DC-DC"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src="/Hero_P/EVdeck.png" alt="EV Generic Deck" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{ color: 'white' }}>EV Generic Deck</h1>
+          <h1 className="hero-title text-white">EV Generic Deck</h1>
         </div>
 
         {/* Creative Content Sections */}
@@ -47,7 +53,7 @@ const P2 = () => {
 
 
           <section>
-            <p style={{ fontSize: "1.2rem", textAlign: "justify" }}>
+            <p className="fs-1-2rem text-justify">
               Our <b>EV Generic Deck</b> is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
             </p>
           </section>

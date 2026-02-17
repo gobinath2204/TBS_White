@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { HelmetProvider } from 'react-helmet-async';
 import HomeExp from "./pages/Home";
 import ContactUS from "./pages/ContactUS";
 import AboutUS from "./pages/About";
@@ -19,6 +20,7 @@ import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import Services from "./pages/Services";
+import ScrollToTop from "./components/ScrollToTop";
 import Admin from "./pages/Admin";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PageLoader from "./components/PageLoader";
@@ -30,29 +32,6 @@ function AppContent() {
   useEffect(() => {
     // Trigger loading on location change
     setIsLoading(true);
-
-    // Update Page Title
-    const path = location.pathname;
-    let title = "Test Base Solutions Ltd.";
-
-    if (path === "/") title = "Test Base Solutions Ltd.";
-    else if (path === "/contact") title = "Contact Us | TBS";
-    else if (path === "/about") title = "About Us | TBS";
-    else if (path === "/careers") title = "Careers | TBS";
-    else if (path === "/products") title = "Our Products | TBS";
-    else if (path === "/services") title = "Our Services | TBS";
-    else if (path.includes("/pages/Our Products/")) {
-      // Extract product name from path
-      const product = path.split("/").pop().replace(/([A-Z])/g, ' $1').trim();
-      title = `${product} | Products | TBS`;
-    }
-    else if (path.includes("/pages/Services/")) {
-      const service = path.split("/").pop().replace(/([A-Z])/g, ' $1').trim();
-      title = `${service} | Services | TBS`;
-    }
-    else if (path === "/admin") title = "Admin | TBS";
-
-    document.title = title;
 
     // Simulate loading delay (or wait for resources if needed in future)
     // A small delay ensures the user sees the transition
@@ -96,9 +75,12 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    <HelmetProvider>
+      <HashRouter>
+        <ScrollToTop />
+        <AppContent />
+      </HashRouter>
+    </HelmetProvider>
   );
 }
 

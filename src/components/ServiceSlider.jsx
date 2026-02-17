@@ -88,12 +88,12 @@ export default function ServiceSlider() {
       ) : (
         <section className="products" id="services">
           <div className="slide-container">
-            <span className="arrow left" style={{ color: "white" }} onClick={prevService}>
+            <span className="arrow left text-white" onClick={prevService}>
               ❮
             </span>
 
             <div className="slide reverse" key={currentService.id}>
-              <div className="slide-content" style={{ paddingLeft: "4rem" }}>
+              <div className="slide-content pl-4rem">
                 <h3>{currentService.name}</h3>
                 <p>{currentService.desc}</p>
                 <button
@@ -112,17 +112,12 @@ export default function ServiceSlider() {
               <div className="slide-image">
                 <img src={currentService.img} alt={currentService.name} />
                 <span
-                  className="images-overlay"
-                  style={{
-                    width: "65%",
-                    left: "35%",
-                    borderRadius: "0 25px 25px 0",
-                  }}
+                  className="images-overlay w-65-perc left-35-perc br-0-25px-25px-0"
                 ></span>
               </div>
             </div>
 
-            <span className="arrow right" style={{ color: "white" }} onClick={nextService}>
+            <span className="arrow right text-white" onClick={nextService}>
               ❯
             </span>
           </div>

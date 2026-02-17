@@ -92,11 +92,11 @@ export default function ProductSlider() {
       ) : (
         <section className="products" >
           <div className="slider-container">
-            <span className="arrow left" style={{ color: "white" }} onClick={prevProduct}>
+            <span className="arrow left text-white" onClick={prevProduct}>
               ❮
             </span>
 
-            <div className="slide" key={current.id} style={{ boxShadow: "0 12px 20px rgba(253, 253, 253, 0.37)" }}>
+            <div className="slide box-shadow-slider" key={current.id}>
               <div className="slide-image">
                 <img src={current.img} alt={current.name} />
                 <span className="image-overlay"></span>
@@ -118,7 +118,7 @@ export default function ProductSlider() {
                 </button>
               </div>
             </div>
-            <span className="arrow right" style={{ color: "white" }} onClick={nextProduct}>
+            <span className="arrow right text-white" onClick={nextProduct}>
               ❯
             </span>
           </div>

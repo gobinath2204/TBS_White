@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Services.css";
+import SEO from "../components/SEO";
 
 const products = [
   {
@@ -51,8 +52,13 @@ const ProductsPage = () => {
 
   return (
     <section className="services-container">
+      <SEO
+        title="Our Products"
+        description="Discover TBS's range of automotive products, including in-house software stacks, EV solutions, and smart testing systems."
+        keywords="Automotive Products, EV Generic Deck, Smart HIL, Diagnostic Tools, SMU, HMI, TBS"
+      />
       <h2 className="services-title">Our Products</h2>
-      <p className="services-description" style={{ textAlign: 'justify', marginBottom: '3rem' }}>
+      <p className="services-description text-justify mb-3rem">
         Test Base Solutions offers innovative automotive products designed to accelerate development and enhance vehicle performance.
         Our portfolio includes safety-certified software stacks, advanced testing platforms, and secure manufacturing solutions
         that empower OEMs and Tier-1 suppliers to deliver next-generation automotive systems.

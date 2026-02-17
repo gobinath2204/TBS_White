@@ -55,7 +55,7 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul className={`nav-items ${isMobileMenuOpen ? "active" : ""}`}>
-          <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/">Home</Link></li>
+          <li><Link onClick={() => { setMobileMenuOpen(false); }} to="/">Home</Link></li>
 
           {/* Services Dropdown */}
           <li className="dropdown services-dropdown">
@@ -81,9 +81,9 @@ const Navbar = () => {
               <li><Link to="/pages/Our Products/DFU" onClick={() => setMobileMenuOpen(false)}>Diagnostic Tools</Link></li>
             </ul>
           </li>
-          <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/careers">Careers</Link></li>
-          <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/about">About</Link></li>
-          <li><Link onClick={() => { window.scrollTo(0, 0); setMobileMenuOpen(false); }} to="/contact">Contact</Link></li>
+          <li><Link onClick={() => { setMobileMenuOpen(false); }} to="/careers">Careers</Link></li>
+          <li><Link onClick={() => { setMobileMenuOpen(false); }} to="/about">About</Link></li>
+          <li><Link onClick={() => { setMobileMenuOpen(false); }} to="/contact">Contact</Link></li>
         </ul>
         {isMobileMenuOpen && (
           <div className="menu-overlay" onClick={() => setMobileMenuOpen(false)}></div>

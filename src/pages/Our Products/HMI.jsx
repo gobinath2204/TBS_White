@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const P3 = () => {
   const contentRef = useRef(null);
@@ -35,18 +36,23 @@ const P3 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="HMI (Human-Machine Interface)"
+          description="TBS specializes in developing high-performance, user-friendly HMI systems for automotive and industrial applications."
+          keywords="HMI, Human-Machine Interface, TBS, User Experience, Automotive HMI"
+        />
         {/* Hero Section */}
         <div className="hero-container">
-          <img src="/Hero_P/HMI.png" alt="HMI (Human-Machine Interface)" className="hero-video" style={{ transform: 'scale(1.2)' }} />
+          <img src="/Hero_P/HMI.png" alt="HMI (Human-Machine Interface)" className="hero-video scale-1-2" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>HMI (Human-Machine Interface)</h1>
+          <h1 className="hero-title text-white">HMI (Human-Machine Interface)</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify", }}>
-                Our <b> HMI Display solution </b>  utilizes a dual-processor architecture, combining a Vehicle Interface Processor (VIP) powered by the TI TMS570 and a Graphics Interface Processor (GIP) to deliver high-performance automotive visualization. Designed for electric vehicle integration, the system facilitates seamless communication over CAN and UART protocols, offering a robust platform for real-time energy information, drive mode settings, and climate control management. This architecture ensures reliable processing of vehicle data alongside a responsive user interface.
+            <p className="fs-1-2rem text-justify">
+              Our <b> HMI Display solution </b>  utilizes a dual-processor architecture, combining a Vehicle Interface Processor (VIP) powered by the TI TMS570 and a Graphics Interface Processor (GIP) to deliver high-performance automotive visualization. Designed for electric vehicle integration, the system facilitates seamless communication over CAN and UART protocols, offering a robust platform for real-time energy information, drive mode settings, and climate control management. This architecture ensures reliable processing of vehicle data alongside a responsive user interface.
             </p>
           </section>
 

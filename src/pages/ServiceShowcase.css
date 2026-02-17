@@ -3,10 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 90%;
+  max-width: 1400px;
+  /* Constrain on 4K */
   margin: 0 auto;
   height: 70vh;
-  max-height: 60%;
+  min-height: 500px;
+  max-height: 800px;
 }
 
 .slide {
@@ -42,7 +45,7 @@
   left: 0;
   width: 65%;
   height: 100%;
-  pointer-events: none; 
+  pointer-events: none;
   border-radius: 0 20 20 0;
 }
 
@@ -191,6 +194,31 @@
 }
 
 /* Mobile View - Product Card Layout */
+@media (min-width: 2560px) {
+  .slide-container {
+    max-width: 2000px;
+    height: 60vh;
+  }
+
+  .slide-content h3 {
+    font-size: 4rem;
+  }
+
+  .slide-content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .slide-content {
+    padding: 2rem 1rem;
+  }
+
+  .slide-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .product-card {
     flex-direction: column;

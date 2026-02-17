@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import './About.css';
+import SEO from '../components/SEO';
 
 export default function About() {
+  return (
+    <AboutContent />
+  );
+}
+
+function AboutContent() {
   const navigate = useNavigate();
   const words = ["TBS", "Team"];
   const [index, setIndex] = useState(0);
@@ -110,7 +117,6 @@ export default function About() {
 
                 setTimeout(() => {
                   animateValue(yearsCounter, 0, 7, 2000, '+');
-                  animateValue(yearsCounter, 0, 7, 2000, '+');
                 }, 300);
               }
             }
@@ -164,6 +170,8 @@ export default function About() {
     const timelineItems = document.querySelectorAll(".timeline-item");
     const timelineLine = document.querySelector(".timeline-line");
 
+    if (!timelineItems.length || !timelineLine) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -203,6 +211,11 @@ export default function About() {
 
   return (
     <>
+      <SEO
+        title="About Us"
+        description="Learn about the journey of Test Base Solutions (TBS), our story, our pillars of excellence, and our commitment to automotive innovation."
+        keywords="About TBS, Test Base Solutions, Automotive Engineering, ASPICE, Innovation, Quality, Mobility Solutions"
+      />
       <div className="about-container">
         {/* 1. We are team, TBS animation */}
         <div className="typing-wrapper">
@@ -333,12 +346,12 @@ export default function About() {
           </div>
         </section>
 
-        <section style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <section className="text-center mb-2rem">
           <h2>About Our Journey</h2>
         </section>
         {/* Video Section */}
         <section className="video-section">
-          
+
           <div className="video-background">
             <video autoPlay muted loop playsInline className="content-video">
               <source src="/videos/About.mp4" type="video/mp4" />

@@ -20,6 +20,22 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
+  /* Base for standard screens */
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 20px;
+    /* Scaling up for 4K */
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 14px;
+    /* Scaling down for iPhone SE */
+  }
 }
 
 body {
@@ -31,6 +47,8 @@ body {
   padding-top: env(safe-area-inset-top);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
+  overflow-x: hidden;
+  /* Prevent horizontal scroll on small devices */
 }
 
 h1,
@@ -89,7 +107,8 @@ h6 {
 nav ul {
   list-style: none;
   display: flex;
-  gap: clamp(20px, 3vw, 50px);
+  gap: clamp(10px, 1.5vw, 25px);
+  /* Reduced gap for tighter layout */
 }
 
 nav a {
@@ -197,8 +216,12 @@ nav ul a:hover::after {
 ------------------------------ */
 .hero {
   font-family: "Audiowide", sans-serif;
+  display: flex;
+  /* Added missing flex */
   flex-wrap: wrap;
   height: 100vh;
+  width: 100%;
+  /* Ensure full width */
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -231,14 +254,30 @@ nav ul a:hover::after {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 0 1rem 2rem;
-  background: rgba(26, 26, 26, 0.108);
+  max-width: 1920px;
+  /* Constrain content on 4K */
+  margin: 0 auto;
+  padding: 0 4rem 2rem;
+  background: transparent;
+  /* Removed constrained background */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Full-width overlay for better legibility */
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero-left {
@@ -351,10 +390,11 @@ section h2 {
 
 .about p {
   margin-bottom: 1rem;
-  font-size: clamp(1rem, 1vw, 5rem);
+  font-size: clamp(1rem, 1.1vw, 2rem);
+  /* More controlled fluid sizing */
   color: #444;
-  max-width: 95%;
-  /* Increased from 85% */
+  max-width: 1400px;
+  /* Limit line length for readability */
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
@@ -556,9 +596,10 @@ section h2 {
   left: 50%;
   transform: translateX(-50%) scaleY(0.92);
   background: #ffffff;
-  min-width: 200px;
+  min-width: 250px;
+  /* Increased for longer text like "Software Engineering" */
   border-radius: 12px;
-  padding: 8px;
+  padding: 10px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.05);
 
@@ -608,19 +649,25 @@ section h2 {
 .dropdown-menu li a {
   font-family: 'Inter', sans-serif !important;
   font-weight: 400 !important;
-  font-size: 0.85rem !important;
-  padding: 10px 10px !important;
+  font-size: 0.9rem !important;
+  padding: 12px 15px !important;
   border-radius: 8px;
   text-transform: none !important;
   letter-spacing: 0 !important;
   transition: all 0.3s ease !important;
   position: relative;
+  display: block !important;
+  width: 100%;
+  color: #333 !important;
+  white-space: nowrap;
+  /* Prevent awkward wrapping */
 }
 
 .dropdown-menu li a:hover {
-  background: #f0f0f0 !important;
-  transform: scale(1.06);
+  background: #f8f9fa !important;
   color: var(--orange) !important;
+  padding-left: 20px !important;
+  /* Elegant shift instead of scale */
 }
 
 /* Individual Item Styling */
@@ -666,7 +713,7 @@ section h2 {
 
   .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -674,8 +721,15 @@ section h2 {
     height: 100%;
     width: 100%;
     padding: 2rem;
-    background: url('./hmi.png') no-repeat center center;
+    background: transparent;
+    /* Removed image background, using overlay instead */
+  }
+
+  /* Ensure video/overlay logic works on mobile if image is not needed */
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.6) url('./hmi.png') no-repeat center center;
     background-size: cover;
+    background-blend-mode: overlay;
   }
 
   /* Add black overlay */
@@ -1005,4 +1059,110 @@ section h2 {
   .footer .social-icons {
     justify-content: center;
   }
+}
+
+/* ------------------------------
+   ULTRA LARGE SCREEN (4K) SUPPORT
+------------------------------ */
+@media (min-width: 2560px) {
+
+  .nav-container,
+  .hero-content,
+  .products-section .product-grid,
+  .services-section .service-grid,
+  .footer-inner {
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-left {
+    font-size: 8rem;
+  }
+
+  .hero-right {
+    font-size: 2.5rem;
+  }
+
+  .about p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+}
+
+/* ------------------------------
+   IPHONE SE & SMALL MOBILE SIZES
+------------------------------ */
+@media (max-width: 380px) {
+  .hero-left {
+    font-size: 2.5rem;
+  }
+
+  .hero-right {
+    font-size: 0.9rem;
+  }
+
+  .nav-items.active {
+    width: 85%;
+    /* Give more space on tiny screens */
+  }
+
+  .footer-left h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ------------------------------
+   UTILITY CLASSES
+------------------------------ */
+.pos-absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.obj-pos-center-top {
+  object-position: center top;
+}
+
+.w-100-perc {
+  width: 100%;
+}
+
+.h-100-perc {
+  height: 100%;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
 }

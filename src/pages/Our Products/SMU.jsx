@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const P4 = () => {
   const contentRef = useRef(null);
@@ -35,18 +36,23 @@ const P4 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="Secure Manufacturing Unit"
+          description="TBS Secure Manufacturing Unit (SMU) provides end-to-end security for industrial manufacturing processes."
+          keywords="SMU, Secure Manufacturing Unit, TBS, Industrial Security, Manufacturing Tech"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src="/Hero_P/SMU.png" alt="Secure Manufacturing Unit" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>Secure Manufacturing Unit</h1>
+          <h1 className="hero-title text-white">Secure Manufacturing Unit</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify", }}>
-                The <b>Secure Manufacturing Unit (SMU)</b> safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
+            <p className="fs-1-2rem text-justify">
+              The <b>Secure Manufacturing Unit (SMU)</b> safeguards automotive production lines against cyber threats, ensuring integrity from component assembly to vehicle rollout. In connected factories, the SMU integrates hardware-secured enclaves with ISO/SAE 21434-compliant software to protect ECUs, robots, and IoT devices throughout the manufacturing lifecycle.
             </p>
           </section>
 

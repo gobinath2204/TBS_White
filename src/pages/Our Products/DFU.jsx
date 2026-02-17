@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const P6 = () => {
   const contentRef = useRef(null);
@@ -35,24 +36,29 @@ const P6 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="Diagnostic Tools"
+          description="TBS Diagnostic Tools support DoIP, CAN FD, and standard CAN protocols, ensuring compatibility with multiple flash specifications."
+          keywords="Diagnostic Tools, TBS, DoIP, CAN FD, UDS, TbsFLASH"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src="/Hero_P/DFU.png" alt="Diagnostic Tools" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{ color: 'white' }}>Diagnostic Tools</h1>
+          <h1 className="hero-title text-white">Diagnostic Tools</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
           <section>
-            <p style={{ fontSize: "1.2rem", textAlign: "justify" }}>
+            <p className="fs-1-2rem text-justify">
               Our <b>Diagnostic Tools </b> supports DoIP, CAN FD, and standard CAN protocols, ensuring compatibility with multiple flash specifications. It features independent flashing tool support for various CAN interfaces, including Vector, NI, Intrepid, and Pak. With integrated DHCP for DoIP, XML-configurable sequences, and detailed logging, it enables quick verification for EOL and aftersales deployment while exposing COM APIs for integration.
             </p>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_DFU/Picture0.png" alt="Protocol Support" className="section-image" style={{ objectFit: "cover", height: "auto" }} />
+              <img src="/P_DFU/Picture0.png" alt="Protocol Support" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>TbsFLASH</h2>
@@ -71,7 +77,7 @@ const P6 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/P_DFU/Picture1.png" alt="Protocol Support" className="section-image" style={{ objectFit: "cover", height: "auto" }} />
+              <img src="/P_DFU/Picture1.png" alt="Protocol Support" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Flashing Script (CANoe)</h2>
@@ -88,7 +94,7 @@ const P6 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_DFU/Picture2.png" alt="Protocol Support" className="section-image" style={{ objectFit: "cover", height: "auto" }} />
+              <img src="/P_DFU/Picture2.png" alt="Protocol Support" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Part Number Reader</h2>

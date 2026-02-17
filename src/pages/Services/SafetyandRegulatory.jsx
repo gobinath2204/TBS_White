@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const S5 = () => {
   const contentRef = useRef(null);
@@ -36,6 +37,11 @@ const S5 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="Safety & Regulatory Services"
+          description="TBS safety and regulatory team delivers cutting-edge compliance solutions for automotive systems, covering functional safety and cybersecurity."
+          keywords="Safety & Regulatory, ISO 26262, ISO 21434, HV Safety, CAN, EMC Testing, TBS"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src={imagePath} alt="Safety & Regulatory Services" className="hero-video" />
@@ -46,14 +52,14 @@ const S5 = () => {
         <div className="product-page">
 
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify"}}>
-                Our <b>safety and regulatory team</b> delivers cutting-edge compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. We excel in ISO 26262, ISO 21434, R155, R156, LV123, LV124, HV safety automotive CAN protocols, and global market regulations, ensuring robust system protection and full compliance. From comprehensive testing to validation and certification support, we help clients achieve safe, reliable, and market-ready automotive solutions.
+            <p className="fs-1-2rem text-justify">
+              Our <b>safety and regulatory team</b> delivers cutting-edge compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. We excel in ISO 26262, ISO 21434, R155, R156, LV123, LV124, HV safety automotive CAN protocols, and global market regulations, ensuring robust system protection and full compliance. From comprehensive testing to validation and certification support, we help clients achieve safe, reliable, and market-ready automotive solutions.
             </p>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture0.png" alt="FS" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
+              <img src="/S_SR/Picture0.png" alt="FS" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Functional Safety</h2>
@@ -74,7 +80,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture1.png" alt="" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
+              <img src="/S_SR/Picture1.png" alt="" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Cybersecurity Development & Testing</h2>
@@ -95,7 +101,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture2.png" alt="HV" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
+              <img src="/S_SR/Picture2.png" alt="HV" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>HV Safety Development & Testing</h2>
@@ -113,11 +119,11 @@ const S5 = () => {
               </ul>
             </div>
           </section>
-        
 
-        <section className="content-section section-with-image">
+
+          <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-             <img src="/S_SR/Picture3.png" alt="CAN" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
+              <img src="/S_SR/Picture3.png" alt="CAN" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Automotive CAN Standard Development & Testing</h2>
@@ -138,7 +144,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture4.png" alt="Market" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
+              <img src="/S_SR/Picture4.png" alt="Market" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Market Regulatory Standards</h2>
@@ -157,9 +163,9 @@ const S5 = () => {
             </div>
           </section>
 
-        <section className="content-section section-with-image">
+          <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-             <img src="/S_SR/Picture5.png" alt="Electrical" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
+              <img src="/S_SR/Picture5.png" alt="Electrical" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Electrical Testing</h2>
@@ -180,7 +186,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture6.png" alt="Environmental" className="section-image" style = {{objectFit: "cover", height: "auto"}} />
+              <img src="/S_SR/Picture6.png" alt="Environmental" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Environmental Standards</h2>

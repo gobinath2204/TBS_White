@@ -5,7 +5,8 @@
 
 /* About.css */
 .about-container {
-  max-width: 80%;
+  max-width: 1400px;
+  width: 90%;
   margin: 5rem auto 0 auto;
   padding: 40px 20px;
   font-family: 'SST', sans-serif;
@@ -92,7 +93,7 @@
 }
 
 .story-card-content p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.1vw, 1.5rem);
   line-height: 1.8;
   color: #555;
   margin-bottom: 20px;
@@ -276,7 +277,8 @@
 .counter-column {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centers label under number */
+  align-items: center;
+  /* centers label under number */
 }
 
 .counter-number-box {
@@ -445,7 +447,7 @@
   height: 20px;
   background-color: #3498db;
   border: 4px solid white;
-  
+
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -501,7 +503,7 @@
   vertical-align: -2px;
 }
 
-.dropping-texts > div {
+.dropping-texts>div {
   font-size: 0px;
   opacity: 0;
   margin-left: -30px;
@@ -510,19 +512,19 @@
   color: #3498db;
 }
 
-.dropping-texts > div:nth-child(1) {
+.dropping-texts>div:nth-child(1) {
   animation: roll 5s linear infinite 0s;
 }
 
-.dropping-texts > div:nth-child(2) {
+.dropping-texts>div:nth-child(2) {
   animation: roll 5s linear infinite 1s;
 }
 
-.dropping-texts > div:nth-child(3) {
+.dropping-texts>div:nth-child(3) {
   animation: roll 5s linear infinite 2s;
 }
 
-.dropping-texts > div:nth-child(4) {
+.dropping-texts>div:nth-child(4) {
   animation: roll2 5s linear infinite 3s;
 }
 
@@ -534,16 +536,19 @@
     margin-top: 0px;
     transform: rotate(-25deg);
   }
+
   3% {
     opacity: 1;
     transform: rotate(0deg);
   }
+
   5% {
     font-size: inherit;
     opacity: 1;
     margin-left: 0px;
     margin-top: 0px;
   }
+
   20% {
     font-size: inherit;
     opacity: 1;
@@ -551,12 +556,14 @@
     margin-top: 0px;
     transform: rotate(0deg);
   }
+
   27% {
     font-size: 0px;
     opacity: 0.5;
     margin-left: 20px;
     margin-top: 100px;
   }
+
   100% {
     font-size: 0px;
     opacity: 0;
@@ -574,16 +581,19 @@
     margin-top: 0px;
     transform: rotate(-25deg);
   }
+
   3% {
     opacity: 1;
     transform: rotate(0deg);
   }
+
   5% {
     font-size: inherit;
     opacity: 1;
     margin-left: 0px;
     margin-top: 0px;
   }
+
   30% {
     font-size: inherit;
     opacity: 1;
@@ -591,12 +601,14 @@
     margin-top: 0px;
     transform: rotate(0deg);
   }
+
   37% {
     font-size: 1500px;
     opacity: 0;
     margin-left: -1000px;
     margin-top: -800px;
   }
+
   100% {
     font-size: 0px;
     opacity: 0;
@@ -664,8 +676,16 @@
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 /* ============================= */
@@ -700,41 +720,42 @@
     padding: 30px 20px;
     max-width: 90%;
   }
-  
+
   .title-content h1 {
     font-size: 2.4rem;
   }
-  
+
   .story-card {
     padding: 40px 30px;
   }
-  
+
   .story-card-content h2 {
     font-size: 2rem;
   }
-  
+
   .hero-contents h1 {
     font-size: 2.8rem;
   }
-  
+
   .hero-contents p {
     font-size: 1.3rem;
   }
-  
+
   .timeline-date {
     font-size: 1.8rem;
   }
-  
+
   .counter-container {
     gap: 60px;
   }
-  
+
   .counter-number {
     font-size: 3.2rem;
   }
 }
 
 @media (max-width: 768px) {
+
   .pillars-of-excellence-content,
   .fostering-talent-content {
     padding: 1.5rem;
@@ -757,38 +778,40 @@
   .timeline-line {
     left: 30px;
   }
-  
+
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 60px;
     margin-bottom: 70px;
   }
-  
-  .timeline-content, .timeline-date {
+
+  .timeline-content,
+  .timeline-date {
     width: 100%;
     margin-bottom: 30px;
   }
-  
-  .left, .right {
+
+  .left,
+  .right {
     text-align: left;
   }
-  
+
   .timeline-item::after {
     left: 30px;
   }
-  
+
   .left::after {
     right: auto;
     left: -15px;
     border-right: 15px solid white;
     border-left: none;
   }
-  
+
   .right::after {
     left: -15px;
   }
-  
+
   .timeline-line {
     left: 20px;
   }
@@ -804,16 +827,16 @@
   .timeline-item.active::after {
     display: none;
   }
-  
+
   .counter-container {
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .counter-number {
     font-size: 2.8rem;
   }
-  
+
   .counter-tagline {
     font-size: 1.2rem;
   }
@@ -823,49 +846,97 @@
   .timeline-content {
     padding: 20px;
   }
-  
+
   .timeline-date {
     font-size: 1.6rem;
     padding: 15px;
   }
-  
+
   .timeline-content h2 {
     font-size: 1.4rem;
   }
-  
+
   .title-content h1 {
     font-size: 1.8rem;
   }
-  
+
   .story-card-content h2 {
     font-size: 1.6rem;
   }
-  
+
   .story-card-content p {
     font-size: 1rem;
   }
-  
+
   .excellence-list {
     padding-left: 15px;
   }
-  
+
   .hero-contents h1 {
     font-size: 1.8rem;
   }
-  
+
   .hero-contents p {
     font-size: 1rem;
   }
-  
+
   .counter-number {
     font-size: 2.2rem;
   }
-  
+
   .counter-label {
     font-size: 1rem;
   }
-  
+
   .typing-text {
-    font-size: 36px;
+    font-size: 28px;
+  }
+}
+
+/* ------------------------------
+   ULTRA LARGE SCREEN (4K) SUPPORT
+------------------------------ */
+@media (min-width: 2560px) {
+  .about-container {
+    max-width: 2000px;
+  }
+
+  .title-content h1 {
+    font-size: 4rem;
+  }
+
+  .story-card-content h2,
+  .pillars-of-excellence-content h2,
+  .fostering-talent-content h2 {
+    font-size: 3rem;
+  }
+
+  .story-card-content p,
+  .pillars-of-excellence-content p,
+  .fostering-talent-content p,
+  .excellence-list li {
+    font-size: 1.6rem;
+  }
+
+  .hero-contents h1 {
+    font-size: 5rem;
+  }
+
+  .hero-contents p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .title-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .story-card-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .typing-text {
+    font-size: 24px;
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../pages/Services.css";
+import SEO from "../components/SEO";
 
 const services = [
   {
@@ -45,8 +46,13 @@ export default function ServiceShowcase() {
 
   return (
     <section className="services-container">
+      <SEO
+        title="Our Services"
+        description="Explore TBS's end-to-end automotive engineering services, from system architecture to validation and compliance."
+        keywords="Automotive Services, System Engineering, Software Engineering, Hardware Engineering, System Validation, Safety & Regulatory, TBS"
+      />
       <h2 className="services-title">Our Services</h2>
-      <p className="services-description" style={{ textAlign: 'justify', marginBottom: '3rem' }}>
+      <p className="services-description text-justify mb-3rem">
         At Test Base Solutions, we deliver end-to-end automotive engineering services across the complete development lifecycle.
         From system architecture to validation, our ASPICE-compliant solutions ensure safety, quality, and regulatory compliance
         for next-generation vehicles.

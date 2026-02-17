@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const P1 = () => {
   const contentRef = useRef(null);
@@ -35,25 +36,30 @@ const P1 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="In-House Software Stack (COTS)"
+          description="TBS In-House Commercial off the shelf software stack developed for Automotive communication, Diagnostics, Calibration, and Safety RTOS."
+          keywords="COTS, Software Stack, TBS, Automotive Communication, CAN, UDS, XCP, RTOS"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src="/Hero_P/IHSS.png" alt="In-House Software Stack" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{ color: 'white' }}>In-House Software Stack (COTS)</h1>
+          <h1 className="hero-title text-white">In-House Software Stack (COTS)</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
 
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify", }}>
-                Our <b>In House Commercial off the shelf software stack</b> developed for Automotive communication (CAN), Diagnostics(UDS),UDS on CAN,  Calibration(XCP), Safe RTOS(Free RTOS + Safety Plugin), Flash Boot Loaders(PBL +SBL+App), NVM Manager & BSW Low Level Drivers. Our stacks are in compliance with respective ISO Standards. Our stacks are already in production vehicles. Our all stack have configuration Tools. 
+            <p className="fs-1-2rem text-justify">
+              Our <b>In House Commercial off the shelf software stack</b> developed for Automotive communication (CAN), Diagnostics(UDS),UDS on CAN,  Calibration(XCP), Safe RTOS(Free RTOS + Safety Plugin), Flash Boot Loaders(PBL +SBL+App), NVM Manager & BSW Low Level Drivers. Our stacks are in compliance with respective ISO Standards. Our stacks are already in production vehicles. Our all stack have configuration Tools.
             </p>
           </section>
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture2.png" alt="CAN Stack" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+              <img src="/P_COTS/Picture2.png" alt="CAN Stack" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>CAN Stack (Controller Area Network)</h2>
@@ -72,7 +78,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture3.png" alt="UDS Stack" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+              <img src="/P_COTS/Picture3.png" alt="UDS Stack" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>UDS Stack (Unified Diagnostic Services - ISO 14229)</h2>
@@ -88,7 +94,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture4.png" alt="XCP Stack" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+              <img src="/P_COTS/Picture4.png" alt="XCP Stack" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>XCP Stack (Universal Measurement and Calibration Protocol)</h2>
@@ -109,7 +115,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture1.png" alt="NVM manager" className="section-image" style={{ objectFit: "fill", height: "100%" }} />
+              <img src="/P_COTS/Picture1.png" alt="NVM manager" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>NVM Manager, Watchdog & Drivers</h2>
@@ -123,7 +129,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture0.png" alt="Flash Bootloader Stack" className="section-image" style ={{objectFit: "fill",height: "100%"}} />
+              <img src="/P_COTS/Picture0.png" alt="Flash Bootloader Stack" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>Flash Bootloader Stack</h2>
@@ -144,7 +150,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_RTOS/Picture.jpeg" alt="Free RTOS Safety Plugin Features" className="section-image" style={{objectFit: "fill",height: "100%"}}/>
+              <img src="/P_RTOS/Picture.jpeg" alt="Free RTOS Safety Plugin Features" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>Free RTOS Safety Plugin Features</h2>
