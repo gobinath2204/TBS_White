@@ -59,7 +59,6 @@ h6 {
   top: 0;
   width: 100%;
   padding: 12px 30px;
-  /* Reduced from 60px */
   background: #ffffff;
   z-index: 10000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
