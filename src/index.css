@@ -107,8 +107,11 @@ h6 {
 nav ul {
   list-style: none;
   display: flex;
-  gap: clamp(10px, 1.5vw, 25px);
-  /* Reduced gap for tighter layout */
+  gap: clamp(5px, 1vw, 10px);
+  /* Further reduced for tighter layout */
+  flex-wrap: nowrap;
+  /* Ensure all content is in one line */
+  align-items: center;
 }
 
 nav a {
