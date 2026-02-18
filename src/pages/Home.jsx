@@ -51,13 +51,12 @@ export default function Home() {
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
-          <div className="hero-left">Partners in Software and Testing</div>
+          <div className="hero-left">PARTNERS IN SOFTWARE AND TESTING</div>
           <div className="hero-right">
             <p>
-              Advanced diagnostics, high-performance
-              software, and EV innovation: from OBCs and BMS to DC-DC converters
-              and beyond. <br />
-              ASPICE-Aligned. Rigorously Validated. Electrically Engineered.
+              ADVANCED DIAGNOSTICS, HIGH PERFORMANCE,
+              SOFTWARE & EV INNOVATIONS : FROM OBC's TO DC-DC CONVERTERS AND BEYOND. <br />
+              ASPICE-ALIGNED. RIGOUROUSLY VALIDATED. ELECTRICALLY ENGINEERED.
             </p>
           </div>
         </div>

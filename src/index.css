@@ -73,16 +73,17 @@ h6 {
 
 /* ========== NAVBAR ========== */
 .navbar {
+  font-family: 'Audiowide', sans-serif !important;
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 12px 30px;
-  background: #ffffff;
+  padding: env(safe-area-inset-top) clamp(15px, 4vw, 50px) 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   z-index: 10000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  /* Thin subtle line instead of heavy shadow */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
 }
 
 /* Scrolled state (Optional: Add this class via JS if you want it to shrink) */
@@ -95,9 +96,9 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
-  /* Better constraint for wide screens */
+  max-width: 1600px;
   margin: 0 auto;
+  height: clamp(65px, 10vh, 95px);
 }
 
 .logo img {
@@ -107,8 +108,8 @@ h6 {
 nav ul {
   list-style: none;
   display: flex;
-  gap: clamp(5px, 1vw, 10px);
-  /* Further reduced for tighter layout */
+  gap: clamp(15px, 2.5vw, 35px);
+  /* Significantly increased for premium spacing */
   flex-wrap: nowrap;
   /* Ensure all content is in one line */
   align-items: center;
@@ -120,10 +121,14 @@ nav a {
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  font-weight: 500 !important;
+  font-size: clamp(0.85rem, 0.5vw + 0.5rem, 1.1rem);
+  letter-spacing: 0.5px;
   text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transform: translateZ(0);
 }
 
 nav ul a::after {
@@ -285,7 +290,7 @@ nav ul a:hover::after {
 
 .hero-left {
   flex: 1 1 40%;
-  font-size: clamp(5rem, 4vw, 8rem);
+  font-size: clamp(4.65rem, 3vw, 6rem);
   font-weight: 700;
   margin-left: 2rem;
   /* Reduced from 4rem */
@@ -307,7 +312,7 @@ nav ul a:hover::after {
 section h2 {
   text-align: center;
   color: var(--blue);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: clamp(1.8rem, 3vw, 4.5rem);
 }
 
@@ -318,7 +323,7 @@ section h2 {
   position: relative;
   background-color: #ffffff;
   border-radius: 0;
-  padding: 3rem 0;
+  padding: clamp(2rem, 5vh, 5rem) 0;
   width: 100%;
   z-index: 3;
 }
@@ -329,7 +334,7 @@ section h2 {
 .products-section {
   position: relative;
   background-color: #ffffff;
-  padding: 3rem 0;
+  padding: clamp(2rem, 5vh, 5rem) 0;
   width: 100%;
   z-index: 4;
 }
@@ -384,8 +389,7 @@ section h2 {
 .about {
   position: relative;
   background: #fff;
-  padding: 3rem 1rem;
-  /* Reduced horizontal padding */
+  padding: clamp(2rem, 5vh, 5rem) 1rem;
   width: 100%;
   text-align: center;
   z-index: 6;
@@ -429,31 +433,73 @@ section h2 {
    FOOTER
 ------------------------------ */
 .footer {
-  background: #111111ef;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 3rem 2rem;
-  /* Reduced horizontal padding */
-  flex-wrap: wrap;
+  font-family: 'Audiowide', sans-serif !important;
+  background: rgba(17, 17, 17, 0.85);
+  /* Premium dark glass */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: #fff !important;
+  padding: clamp(2rem, 5vw, 4rem) 0 2rem;
   position: relative;
   z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 60px);
+  flex-wrap: wrap;
+}
+
+.footer a,
+.footer span,
+.footer p,
+.footer li {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.footer-section a:hover {
+  color: var(--orange) !important;
 }
 
 .footer-left {
-  max-width: 40%;
+  max-width: 45%;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 25px !important;
+  /* Increased global gap for left section */
+}
+
+.footer-contact-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  /* Space between SVG and text */
+}
+
+.footer-contact-link span {
+  font-family: 'Audiowide', sans-serif !important;
 }
 
 .footer-left h2 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary);
+  font-family: 'Audiowide', sans-serif !important;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700 !important;
+  margin-bottom: clamp(0.5rem, 2vw, 1.2rem) !important;
+  color: var(--primary) !important;
+  letter-spacing: 1px;
 }
 
 .footer-left p {
-  font-size: 0.9rem;
+  font-family: 'Audiowide', sans-serif !important;
+  font-size: clamp(0.8rem, 0.5vw + 0.5rem, 1rem);
   color: var(--light);
-  margin: 1.5rem 0 2rem;
+  margin: 0.5rem 0 1.5rem !important;
+  line-height: 1.6;
 }
 
 .social-icons {
@@ -477,9 +523,10 @@ section h2 {
 }
 
 .footer-section h4 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  font-family: 'Audiowide', sans-serif !important;
+  color: var(--primary) !important;
+  margin-bottom: 1.2rem !important;
+  font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1.2rem);
 }
 
 .footer-section ul {
@@ -488,11 +535,14 @@ section h2 {
 }
 
 .footer-section li {
+  font-family: 'Audiowide', sans-serif !important;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 0.5vw + 0.4rem, 0.95rem);
+  letter-spacing: 0.8px !important;
 }
 
 .footer-section a {
+  font-family: 'Audiowide', sans-serif !important;
   color: #fff;
   text-decoration: none;
   position: relative;
@@ -515,6 +565,7 @@ section h2 {
 }
 
 .footer-bottom {
+  font-family: 'Audiowide', sans-serif !important;
   width: 100%;
   border-top: 1px solid #333;
   text-align: center;
@@ -592,6 +643,13 @@ section h2 {
   /* Change from fixed to relative */
 }
 
+/* CRITICAL: Override nav ul flex gap for dropdown menus */
+.dropdown-menu {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: clamp(1rem, 1vh, 1rem) !important;
+}
+
 /* Services Dropdown - Desktop */
 .services-dropdown .dropdown-menu {
   position: absolute;
@@ -600,9 +658,9 @@ section h2 {
   transform: translateX(-50%) scaleY(0.92);
   background: #ffffff;
   min-width: 250px;
-  /* Increased for longer text like "Software Engineering" */
-  border-radius: 12px;
-  padding: 10px;
+  /* Increased for better rendering of wide fonts */
+  border-radius: 10px;
+  padding: 2px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.05);
 
@@ -621,9 +679,10 @@ section h2 {
   left: 50%;
   transform: translateX(-50%) scaleY(0.92);
   background: #ffffff;
-  min-width: 280px;
+  min-width: 320px;
+  /* Increased for better rendering of wide fonts */
   border-radius: 12px;
-  padding: 8px;
+  padding: 4px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.05);
 
@@ -650,19 +709,22 @@ section h2 {
 }
 
 .dropdown-menu li a {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Audiowide', sans-serif !important;
   font-weight: 400 !important;
-  font-size: 0.9rem !important;
-  padding: 12px 15px !important;
-  border-radius: 8px;
-  text-transform: none !important;
-  letter-spacing: 0 !important;
+  font-size: 0.85rem !important;
+  padding: 8px 20px !important;
+  border-radius: 4px;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   transition: all 0.3s ease !important;
   position: relative;
   display: block !important;
   width: 100%;
   color: #333 !important;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   /* Prevent awkward wrapping */
 }
 
@@ -676,6 +738,8 @@ section h2 {
 /* Individual Item Styling */
 .dropdown-menu li {
   width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Remove underline on hover for dropdown items */
@@ -780,63 +844,56 @@ section h2 {
 
 
   .navbar {
-    position: relative;
-    background: rgb(255, 255, 255);
-    backdrop-filter: blur(0px);
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
   }
 
   nav {
-    padding: 15px 20px;
+    padding: 10px 20px;
+  }
+
+  .nav-container {
+    height: 60px;
   }
 
   nav a {
-    color: var(--blue);
-    /* Changed to blue for visibility on white, or check logic */
+    color: var(--bg-dark);
     font-weight: 500;
-  }
-
-  /* Wait, original was var(--light). If background is white (line 724), var(--light) (white) is invisible. 
-     The original code had background: rgb(255, 255, 255) and nav a color: var(--light). 
-     This implies white text on white background? 
-     Let me check if this was a bug I should fix too, or if I should just restore it. 
-     The user asked to fix mobile cards, but invisible nav is bad. 
-     However, sticking to the task, I will restore it but maybe fix the color if it's obviously wrong. 
-     Actually, looking at the previous file, .navbar had background #ffffff (line 63). 
-     On mobile (line 724) it is also white. 
-     If var(--light) is #ffffff, then it's invisible.
-     Let's check line 48: --light: #ffffff;
-     So yes, mobile nav links were likely invisible if not overridden elsewhere.
-     However, I will restore strictly what was there to avoid scope creep, OR simply fix it if it's a glaring bug. 
-     The user's issue was "mobile view of the product and service cards". 
-     I will restore it as is, but maybe I misread the context. 
-     Ah, `nav a` line 98 says `color: var(--bg-dark);`.
-     In mobile media query line 733 `color: var(--light);`.
-     Maybe the mobile nav has a dark background? 
-     Line 724 says `background: rgb(255, 255, 255)`.
-     This seems like a pre-existing bug. 
-     I will restore it exactly as it was to be safe, or perhaps the user meant "fix mobile view" broadly.
-     I'll restore it exactly to be safe.
-  */
-
-  nav a {
-    color: var(--light);
-    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
   }
 
   .mobile-menu-toggle {
     display: flex;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 2rem;
-    display: none;
-  }
-
   nav ul.active {
     display: flex;
-    background: #111;
-    /* Add this if missing to make white text visible? No, sticking to restore. */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    background: #ffffff;
+    padding: 80px 30px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    z-index: 10001;
+    transform: translateX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .nav-items:not(.active) {
+    transform: translateX(100%);
+    display: flex;
+    /* keep flex structure but hide via transform */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    pointer-events: none;
   }
 
   .logo {
@@ -922,25 +979,38 @@ section h2 {
   }
 
   .footer {
-    flex-direction: row;
-    padding: 2rem 10% 2rem 10%;
-    justify-content: left;
-    gap: 20%;
+    padding: 3rem 0;
+  }
+
+  .footer-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 3rem !important;
+  }
+
+  .footer-left {
+    max-width: 100% !important;
+    width: 100% !important;
+    align-items: center !important;
   }
 
   .footer-right {
-    width: 40%;
-    max-width: 40%;
-  }
-
-  .footer-right {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 2rem !important;
   }
 
   .footer .social-icons {
-    justify-content: left;
+    justify-content: center !important;
+  }
+
+  .footer-contact-link {
+    justify-content: center !important;
   }
 
   .services-dropdown .dropdown-menu,
@@ -1004,10 +1074,6 @@ section h2 {
   .hero-right {
     font-size: 1rem;
   }
-
-
-
-
 
   .mobile-menu-toggle {
     display: flex;

@@ -2,19 +2,13 @@ import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 import SEO from "../../components/SEO";
+import PageNavigation from "../../components/PageNavigation";
 
 const P3 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
 
-  const handlePrevious = () => {
-    navigate("/pages/Our Products/EVgenericdeck");
-    window.scrollTo(0, 0);
-  };
-  const handleNext = () => {
-    navigate("/pages/Our Products/SMU");
-    window.scrollTo(0, 0);
-  };
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -76,17 +70,7 @@ const P3 = () => {
         </div>
 
         {/* Navigation Arrows */}
-        <button className="nav-arrow-btn left" onClick={handlePrevious}>
-          <div className="arrow">
-            ❮
-          </div>
-        </button>
-
-        <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className="arrow">
-            ❯
-          </div>
-        </button>
+        <PageNavigation type="products" currentId="HMI" />
       </div>
     </>
   );

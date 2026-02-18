@@ -17,8 +17,6 @@ import S4 from "./pages/Services/SystemValidation";
 import S5 from "./pages/Services/SafetyandRegulatory";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Products from "./pages/Products";
-import Services from "./pages/Services";
 import ScrollToTop from "./components/ScrollToTop";
 import Admin from "./pages/Admin";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -62,8 +60,6 @@ function AppContent() {
           <Route path="/pages/Services/HardwareEngineering" element={<S3 />} />
           <Route path="/pages/Services/SystemValidation" element={<S4 />} />
           <Route path="/pages/Services/SafetyandRegulatory" element={<S5 />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
         </Routes>
       </main>

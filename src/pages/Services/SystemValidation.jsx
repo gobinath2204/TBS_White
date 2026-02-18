@@ -2,21 +2,14 @@ import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
 import SEO from "../../components/SEO";
+import PageNavigation from "../../components/PageNavigation";
 
 const S4 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
   const imagePath = "/Hero_S/sysval.jpg";
 
-  const handlePrevious = () => {
-    navigate("/pages/Services/HardwareEngineering");
-    window.scrollTo(0, 0);
-  };
 
-  const handleNext = () => {
-    navigate("/pages/Services/SafetyandRegulatory");
-    window.scrollTo(0, 0);
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -232,13 +225,7 @@ const S4 = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <button className="nav-arrow-btn left" onClick={handlePrevious}>
-          <div className="arrow">❮</div>
-        </button>
-
-        <button className="nav-arrow-btn right" onClick={handleNext}>
-          <div className="arrow">❯</div>
-        </button>
+        <PageNavigation type="services" currentId="SystemValidation" />
       </div>
     </>
   );

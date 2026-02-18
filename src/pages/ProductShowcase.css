@@ -3,21 +3,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  max-width: 1400px;
-  /* Constrain on 4K */
+  width: 80%;
   margin: 0 auto;
   height: 70vh;
-  min-height: 500px;
-  max-height: 800px;
+  max-height: 60%;
   border-radius: 15px;
+
 }
 
 .slide {
   display: flex;
   border-radius: 15px;
   overflow: hidden;
-  background: #111;
+  background: #333333;
   width: 100%;
   height: 100%;
 
@@ -37,7 +35,7 @@
 }
 
 .slide-image {
-  flex: 0 0 65%;
+  flex: 0 0 55%;
 }
 
 .image-overlay {
@@ -57,14 +55,13 @@
 }
 
 .slider-content {
-  flex: 0 0 50%;
+  flex: 1;
   background: #333333;
   color: #fff;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem 3rem 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .slider-content h3 {
@@ -128,7 +125,7 @@
   transform: translateY(-50%);
   font-size: 2rem;
   border: none;
-  color: black;
+  color: white;
   cursor: pointer;
   padding: 0.5rem 0.8rem;
   border-radius: 50%;
@@ -144,35 +141,10 @@
 
 .arrow.right {
   right: 12px;
-  color: black;
+  color: white;
 }
 
 /* Mobile View - Product Card Layout */
-@media (min-width: 2560px) {
-  .slider-container {
-    max-width: 2000px;
-    height: 60vh;
-  }
-
-  .slider-content h3 {
-    font-size: 4rem;
-  }
-
-  .slider-content p {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 380px) {
-  .slider-content {
-    padding: 2rem 1rem;
-  }
-
-  .slider-content h3 {
-    font-size: 1.5rem;
-  }
-}
-
 @media (max-width: 1024px) {
   .product-card {
     flex-direction: column;
