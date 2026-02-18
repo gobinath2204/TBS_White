@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const S3 = () => {
   const contentRef = useRef(null);
@@ -36,6 +37,11 @@ const S3 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="Hardware Engineering Services"
+          description="TBS hardware engineering team delivers exceptional ASPICE-compliant hardware solutions covering the complete development lifecycle."
+          keywords="Hardware Engineering, PCB Design, Schematic Design, FMEA, ISO 26262, ASPICE, TBS"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src={imagePath} alt="HW Engineering services" className="hero-video" />
@@ -45,14 +51,14 @@ const S3 = () => {
         {/* Creative Content Sections */}
         <div className="product-page">
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify"}}>
-                Our <b>hardware engineering team</b> delivers exceptional ASPICE-compliant hardware solutions covering the complete development lifecycle from requirements to verification. We excel in schematic and PCB design, safety analysis (FMEA/DFMEA), advanced simulations, and rigorous testing methodologies. From concept to production, we deliver robust, high-performance hardware that ensures functional safety, industry compliance, and accelerated time-to-market.
+            <p className="fs-1-2rem text-justify">
+              Our <b>hardware engineering team</b> delivers exceptional ASPICE-compliant hardware solutions covering the complete development lifecycle from requirements to verification. We excel in schematic and PCB design, safety analysis (FMEA/DFMEA), advanced simulations, and rigorous testing methodologies. From concept to production, we deliver robust, high-performance hardware that ensures functional safety, industry compliance, and accelerated time-to-market.
             </p>
           </section>
 
           <section className="content-section section-with-image reverse">
-            <div className="section-image-wrapper" style={{ height: "auto" }}>
-              <img src="/S_HW/Picture0.png" alt="HWE1" className="section-image" style={{ objectFit: "fill", height: "auto" }} />
+            <div className="section-image-wrapper h-auto">
+              <img src="/S_HW/Picture0.png" alt="HWE1" className="section-image object-fit-fill h-auto" />
             </div>
             <div className="section-text">
               <h2>HWE.1 Hardware Requirement Development</h2>
@@ -73,8 +79,8 @@ const S3 = () => {
           </section>
 
           <section className="content-section section-with-image">
-            <div className="section-image-wrapper" style={{ height: "auto" }}>
-              <img src="/S_HW/Picture1.png" alt="Design" className="section-image" style={{ objectFit: "cover", height: "auto" }}/>
+            <div className="section-image-wrapper h-auto">
+              <img src="/S_HW/Picture1.png" alt="Design" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Schematic Design</h2>
@@ -94,8 +100,8 @@ const S3 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
-            <div className="section-image-wrapper" style={{ height: "auto" }}>
-              <img src="/S_HW/Picture2.png" alt="Connectivity" className="section-image" style={{ objectFit: "none", height: "auto" }}/>
+            <div className="section-image-wrapper h-auto">
+              <img src="/S_HW/Picture2.png" alt="Connectivity" className="section-image object-fit-none h-auto" />
             </div>
             <div className="section-text">
               <h2>PCB Design & Development</h2>
@@ -113,10 +119,10 @@ const S3 = () => {
               </ul>
             </div>
           </section>
-        
-        <section className="content-section section-with-image">
-            <div className="section-image-wrapper" style={{ height: "auto" }}>
-              <img src="/S_HW/Picture3.jpeg" alt="Connectivity" className="section-image" style={{ height: "auto" }} />
+
+          <section className="content-section section-with-image">
+            <div className="section-image-wrapper h-auto">
+              <img src="/S_HW/Picture3.jpeg" alt="Connectivity" className="section-image h-auto" />
             </div>
             <div className="section-text">
               <h2>Safety Analysis (FMEA / DFMEA / FMEDA / FTA)</h2>
@@ -136,8 +142,8 @@ const S3 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
-            <div className="section-image-wrapper" style={{ height: "auto" }}>
-              <img src="/S_HW/Picture4.jpeg" alt="Software Updates" className="section-image" style={{ height: "auto" }} />
+            <div className="section-image-wrapper h-auto">
+              <img src="/S_HW/Picture4.jpeg" alt="Software Updates" className="section-image h-auto" />
             </div>
             <div className="section-text">
               <h2>Design Calculations & Circuit Simulations</h2>
@@ -157,8 +163,8 @@ const S3 = () => {
           </section>
 
           <section className="content-section section-with-image">
-            <div className="section-image-wrapper" style={{ height: "auto" }}>
-              <img src="/S_HW/Picture5.png" alt="HARA" className="section-image" style={{ height: "auto" }} />
+            <div className="section-image-wrapper h-auto">
+              <img src="/S_HW/Picture5.png" alt="HARA" className="section-image h-auto" />
             </div>
             <div className="section-text">
               <h2>HARA Development</h2>
@@ -178,8 +184,8 @@ const S3 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
-            <div className="section-image-wrapper" style={{ height: "auto" }}>
-              <img src="/S_HW/Picture6.jpeg" alt="Software Updates" className="section-image" style={{ height: "auto" }} />
+            <div className="section-image-wrapper h-auto">
+              <img src="/S_HW/Picture6.jpeg" alt="Software Updates" className="section-image h-auto" />
             </div>
             <div className="section-text">
               <h2>Hardware Verification</h2>

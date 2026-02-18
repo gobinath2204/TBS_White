@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const SystemEngineering = () => {
   const contentRef = useRef(null);
@@ -36,6 +37,11 @@ const SystemEngineering = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="System Engineering Services"
+          description="TBS system engineering team delivers exceptional system engineering with accurate, fully traceable requirements for automotive ECUs."
+          keywords="System Engineering, Requirements Elicitation, Architecture Development, FMEA, Functional Safety, Cybersecurity, ISO 26262, ISO 21434, TBS"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src={imagePath} alt="System engineering development" className="hero-video" />
@@ -45,8 +51,8 @@ const SystemEngineering = () => {
         <div className="product-page">
 
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify"}}>
-                Our <b>system engineering team</b> delivers exceptional system engineering with accurate, fully traceable requirements for functional, non-functional (electrical, mechanical, and environmental), communication, diagnostics, and EOL for cutting-edge automotive ECUs. We deliver the system engineering in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards (UN R100).
+            <p className="fs-1-2rem text-justify">
+              Our <b>system engineering team</b> delivers exceptional system engineering with accurate, fully traceable requirements for functional, non-functional (electrical, mechanical, and environmental), communication, diagnostics, and EOL for cutting-edge automotive ECUs. We deliver the system engineering in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards (UN R100).
             </p>
           </section>
 

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ProductSlider from "../components/ProductSlider";
 import ServiceSlider from "../components/ServiceSlider";
 import "../index.css";
+import SEO from "../components/SEO";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -27,6 +28,11 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="Home"
+        description="Test Base Solutions (TBS) is your partner in automotive software, testing, and EV innovation. Advanced diagnostics and high-performance software."
+        keywords="Automotive Software, Testing, EV Innovation, Diagnostics, ASPICE, TBS"
+      />
       {/* HERO */}
       <section className="hero" id="home">
         <div className="video-background">
@@ -36,15 +42,13 @@ export default function Home() {
             muted
             loop
             playsInline
-            style={{
-              position: 'absolute', top: 0, left: 0,
-              width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% -5%',
-            }}
+            className="pos-absolute top-0 left-0 w-100 h-100 object-fit-cover obj-pos-center-top"
             aria-label="Background video showing our services"
           >
             <source src="/videos/Hero%20Video.mp4" type="video/mp4" />
           </video>
         </div>
+        <div className="hero-overlay"></div>
 
         <div className="hero-content">
           <div className="hero-left">Partners in Software and Testing</div>
@@ -106,7 +110,6 @@ export default function Home() {
           className="about-us-btn"
           onClick={() => {
             navigate(`/about`);
-            window.scrollTo(0, 0);
           }}
           aria-label="Read more about our story"
         >

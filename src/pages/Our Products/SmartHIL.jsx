@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const P5 = () => {
   const contentRef = useRef(null);
@@ -35,19 +36,24 @@ const P5 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="Smart HIL (Hardware-in-the-Loop)"
+          description="TBS Smart HIL platform transforms automotive validation through intelligent hardware-software integration."
+          keywords="Smart HIL, HIL, Hardware-in-the-Loop, TBS, Automotive Validation, ECU Testing"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src="/Hero_P/SmartHIL.png" alt="Smart HIL (Hardware-in-the-Loop)" className="hero-video" />
           <div className="hero-overlay"></div>
-          <h1 className="hero-title" style={{color: 'white'}}>Smart HIL (Hardware-in-the-Loop)</h1>
+          <h1 className="hero-title text-white">Smart HIL (Hardware-in-the-Loop)</h1>
         </div>
 
         {/* Creative Content Sections */}
         <div className="product-page">
 
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify", }}>
-                TBS's Smart HIL platform transforms automotive validation through intelligent hardware-software integration. Our system delivers real-time ECU testing with advanced fault simulation, multi-protocol connectivity, and AI-driven automation. Designed for next-generation vehicle development, it accelerates testing cycles while ensuring ISO 26262 compliance and seamless integration with industry-standard development tools.
+            <p className="fs-1-2rem text-justify">
+              TBS's Smart HIL platform transforms automotive validation through intelligent hardware-software integration. Our system delivers real-time ECU testing with advanced fault simulation, multi-protocol connectivity, and AI-driven automation. Designed for next-generation vehicle development, it accelerates testing cycles while ensuring ISO 26262 compliance and seamless integration with industry-standard development tools.
             </p>
           </section>
 

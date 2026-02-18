@@ -50,30 +50,31 @@
   position: relative;
   z-index: 3;
   color: var(--light);
-  font-size: clamp(2.5rem, 5vw, 6rem);
-  /* Fluid font size */
+  font-size: clamp(2rem, 5vw, 5rem);
+  /* Slightly more controlled */
   text-align: center;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   margin-top: 0;
   pointer-events: none;
-  padding: 0 2rem;
-  max-width: 90%;
+  padding: 0 1rem;
+  max-width: 1200px;
+  /* Prevent over-stretch */
+  margin: 0 auto;
   line-height: 1.1;
 }
 
 /* Product Page & Content Sections */
 .product-page {
-  max-width: 1600px;
-  /* Increased for larger screens */
+  max-width: 1400px;
+  /* Consistent with 4K strategy */
   width: 92%;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: clamp(1.5rem, 3vw, 4rem);
+  /* Reduced global section gap */
   padding: 2rem 0;
   margin: 0 auto;
   font-family: 'Inter', sans-serif;
-  scroll-snap-type: y proximity;
-  /* Proximity allows more natural scrolling while still snapping */
 }
 
 .content-section,
@@ -108,22 +109,21 @@
   display: flex;
   flex-wrap: wrap;
   /* Allow wrapping for full-width headers */
-  justify-content: space-between;
-  align-items: flex-start;
-  /* Center content vertically in viewport */
+  justify-content: center;
+  /* Changed from space-between to center */
+  align-items: stretch;
   position: relative;
   min-height: auto;
   overflow: visible;
   margin: 0;
-  padding: 0 1rem;
-  gap: 1rem;
-  /* Increased gap for better separation */
+  padding: 0 1.5rem;
+  gap: 3rem;
+  /* Tighter controlled gap */
   border-radius: 0;
   background: transparent;
   border: none;
   backdrop-filter: none;
   scroll-snap-align: start;
-  /* Snap to section when scrolling */
 }
 
 /* Section with Image + Text Layout */
@@ -134,18 +134,16 @@
   position: relative;
   height: auto;
   max-height: 500px;
-  /* Prevent excessive stretching */
-  flex: 0 0 calc(40% - 0.6rem);
-  /* 40% width minus gap proportion */
-  min-width: calc(40% - 0.6rem);
-  max-width: calc(40% - 0.6rem);
+  flex: 0 0 calc(45% - 1.5rem);
+  /* Adjusted for center layout */
+  min-width: calc(45% - 1.5rem);
+  max-width: calc(45% - 1.5rem);
   overflow: hidden;
   background: none;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   transition: all 0.4s ease;
   order: 3;
-  /* Image Order */
 }
 
 .section-image-wrapper:hover {
@@ -170,14 +168,14 @@
   font-family: 'Axiforma', sans-serif;
 }
 
-/* Text Side - Ungrouped to control H2 and Content separately */
 .section-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 0 0 calc(60% - 0.9rem);
-  min-width: calc(60% - 0.9rem);
-  max-width: calc(60% - 0.9rem);
+  flex: 0 0 calc(55% - 1.5rem);
+  /* Adjusted for center layout */
+  min-width: calc(55% - 1.5rem);
+  max-width: calc(55% - 1.5rem);
   order: 1;
 }
 
@@ -185,7 +183,8 @@
   font-size: clamp(1rem, 2vw, 2rem);
   font-weight: 700;
   margin-bottom: 0.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  /* Reduced padding-bottom */
   color: var(--blue);
   text-align: left;
   font-family: 'Axiforma', sans-serif;
@@ -194,10 +193,10 @@
 }
 
 .section-text p {
-  font-size: clamp(0.9rem, 0.5vw, 1.0rem);
-  /* Fluid paragraph text */
-  line-height: 1.2;
-  color: #8d8c8c;
+  font-size: clamp(1rem, 1.0vw, 1.0rem);
+  line-height: 1.6;
+  /* Improved line-height for readability */
+  color: #444;
   margin-bottom: 1rem;
   text-align: Justify;
   font-family: 'Inter', sans-serif;
@@ -345,15 +344,23 @@
 }
 
 /* Large Screens (2k/4k) */
-@media (min-width: 1920px) {
+@media (min-width: 2560px) {
   .product-page {
-    max-width: 80%;
-    /* Don't stretch too wide on ultrawide */
+    max-width: 2000px;
+    gap: 8rem;
   }
 
   .section-text {
     padding: 0 4rem;
-    /* More breathing room for text */
+  }
+
+  .section-text h2 {
+    font-size: 3.5rem;
+  }
+
+  .section-text p,
+  .section-text li {
+    font-size: 1.5rem;
   }
 }
 
@@ -468,5 +475,24 @@
 
   .nav-arrow-btn.right {
     right: 10px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .section-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .nav-arrow-btn {
+    width: 35px !important;
+    height: 35px !important;
   }
 }

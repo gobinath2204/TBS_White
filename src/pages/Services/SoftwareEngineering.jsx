@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const S2 = () => {
   const contentRef = useRef(null);
@@ -36,6 +37,11 @@ const S2 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="Software Engineering Services"
+          description="TBS software engineering team delivers comprehensive automotive software solutions strictly aligned with the ASPICE V-Model."
+          keywords="Software Engineering, ASPICE, V-Model, ISO 26262, Cybersecurity, Automotive Software, TBS"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src={imagePath} alt="SW Engineering services" className="hero-video" />
@@ -46,8 +52,8 @@ const S2 = () => {
         <div className="product-page">
 
           <section >
-            <p style={{fontSize: "1.2rem", textAlign: "justify"}}>
-                Our <b>software engineering team</b> delivers comprehensive automotive software solutions strictly aligned with the ASPICE V-Model (SWE.1 to SWE.6). We cover the entire lifecycle from Requirements Elicitation and Architectural Design to Detailed Design, Unit Verification, Integration, and Qualification Testing. Ensuring full compliance with ISO 26262 and cybersecurity standards, we provide robust, scalable, and safety-critical software for next-generation automotive ECUs.
+            <p className="fs-1-2rem text-justify">
+              Our <b>software engineering team</b> delivers comprehensive automotive software solutions strictly aligned with the ASPICE V-Model (SWE.1 to SWE.6). We cover the entire lifecycle from Requirements Elicitation and Architectural Design to Detailed Design, Unit Verification, Integration, and Qualification Testing. Ensuring full compliance with ISO 26262 and cybersecurity standards, we provide robust, scalable, and safety-critical software for next-generation automotive ECUs.
             </p>
           </section>
 

@@ -17,7 +17,7 @@ const ContactUS = () => {
   const form = useRef();
   const [successMessage, setSuccessMessage] = useState('');
   const [phone, setPhone] = useState('');
-  const position = [52.428062375909974, -1.5744578783417158]; 
+  const position = [52.428062375909974, -1.5744578783417158];
 
   const customIcon = new L.Icon({
     iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
@@ -94,7 +94,7 @@ const ContactUS = () => {
         </div>
 
         <div className="map-section" data-aos="fade-left">
-          <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ zIndex: 0 }}>
+          <MapContainer center={position} zoom={13} scrollWheelZoom={false} className="z-0">
             <LayersControl position="topright">
               <LayersControl.BaseLayer checked name="OpenStreetMap">
                 <TileLayer

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const S4 = () => {
   const contentRef = useRef(null);
@@ -37,6 +38,11 @@ const S4 = () => {
   return (
     <>
       <div ref={contentRef}>
+        <SEO
+          title="System Validation Services"
+          description="TBS System Validation team excels in HIL design, development, and commissioning for comprehensive component validation."
+          keywords="System Validation, HIL, dSPACE, NI, Automotive Testing, DVP, EOL Validation, TBS"
+        />
         {/* Hero Section */}
         <div className="hero-container">
           <img src={imagePath} alt="System validation services" className="hero-video" />
@@ -47,7 +53,7 @@ const S4 = () => {
         {/* Main Product Page */}
         <div className="product-page">
           <section >
-            <p style={{ fontSize: "1.2rem", textAlign: "justify" }}>
+            <p className="fs-1-2rem text-justify">
               Our <b>System Validation team</b> excels in system validation through comperhensive system understanding and  HIL design, development and comissionsing to achieve the end to end component validation to cover functional, fault inserstion, communicaiton, DV PV validation and end of line validation.
             </p>
           </section>
@@ -55,7 +61,7 @@ const S4 = () => {
           {/* Content Sections */}
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture0.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+              <img src="/S_SV/Picture0.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>SYS.4 HIL Design Test & Automation</h2>
@@ -77,7 +83,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture1.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+              <img src="/S_SV/Picture1.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>SYS5. DVP, Test and Design</h2>
@@ -99,7 +105,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture2.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+              <img src="/S_SV/Picture2.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>SYS.5 HIL Design Test & Automation</h2>
@@ -120,7 +126,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture3.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+              <img src="/S_SV/Picture3.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>Dyno Validation</h2>
@@ -142,7 +148,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture4.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+              <img src="/S_SV/Picture4.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>LabCar Validation</h2>
@@ -163,7 +169,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture5.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+              <img src="/S_SV/Picture5.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>Vehicle Validation</h2>
@@ -184,7 +190,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture6.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+              <img src="/S_SV/Picture6.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>EOL Validation</h2>
@@ -205,7 +211,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-             <img src="/S_SV/Picture7.png" alt="Custom UI" className="section-image" style={{objectFit: "cover", height: "auto", width: "100%"}}/>
+              <img src="/S_SV/Picture7.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>Environmental Validation</h2>
