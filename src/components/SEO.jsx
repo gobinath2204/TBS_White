@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, image, url }) => {
     const siteTitle = "Test Base Solutions Ltd.";
@@ -10,7 +9,7 @@ const SEO = ({ title, description, keywords, image, url }) => {
     const siteImage = image || "/logo.png";
 
     return (
-        <Helmet>
+        <>
             {/* Basic Meta Tags */}
             <title>{fullTitle}</title>
             <meta name="description" content={siteDescription} />
@@ -29,7 +28,7 @@ const SEO = ({ title, description, keywords, image, url }) => {
             <meta property="twitter:title" content={fullTitle} />
             <meta property="twitter:description" content={siteDescription} />
             <meta property="twitter:image" content={siteImage} />
-        </Helmet>
+        </>
     );
 };
 

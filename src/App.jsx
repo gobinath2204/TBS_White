@@ -1,6 +1,5 @@
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { HelmetProvider } from 'react-helmet-async';
 import HomeExp from "./pages/Home";
 import ContactUS from "./pages/ContactUS";
 import AboutUS from "./pages/About";
@@ -75,12 +74,10 @@ function AppContent() {
 
 function App() {
   return (
-    <HelmetProvider>
-      <HashRouter>
-        <ScrollToTop />
-        <AppContent />
-      </HashRouter>
-    </HelmetProvider>
+    <HashRouter>
+      <ScrollToTop />
+      <AppContent />
+    </HashRouter>
   );
 }
 
