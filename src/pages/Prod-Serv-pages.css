@@ -307,12 +307,22 @@
   transform: translateY(-5px) !important;
 }
 
-.nav-arrow-icon {
+.nav-direction {
   color: var(--blue) !important;
-  font-size: 2.5rem !important;
+  font-size: clamp(1.5rem, 3vw, 2.2rem) !important;
   line-height: 1 !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-text-label {
+  display: none !important;
+  /* Minimalist UI: only arrows and names */
+  font-size: 0.9rem;
+  margin: 0 5px;
+  vertical-align: middle;
 }
 
 .nav-label {
@@ -440,19 +450,24 @@
     line-height: 1.4;
   }
 
+  .custom-page-nav {
+    margin: 2rem auto !important;
+    padding: 1rem !important;
+    gap: 1rem !important;
+  }
+
   .nav-arrow-btn {
-    width: 40px !important;
-    height: 40px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    /* Slightly transparent on mobile */
+    padding: 5px !important;
+    min-height: 60px;
+    justify-content: center;
   }
 
-  .nav-arrow-btn.left {
-    left: 10px !important;
+  .nav-direction {
+    font-size: 1.8rem !important;
   }
 
-  .nav-arrow-btn.right {
-    right: 10px !important;
+  .nav-label {
+    font-size: 0.75rem !important;
+    max-width: 150px;
   }
 }

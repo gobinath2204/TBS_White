@@ -24,12 +24,16 @@ const PageNavigation = ({ type, currentId }) => {
     return (
         <div className="custom-page-nav">
             <button className="nav-arrow-btn left" onClick={() => handleNavigate(prev.path)}>
-                <span className="nav-arrow-icon">← PREVIOUS</span>
+                <span className="nav-direction">
+                    ← <span className="nav-text-label">PREVIOUS</span>
+                </span>
                 <span className="nav-label">{prev.name}</span>
             </button>
 
             <button className="nav-arrow-btn right" onClick={() => handleNavigate(next.path)}>
-                <span className="nav-arrow-icon">NEXT →</span>
+                <span className="nav-direction">
+                    <span className="nav-text-label">NEXT</span> →
+                </span>
                 <span className="nav-label">{next.name}</span>
             </button>
         </div>

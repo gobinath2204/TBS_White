@@ -26,8 +26,8 @@ html {
 
 @media (min-width: 2560px) {
   html {
-    font-size: 20px;
-    /* Scaling up for 4K */
+    font-size: 18px;
+    /* Slightly more conservative for 4K row integrity */
   }
 }
 
@@ -81,6 +81,7 @@ h6 {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+  /* Robust Safari/Edge support */
   z-index: 10000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -263,17 +264,16 @@ nav ul a:hover::after {
 .hero-content {
   position: relative;
   z-index: 3;
-  display: flex;
-  justify-content: space-between;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  /* deterministic split for text vs model */
   align-items: center;
   height: 100%;
   width: 100%;
   max-width: 1920px;
-  /* Constrain content on 4K */
   margin: 0 auto;
   padding: 0 4rem 2rem;
   background: transparent;
-  /* Removed constrained background */
 }
 
 .hero-overlay {
@@ -289,21 +289,20 @@ nav ul a:hover::after {
 }
 
 .hero-left {
-  flex: 1 1 40%;
-  font-size: clamp(4.65rem, 3vw, 6rem);
+  font-size: clamp(3rem, 5vw, 5.5rem) !important;
+  /* Cap huge font size for better fit */
   font-weight: 700;
-  margin-left: 2rem;
-  /* Reduced from 4rem */
+  margin-left: 0;
   color: var(--orange);
+  line-height: 1.1;
 }
 
 .hero-right {
-  flex: 1 1 50%;
-  font-size: clamp(1.5rem, 1vw, 6.7rem);
-  margin-right: 2rem;
-  /* Reduced from 4rem */
-  padding-left: 3rem;
-  /* Reduced from 6em */
+  font-size: clamp(1rem, 1.5vw, 1.3rem) !important;
+  /* More robust scaling for secondary text */
+  margin-right: 0;
+  padding-left: 2rem;
+  line-height: 1.6;
 }
 
 /* ------------------------------
@@ -446,12 +445,14 @@ section h2 {
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid !important;
+  grid-template-columns: 1fr 2fr;
+  /* branding on left, links on right */
+  gap: clamp(2rem, 5vw, 6rem);
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 clamp(20px, 4vw, 60px);
-  flex-wrap: wrap;
+  align-items: start;
 }
 
 .footer a,
@@ -467,11 +468,10 @@ section h2 {
 }
 
 .footer-left {
-  max-width: 45%;
   display: flex !important;
   flex-direction: column !important;
   gap: 25px !important;
-  /* Increased global gap for left section */
+  width: 100% !important;
 }
 
 .footer-contact-link {
@@ -487,7 +487,7 @@ section h2 {
 
 .footer-left h2 {
   font-family: 'Audiowide', sans-serif !important;
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem) !important;
   font-weight: 700 !important;
   margin-bottom: clamp(0.5rem, 2vw, 1.2rem) !important;
   color: var(--primary) !important;
@@ -517,9 +517,11 @@ section h2 {
 }
 
 .footer-right {
-  display: flex;
-  gap: clamp(2rem, 5vw, 6rem);
-  flex-wrap: wrap;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  /* Forces 3 columns for links */
+  gap: clamp(1.5rem, 3vw, 4rem) !important;
+  width: 100% !important;
 }
 
 .footer-section h4 {
@@ -567,9 +569,11 @@ section h2 {
 .footer-bottom {
   font-family: 'Audiowide', sans-serif !important;
   width: 100%;
+  grid-column: 1 / -1;
+  /* Spans all columns for perfect centering */
   border-top: 1px solid #333;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   font-size: 0.85rem;
   color: #aaa;
   margin-top: 2rem;
@@ -781,15 +785,16 @@ section h2 {
   .hero-content {
     position: relative;
     z-index: 3;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    /* Override desktop grid */
+    flex-direction: column !important;
+    /* Stack vertically for mobile */
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
     padding: 2rem;
     background: transparent;
-    /* Removed image background, using overlay instead */
   }
 
   /* Ensure video/overlay logic works on mobile if image is not needed */
@@ -812,20 +817,24 @@ section h2 {
   }
 
   .hero-left {
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 8vw, 4rem) !important;
+    /* Refined mobile size */
     font-weight: 700;
     margin: 0.5rem 0;
     padding: 0;
     color: var(--orange);
     text-align: center;
+    line-height: 1.1;
   }
 
   .hero-right {
-    font-size: 1.5rem;
-    margin: 0;
+    font-size: clamp(0.9rem, 3vw, 1.1rem) !important;
+    /* Robust mobile scaling */
+    margin: 1rem 0 0;
     padding-left: 0;
     text-align: center;
     color: var(--light);
+    line-height: 1.5;
   }
 
   .video-background {
@@ -858,7 +867,8 @@ section h2 {
   }
 
   nav a {
-    color: var(--bg-dark);
+    color: #ffffff !important;
+    /* White text for mobile navbar links */
     font-weight: 500;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
@@ -878,7 +888,7 @@ section h2 {
     height: 100vh;
     background: #ffffff;
     padding: 80px 30px;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 0 30px rgba(246, 243, 243, 0.3);
     z-index: 10001;
     transform: translateX(0);
     transition: transform 0.4s ease;
@@ -983,6 +993,7 @@ section h2 {
   }
 
   .footer-container {
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
@@ -996,9 +1007,9 @@ section h2 {
   }
 
   .footer-right {
+    display: flex !important;
     width: 100% !important;
     max-width: 100% !important;
-    display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
@@ -1139,7 +1150,7 @@ section h2 {
   .hero-content,
   .products-section .product-grid,
   .services-section .service-grid,
-  .footer-inner {
+  .footer-container {
     max-width: 2000px;
     margin-left: auto;
     margin-right: auto;
@@ -1234,4 +1245,49 @@ section h2 {
 
 .align-center {
   align-items: center;
+}
+
+/* ------------------------------ */
+/* FOOTER UTILITY CLASSES         */
+/* (Controlled Browser-Agnostic)  */
+/* ------------------------------ */
+.w-30 {
+  width: 100% !important;
+}
+
+/* Grid handles the 30% via fractional units */
+.w-100 {
+  width: 100% !important;
+}
+
+.align-flex-start {
+  align-self: flex-start !important;
+}
+
+.align-items-flex-start {
+  align-items: flex-start !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.gap-20px {
+  gap: 20px !important;
+}
+
+.ls-1px {
+  letter-spacing: 1px !important;
+}
+
+.fs-0-8rem {
+  font-size: 0.8rem !important;
+}
+
+.fs-2-5rem {
+  font-size: 2.5rem !important;
+}
+
+.mt-neg-10px {
+  margin-top: -10px !important;
 }
