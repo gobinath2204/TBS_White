@@ -58,13 +58,20 @@ const S2 = () => {
             <div className="section-text">
               <h2>SWE.1 Requirements Elicitation</h2>
               <p>
-                The SWE.1 process derives, analyzes, and documents software requirements from SYS.2 specifications with full traceability.
-              </p>
+              The SWE.1 process derives, analyses, and documents software requirements from SYS.2 (System Requirements), SYS.3 (System Architecture), FuSa (Functional Safety) requirements, and HSI (Hardware Software Interface document or Hardware Schematics).
+              Our SWE.1 process follows the ASPICE base practices, ensuring requirements are atomic, concise, and testable. It ensures bi-directional traceability and ASPICE compliance. Our requirements can be classified into:</p>
               <ul>
-                <li><strong>Functional Requirements:</strong> Derives software operating modes, measurement capabilities (e.g., CAN signal reads), control functions, and system behaviors.</li>
-                <li><strong>Non-Functional Requirements:</strong> Analyzes performance metrics, efficiency standards, lifetime expectations, and operational constraints like memory usage.</li>
-                <li><strong>Standards Compliance:</strong> Aligns with ISO/SAE 21434 (Cybersecurity), ISO 26262 (Safety), and ISO/IEC/IEEE 15288/12207.</li>
-                <li><strong>Specialized Scopes:</strong> Includes Environmental, Communication (CAN, Ethernet, etc.), End-of-Line, and Test Requirements.</li>
+                <li><strong>Application requirements:</strong> Covers aspects of Measurement, Determination, Communication, Protection, and Control related requirements necessary for the application.</li>
+                <li><strong>Basic Software Requirements:</strong> Covers middleware requirements such as timing/scheduling, MCU system services, interfacing of MCU drivers and libraries (Safety Libs, BIST Libs, Checksum Libs, Crypto Libs).</li>
+                <li><strong>Microcontroller Requirements:</strong> Defines constraints like memory consumption, peripheral consumption, CPU consumption.</li>
+                <li><strong>Diagnostics and Calibration Requirements:</strong> OBD, UDS and XCP (over CAN, Ethernet, LIN) adhering to automotive industry standards.</li>
+                <li><strong>FuSa and CySa Requirements:</strong> Covers the requirements derived from Functional Safety (ISO 26262) and Cybersecurity (ISO/SAE 21434) analyses, ensuring that the software system maintains safety compliance, freedom from unreasonable risk, and resilience against cyber threats throughout its lifecycle.</li>
+              </ul>
+              <p><strong>Attributes of SWE.1:</strong></p>
+              <ul>
+                <li><strong>ASIL/SIL Level:</strong> Specifies the safety integrity level according to FuSa requirements and TSR manual.</li>
+                <li><strong>CySa Level:</strong> Specifies the cyber security level according to CySa requirements.</li>
+                <li><strong>Verification Type and Validation Criteria:</strong> Ensures the testability and adherence to V model or the ASPICE model.</li>
               </ul>
             </div>
           </section>
@@ -76,13 +83,28 @@ const S2 = () => {
             <div className="section-text">
               <h2>SWE.2 Software Architectural Design</h2>
               <p>
-                We deliver scalable, modular software architectures for automotive ECUs, strictly adhering to AUTOSAR standards.
-              </p>
+              The SWE.2 process considers inputs from System Architecture (SYS.3), Software Requirements (SWE.1), FuSa (Functional Safety) requirements and HSI (Hardware Software Interface document or Hardware Schematics).
+              Identify software components and follow modular approach for maximum re-usability. The process follows ASPICE base practices and ensures bidirectional traceability and ASPICE compliance.
+              </p><p>
+                <strong>Architectural Documentation:</strong>
+              </p> 
               <ul>
-                <li><strong>Technical Evaluation:</strong> Conducts comprehensive analysis across the software lifecycle with documented rationales for every design decision.</li>
-                <li><strong>Documentation:</strong> Provides detailed static/dynamic specifications, component interfaces, and behavioral models using UML/SysML.</li>
-                <li><strong>Risk & Performance:</strong> Minimizes change impact while optimizing timings and resource efficiency through bidirectional traceability to SWE.1.</li>
-                <li><strong>Integration:</strong> Ensures seamless hardware-software integration with robust concurrency handling for multi-threading and interrupts.</li>
+                <li><strong>Interface Diagrams:</strong> Context View and specification, Static and Dynamic diagrams (Sequence Diagrams), Use case diagrams.</li>
+                <li><strong>Memory Map:</strong> RAM and ROM estimates.</li>
+                <li><strong>Resource Map:</strong> CPU, peripheral and ISR estimates.</li>
+                <li><strong>Scheduling/ Timing.</strong></li>
+              </ul>
+              <p><strong>Attributes of SWE.2:</strong></p>
+              <ul>
+                <li><strong>ASIL/SIL Level:</strong> Specifies the safety integrity level according to FuSa requirements.</li>
+                <li><strong>CySa Level:</strong> Specifies the cyber security level according to CySa requirements.</li>
+                <li><strong>Verification Type and Validation Criteria:</strong> Ensures the testability and adherence to V model or the ASPICE model.</li>
+              </ul>
+              <p><strong>
+               Tools:
+              </strong></p>
+              <ul>
+                <li>Enterprise Architect, MATLAB, Draw.io</li>
               </ul>
             </div>
           </section>
@@ -94,13 +116,19 @@ const S2 = () => {
             <div className="section-text">
               <h2>SWE.3 Software Detailed Design & Unit Construction</h2>
               <p>
-                We translate architectural requirements into structured software components and comprehensive detailed design documentation.
+              The SWE.3 process considers inputs from Software Requirements (SWE.1), FuSa (Functional Safety) requirements and SWE.2 (Software Architecture).
+              The process identifies software units/ Functions and defines its interfaces (parameters and data types) to satisfy the input requirements. The process follows ASPICE base practices and ensures bidirectional traceability and ASPICE compliance.
               </p>
+              <p><strong>Documentation:</strong></p>
               <ul>
-                <li><strong>Standardization:</strong> Adheres to MISRA C guidelines to ensure maintainable and robust software for automotive applications.</li>
-                <li><strong>Coverage:</strong> Designs comprehensive interfaces, software units, data flow, and control flow.</li>
-                <li><strong>Dynamic Modeling:</strong> Captures software unit interactions and dynamic behaviors through UML/SysML models.</li>
-                <li><strong>Traceability:</strong> Maintains bidirectional links between SWE.3 tests and SWE.2 architecture.</li>
+                <li><strong>Interface diagram:</strong> for each source file (Class diagram with public functions).</li>
+                <li><strong>Sequence diagram:</strong> Represents the interaction of functions/ lifelines within the units.</li>
+                <li><strong>Activity diagram/ Control Flow:</strong> (Flow Chart).</li>
+                <li><strong>Data diagram:</strong> that provides information on the variables and the data types used within the units.</li>
+              </ul>
+              <p><strong>Tools:</strong></p>
+              <ul>
+                <li>Enterprise Architect, Draw.io</li>
               </ul>
             </div>
           </section>
@@ -112,13 +140,26 @@ const S2 = () => {
             <div className="section-text">
               <h2>SWE.4 Software Unit Verification</h2>
               <p>
-                We perform ASIL-compliant unit verification using industry-standard tools such as Tessy, Ceedling, and LDRA.
+                Comprehensive unit verification per detailed design specs with ISO 26262 ASIL compliance using Tessy, Ceedling, LDRA.
+              </p>
+              <p><strong>Verification Strategy & Measures:</strong></p>
+              <ul>
+                <li><strong>Verification strategy:</strong> Defined pass/fail criteria, entry/exit conditions, test infrastructure.</li>
+                <li><strong>Selected measures:</strong> Static analysis (MISRA), reviews, unit testing with regression coverage. The documented selection of verification measures shall have sufficient coverage according to the release scope.</li>
+              </ul>
+              <p><strong>Execution Coverage:</strong></p>
+              <p>
+                We perform code coverage analysis, static analysis, and fault injection, ensuring defect-free software that meets ASIL requirements. Bidirectional links: Verification measures ↔ units ↔ results for impact analysis and coverage proof.
               </p>
               <ul>
-                <li><strong>Testing Measures:</strong> Includes static analysis (MISRA), code reviews, and unit testing with full regression coverage.</li>
-                <li><strong>Analysis Methods:</strong> Performs code coverage analysis, static analysis, and fault injection to ensure defect-free software.</li>
-                <li><strong>Rigor Levels:</strong> Supports Statement, Branch, and Decision coverage, up to MC/DC coverage for ASIL-D safety requirements.</li>
-                <li><strong>Traceability:</strong> Establishes bidirectional links between verification results, units, and detailed design.</li>
+                <li><strong>Statement Coverage:</strong> Every executable code line runs at least once. Basic white-box metric (e.g., 100% = all statements tested).</li>
+                <li><strong>Branch Coverage:</strong> Tests true/false outcomes of decisions (if/else). Ensures both paths execute.</li>
+                <li><strong>Decision Coverage:</strong> Same as branch—verifies decision points take both outcomes.</li>
+                <li><strong>MC/DC Coverage:</strong> Each condition independently affects decision outcome. Highest rigor for ASIL-D safety (ISO 26262).</li>
+              </ul>
+              <p><strong>Full Traceability:</strong></p>
+              <ul>
+                <li><strong>Bidirectional links:</strong> SWE.4 Tests ↔ SWE.3 units and detailed design.</li>
               </ul>
             </div>
           </section>
@@ -130,13 +171,29 @@ const S2 = () => {
             <div className="section-text">
               <h2>SWE.5 Software Integration & Integration Verification</h2>
               <p>
-                We conduct sequential integration testing, moving from individual units to the full software stack, verified against the SWE.2 architecture.
+                Sequential integration testing from units to full software stack with comprehensive verification against SWE.2 architecture.
               </p>
+              <p><strong>Integration Strategy:</strong></p>
               <ul>
-                <li><strong>Strategy:</strong> Defines sequences and pass/fail criteria for comprehensive dataflow and timing verification.</li>
-                <li><strong>Environment:</strong> Utilizes SIL (Software-in-the-Loop) environments, hardware debug interfaces, and continuous integration.</li>
-                <li><strong>Behavioral Testing:</strong> Validates interface compliance, resource consumption, and dynamic interactions.</li>
-                <li><strong>Traceability:</strong> Maintains full bidirectional links between integration tests and software architecture.</li>
+                <li>We define sequence, preconditions, and pass/fail criteria for comprehensive dataflow and timing verification.</li>
+                <li>We leverage SIL environments, hardware debug interfaces, and continuous integration for robust validation.</li>
+              </ul>
+              <p><strong>Component Behaviour Testing:</strong></p>
+              <ul>
+                <li>We do the Interface compliance, resource consumption, dynamic interaction validation.</li>
+                <li>Stepwise or big-bang integration per release scope.</li>
+              </ul>
+              <p><strong>Full Traceability:</strong></p>
+              <ul>
+                <li>Bidirectional links: SWE.5 Tests ↔ SWE.2 architecture.</li>
+              </ul>
+              <p><strong>Results Summary:</strong></p>
+              <ul>
+                <li>Consolidated pass/fail status communicated to all stakeholders for release decisions.</li>
+              </ul>
+              <p><strong>Test Execution:</strong></p>
+              <ul>
+                <li>Defined strategy, component testing, 100% coverage reports.</li>
               </ul>
             </div>
           </section>
@@ -148,13 +205,27 @@ const S2 = () => {
             <div className="section-text">
               <h2>SWE.6 Software Qualification Testing</h2>
               <p>
-                We verify the integrated software against SWE.1 software requirements to ensure complete functional compliance.
+                Full verification of integrated software against SWE.1 requirements with defined techniques, criteria, and environments.
               </p>
+              <p><strong>Requirement Testing:</strong></p>
               <ul>
-                <li><strong>Testing Methodology:</strong> Executes functional and non-functional tests within HIL (Hardware-in-the-Loop) and SIL environments.</li>
-                <li><strong>Key Verification Areas:</strong> Focuses on boundary values, error handling, performance, and communication requirements.</li>
-                <li><strong>Compliance:</strong> Supports ISO 26262 ASIL A-D and ASPICE Level 1-3 requirements.</li>
-                <li><strong>Traceability:</strong> Ensures every software requirement is verified with documented evidence and bidirectional links.</li>
+                <li>We create test cases directly from SWE.1 requirements specs and verify integrated software produces exact expected outputs for each requirement.</li>
+              </ul>
+              <p><strong>Functional Testing:</strong></p>
+              <ul>
+                <li>We test complete end-to-end functions (login → dashboard → data processing) ensuring software works correctly as a black box system.</li>
+              </ul>
+              <p><strong>Verification Strategy:</strong></p>
+              <ul>
+                <li>We Pass/fail criteria, entry/exit conditions, test sequences for functional/non-functional compliance, Selected measures covering release scope with regression testing.</li>
+              </ul>
+              <p><strong>Execution & Results:</strong></p>
+              <ul>
+                <li>We Record pass/fail status and verification data for complete requirement coverage proof.</li>
+              </ul>
+              <p><strong>Full Traceability:</strong></p>
+              <ul>
+                <li>Bidirectional links: SWE.5 Tests ↔ SWE.1 Requirements.</li>
               </ul>
             </div>
           </section>

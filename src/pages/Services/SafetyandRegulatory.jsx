@@ -157,7 +157,7 @@ const S5 = () => {
             </div>
           </section>
 
-          <section className="content-section section-with-image">
+          {/* <section className="content-section section-with-image">
             <div className="section-image-wrapper">
               <img src="/S_SR/Picture5.png" alt="Electrical" className="section-image object-fit-cover h-auto" />
             </div>
@@ -198,7 +198,7 @@ const S5 = () => {
                 <li><strong>Chemical Resistance:</strong> Harmful gas and chemical exposure testing per IEC 60068‑2‑60.</li>
               </ul>
             </div>
-          </section>
+          </section> */}
         </div>
 
         {/* Navigation Arrows */}
