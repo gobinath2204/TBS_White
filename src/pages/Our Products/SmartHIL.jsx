@@ -53,7 +53,7 @@ const P5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_HIL/Picture.png" alt="Custom UI" className="section-image" />
+              <img src="/P_HIL/Picture.jpeg" alt="Custom UI" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Smart HIL (Hardware-in-the-Loop)</h2>

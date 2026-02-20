@@ -52,7 +52,7 @@ const P3 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_HMI/Picture1.jpg" alt="HMI Architecture" className="section-image" />
+              <img src="/P_HMI/Picture1.png" alt="HMI Architecture" className="section-image" />
             </div>
             <div className="section-text">
               <h2>HMI (Human-Machine Interface)</h2>
