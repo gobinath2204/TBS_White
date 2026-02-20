@@ -52,7 +52,7 @@ const SystemEngineering = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SD/Picture0.png" alt="SYS.2 Requirements Elicitation" className="section-image" />
+              <img src="/S_SD/Picture0.jpeg" alt="SYS.2 Requirements Elicitation" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SYS.2 Requirements Elicitation</h2>
@@ -73,7 +73,7 @@ const SystemEngineering = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SD/Picture1.png" alt="Custom UI" className="section-image" />
+              <img src="/S_SD/Picture1.jpeg" alt="Custom UI" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SYS.3 Architecture Development</h2>
@@ -94,7 +94,7 @@ const SystemEngineering = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SD/Picture2.png" alt="Connectivity" className="section-image" />
+              <img src="/S_SD/Picture2.jpeg" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>FMEA Development</h2>
@@ -114,7 +114,7 @@ const SystemEngineering = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SD/Picture3.png" alt="Software Updates" className="section-image" />
+              <img src="/S_SD/Picture3.jpeg" alt="Software Updates" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Communication Requirements</h2>
@@ -135,7 +135,7 @@ const SystemEngineering = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SD/Picture4.png" alt="Connectivity" className="section-image" />
+              <img src="/S_SD/Picture4.jpeg" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Functional Safety</h2>
@@ -156,7 +156,7 @@ const SystemEngineering = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SD/Picture5.png" alt="Software Updates" className="section-image" />
+              <img src="/S_SD/Picture5.jpeg" alt="Software Updates" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Cybersecurity</h2>
@@ -175,7 +175,7 @@ const SystemEngineering = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SD/Picture6.png" alt="Connectivity" className="section-image" />
+              <img src="/S_SD/Picture6.jpeg" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Diagnostics & EOL Requirements Development</h2>
