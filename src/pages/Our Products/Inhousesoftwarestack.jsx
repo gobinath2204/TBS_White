@@ -53,7 +53,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture2.png" alt="CAN Stack" className="section-image object-fit-fill h-100" />
+              <img src="/P_COTS/Picture0.jpeg" alt="CAN Stack" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>CAN Stack (Controller Area Network)</h2>
@@ -72,7 +72,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture3.png" alt="UDS Stack" className="section-image object-fit-fill h-100" />
+              <img src="/P_COTS/Picture1.jpeg" alt="UDS Stack" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>UDS Stack (Unified Diagnostic Services - ISO 14229)</h2>
@@ -88,7 +88,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture4.png" alt="XCP Stack" className="section-image object-fit-fill h-100" />
+              <img src="/P_COTS/Picture2.jpeg" alt="XCP Stack" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>XCP Stack (Universal Measurement and Calibration Protocol)</h2>
@@ -109,7 +109,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture1.png" alt="NVM manager" className="section-image object-fit-fill h-100" />
+              <img src="/P_COTS/Picture3.jpeg" alt="NVM manager" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>NVM Manager, Watchdog & Drivers</h2>
@@ -123,7 +123,7 @@ const P1 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_COTS/Picture0.png" alt="Flash Bootloader Stack" className="section-image object-fit-fill h-100" />
+              <img src="/P_COTS/Picture4.jpeg" alt="Flash Bootloader Stack" className="section-image object-fit-fill h-100" />
             </div>
             <div className="section-text">
               <h2>Flash Bootloader Stack</h2>
