@@ -31,7 +31,7 @@ export default function Home() {
       <SEO
         title="Home"
         description="Test Base Solutions (TBS) is your partner in automotive software, testing, and EV innovation. Advanced diagnostics and high-performance software."
-        keywords="Automotive Software, Testing, EV Innovation, Diagnostics, ASPICE, TBS"
+        keywords="Automotive Software, Testing, EV Innovation, Diagnostics, ASPICE, TBS, Automotive Software Developent, Bootloader, ECU, DC-DC Converters, HIL, HMI, In-House Software Stack, "
       />
       {/* HERO */}
       <section className="hero" id="home">
@@ -45,7 +45,7 @@ export default function Home() {
             className="pos-absolute top-0 left-0 w-100 h-100 object-fit-cover obj-pos-center-top"
             aria-label="Background video showing our services"
           >
-            <source src="/videos/Hero%20Video.mp4" type="video/mp4" />
+            <source src="/videos/Hero_Video.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="hero-overlay"></div>
@@ -63,7 +63,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="services-section" aria-labelledby="services-heading">
+      <section id="services" className="services-section" aria-labelledby="services-heading">
         {isMobile ? (
           <div className="cards-container">
             <ServiceSlider asCards={true} navigate={navigate} />
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* PRODUCTS */}
-      <section className="products-section" aria-labelledby="products-heading">
+      <section id="products" className="products-section" aria-labelledby="products-heading">
         {isMobile ? (
           <div className="cards-container">
             <ProductSlider asCards={true} navigate={navigate} />

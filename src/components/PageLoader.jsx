@@ -12,7 +12,7 @@ const PageLoader = ({ isLoading }) => {
             // Small delay to allow fade-out animation
             const timer = setTimeout(() => {
                 setShouldRender(false);
-            }, 500);
+            }, 100);
             return () => clearTimeout(timer);
         }
     }, [isLoading]);

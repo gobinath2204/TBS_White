@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         {/* Left Side */}
-        <div className={`footer-left p-0 display-flex flex-column gap-20px ${isMobile ? 'w-100 align-items-center' : 'w-30 align-flex-start align-items-flex-start'}`}>
+        <div className="footer-left">
           <h2 className="mt-neg-10px mb-0 mb-10px fs-2-5rem fw-bold text-primary">TEST BASE SOLUTIONS</h2>
           <a href="https://www.linkedin.com/company/testbasesolutions-ltd/?originalSubdomain=uk" target="_blank" rel="noreferrer" className="footer-contact-link no-decoration color-inherit">
             <svg width="20" height="20" fill="white" viewBox="0 0 24 24">

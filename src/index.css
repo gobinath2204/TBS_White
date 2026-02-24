@@ -89,7 +89,7 @@ h6 {
 
 /* Scrolled state (Optional: Add this class via JS if you want it to shrink) */
 .navbar.scrolled {
-  padding: 8px 30px;
+  padding: 10px 50px;
   background: rgba(255, 255, 255, 0.95);
 }
 
@@ -273,7 +273,6 @@ nav ul a:hover::after {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 4rem 2rem;
-  background: transparent;
 }
 
 .hero-overlay {
@@ -282,10 +281,12 @@ nav ul a:hover::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(243, 238, 238, 0.4);
+  opacity: 0.25;
   /* Full-width overlay for better legibility */
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
+  opacity: 0.10;
 }
 
 .hero-left {
@@ -321,10 +322,11 @@ section h2 {
 .services-section {
   position: relative;
   background-color: #ffffff;
-  border-radius: 0;
+  border-radius: 0.5rem;
   padding: clamp(2rem, 5vh, 5rem) 0;
   width: 100%;
   z-index: 3;
+  scroll-margin-top: 100px;
 }
 
 /* ------------------------------
@@ -432,7 +434,7 @@ section h2 {
    FOOTER
 ------------------------------ */
 .footer {
-  font-family: 'Audiowide', sans-serif !important;
+  font-family: 'Axiforma', sans-serif !important;
   background: rgba(17, 17, 17, 0.85);
   /* Premium dark glass */
   backdrop-filter: blur(15px);
@@ -445,14 +447,14 @@ section h2 {
 }
 
 .footer-container {
-  display: grid !important;
-  grid-template-columns: 1fr 2fr;
-  /* branding on left, links on right */
-  gap: clamp(2rem, 5vw, 6rem);
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  flex-wrap: wrap;
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 clamp(20px, 4vw, 60px);
-  align-items: start;
+  gap: clamp(2rem, 4vw, 3rem);
 }
 
 .footer a,
@@ -470,8 +472,9 @@ section h2 {
 .footer-left {
   display: flex !important;
   flex-direction: column !important;
-  gap: 25px !important;
-  width: 100% !important;
+  gap: 15px !important;
+  flex-shrink: 0;
+  width: 280px;
 }
 
 .footer-contact-link {
@@ -482,20 +485,21 @@ section h2 {
 }
 
 .footer-contact-link span {
-  font-family: 'Audiowide', sans-serif !important;
+  font-family: 'Axiforma', sans-serif !important;
 }
 
 .footer-left h2 {
-  font-family: 'Audiowide', sans-serif !important;
-  font-size: clamp(1.8rem, 2.5vw, 2.8rem) !important;
+  font-family: 'Axiforma', sans-serif !important;
+  font-size: clamp(1.5rem, 2vw, 2.2rem) !important;
   font-weight: 700 !important;
-  margin-bottom: clamp(0.5rem, 2vw, 1.2rem) !important;
+  margin-bottom: 0.5rem !important;
   color: var(--primary) !important;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 .footer-left p {
-  font-family: 'Audiowide', sans-serif !important;
+  font-family: 'Axiforma', sans-serif !important;
   font-size: clamp(0.8rem, 0.5vw + 0.5rem, 1rem);
   color: var(--light);
   margin: 0.5rem 0 1.5rem !important;
@@ -517,15 +521,15 @@ section h2 {
 }
 
 .footer-right {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  /* Forces 3 columns for links */
-  gap: clamp(1.5rem, 3vw, 4rem) !important;
-  width: 100% !important;
+  display: flex !important;
+  gap: clamp(2.5rem, 4vw, 5rem) !important;
+  justify-content: flex-end !important;
+  flex: 1;
+  flex-wrap: nowrap;
 }
 
 .footer-section h4 {
-  font-family: 'Audiowide', sans-serif !important;
+  font-family: 'Axiforma', sans-serif !important;
   color: var(--primary) !important;
   margin-bottom: 1.2rem !important;
   font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1.2rem);
@@ -537,20 +541,20 @@ section h2 {
 }
 
 .footer-section li {
-  font-family: 'Audiowide', sans-serif !important;
+  font-family: 'Axiforma', sans-serif !important;
   margin-bottom: 0.5rem;
   font-size: clamp(0.75rem, 0.5vw + 0.4rem, 0.95rem);
   letter-spacing: 0.8px !important;
 }
 
 .footer-section a {
-  font-family: 'Audiowide', sans-serif !important;
+  font-family: 'Axiforma', sans-serif !important;
   color: #fff;
   text-decoration: none;
   position: relative;
 }
 
-.footer-section a::after {
+/* .footer-section a::after {
   content: "";
   display: block;
   height: 2px;
@@ -564,13 +568,12 @@ section h2 {
 
 .footer-section a:hover::after {
   width: 100%;
-}
+} */
 
 .footer-bottom {
-  font-family: 'Audiowide', sans-serif !important;
+  font-family: 'Axiforma', sans-serif !important;
   width: 100%;
-  grid-column: 1 / -1;
-  /* Spans all columns for perfect centering */
+  flex-basis: 100%;
   border-top: 1px solid #333;
   text-align: center;
   padding-top: 1.5rem;
@@ -627,13 +630,13 @@ section h2 {
 }
 
 .apply-btn {
-  background: var(--blue);
+  background: var(--orange);
   color: #fff;
   border: none;
   padding: 0.7rem 1.4rem;
   border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.4s ease;
 }
 
 .apply-btn:hover {
@@ -713,7 +716,7 @@ section h2 {
 }
 
 .dropdown-menu li a {
-  font-family: 'Audiowide', sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
   font-weight: 400 !important;
   font-size: 0.85rem !important;
   padding: 8px 20px !important;
@@ -724,18 +727,17 @@ section h2 {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   transition: all 0.3s ease !important;
-  position: relative;
   display: block !important;
   width: 100%;
   color: #333 !important;
-  /* white-space: nowrap; */
+  text-align: center;
+  white-space: nowrap;
   /* Prevent awkward wrapping */
 }
 
 .dropdown-menu li a:hover {
   background: #f8f9fa !important;
   color: var(--orange) !important;
-  padding-left: 20px !important;
   /* Elegant shift instead of scale */
 }
 
@@ -886,9 +888,9 @@ section h2 {
     right: 0;
     width: 75%;
     height: 100vh;
-    background: #ffffff;
+    background: #111;
     padding: 80px 30px;
-    box-shadow: -10px 0 30px rgba(246, 243, 243, 0.3);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
     z-index: 10001;
     transform: translateX(0);
     transition: transform 0.4s ease;
@@ -1045,9 +1047,12 @@ section h2 {
   .dropdown-menu li a {
     color: var(--light) !important;
     /* Make text white for the dark mobile menu */
-    font-size: 0.8rem !important;
+    font-size: 0.9rem !important;
     font-family: 'Audiowide', sans-serif !important;
+    text-align: left !important;
+    white-space: normal !important;
     transition: none !important;
+    padding: 10px 0 !important;
   }
 
   .dropdown-menu li a:hover {

@@ -28,10 +28,14 @@ const Navbar = () => {
   useEffect(() => {
     if (location.pathname === "/" && location.hash) {
       const targetId = location.hash.replace("#", "");
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      // Small delay to ensure the page has rendered and ScrollToTop has run
+      const timer = setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300);
+      return () => clearTimeout(timer);
     }
   }, [location]);
 

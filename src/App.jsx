@@ -34,7 +34,7 @@ function AppContent() {
     // A small delay ensures the user sees the transition
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1470);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [location]);
