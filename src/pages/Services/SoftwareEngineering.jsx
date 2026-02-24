@@ -89,7 +89,7 @@ const S2 = () => {
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
               <div style={{ maxWidth: "600px" }}>
-                <img src="/S_SW/Picture0.jpeg" alt="Custom UI" className="section-image" style={{ height: "auto", width: "100%", objectFit: "contain" }} />
+                <img src="/S_SW/Picture0.png" alt="Custom UI" className="section-image" style={{ height: "auto", width: "100%", objectFit: "contain" }} />
               </div>
             </div>
             <div className="section-text">
@@ -115,7 +115,7 @@ const S2 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SW/Picture1.jpeg" alt="Connectivity" className="section-image" />
+              <img src="/S_SW/Picture1.png" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SWE.2 Software Architectural Design</h2>
@@ -148,7 +148,7 @@ const S2 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SW/Picture2.jpeg" alt="Software Updates" className="section-image" />
+              <img src="/S_SW/Picture2.png" alt="Software Updates" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SWE.3 Software Detailed Design & Unit Construction</h2>
@@ -201,7 +201,7 @@ const S2 = () => {
           </div>
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SW/Picture3.jpeg" alt="Connectivity" className="section-image" />
+              <img src="/S_SW/Picture3.png" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SWE.4 Software Unit Verification</h2>
@@ -232,7 +232,7 @@ const S2 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SW/Picture4.jpeg" alt="Software Updates" className="section-image" />
+              <img src="/S_SW/Picture4.png" alt="Software Updates" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SWE.5 Software Integration & Integration Verification</h2>
@@ -266,7 +266,7 @@ const S2 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SW/Picture5.jpeg" alt="Connectivity" className="section-image" />
+              <img src="/S_SW/Picture5.png" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SWE.6 Software Qualification Testing</h2>
