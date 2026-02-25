@@ -47,7 +47,7 @@ const S5 = () => {
 
           <section >
             <p className="fs-1-2rem text-justify">
-              Our <b>safety and regulatory team</b> delivers cutting-edge compliance solutions for automotive systems, covering functional safety, cybersecurity, and high-voltage safety standards. We excel in ISO 26262, ISO 21434, R155, R156, LV123, LV124, HV safety automotive CAN protocols, and global market regulations, ensuring robust system protection and full compliance. From comprehensive testing to validation and certification support, we help clients achieve safe, reliable, and market-ready automotive solutions.
+              Our <b>Safety and Regulatory Engineering team</b> supports automotive OEMs and Tier-1 suppliers in achieving full compliance with global safety and regulatory requirements. We provide end-to-end engineering solutions across functional safety, cybersecurity, high-voltage safety, and vehicle-level regulatory frameworks. With deep expertise in ISO 26262 (Functional Safety), ISO 21434 (Cybersecurity), UNECE R155 & R156, LV123, LV124, and high-voltage system safety standards, we ensure that complex automotive systems meet stringent safety, security, and performance requirements. Our capabilities extend to safety concept development, HARA, FMEA, FMEDA, FTA, DFA, verification & validation planning, cybersecurity risk assessment, compliance testing, safety audit, confirmation review and safety assessment.
             </p>
           </section>
 
@@ -58,16 +58,17 @@ const S5 = () => {
             <div className="section-text">
               <h2>Functional Safety</h2>
               <p>
-                TBS provides comprehensive ISO 26262 compliance and functional safety engineering. Our systematic approach ensures that every safety-critical automotive system meets international regulatory standards through expert development and rigorous testing.
+                TBS provide engineering services for compliance to ISO 26262, functional Safety (FuSa / FuSi) standard including part: 2 – 9, 11 and 12.​
               </p>
               <ul>
-                <li><strong>Communication Integrity:</strong> We implement hardware redundancy and monitoring to prevent message corruption across vehicle buses.</li>
-                <li><strong>Processing Unit Safety:</strong> TBS develops software self-tests and lockstep configurations to ensure core processing reliability.</li>
-                <li><strong>Electrical Element Analysis:</strong> We provide online monitoring solutions for relays and harnesses to detect electrical failures.</li>
-                <li><strong>Sensor & Actuator Validation:</strong> Our team implements voting logic and correlation checks for precise, safe system performance.</li>
-                <li><strong>I/O Safeguard Implementation:</strong> We deploy test patterns and code protection to secure analog and digital interface data.</li>
-                <li><strong>Clock & Sequence Monitoring:</strong> We integrate advanced watchdogs to maintain perfect software execution timing and logical flow.</li>
-                <li><strong>Power Supply Regulation:</strong> TBS designs voltage and current control mechanisms to protect systems from power-related failures.</li>
+                <li><strong>Part 2 Management of Functional Safety:</strong> Safety planning, monitoring and tracking, DIA, managing supplier meetings, etc.​</li>
+                <li><strong>Part 3 Concept phase:</strong> Preparation of Item definition, HARA,  Safety goals, Functional FMEA, FTA, Functional Safety Requirements & concept (FSR / FSC).​</li>
+                <li><strong>Part 4 System Development:</strong> System safety analysis (FTA /DFMEA / DFA), Safety mechanism, Technical safety requirements / concept (TSR / TSC), system safety architecture, System integration and verification, Support for safety validation.​</li>
+                <li><strong>Part 5 Hardware Development:</strong> Hardware safety requirement, Hardware design, Hardware metric calculation (SPFM, LFM, PMHF), hardware integration and verification.​</li>
+                <li><strong>Part 6 Software development:</strong> Software safety requirements,  software architecture design, software unit design testing, implementation, verification, testing of embedded software.​</li>
+                <li><strong>Part 7 Production,  operation service and decommissioning:</strong> Process FMEA, safety requirements.​</li>
+                <li><strong>Part 8 Supporting processes:</strong> managing suppliers / customers with DIA, verification, documentation, tool qualification, etc.​</li>
+                <li><strong>Part 9 ASIL / Safety analyses:</strong> ASIL decomposition, criteria for co-existence, Analysis of dependent failures, safety analysis (FMEA / FTA)​</li>
               </ul>
             </div>
           </section>
@@ -79,16 +80,15 @@ const S5 = () => {
             <div className="section-text">
               <h2>Cybersecurity Development & Testing</h2>
               <p>
-                Our cybersecurity solutions protect automotive systems from evolving threats with comprehensive security measures:
+                TBS provides engineering services for compliance to ISO/SAE 21434 and UNECE R155 / R156 Cybersecurity regulations, covering the complete cybersecurity lifecycle.​
               </p>
               <ul>
-                <li><strong>ISO/SAE 21434 & UNECE R155 Compliance:</strong> Secure-by-design principles integrated throughout development lifecycle</li>
-                <li><strong>Vulnerability Assessment:</strong> Comprehensive security assessments identifying potential system weaknesses</li>
-                <li><strong>Robust Security Implementation:</strong> Advanced encryption and authentication protocols for system protection</li>
-                <li><strong>Penetration Testing:</strong> Thorough testing ensuring resilience against sophisticated cyberattacks</li>
-                <li><strong>Tara Analysis:</strong> Provide expert TARA services to identify and mitigate cybersecurity risks</li>
-                <li><strong>Connected Vehicle Protection:</strong> Comprehensive safeguarding of connected vehicles and user data</li>
-                <li><strong>Evolving Threat Response:</strong> Adaptive security measures addressing emerging cybersecurity challenges</li>
+                <li><strong>Clause 5, 6 Cybersecurity Management:</strong> Cybersecurity planning, work product management, audit preparation, and compliance tracking.​</li>
+                <li><strong>Clause 7, 8: Distributed / Continual Activities:</strong> Customer / supplier coordination, risk assessment, vulnerability management​</li>
+                <li><strong>Clause 9, 15: concept phase:</strong> Item definition, Threat Analysis and Risk Assessment (TARA) (Identify threats and threat scenarios, Assess impacts and likelihood, Determine risks and decide on treatment strategies.) security attributes, cybersecurity goals. ​</li>
+                <li><strong>Clause 10 Product Development:</strong> Cybersecurity concept / cybersecurity requirements at system  / hardware / software level.  Architecture design, cybersecurity verification and analysis.​</li>
+                <li><strong>Clause 11 cybersecurity validation:</strong> Test cases and testing support.​</li>
+                <li><strong>Clause 12, 13 and 14 Production, Operation, decommissioning:</strong> Cybersecurity analysis and requirements​</li>
               </ul>
             </div>
           </section>
@@ -100,16 +100,21 @@ const S5 = () => {
             <div className="section-text">
               <h2>HV Safety Development & Testing</h2>
               <p>
-                We ensure high-voltage (HV) systems in electric vehicles meet comprehensive safety standards:
+                TBS provides services to derive HV safety requirements and mapping, test specifications and test support covering global HV safety regulations and standards.​
               </p>
               <ul>
-                <li><strong>ISO 6469 Compliance:</strong> Complete adherence to high-voltage safety standards for electric vehicles</li>
-                <li><strong>HV Architecture Design:</strong> Safe and efficient high-voltage system architectures</li>
-                <li><strong>Insulation Monitoring:</strong> Advanced monitoring systems ensuring electrical safety and integrity</li>
-                <li><strong>Fail-Safe Mechanisms:</strong> Robust safety mechanisms protecting against electrical hazards</li>
-                <li><strong>Comprehensive Testing:</strong> Dielectric strength and thermal stress tests validating system safety</li>
-                <li><strong>User Protection:</strong> Complete protection of users and components from electrical hazards</li>
-                <li><strong>EV Safety Standards:</strong> Full compliance with electric vehicle safety requirements and regulations</li>
+                <li><strong>UNECE R100 Rev.3 (UN R100) Regulatory:</strong> Electrical safety for electric power train + REESS (shock protection, isolation, post-crash, discharge, etc.)​</li>
+                <li><strong>UN GTR No. 20 Regulatory:</strong> Harmonized set of safety requirements for electric vehicles (EVs) to minimize the risk of fire, explosion, and electric shock​</li>
+                <li><strong>ISO 6469-1 (RESS safety) standard:</strong> Battery pack safety requirements, design review, verification planning​</li>
+                <li><strong>ISO 6469-2 (Operational safety):</strong> Operational safety concept, misuse / user interaction safety analysis​</li>
+                <li><strong>ISO 6469-3 (In-use electrical safety):</strong> Electrical safety requirements for voltage class B circuits (shock + thermal incident protection)​</li>
+                <li><strong>ISO 17409 (Conductive charging connection safety):</strong> Charging safety architecture review, interlock/HV enable logic, validation​</li>
+                <li><strong>IEC 61851-1 (EV conductive charging system):</strong> EV supply equipment requirements for charging up to 1000 VAC / 1500 VDC​</li>
+                <li><strong>IEC 62196-1 (Connectors/inlets for conductive charging):</strong> Connector selection & compliance support, thermal/contact safety validation​</li>
+                <li><strong>ISO 19363 (Wireless power transfer safety):</strong> WPT safety analysis (clearance, EMF, interlocks), validation planning​</li>
+                <li><strong>LV123 (HV component validation – German OEMs):</strong> HV component validation (electrical, environmental, abuse) Validation planning, DV/PV execution support​</li>
+                <li><strong>FMVSS 305 (49 CFR §571.305, USA) Regulatory :</strong> Compliance assessment, crash/post-crash electrical safety analysis, test support​</li>
+                <li><strong>AIS-038 Rev.2 (India):</strong> India homologation support, test planning, documentation.​</li>
               </ul>
             </div>
           </section>
