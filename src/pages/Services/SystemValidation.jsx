@@ -54,7 +54,7 @@ const S4 = () => {
           {/* Content Sections */}
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture0.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
+              <img src="/S_SV/Picture0.jpeg" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>HIL Design & Development​</h2>
@@ -76,7 +76,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture1.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
+              <img src="/S_SV/Picture1.jpeg" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>System Validation: Test Procedure Development​</h2>
@@ -98,7 +98,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture2.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
+              <img src="/S_SV/Picture2.jpeg" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>System Validation Execution & Automation​</h2>
@@ -120,7 +120,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture3.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
+              <img src="/S_SV/Picture3.jpeg" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>Environmental Validation​</h2>
@@ -142,7 +142,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture4.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
+              <img src="/S_SV/Picture4.jpeg" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>Electrical Testing</h2>
@@ -164,7 +164,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture5.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
+              <img src="/S_SV/Picture5.jpeg" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>Mechanical Validation</h2>
@@ -186,7 +186,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture6.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
+              <img src="/S_SV/Picture6.jpeg" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>Design verification</h2>
@@ -208,7 +208,7 @@ const S4 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SV/Picture7.png" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
+              <img src="/S_SV/Picture7.jpeg" alt="Custom UI" className="section-image object-fit-cover h-auto w-100" />
             </div>
             <div className="section-text">
               <h2>Additional Validation Support​</h2>
