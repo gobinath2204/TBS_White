@@ -1296,3 +1296,21 @@ section h2 {
 .mt-neg-10px {
   margin-top: -10px !important;
 }
+
+.fs-1-2rem {
+  font-size: clamp(0.95rem, 1.2vw, 1.2rem) !important;
+  /* Fluid intro paragraph: scales from 0.95rem on mobile to 1.2rem on desktop */
+  line-height: 1.6 !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+@media (max-width: 768px) {
+  .fs-1-2rem {
+    font-size: 0.95rem !important;
+    /* Prevent oversizing on small screens */
+    line-height: 1.55 !important;
+  }
+}

@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
 const P6 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-
+  useFeatureAnimations(contentRef);
 
 
   useEffect(() => {
@@ -57,14 +58,14 @@ const P6 = () => {
             <div className="section-text">
               <h2>TbsFLASH</h2>
               <ul>
-                <li><strong>Multi-Protocol Support:</strong> Supports DoIP, CAN FD, and standard CAN protocols.</li>
-                <li><strong>Flash Compatibility:</strong> Compatible with multiple flash specifications.</li>
-                <li><strong>Interface Support:</strong> Supports various CAN interfaces, including Vector, NI, Intrepid, and Peak.</li>
-                <li><strong>Advanced Logging:</strong> Provides human-readable UDS logs and raw CAN dumps; DoIP includes UDS logs and Wireshark dumps.User logs include detailed failure reasons for thorough analysis.</li>
-                <li><strong>Integrated DHCP:</strong> Built-in DHCP server for DoIP connections.</li>
-                <li><strong>Configurable Sequences:</strong> Flash sequences can be configured and controlled via XML.</li>
-                <li><strong>Rapid Verification:</strong> Flash specification updates can be quickly verified before deployment in EOL or aftersales tools.</li>
-                <li><strong>Integration APIs:</strong> Exposes COM APIs for integration with other tools.</li>
+                <li><strong>Multi-Protocol Support:</strong> Native support for DoIP, CAN FD, and standard CAN protocols.</li>
+                <li><strong>Flash Compatibility:</strong> Seamlessly compatible with multiple diverse flash specifications.</li>
+                <li><strong>Interface Support:</strong> Connects via CAN interfaces including Vector, NI, Intrepid, and Peak.</li>
+                <li><strong>Advanced Logging:</strong> Provides readable UDS logs, raw CAN/Wireshark dumps, and detailed diagnostics.</li>
+                <li><strong>Integrated DHCP:</strong> Built-in DHCP server optimizing efficient DoIP connections.</li>
+                <li><strong>Configurable Sequences:</strong> Customizable flash sequences easily controlled via XML configuration.</li>
+                <li><strong>Rapid Verification:</strong> Quickly verify flash updates prior to EOL or aftersales tool deployment.</li>
+                <li><strong>Integration APIs:</strong> Exposes robust COM APIs facilitating smooth integration with external tools.</li>
               </ul>
             </div>
           </section>
@@ -76,12 +77,12 @@ const P6 = () => {
             <div className="section-text">
               <h2>Flashing Script (CANoe)</h2>
               <ul>
-                <li><strong>Universal Flashing:</strong> Capable of flashing any module.</li>
-                <li><strong>Configurable Setup:</strong> User can change the Canoe configuration based on the vehicle line.</li>
-                <li><strong>Dual Logging:</strong> Two logs are available (Readable log and Canoe CAN log file).</li>
-                <li><strong>Failure Analysis:</strong> User log provides failure reasons to aid analysis.</li>
-                <li><strong>XML Control:</strong> Sequence can be controlled with XML configuration.</li>
-                <li><strong>Verification:</strong> Flash specification updates are quickly verified with this tool before updating EOL or Aftersales tools.</li>
+                <li><strong>Universal Flashing:</strong> Highly adaptable scripts capable of flashing any compatible module.</li>
+                <li><strong>Configurable Setup:</strong> Users can effortlessly modify CANoe configurations per vehicle line.</li>
+                <li><strong>Dual Logging:</strong> Simultaneous generation of readable text logs and dedicated CANoe log files.</li>
+                <li><strong>Failure Analysis:</strong> Detailed user logs provide explicit failure reasons accelerating analysis.</li>
+                <li><strong>XML Control:</strong> Flexible sequence control driven entirely by XML configuration files.</li>
+                <li><strong>Rapid Verification:</strong> Thoroughly verify module flash updates before broad EOL or Aftersales deployment.</li>
               </ul>
             </div>
           </section>
@@ -93,11 +94,11 @@ const P6 = () => {
             <div className="section-text">
               <h2>Part Number Reader</h2>
               <ul>
-                <li><strong>Vehicle Readout:</strong> Read Part numbers and DTC information for the whole vehicle.</li>
-                <li><strong>Adaptable Configuration:</strong> User can change the Canoe configuration based on the vehicle line.</li>
-                <li><strong>Comprehensive Reporting:</strong> Two logs are available (HTML report and Canoe CAN log file).</li>
-                <li><strong>DTC Parsing:</strong> Parses DTCs, including snapshot and extended data.</li>
-                <li><strong>Part Number Comparison:</strong> Highlights differentiation in Part numbers using Excel files with proper color coding.</li>
+                <li><strong>Vehicle Readout:</strong> Instantly read part numbers and comprehensive DTC data across the entire vehicle.</li>
+                <li><strong>Adaptable Configuration:</strong> Easily adjust CANoe configuration parameters tailored to target vehicle lines.</li>
+                <li><strong>Comprehensive Reporting:</strong> Dual outputs featuring detailed HTML dashboards and raw CANoe log files.</li>
+                <li><strong>DTC Parsing:</strong> Deep parsing of DTCs explicitly capturing snapshot and extended environmental data.</li>
+                <li><strong>Part Number Comparison:</strong> Automates part number differentiation via intuitive color-coded Excel exports.</li>
               </ul>
             </div>
           </section>

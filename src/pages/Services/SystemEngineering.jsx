@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
 const SystemEngineering = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
+  useFeatureAnimations(contentRef);
   const imagePath = "/Hero_S/Sysengg.png";
 
 

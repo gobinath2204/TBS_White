@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
 const P5 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-
-
+  useFeatureAnimations(contentRef);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,15 +58,15 @@ const P5 = () => {
             <div className="section-text">
               <h2>Smart HIL (Hardware-in-the-Loop)</h2>
               <ul>
-                <li>Enables simplified and accurate simulation of physical systems</li>
-                <li>Compatible with Vector CAN and Peak CAN tools</li>
-                <li>Designed for ease of use and cost efficiency</li>
-                <li>Outputs are simulated via CAN Panel & CAPL at 1–10 ms intervals</li>
-                <li>Inputs are measured and broadcasted to CAN at 1–10 ms intervals</li>
-                <li>Operates independently of complex software dependencies</li>
-                <li>Offers configurable I/O tailored to project-specific needs</li>
-                <li>Supports programmable CAN communication and sensor emulation</li>
-                <li>Supports multi-domain applications: Automotive, Aerospace, Railways</li>
+                <li><strong>System Simulation:</strong> Enables highly simplified yet remarkably accurate simulation of complex physical systems.</li>
+                <li><strong>Tool Compatibility:</strong> Seamlessly compatible with industry-standard Vector CAN and Peak CAN toolchains.</li>
+                <li><strong>Cost Efficiency:</strong> Intentionally designed for exceptional ease of use and maximum operational cost efficiency.</li>
+                <li><strong>High-Speed Simulation:</strong> Outputs dynamically simulated via CAN Panel and CAPL at rapid 1–10ms intervals.</li>
+                <li><strong>Precision Measurement:</strong> Inputs precisely measured and instantly broadcasted to CAN networks at 1–10ms intervals.</li>
+                <li><strong>Standalone Operation:</strong> Operates entirely independently, completely free from restrictive complex software dependencies.</li>
+                <li><strong>Configurable I/O:</strong> Offers highly adaptable I/O matrices meticulously tailored to specific project requirements.</li>
+                <li><strong>Programmable Logic:</strong> Fully supports deeply programmable CAN communication and complex sensor emulation profiles.</li>
+                <li><strong>Multi-Domain Support:</strong> Proven capability across advanced Automotive, Aerospace, and Railway domain applications.</li>
               </ul>
             </div>
           </section>

@@ -48,7 +48,7 @@ export default function Footer() {
               <li><Link to="/pages/Services/SoftwareEngineering">Software Engineering</Link></li>
               <li><Link to="/pages/Services/HardwareEngineering">Hardware Engineering</Link></li>
               <li><Link to="/pages/Services/SystemValidation">System Validation</Link></li>
-              <li><Link to="/pages/Services/SafetyandRegulatory">Safety & Regulatory</Link></li>
+              <li><Link to="/pages/Services/SafetyandRegulatory">Safety and Regulatory</Link></li>
             </ul>
           </div>
 

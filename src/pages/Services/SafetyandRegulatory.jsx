@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
 const S5 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
+  useFeatureAnimations(contentRef);
   const imagePath = "/Hero_S/S&R.jpeg";
 
 
@@ -58,7 +60,7 @@ const S5 = () => {
             <div className="section-text">
               <h2>Functional Safety</h2>
               <p>
-                TBS provide engineering services for compliance to ISO 26262, functional Safety (FuSa / FuSi) standard including part: 2 – 9, 11 and 12.​
+                TBS provide engineering services for compliance to ISO 26262, functional Safety (FuSa / FuSi) standard including part: 2 – 9, 11 and 12.
               </p>
               <ul>
                 <li><strong>Part 2 Management of Functional Safety:</strong> Safety planning, monitoring and tracking, DIA, managing supplier meetings, etc.​</li>
@@ -80,7 +82,7 @@ const S5 = () => {
             <div className="section-text">
               <h2>Cybersecurity Development & Testing</h2>
               <p>
-                TBS provides engineering services for compliance to ISO/SAE 21434 and UNECE R155 / R156 Cybersecurity regulations, covering the complete cybersecurity lifecycle.​
+                TBS provides engineering services for compliance to ISO/SAE 21434 and UNECE R155 / R156 Cybersecurity regulations, covering the complete cybersecurity lifecycle.
               </p>
               <ul>
                 <li><strong>Clause 5, 6 Cybersecurity Management:</strong> Cybersecurity planning, work product management, audit preparation, and compliance tracking.​</li>
@@ -100,7 +102,7 @@ const S5 = () => {
             <div className="section-text">
               <h2>HV Safety Development & Testing</h2>
               <p>
-                TBS provides services to derive HV safety requirements and mapping, test specifications and test support covering global HV safety regulations and standards.​
+                TBS provides services to derive HV safety requirements and mapping, test specifications and test support covering global HV safety regulations and standards.
               </p>
               <ul>
                 <li><strong>UNECE R100 Rev.3 (UN R100) Regulatory:</strong> Electrical safety for electric power train + REESS (shock protection, isolation, post-crash, discharge, etc.)​</li>

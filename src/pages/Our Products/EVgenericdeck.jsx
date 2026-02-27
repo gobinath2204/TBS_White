@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import { useNavigate } from "react-router-dom";
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
@@ -7,8 +8,7 @@ import PageNavigation from "../../components/PageNavigation";
 const P2 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-
-
+  useFeatureAnimations(contentRef);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,13 +59,13 @@ const P2 = () => {
             <div className="section-text">
               <h2>Strategic EV Development Framework</h2>
               <ul>
-                <li><strong>Ensure ASPICE Compliance:</strong> Position compliance as a strategic differentiator to meet OEM mandates (~70% require Level 2/3).</li>
-                <li><strong>Scalable EV Feature Library:</strong> Concentrates on BMS, Inverter, DC-DC, and OBC, embedding ASPICE-compliant processes for reuse.</li>
-                <li><strong>Measurable Outcomes (KPIs):</strong> Target 40% reduction in development time, 90% improved defect detection, and 20% cost reduction.</li>
-                <li><strong>Address Organizational Challenges:</strong> Mitigate talent shortages with training/templates and automate documentation for massive artifact requirements.</li>
-                <li><strong>Emphasize Business Value:</strong> Focus on faster RFQ turnarounds and long-term savings through standardized workflows.</li>
-                <li><strong>Global Expansion:</strong> Adapt framework for Europe/Asia and create opportunities for consulting and strategic partnerships.</li>
-                <li><strong>Integrate Standards Alignment:</strong> Ensure compatibility with ISO 26262 (Functional Safety) and ISO 21434 (Cybersecurity).</li>
+                <li><strong>ASPICE Compliance:</strong> Strategically position compliance to satisfy strict OEM mandates requiring Level 2/3 certification.</li>
+                <li><strong>Scalable Feature Library:</strong> Pre-built, ASPICE-compliant modules focusing on core BMS, Inverter, DC-DC, and OBC functions.</li>
+                <li><strong>Measurable Outcomes:</strong> Target 40% faster development, 90% better defect detection, and significant 20% cost reductions.</li>
+                <li><strong>Organizational Support:</strong> Overcome talent gaps via integrated training and completely automate heavy documentation burdens.</li>
+                <li><strong>Maximum Business Value:</strong> Guarantee faster RFQ turnarounds and compound long-term savings via standardized workflows.</li>
+                <li><strong>Global Expansion Ready:</strong> Easily adapted frameworks uniquely suited for European, Asian, and global consulting partnerships.</li>
+                <li><strong>Strict Standards Alignment:</strong> Out-of-the-box compatibility with ISO 26262 (Functional Safety) and ISO 21434 paradigms.</li>
               </ul>
             </div>
           </section>

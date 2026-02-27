@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
 const P3 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-
+  useFeatureAnimations(contentRef);
 
 
   useEffect(() => {
@@ -57,13 +58,13 @@ const P3 = () => {
             <div className="section-text">
               <h2>HMI (Human-Machine Interface)</h2>
               <ul>
-                <li><strong>High-Resolution Display:</strong> A 7-inch capacitive touch screen with an 800 x 480 resolution and 300 nits brightness.</li>
-                <li><strong>Dual-Processor Architecture:</strong> Integrated TI TMS570LC43x (VIP) and an FPGA-based Graphics Processor (GIP) for optimized data handling and UI rendering.</li>
-                <li><strong>Automotive Connectivity:</strong> Full CAN Stack implementation supporting up to 500KBPS and UDS diagnostics (ISO 14229/ISO 15765) for software flashing and configuration.</li>
-                <li><strong>Flexible Interface:</strong> Features dimming control (0–100%), an internal buzzer, and support for real-time 3D printed design prototypes.</li>
-                <li><strong>Operational Durability:</strong> Rated for operating temperatures between -20°C and 70°C with a backlight lifetime exceeding 30,000 hours.</li>
-                <li><strong>Efficient Power Management:</strong> Low power consumption design operating at 12V with a maximum current draw of 800 mA.</li>
-                <li><strong>Comprehensive Software Stack:</strong> Includes Touch Screen Managers, Audio Managers, and a GPU Stack for a smooth, 30FPS user experience.</li>
+                <li><strong>High-Resolution Display:</strong> Vibrant 7-inch capacitive touch screen featuring 800x480 resolution and 300 nits brightness.</li>
+                <li><strong>Dual-Processor Architecture:</strong> TI TMS570LC43x (VIP) paired with an FPGA GPU for highly optimized UI rendering.</li>
+                <li><strong>Automotive Connectivity:</strong> Full CAN Stack supporting 500KBPS alongside complete UDS diagnostics for secure flashing.</li>
+                <li><strong>Flexible Interface:</strong> Responsive 0–100% dimming control, internal buzzer alerts, and rapid prototype support.</li>
+                <li><strong>Operational Durability:</strong> Rugged design rated for -20°C to 70°C with an exceptional 30,000+ hour backlight lifespan.</li>
+                <li><strong>Efficient Power Management:</strong> Ultra-low power consumption architecture operating natively at 12V, drawing under 800mA.</li>
+                <li><strong>Comprehensive Software Stack:</strong> Deep integration of Touch and Audio managers driving a flawlessly smooth 30FPS experience.</li>
               </ul>
             </div>
           </section>

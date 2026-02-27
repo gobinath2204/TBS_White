@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
 const P1 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
-
-
+  useFeatureAnimations(contentRef);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,14 +58,14 @@ const P1 = () => {
             <div className="section-text">
               <h2>CAN Stack (Controller Area Network)</h2>
               <ul>
-                <li>Multi Channel Support, GUI Config Auto Code Tool, ISO11898 Compliance, ASIL – B Support, Autosar Architecture framework, In production Vehicles</li>
-                <li><strong>CAN NM:</strong> Manages Wakeup & Sleep CAN Modes</li>
-                <li><strong>CAN Manager:</strong> Exposes signals to the application layer</li>
-                <li><strong>CAN Pdur:</strong> PDUR (PDU Router) routes protocol-independent I-PDUs between upper layers and lower bus-specific layers (CANIf/LINIf) in CAN stack.</li>
-                <li><strong>CAN TP:</strong> Segments large N-PDUs (&gt;8 bytes) into multiple CAN frames and reassembles them on reception.</li>
-                <li><strong>CAN IF:</strong> Interacts with Upper layer & hardware.</li>
-                <li><strong>CAN Driver:</strong> Interacts with CAN Controller & CAN Transceiver</li>
-                <li><strong>ISO11898 Compliance</strong> CAN Physical and Communication Test procedure and evidence</li>
+                <li><strong>Features:</strong> Multi-Channel, GUI Auto Code Tool, ISO11898/ASIL-B compliant, AUTOSAR architecture, production-ready.</li>
+                <li><strong>CAN NM:</strong> Efficiently manages network Wakeup & Sleep CAN Modes.</li>
+                <li><strong>CAN Manager:</strong> Exposes crucial network signals directly to the application layer.</li>
+                <li><strong>CAN PDUR:</strong> Routes protocol-independent I-PDUs seamlessly between upper and lower bus layers.</li>
+                <li><strong>CAN TP:</strong> Segments and reassembles large N-PDUs (&gt;8 bytes) across multiple CAN frames.</li>
+                <li><strong>CAN IF:</strong> Facilitates interaction between upper software layers and underlying hardware.</li>
+                <li><strong>CAN Driver:</strong> Direct low-level interaction with CAN Controllers and Transceivers.</li>
+                <li><strong>ISO11898 Compliance:</strong> Delivered with physical/communication test procedures and concrete evidence.</li>
               </ul>
             </div>
           </section>
@@ -77,11 +77,11 @@ const P1 = () => {
             <div className="section-text">
               <h2>UDS Stack (Unified Diagnostic Services - ISO 14229)</h2>
               <ul>
-                <li>UDSonCAN Support​, ISO14229 Compliance​, ISO15765 Compliance​</li>
-                <li>Interactive GUI Tool for Configuration​, AutoSaR Framework Architecure​, In Production Vehciles​</li>
-                <li>UDS Core, UDS app, UDS app support, UDS SecAcc, DTC Core & DTC application</li>
-                <li><strong>Automated Test script</strong> to Prove the stack compliance of Services(ISO14229) Test procedure and evidences for applicable and no applicable services and sub functions for both Physical and Functional addressing</li>
-                <li><strong>Automated Test script</strong>to Prove the stack compliance of Communication UDSonCAN(ISO15765) Test procedure and evidences for applicable and no applicable services and sub functions for both Physical and Functional addressing</li>
+                <li><strong>Standards:</strong> Full UDSonCAN, ISO14229, and ISO15765 compliance.</li>
+                <li><strong>Features:</strong> Interactive GUI configuration, AUTOSAR architecture, and production-proven reliability.</li>
+                <li><strong>Core Modules:</strong> Includes UDS Core, App Support, SecAcc, DTC Core, and DTC Application.</li>
+                <li><strong>ISO14229 Automated Tests:</strong> Comprehensive scripts proving stack service compliance across physical and functional addressing.</li>
+                <li><strong>ISO15765 Automated Tests:</strong> Detailed scripts verifying UDSonCAN communication compliance with complete test evidence.</li>
               </ul>
             </div>
           </section>
@@ -114,9 +114,9 @@ const P1 = () => {
             <div className="section-text">
               <h2>NVM Manager, Watchdog & Drivers</h2>
               <ul>
-                <li><strong>NVM Manager:</strong> Flash Management, EEPROM Emulation, Backup RAM, Config Tool. Ensures reliable data storage and retrieval across power cycles.</li>
-                <li><strong>Watchdog Manager:</strong> Multi Window, Event alert, Configurable</li>
-                <li><strong>Low Level Drivers:</strong> Bluetooth Stack, Sound Manager, Timers, PWM, ADC, Port, UART, I2C, SPI, Real Time Clock, EEPROM Driver, Flash Driver</li>
+                <li><strong>NVM Manager:</strong> Flash management, EEPROM emulation, Backup RAM, ensuring reliable data storage across power cycles.</li>
+                <li><strong>Watchdog Manager:</strong> Configurable multi-window execution monitoring with immediate event alerts.</li>
+                <li><strong>Low Level Drivers:</strong> Comprehensive suite including Bluetooth, Sound, Timers, PWM, ADC, UART, SPI, RTC, and Flash/EEPROM drivers.</li>
               </ul>
             </div>
           </section>
@@ -128,16 +128,13 @@ const P1 = () => {
             <div className="section-text">
               <h2>Flash Bootloader Stack</h2>
               <ul>
-                <li>A reliable and robust Flash programming solution for safe and consistent ECU software updates.</li>
-                <li>Supports secure download, erase, and programming flows for seamless in‑field reprogramming.</li>
-                <li>Ensures controlled startup and update handling with built‑in integrity checks.</li>
-                <li>Designed for smooth integration with OEM diagnostic tools and standard communication protocols.</li>
-                <li>ASIL‑based safety requirements to avoid unsafe states.</li>
-                <li>Provides standard architecture and interfaces for communication, memory, and diagnostics used in the bootloader.</li>
-                <li>Standard for CAN communication used during flashing and diagnostics.</li>
-                <li>Standard diagnostics protocol for ECU reprogramming.</li>
-                <li>Defines download, data transfer, and security access for flashing.</li>
-                <li>Readily available for TI – Sitara & TI R4F & R5F & ST Platform & Infineon Family</li>
+                <li><strong>Robust Updates:</strong> A highly reliable flash programming solution for consistent ECU software updates.</li>
+                <li><strong>Secure Flashing:</strong> Employs secure download, erase, and programming flows for seamless in-field reprogramming.</li>
+                <li><strong>Integrity Checks:</strong> Ensures strictly controlled startup handling via robust built-in integrity verification.</li>
+                <li><strong>OEM Integration:</strong> Designed for effortless integration with standard OEM diagnostic tools and protocols.</li>
+                <li><strong>Safety Focused:</strong> Aligns with ASIL-based safety requirements preventing critical unsafe operating states.</li>
+                <li><strong>Standard Architecture:</strong> Provides unified interfaces for memory, diagnostics, and secure bootloader communication.</li>
+                <li><strong>Platform Availability:</strong> Readily available for TI Sitara, R4F/R5F, ST Platforms, and the Infineon family.</li>
               </ul>
             </div>
           </section>
@@ -152,12 +149,12 @@ const P1 = () => {
                 Our Free RTOS Safety Plugin empowers automotive embedded systems with ISO 26262 ASIL-D compliance.
               </p>
               <ul>
-                <li><strong>SAFECRC Checker:</strong> Ensures complete data integrity within a Safety RTOS environment.</li>
-                <li><strong>SAFEX Change:</strong> Facilitates safe and validated data exchange between system components.</li>
-                <li><strong>Kernel Updates:</strong> Ensures the Safety RTOS utilizes validated and controlled Free RTOS versions without compromising real-time behavior.</li>
-                <li><strong>SAFE Checkpoints Component:</strong> Monitors safety-critical tasks to ensure they execute in the correct sequence and within defined time limits.</li>
-                <li><strong>Safety Analysis:</strong> Evaluates the kernel to identify potential failure modes affecting memory, timing, and scheduling.</li>
-                <li><strong>Safe Checkpoints Verification:</strong> Verifies that critical tasks reach defined execution points within their expected time windows.</li>
+                <li><strong>SAFECRC Checker:</strong> Assures comprehensive data integrity across the entire Safety RTOS environment.</li>
+                <li><strong>SAFEX Change:</strong> Strictly facilitates safe, fully validated data exchange between core system components.</li>
+                <li><strong>Kernel Updates:</strong> Deploys validated Free RTOS versions completely preserving essential real-time execution behavior.</li>
+                <li><strong>SAFE Checkpoints:</strong> Actively monitors critical tasks ensuring correct sequencing within strict time limits.</li>
+                <li><strong>Safety Analysis:</strong> Deep kernel evaluation targeting complex memory, timing, and scheduling failure modes.</li>
+                <li><strong>Execution Verification:</strong> Confirms critical tasks consistently reach defined execution points within mandatory time windows.</li>
               </ul>
             </div>
           </section>

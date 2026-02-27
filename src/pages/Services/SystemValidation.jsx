@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
 const S4 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
+  useFeatureAnimations(contentRef);
   const imagePath = "/Hero_S/sysval.jpg";
 
 
@@ -62,14 +64,14 @@ const S4 = () => {
                 Our HIL Design & Development services provide high-precision rig architecture and real-time simulation environments. We integrate high-fidelity I/O, fault injection layers, and safety systems to create robust, industry-standard validation platforms.
               </p>
               <ul>
-                <li><strong>Rig Architecture Design:</strong> Full SYS4/SYS5 HIL rigs replicating ECU networks, domain topologies and real-time plant interactions.</li>
-                <li><strong>High-Fidelity I/O Expansion:</strong> Configurable analogue, digital, PWM, CAN, LIN, SPI, I2C, HV/LV channels supporting complex test behaviours.</li>
-                <li><strong>Fault Injection Layer:</strong> OC, SCG, SCL, OORL and OORH simulation enabling robustness and failure-mode validation.</li>
-                <li><strong>Real-Time Simulation Engine:</strong> HVAC, HVDC, LVDC and load models running on dSPACE/NI PXIe for deterministic execution.</li>
-                <li><strong>Hardware Abstraction Interface:</strong> Sensor, actuator and controller interfacing enabling physical-to-model coherence.</li>
-                <li><strong>Safety & Protection System:</strong> HV isolation, over-current protection and emergency-stop integration for safe bench operation.</li>
-                <li><strong>Advanced Measurement Suite:</strong> CANoe, oscilloscopes, PXIe logging and RT trace tools for signal visibility and debug depth.</li>
-                <li><strong>Industry-Standard Toolchain:</strong> dSPACE, NI TestStand, VT System, CADET, MATLAB/Simulink, XCP AutomationDesk capability.</li>
+                <li><strong>Rig Architecture Design:</strong> Building comprehensive SYS4/SYS5 HIL rigs replicating ECU networks and real-time plant properties.</li>
+                <li><strong>High-Fidelity I/O Expansion:</strong> Utilizing configurable channels linking analogue, digital, PWM, and communication interfaces.</li>
+                <li><strong>Fault Injection Layer:</strong> Simulating OC, SCG, SCL, and out-of-range states for robust failure-mode validation.</li>
+                <li><strong>Real-Time Simulation Engine:</strong> Executing HVAC, HVDC, and LVDC load models on deterministic dSPACE/NI PXIe architectures.</li>
+                <li><strong>Hardware Abstraction:</strong> Interfacing sensors, actuators, and controllers ensuring tight physical-to-model coherence.</li>
+                <li><strong>Safety & Protection:</strong> Integrating HV isolation, over-current safeguards, and e-stops for secure bench operation.</li>
+                <li><strong>Advanced Measurement Suite:</strong> Leveraging CANoe, oscilloscopes, and PXIe tools for unmatched signal visibility and debug depth.</li>
+                <li><strong>Industry-Standard Toolchain:</strong> Expert application of dSPACE, NI TestStand, VT System, MATLAB/Simulink, and AutomationDesk.</li>
               </ul>
             </div>
           </section>
@@ -84,14 +86,14 @@ const S4 = () => {
                 Our System Validation Test Procedure Development services provide a structured, end-to-end approach for creating robust validation strategies. From requirement intake and feature definition to detailed test logic and traceability mapping, we ensure comprehensive coverage and PLM-ready deliverables.
               </p>
               <ul>
-                <li><strong>Requirement Intake:</strong> SYS2/SYS3 requirements, HSIs, CAN/XCP databases and regulatory inputs forming the test foundation.</li>
-                <li><strong>SYS.4 Feature Definition:</strong> Interface testing, interoperability checks, dynamic behavior assessment and timing compliance.</li>
-                <li><strong>SYS.5 Feature Definition:</strong> System functionality, diagnostic coverage, safety behavior, operating modes and HV/LV operating ranges.</li>
-                <li><strong>DVP & GAP Analysis:</strong> Classification of requirements with clear identification of missing, partial or ambiguous coverage.</li>
-                <li><strong>Test Logic Development:</strong> Detailed flowcharts, block diagrams and sequence definitions mapping requirement → test action.</li>
-                <li><strong>Procedure Authoring:</strong> SYS4/SYS5 stepwise procedures with pre‑conditions, timing windows, expected results and verdict logic.</li>
-                <li><strong>Traceability Mapping:</strong> Full linkage from requirements → test case → log evidence → pass/fail verdict → PLM updates.</li>
-                <li><strong>Deliverable Packaging:</strong> Upload‑ready documents for PLM with attribute population, linkage and review‑workflow readiness.</li>
+                <li><strong>Requirement Intake:</strong> Establishing the test foundation using SYS2/SYS3 criteria, HSIs, CAN databases, and regulatory standards.</li>
+                <li><strong>SYS.4 Feature Definition:</strong> Validating interface stability, interoperability limits, dynamic behavior, and strict timing compliance.</li>
+                <li><strong>SYS.5 Feature Definition:</strong> Assessing system functionality, diagnostic coverage, operating modes, and HV/LV operating limits.</li>
+                <li><strong>DVP & GAP Analysis:</strong> Reviewing requirements to explicitly identify missing, partial, or ambiguous testing coverage.</li>
+                <li><strong>Test Logic Development:</strong> Drafting highly detailed flowcharts and sequence definitions seamlessly mapping requirements to actions.</li>
+                <li><strong>Procedure Authoring:</strong> Creating SYS4/SYS5 stepwise test procedures detailing pre-conditions, timing windows, and definitive verdict logic.</li>
+                <li><strong>Traceability Mapping:</strong> Sustaining full vertical linkage from base requirements through log evidence to conclusive PLM updates.</li>
+                <li><strong>Deliverable Packaging:</strong> Structuring upload-ready PLM documentation with populated attributes and complete review-workflow readiness.</li>
               </ul>
             </div>
           </section>
@@ -106,14 +108,14 @@ const S4 = () => {
                 Our System Validation Execution & Automation services leverage advanced HIL capabilities and 24/7 automation pipelines to ensure rigorous functional depth. We focus on dynamic behavior coverage, automated reporting, and KPI-driven monitoring to achieve pre-vehicle maturity and accelerate root cause analysis.
               </p>
               <ul>
-                <li><strong>HIL Execution Capability:</strong> Powertrain, body, HVAC, ADAS, chassis and cross‑domain benches executed with full functional depth.​</li>
-                <li><strong>24/7 Automation Pipeline:</strong> Night‑cycle regression and continuous validation driven by Python, CAPL, XML and TestStand.​</li>
-                <li><strong>Dynamic Behavior Coverage:</strong> Real‑time behavior evaluation under simulated loads, disturbances and operating conditions.​</li>
-                <li><strong>Advanced Log Ecosystem:</strong> RT, CAN, FTTI and waveform logs auto‑captured with structured templates for fast triage.​</li>
-                <li><strong>Automated Reporting:</strong> HTML/PDF/Excel reports with verdict logic, KPI metrics, coverage analytics and failure clustering.​</li>
-                <li><strong>Root Cause Acceleration:</strong> Automated failure reproduction using plant‑model manipulation and fault‑injection triggers.​</li>
-                <li><strong>KPI‑Driven Monitoring:</strong> Stability trends, pass rates, defect hotspots and cycle‑time analytics feeding improvement loops.​</li>
-                <li><strong>Pre‑Vehicle Maturity:</strong> Achieving functional maturity on HIL, minimizing field issues and reducing prototype dependency.​</li>
+                <li><strong>HIL Execution Capability:</strong> Delivering full-depth functional validation for powertrain, body, HVAC, ADAS, and chassis domains.</li>
+                <li><strong>24/7 Automation Pipeline:</strong> Driving continuous test cycles using advanced Python, CAPL, XML, and TestStand orchestration.</li>
+                <li><strong>Dynamic Behavior Coverage:</strong> Evaluating complex real-time behavior under heavily simulated loads, disturbances, and varied conditions.</li>
+                <li><strong>Advanced Log Ecosystem:</strong> Structuring automated capture of RT, CAN, FTTI, and waveform logs for rapid diagnostic triage.</li>
+                <li><strong>Automated Reporting:</strong> Autogenerating comprehensive HTML/PDF/Excel reports featuring verdict logic, KPIs, and failure clustering.</li>
+                <li><strong>Root Cause Acceleration:</strong> Empowering rapid automated failure reproduction via plant-model manipulation and fault-injection.</li>
+                <li><strong>KPI‑Driven Monitoring:</strong> Analyzing stability trends, defect hotspots, and pass rates to feed continuous improvement loops.</li>
+                <li><strong>Pre‑Vehicle Maturity:</strong> Guaranteeing pre-vehicle functional maturity to aggressively minimize subsequent field and prototype issues.</li>
               </ul>
             </div>
           </section>
@@ -128,14 +130,14 @@ const S4 = () => {
                 Our Environmental Validation services ensure product endurance and compliance through rigorous testing against global standards. We cover thermal, vibration, corrosion, and accelerated aging profiles, providing comprehensive analysis for automotive and EV systems.
               </p>
               <ul>
-                <li><strong>Standards Alignment:</strong> Ready‑made profiles compliant with MIL‑STD‑810, IEC‑60068, ISO‑16750 and ISO‑20653 requirements.​</li>
-                <li><strong>Thermal & Humidity Profiles:</strong> Temperature cycling, humidity ramps and thermal shock tests for environmental endurance.​</li>
-                <li><strong>Vibration & Mechanical Stress:</strong> Random, sine, shock and mechanical excitation aligned with automotive and industrial norms.​</li>
-                <li><strong>Corrosion & Ingress Testing:</strong> Salt‑spray, IP‑rated dust/water ingress and corrosion‑accelerated exposure profiles.​</li>
-                <li><strong>Accelerated Aging (HALT/HASS):</strong> Early‑weakness identification supporting FMEA‑driven design improvements.​</li>
-                <li><strong>EV‑Ready Environmental Packs:</strong> Battery, inverter, HVDC/LVDC environmental cycles for electric mobility systems.​</li>
-                <li><strong>Real‑Time Instrumentation:</strong> CAN/RT/FTTI logging and oscilloscope monitoring integrated into chamber operations.​</li>
-                <li><strong>Compliance Reporting:</strong> Full test matrices, acceptance criteria, compliance classifications and risk‑rating documents.​</li>
+                <li><strong>Standards Alignment:</strong> Establishing ready-made baseline profiles reliably compliant with MIL-STD-810, IEC-60068, ISO-16750, and ISO-20653.</li>
+                <li><strong>Thermal & Humidity Profiles:</strong> Validating environmental endurance via extensive temperature cycling, humidity ramps, and severe thermal shock testing.</li>
+                <li><strong>Vibration & Mechanical Stress:</strong> Applying rigorous random, sine, and shock excitation firmly aligned with strict automotive norms.</li>
+                <li><strong>Corrosion & Ingress Testing:</strong> Deploying salt-spray regimens and stringent IP-rated dust/water ingress screening procedures.</li>
+                <li><strong>Accelerated Aging:</strong> Utilizing HALT/HASS methodologies for early-weakness identification supporting FMEA-driven product improvements.</li>
+                <li><strong>EV-Ready Environmental Packs:</strong> Standardizing HVDC/LVDC environmental cycling uniquely tailored for complex electric mobility architectures.</li>
+                <li><strong>Real-Time Instrumentation:</strong> Seamlessly integrating high-fidelity CAN/RT/FTTI logging and oscilloscope monitoring directly into chamber operations.</li>
+                <li><strong>Compliance Reporting:</strong> Publishing definitive test matrices, acceptance baselines, compliance classifications, and detailed risk-rating documents.</li>
               </ul>
             </div>
           </section>
@@ -150,14 +152,14 @@ const S4 = () => {
                 Our Electrical Testing services validate the robustness and safety of automotive electrical architectures. We conduct comprehensive electrical disturbance, HV/LV safety, and load simulation tests, ensuring full compliance with ISO and automotive standards.
               </p>
               <ul>
-                <li><strong>Standards‑Compliant Procedures:</strong> ISO 16750‑2, LV123, LV124, LV148, ISO 7637, ISO 21498 and automotive transient standards support.​</li>
-                <li><strong>Electrical Disturbance Validation:</strong> Surge, load dump, ESD, cranking, reverse polarity and voltage dip tests for robustness.​</li>
-                <li><strong>HV/LV Safety Checks:</strong> Isolation, insulation resistance, leakage current and protection‑circuit verification for EV domains.​</li>
-                <li><strong>Load & Power Simulation:</strong> Programmable SMPS load cycles, sinusoidal/RF disturbances and HV/LV power behavior analysis.​</li>
-                <li><strong>Harness & PCB Validation:</strong> Wiring, PCB, sub‑assembly and ECU‑level electrical survivability under stress conditions.​</li>
-                <li><strong>Automation Integration:</strong> Python, CAPL, TestStand and XML‑driven test automation for fully repeatable execution.​</li>
-                <li><strong>Real‑Time Data Capture:</strong> Oscilloscope, PCI cards and CAN/LIN logs feeding waveform‑based diagnostic insights.​</li>
-                <li><strong>Compliance Documentation:</strong> Detailed reporting with deviations, corrective actions, acceptance limits and standard mapping.​</li>
+                <li><strong>Standards‑Compliant Procedures:</strong> Total support for ISO 16750-2, LV123, LV124, LV148, ISO 7637, and complex automotive transient sequences.</li>
+                <li><strong>Electrical Disturbance:</strong> Comprehensively validating system robustness against surges, load dumps, ESD, continuous cranking, and reverse polarity.</li>
+                <li><strong>HV/LV Safety Checks:</strong> Ensuring paramount safety via rigorous isolation, insulation resistance, and EV protection-circuit verification.</li>
+                <li><strong>Load & Power Simulation:</strong> Simulating dynamic SMPS load cycles, RF transients, and nuanced HV/LV power behavior analytics.</li>
+                <li><strong>Harness & PCB Validation:</strong> Guaranteeing electrical survivability of wiring layouts, PCB architectures, and complex ECU sub-assemblies.</li>
+                <li><strong>Automation Integration:</strong> Implementing fully repeatable execution through advanced Python, CAPL, TestStand, and XML-driven frameworks.</li>
+                <li><strong>Real-Time Data Capture:</strong> Deploying oscilloscopes and precision PCI cards feeding high-resolution waveform-based diagnostic triage.</li>
+                <li><strong>Compliance Documentation:</strong> Formally delivering comprehensive reporting spanning recorded deviations, corrective mitigations, and explicit standard mapping.</li>
               </ul>
             </div>
           </section>
@@ -172,14 +174,14 @@ const S4 = () => {
                 Our Mechanical Validation services ensure structural integrity and durability through rigorous vibration, shock, and thermo-mechanical testing. We utilize custom fixtures and automated endurance rigs to deliver precise analytics and full compliance reporting.
               </p>
               <ul>
-                <li><strong>Standards Framework:</strong> ISO 16750‑3, IEC 60068 and MIL‑STD‑810 mechanical test profiles for global compliance.​</li>
-                <li><strong>Vibration Endurance:</strong> Random, sine and combined environment vibration for structure and connection robustness.​</li>
-                <li><strong>Shock & Impact Loading:</strong> Drop, mechanical impact and shock pulses simulating real‑world sudden load events.​</li>
-                <li><strong>Thermo‑Mechanical Cycles:</strong> Combined heat + mechanical stress for accelerated lifecycle behavior validation.​</li>
-                <li><strong>Fixture Engineering:</strong> Custom fixtures ensuring precise strain, displacement and force measurements.​</li>
-                <li><strong>Endurance Automation:</strong> Long‑cycle rigs with auto‑shutdown protection for safe extended operation.​</li>
-                <li><strong>Instrumented Measurements:</strong> High‑accuracy accelerometers, strain gauges and displacement sensors for detailed analytics.​</li>
-                <li><strong>Full Compliance Output:</strong> Procedures, calibration data, acceptance curves and structural reliability reports.​</li>
+                <li><strong>Standards Framework:</strong> Establishing deep global compliance leveraging ISO 16750-3, IEC 60068, and exhaustive MIL-STD-810 mechanical parameters.</li>
+                <li><strong>Vibration Endurance:</strong> Ensuring maximum connection robustness via aggressive random, sine, and complex multiaxial vibration scenarios.</li>
+                <li><strong>Shock & Impact Loading:</strong> Simulating destructive real-world load events through highly calibrated drop, impact, and shock pulses.</li>
+                <li><strong>Thermo-Mechanical Cycles:</strong> Validating dramatically accelerated lifecycle behavior combining extreme heat and sustained mechanical strain concurrently.</li>
+                <li><strong>Fixture Engineering:</strong> Designing robust custom fixtures enabling uncompromising precision across strain, displacement, and force measurement thresholds.</li>
+                <li><strong>Endurance Automation:</strong> Engineering autonomous long-cycle fatigue rigs equipped with highly redundant auto-shutdown safety parameters.</li>
+                <li><strong>Instrumented Measurements:</strong> Utilizing elite-grade accelerometers, strain gauges, and displacement lasers informing uniquely detailed structural analytics.</li>
+                <li><strong>Full Compliance Output:</strong> Generating certified procedures, calibration certs, dynamic acceptance curves, and definitive reliability dossiers.</li>
               </ul>
             </div>
           </section>
@@ -194,14 +196,14 @@ const S4 = () => {
                 Our Design Verification services focus on robust communication and protocol validation. We verify physical layers, transport protocols, and diagnostic services across CAN, Ethernet, and V2G interfaces to ensure interoperability and standards compliance.
               </p>
               <ul>
-                <li><strong>CAN Physical Layer Verification:</strong> ISO 11898 validation ensuring timing margins, signal integrity and noise immunity.​</li>
-                <li><strong>UDS Functional Validation:</strong> ISO 14229 service coverage, security access, diagnostic sessions and timing behavior checks.​</li>
-                <li><strong>ISO 15765 TP Verification:</strong> Transport protocol validation for segmentation, message flow and error handling.​</li>
-                <li><strong>Bootloader & Flashing Verification:</strong> Flash integrity, retry logic, rollback handling and download timing conformance.​</li>
-                <li><strong>Automotive Ethernet Validation:</strong> IEEE 802.3bw (100BASE‑T1) communication verification and timing conformance.​</li>
-                <li><strong>V2G / EVSE Interoperability:</strong> ISO 15118 and IEC 61851 tests for charging communication, authentication and power flow.​</li>
-                <li><strong>CCP/XCP Validation:</strong> Timing, checksum, data integrity and acquisition‑rate conformance under dynamic loads.​</li>
-                <li><strong>Mixed‑Mode Stress Testing:</strong> Communication verification under electrical disturbances, temperature and load variations.​</li>
+                <li><strong>CAN Physical Layer Verification:</strong> Enforcing absolute strict ISO 11898 signal integrity, rigid timing margins, and high noise immunity standards.</li>
+                <li><strong>UDS Functional Validation:</strong> Validating ISO 14229 service coverage alongside secure access protocols and rigorous timing behavior checks.</li>
+                <li><strong>ISO 15765 TP Verification:</strong> Guaranteeing flawless transport protocol operation spanning message segmentation, continuous flow, and error handling.</li>
+                <li><strong>Bootloader Validation:</strong> Exhaustively testing critical flash integrity, robust retry contingencies, seamless rollback handling, and download conformance.</li>
+                <li><strong>Automotive Ethernet:</strong> Verifying high-bandwidth IEEE 802.3bw (100BASE-T1) networking architectures ensuring deterministic timing behavior.</li>
+                <li><strong>V2G / EVSE Interoperability:</strong> Demonstrating ISO 15118 and IEC 61851 charging protocol conformance handling authentication and power transfer.</li>
+                <li><strong>CCP/XCP Validation:</strong> Continuously validating high-frequency timing, checksum integrity, and precise acquisition-rate conformance under immense dynamic loads.</li>
+                <li><strong>Mixed-Mode Stress Testing:</strong> Concurrently stressing communication protocols against disruptive electrical disturbances, extreme thermal variation, and heavy bus loading.</li>
               </ul>
             </div>
           </section>
@@ -216,14 +218,14 @@ const S4 = () => {
                 Our Additional Validation Support covers a wide spectrum of testing needs, from LabCar and vehicle testing to EMC and network management. We provide comprehensive support for diagnostics, endurance cycles, and integration readiness to ensure holistic system maturity.
               </p>
               <ul>
-                <li><strong>LabCar Validation:</strong> Early‑stage functional validation with high‑fidelity benches, rapid debugging and integration assurance.​</li>
-                <li><strong>Vehicle Testing:</strong> Global terrain, climate and regulatory validation ensuring real‑world functional maturity.​</li>
-                <li><strong>EMC/WMI/EMI Testing:</strong> CISPR 25, ISO 11452, ISO 7637, ISO 21498 compliance for radiated, conducted and immunity performance.​</li>
-                <li><strong>Diagnostics & UDS Support:</strong> Part 1 / Part 2 diagnostic validation including backend and fault‑state verification.​</li>
-                <li><strong>RTC & Endurance Cycles:</strong> Power‑cycle, wake/sleep, long‑duration and reliability validation with automated monitoring.​</li>
-                <li><strong>Network Management Simulation:</strong> CAN/LIN/FlexRay/AUTOSAR NM behavior validation for complex networked systems.​</li>
-                <li><strong>Flashing & Integration:</strong> Secure flashing, configuration, network activation and integration readiness support.​</li>
-                <li><strong>DVP & Requirement Mapping:</strong> Full DVP planning, P‑diagram creation, test coverage analytics and compliance governance.​</li>
+                <li><strong>LabCar Validation:</strong> Enabling aggressive early-stage functional validation on high-fidelity benches facilitating unprecedented rapid debugging iteration workflows.</li>
+                <li><strong>Vehicle Testing:</strong> Executing comprehensive multi-continent terrain, extreme climate, and exhaustive regulatory validation proving indisputable real-world maturity.</li>
+                <li><strong>EMC/WMI/EMI Testing:</strong> Proving uncompromising CISPR 25, ISO 11452, and ISO 7637 compliance addressing radiated, conducted, and electromagnetic immunity performance.</li>
+                <li><strong>Diagnostics & UDS Support:</strong> Guaranteeing comprehensive diagnostic coverage spanning in-depth backend interrogation and complex fault-state simulation verification frameworks.</li>
+                <li><strong>RTC & Endurance Cycles:</strong> Automating punishing power-cycling, exhaustive wake/sleep transitions, and continuous long-duration reliability metrics gathering.</li>
+                <li><strong>Network Management Simulation:</strong> Validating intricate CAN/LIN/FlexRay and AUTOSAR NM behavioral state-machines underpinning complex modern vehicular networking systems.</li>
+                <li><strong>Flashing & Integration:</strong> Guaranteeing exceptionally secure flashing operations, robust network configuration parameterizing, and seamless system integration readiness.</li>
+                <li><strong>DVP & Mapping:</strong> Delivering comprehensive end-to-end DVP documentation, robust P-diagram modeling, explicit coverage analytics, and definitive compliance governance.</li>
               </ul>
             </div>
           </section>

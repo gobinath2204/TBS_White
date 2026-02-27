@@ -63,8 +63,8 @@
 
 /* Product Page & Content Sections */
 .product-page {
-  max-width: 1600px;
-  width: 92%;
+  max-width: 1800px;
+  width: 98%;
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 4vh, 5rem);
@@ -75,17 +75,21 @@
   scroll-snap-type: y proximity;
 }
 
-.content-section,
-.section-with-image {
+/* Simple sections (no image) still use IntersectionObserver fade-in */
+.content-section {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.content-section.visible,
-.section-with-image.visible {
+.content-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Image sections: GSAP owns opacity/transform — no CSS initial state needed */
+.section-with-image {
+  opacity: 1;
 }
 
 .content-section {
@@ -105,55 +109,55 @@
 
 .section-with-image {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  min-height: auto;
-  overflow: visible;
+  flex-direction: row;
+  /* Default: image-wrapper is first in DOM → image on LEFT */
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: clamp(1rem, 1.5vw, 1.5rem);
   margin: 0;
-  padding: 1.5rem 1rem;
-  gap: 1.5rem;
-  border-radius: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(0.5rem, 1vw, 1rem);
   background: transparent;
   border: none;
-  backdrop-filter: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   scroll-snap-align: start;
 }
 
-/* Section with Image + Text Layout */
+/* .reverse: row-reverse flips DOM order so image ends up on RIGHT */
+.section-with-image.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ====== IMAGE COLUMN — perfect square ====== */
 .section-image-wrapper {
+  flex: 0 0 clamp(300px, 45%, 550px);
+  width: clamp(300px, 45%, 550px);
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  height: auto;
-  max-height: 500px;
-  /* Prevent excessive stretching */
-  flex: 0 0 calc(40% - 0.6rem);
-  /* 40% width minus gap proportion */
-  min-width: calc(40% - 0.6rem);
-  max-width: calc(40% - 0.6rem);
+  border-radius: 16px;
   overflow: hidden;
-  background: none;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  transition: all 0.4s ease;
-  order: 3;
-  /* Image Order */
+  background: #ffffff;
+  box-shadow: 0 8px 32px rgba(33, 60, 122, 0.10);
+  transition: box-shadow 0.4s ease;
+  flex-shrink: 0;
 }
 
 .section-image-wrapper:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 14px 44px rgba(33, 60, 122, 0.16);
 }
 
 .section-image-wrapper .section-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
-  /* Allow image to fill container naturally */
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.section-image-wrapper:hover .section-image {
+  transform: scale(1.06);
 }
 
 .section-subtitle {
@@ -165,108 +169,104 @@
   font-family: 'Axiforma', sans-serif;
 }
 
-/* Text Side - Ungrouped to control H2 and Content separately */
-.section-text {
+/* ====== TEXT COLUMN ====== */
+.section-with-image .section-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 0 0 calc(60% - 0.9rem);
-  min-width: calc(60% - 0.9rem);
-  max-width: calc(60% - 0.9rem);
-  order: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  gap: 0.5rem;
 }
 
-.section-text h2 {
-  font-size: clamp(1rem, 2vw, 2rem);
+/* H2 — centered within the text column */
+.section-with-image .section-text h2 {
+  font-size: clamp(1.2rem, 2vw, 2rem) !important;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  padding-bottom: 1.5rem;
   color: var(--blue);
-  text-align: left;
+  text-align: center;
   font-family: 'Axiforma', sans-serif;
-  line-height: 1.1;
+  line-height: 1.2;
   width: 100%;
+  border-bottom: none;
+  display: block;
+  margin: 0 0 0 0 !important;
+  padding: 0;
 }
 
-.section-text p {
-  font-size: clamp(0.8rem, 0.4vw, 0.9rem);
-  /* Fluid paragraph text */
-  line-height: 1.1;
-  color: #8d8c8c;
-  margin-bottom: 1rem;
-  text-align: Justify;
+/* Short centred orange accent bar below H2 */
+.section-with-image .section-text h2::after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin: 0.4rem auto 0.7rem;
+}
+
+/* Intro paragraph */
+.section-with-image .section-text p {
+  font-size: clamp(0.85rem, 1vw, 0.98rem);
+  line-height: 1.6;
+  color: #6b6b6b;
+  margin-bottom: 0.6rem !important;
+  text-align: justify;
+  text-wrap: pretty;
   font-family: 'Inter', sans-serif;
   width: 100%;
 }
 
-/* Override global section styles from index.css */
-.product-page section h2,
-.section-with-image h2,
-.section-text h2 {
-  margin-bottom: 0.5rem !important;
-}
-
-.product-page p,
-.section-with-image p,
-.section-text p {
-  margin-bottom: 0.5rem !important;
-}
-
+/* ====== FEATURE CARD GRID ====== */
 .section-text ul {
   width: 100%;
-  margin: 0;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  /* Align to top instead of center */
-  gap: clamp(0.1rem, 0.1vw, 0.2rem);
-  /* Tighter gap between items */
+  margin: 0.6rem 0 0;
+  padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2-column grid — clean for 4–8 items */
+  gap: 0.65rem;
 }
 
 .section-text li {
-  background: transparent;
-  border: none;
-  padding: 0.3rem 0 0.3rem 2rem;
-  box-shadow: none;
-  transition: all 0.3s ease;
-  font-size: clamp(0.8rem, 0.4vw, 0.9rem);
-  line-height: 1.1;
-  color: #333;
-  margin: 0;
-  font-family: 'Axiforma', sans-serif;
+  background: #ffffff;
+  border: 1px solid rgba(33, 60, 122, 0.08);
+  border-left: 3px solid var(--orange);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem 0.7rem 0.85rem;
+  box-shadow: 0 2px 8px rgba(33, 60, 122, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+  line-height: 1.5;
+  color: #444;
+  font-family: 'Inter', sans-serif;
   position: relative;
-  text-align: justify;
-}
-
-.section-text li::before {
-  content: "";
-  background-image: url("/Icons/check.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.2rem;
-  height: 1.2rem;
-  position: absolute;
-  left: 0;
+  text-align: left;
   display: block;
-  z-index: 1;
-  background-position: center;
 }
 
+.section-text li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(229, 107, 46, 0.14);
+  border-left-color: var(--blue);
+}
+
+/* No ::before — numbers removed, cards show title + description only */
+
+/* Feature title (the <strong> tag) */
 .section-text li strong {
+  display: block;
   color: var(--blue);
-  font-weight: 600;
-  font-size: 0.85rem;
-  /* Slightly larger emphasis */
+  font-weight: 700;
+  font-size: clamp(0.8rem, 0.95vw, 0.92rem);
+  font-family: 'Axiforma', sans-serif;
+  line-height: 1.3;
+  margin-bottom: 0.1rem;
 }
 
-/* Alternating Layout for Desktop */
-@media (min-width: 769px) {
-  .section-with-image:nth-of-type(even) {
-    flex-direction: row-reverse;
-  }
-}
+/* Alternating Layout — handled by grid-template-areas on .reverse class (see above) */
+/* No extra media query needed for desktop alternating */
 
 /*SWE Gallery*/
 .sticky-gallery-wrapper {
@@ -285,7 +285,7 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+  background: radial-gradient(circle at center, #e1e3e8 0%, #898e9b 100%);
   width: 100vw;
   /* Reliable breakout for elements inside centered containers */
   margin-left: calc(-1 * (100vw - 100%) / 2);
@@ -299,7 +299,7 @@
   font-family: 'Axiforma', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 700;
-  color: #fff;
+  color: #213c7a;
   text-align: center;
   margin-bottom: 3.5rem;
   position: relative;
@@ -645,13 +645,14 @@
   }
 
   .section-image-wrapper {
-    min-height: 300px;
+    max-height: 420px;
+    /* Allow reasonable height on tablets */
   }
 
   .section-text li {
-    font-size: 0.95rem;
-    /* Slightly smaller on tablets */
-    padding: 0.5rem 0 0.5rem 2rem;
+    font-size: 0.92rem;
+    /* Slightly more compact on tablets but still readable */
+    padding: 0.4rem 0 0.4rem 2rem;
   }
 
   .swe-gallery-grid {
@@ -693,63 +694,41 @@
   .section-with-image,
   .section-with-image.reverse {
     flex-direction: column;
-    padding: 0.5rem 1rem;
-    gap: 1rem;
-    border-radius: 0;
+    /* Stack image above text on mobile */
+    padding: 1rem 0.75rem;
+    gap: 0.75rem;
   }
 
   .section-image-wrapper {
-    width: 100%;
-    height: auto;
-    min-height: 250px;
-    max-height: 400px;
     flex: none;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: min(320px, 100%);
+    margin: 0 auto;
+    border-radius: 12px;
   }
 
   .section-image-wrapper .section-image {
-    max-height: 350px;
-    /* Limit height on mobile */
+    width: 100%;
+    height: 100%;
   }
 
-  .section-text {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
+  .section-with-image .section-text {
     flex: none;
-    order: 2;
-  }
-
-  .section-text h2,
-  .section-text p,
-  .section-text ul {
     width: 100%;
-    /* Stack vertically */
-    padding: 0 5px;
-    /* Add padding to children */
   }
 
-  .section-text h2 {
+  .section-with-image .section-text h2 {
+    font-size: clamp(1.1rem, 4vw, 1.5rem) !important;
     text-align: center;
   }
 
-  .section-image-wrapper {
-    width: 100%;
-    order: 1;
-    flex: none;
-  }
-
-  .section-text ul {
+  .section-with-image .section-text ul {
+    grid-template-columns: 1fr;
     gap: 0.5rem;
-    /* Tighter gap on mobile */
   }
 
   .section-text li {
-    font-size: 0.9rem;
-    /* Smaller text on mobile */
-    padding: 0.5rem 0;
-    line-height: 1.4;
+    font-size: 0.88rem;
+    padding: 0.6rem 0.75rem;
   }
 
   .custom-page-nav {

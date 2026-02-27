@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useNavigate } from "react-router-dom";
+import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
 const S3 = () => {
   const contentRef = useRef(null);
   const navigate = useNavigate();
+  useFeatureAnimations(contentRef);
   const imagePath = "/Hero_S/hwengg.jpg";
 
 
@@ -51,8 +53,8 @@ const S3 = () => {
           </section>
 
           <section className="content-section section-with-image reverse">
-            <div className="section-image-wrapper h-auto">
-              <img src="/S_HW/Picture0.png" alt="HWE1" className="section-image object-fit-fill h-auto" />
+            <div className="section-image-wrapper">
+              <img src="/S_HW/Picture0.png" alt="HWE1" className="section-image" />
             </div>
             <div className="section-text">
               <h2>HWE.1 Hardware Requirement Development</h2>
@@ -63,7 +65,7 @@ const S3 = () => {
                 <li><strong>Hardware Requirements Elicitation:</strong> Transforming system requirements into precise hardware specifications with clear functional, performance, and electrical expectations.</li>
                 <li><strong>Hardware Safety Requirements (HSR):</strong> Deriving Hardware Safety Requirements from TSRs, aligned with ISO 26262 functional safety processes and safety goals.</li>
                 <li><strong>Platform Hardware Requirements:</strong> Deriving platform hardware requirements, including hardware safety requirements for safety‑compliant microcontrollers and automotive‑grade ASICs</li>
-                <li><strong>Functional and Non‑Functional Requirements:</strong> Capturing functional behaviors and non‑functional attributes including performance, thermal limits, reliability, and diagnostics.</li>
+                <li><strong>Functional and Non‑Functional Requirements</strong> Capturing functional behaviors and non‑functional attributes including performance, thermal limits, reliability, and diagnostics.</li>
                 <li><strong>Electrical Test Requirements:</strong> Defining LV and HV electrical test requirements per LV124, LV148, LV123, and essential EV safety standards.</li>
                 <li><strong>High Voltage (HV) and Low Voltage (LV) Requirements:</strong> Defining HV and LV electrical requirements covering behavior, protection, isolation, derating, and automotive standards.</li>
                 <li><strong>Communication Requirements:</strong> Defining hardware communication needs for CAN, LIN, SPI, I2C, Ethernet, and RS232 with diagnostics.</li>
