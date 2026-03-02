@@ -76,7 +76,7 @@ const S3 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper h-auto">
-              <img src="/S_HW/Picture1.png" alt="Design" className="section-image object-fit-cover h-auto" />
+              <img src="/S_HW/Picture1.jpeg" alt="Design" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Schematic Design</h2>
@@ -160,7 +160,7 @@ const S3 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper h-auto">
-              <img src="/S_HW/Picture5.png" alt="HARA" className="section-image h-auto" />
+              <img src="/S_HW/Picture5.jpg" alt="HARA" className="section-image h-auto" />
             </div>
             <div className="section-text">
               <h2>HARA Development</h2>

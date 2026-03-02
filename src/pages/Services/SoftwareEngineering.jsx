@@ -90,7 +90,7 @@ const S2 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SW/Pictures0.png" alt="Custom UI" className="section-image" />
+              <img src="/S_SW/Pictures0.jpeg" alt="Custom UI" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SWE.1 Requirements Elicitation</h2>
@@ -225,7 +225,7 @@ const S2 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SW/Pictures5.jpeg" alt="Connectivity" className="section-image" />
+              <img src="/S_SW/Pictures5.jpg" alt="Connectivity" className="section-image" />
             </div>
             <div className="section-text">
               <h2>SWE.6 Software Qualification Testing</h2>
