@@ -55,7 +55,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture0.png" alt="FS" className="section-image object-fit-cover h-auto" />
+              <img src="/S_SR/Picture0.jpeg" alt="FS" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Functional Safety</h2>
@@ -77,7 +77,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture1.png" alt="" className="section-image object-fit-cover h-auto" />
+              <img src="/S_SR/Picture1.jpeg" alt="" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Cybersecurity Development & Testing</h2>
@@ -97,7 +97,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture2.png" alt="HV" className="section-image object-fit-cover h-auto" />
+              <img src="/S_SR/Picture2.jpeg" alt="HV" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>HV Safety Development & Testing</h2>
@@ -124,7 +124,7 @@ const S5 = () => {
 
           <section className="content-section section-with-image">
             <div className="section-image-wrapper">
-              <img src="/S_SR/Picture3.png" alt="CAN" className="section-image object-fit-cover h-auto" />
+              <img src="/S_SR/Picture3.jpeg" alt="CAN" className="section-image object-fit-cover h-auto" />
             </div>
             <div className="section-text">
               <h2>Automotive CAN Standard Development & Testing</h2>
