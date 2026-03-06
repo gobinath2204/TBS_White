@@ -53,7 +53,7 @@ const P4 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_SMU/SMU1.png" alt="Secure Manufacturing" className="section-image" />
+              <img src="/P_SMU/SMU1.jpg" alt="Secure Manufacturing" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Core Capabilities</h2>

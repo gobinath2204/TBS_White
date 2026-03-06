@@ -54,7 +54,7 @@ const P2 = () => {
 
           <section className="content-section section-with-image reverse">
             <div className="section-image-wrapper">
-              <img src="/P_EVdeck/Picture.jpeg" alt="Strategic EV Development" className="section-image" />
+              <img src="/P_EVdeck/Picture.jpg" alt="Strategic EV Development" className="section-image" />
             </div>
             <div className="section-text">
               <h2>Strategic EV Development Framework</h2>
