@@ -16,7 +16,7 @@ const Careers = () => {
     (job) =>
       job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       job.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      job.id.toLowerCase().includes(searchQuery.toLowerCase()) // Also search by job ID
+      job.id.toLowerCase().includes(searchQuery.toLowerCase()), // Also search by job ID
   );
 
   const handleApply = (job) => {
@@ -28,7 +28,7 @@ const Careers = () => {
 
     // Encode the subject and body for mailto link
     const mailtoLink = `mailto:Recruitment@testbasesolutions.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
+
     // Open default email client
     window.location.href = mailtoLink;
   };
@@ -77,10 +77,7 @@ const Careers = () => {
       {/* Popup modal for job details */}
       {selectedJob && (
         <div className="modal-overlay" onClick={() => setSelectedJob(null)}>
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <h2>{selectedJob.title}</h2>
               <span className="modal-job-id">{selectedJob.id}</span>
@@ -92,16 +89,24 @@ const Careers = () => {
               <strong>Type:</strong> {selectedJob.type}
             </p>
             <div className="job-full-details">
-              <p className="modal-description">{selectedJob.fullDescription}</p>
+              <p
+                className="modal-description"
+                style={{ whiteSpace: "pre-wrap" }}
+              >
+                {selectedJob.fullDescription}
+              </p>
             </div>
             <div className="modal-actions">
-              <button 
-                className="apply-btn" 
+              <button
+                className="apply-btn"
                 onClick={() => handleApply(selectedJob)}
               >
                 Apply via Email
               </button>
-              <button className="close-btn" onClick={() => setSelectedJob(null)}>
+              <button
+                className="close-btn"
+                onClick={() => setSelectedJob(null)}
+              >
                 Close
               </button>
             </div>
