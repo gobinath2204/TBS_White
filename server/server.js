@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 const app = express();
 const port = 5000;
@@ -13,16 +13,26 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Configure SMTP transporter
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
+  secure: process.env.SMTP_SECURE === "true", // true for 465, false for other ports
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 // API endpoint for your React form
 app.post("/send-email", async (req, res) => {
   const { user_name, user_email, user_phone, message } = req.body;
 
   try {
-    const data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>", // Resend requires verified sender domain later
-      to: "gobinath2204@gmail.com",
+    const info = await transporter.sendMail({
+      from: `Contact Form <${process.env.SMTP_USER}>`,
+      to: "info@testbasesolutions.co.uk",
       subject: "New Contact Form Submission",
       html: `
         <div style="font-family:Arial, sans-serif; padding:20px;">
@@ -34,8 +44,7 @@ app.post("/send-email", async (req, res) => {
         </div>
       `
     });
-
-    res.json({ success: true, data });
+    res.json({ success: true, info });
   } catch (error) {
     console.error(error);
     res.status(500).json({ success: false, error });
