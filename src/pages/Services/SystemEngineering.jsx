@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
@@ -50,6 +50,31 @@ const SystemEngineering = () => {
             <p className="fs-1-2rem text-justify">
               Our <b>system engineering team</b> delivers exceptional system engineering with accurate, fully traceable requirements for functional, non-functional (electrical, mechanical, and environmental), communication, diagnostics, and EOL for cutting-edge automotive ECUs. We deliver the system engineering in compliance with Functional Safety (ISO 26262), Cybersecurity (ISO 21434), and Regulatory Standards (UN R100).
             </p>
+            <div className="brief-callout" style={{
+              background: '#eef3fc',
+              borderLeft: '4px solid #213c7a',
+              padding: '16px 20px',
+              borderRadius: '0 6px 6px 0',
+              marginTop: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '15px'
+            }}>
+              <span style={{ fontSize: '1rem', color: '#1f3864', fontWeight: '500' }}>
+                📄 Looking for the technical rollup from the trade show?
+              </span>
+              <Link to="/advert/engineering-reinforcement" style={{
+                color: '#e56b2e',
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                fontFamily: 'Axiforma, sans-serif',
+                fontSize: '0.95rem'
+              }}>
+                Read our Engineering Technical Brief &rarr;
+              </Link>
+            </div>
           </section>
 
           <section className="content-section section-with-image">

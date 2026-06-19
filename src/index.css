@@ -77,7 +77,7 @@ h6 {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: env(safe-area-inset-top) clamp(15px, 4vw, 50px) 0;
+  padding: env(safe-area-inset-top) 0 0;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -100,6 +100,57 @@ h6 {
   max-width: 1600px;
   margin: 0 auto;
   height: clamp(65px, 10vh, 95px);
+  padding: 0 clamp(15px, 4vw, 50px);
+}
+
+/* Event Banner Style */
+.event-banner {
+  background: linear-gradient(90deg, #152b4f, #1f3864);
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: clamp(0.75rem, 0.25vw + 0.7rem, 0.85rem);
+  font-weight: 500;
+  border-bottom: 2px solid #e56b2e;
+  z-index: 10001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.event-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.event-banner-content span {
+  font-family: 'Axiforma', sans-serif;
+  text-transform: uppercase;
+}
+
+.event-banner-link {
+  color: #e56b2e !important;
+  font-family: 'Audiowide', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: inherit;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.event-banner-link:hover {
+  color: #ffffff !important;
+  background: #e56b2e;
+  transform: translateY(-1px);
 }
 
 .logo img {
@@ -482,6 +533,12 @@ section h2 {
   align-items: center !important;
   gap: 1.5rem !important;
   /* Space between SVG and text */
+  transition: color 0.3s ease !important;
+  color: #fff !important;
+}
+
+.footer-contact-link:hover {
+  color: var(--orange) !important;
 }
 
 .footer-contact-link span {
@@ -1312,5 +1369,185 @@ section h2 {
     font-size: 0.95rem !important;
     /* Prevent oversizing on small screens */
     line-height: 1.55 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   PROMOTIONAL AD MODAL
+   -------------------------------------------------------------------------- */
+.promo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100000; /* Must sit above navbar (10000) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: promoFadeIn 0.3s ease-out;
+}
+
+.promo-modal-card {
+  background: linear-gradient(135deg, #152b4f 0%, #1f3864 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 550px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-top: 6px solid var(--orange);
+  position: relative;
+  animation: promoScaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.promo-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.promo-modal-close:hover {
+  color: #ffffff;
+}
+
+.promo-modal-header {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.promo-modal-badge {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 0.75rem;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.promo-modal-header h2 {
+  font-family: 'Axiforma', sans-serif;
+  font-size: clamp(1.4rem, 2vw + 1rem, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.promo-modal-body {
+  margin-bottom: 28px;
+}
+
+.promo-modal-body p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #eef3fc;
+}
+
+.promo-modal-body .promo-modal-subtext {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #bfd3ee;
+  margin-bottom: 0;
+}
+
+.promo-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  .promo-modal-actions {
+    flex-direction: row;
+  }
+}
+
+.promo-modal-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-family: 'Axiforma', sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.promo-modal-btn.primary {
+  background: var(--orange);
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(229, 107, 46, 0.3);
+}
+
+.promo-modal-btn.primary:hover {
+  background: #c95217;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(229, 107, 46, 0.4);
+}
+
+.promo-modal-btn.secondary {
+  background: transparent;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.promo-modal-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.promo-modal-dismiss {
+  background: transparent;
+  border: none;
+  color: #bfd3ee;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-family: 'Axiforma', sans-serif;
+}
+
+.promo-modal-dismiss:hover {
+  color: #ffffff;
+}
+
+@keyframes promoFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes promoScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

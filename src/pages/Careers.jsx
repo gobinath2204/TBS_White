@@ -70,7 +70,7 @@ const Careers = () => {
 
       {filteredJobs.length === 0 && (
         <div className="no-jobs">
-          <p>No job openings found matching your search.</p>
+          <p>We do not have any active openings at this time. Please visit our LinkedIn page for upcoming opportunities.</p>
         </div>
       )}
 

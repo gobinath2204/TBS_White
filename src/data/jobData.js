@@ -2,44 +2,7 @@
 const STORAGE_KEY = "automotive_job_postings";
 
 // Initial dummy data with TBS IDs
-const initialJobs = [
-  {
-    id: "BEV_IN",
-    title: "BEV Systems Integration Engineer",
-    location: "Coventry, UK",
-    type: "Full-time",
-    description:
-      "Vehicle-level integration of battery, power electronics, drive units & thermal systems for EV applications.",
-    fullDescription: `Role Highlights:
-- Vehicle-level integration of battery, power electronics, drive units & thermal systems
-- System requirements, interfaces & validation
-- Collaboration with design, validation & manufacturing teams
-- Compliance with ISO 26262 & UNECE R100
-- Hands-on with tools like CANalyzer, CANape, INCA, MATLAB/Simulink
-
-Experience:
-- 3+ years in Automotive / EV integration`,
-  },
-  {
-    id: "ESETRY",
-    title: "Embedded Software Engineer",
-    location: "ELCOT IT Park, Trichy (Tamil Nadu)",
-    type: "Full-time",
-    description:
-      "Automotive Embedded Software development, working with BSW, MCAL, SWC, and CDD.",
-    fullDescription: `Role Highlights:
-- Automotive Embedded Software development
-- Hands-on development with BSW, MCAL, OS configuration, SWC, and Complex Device Drivers (CDD)
-- Embedded C programming on automotive microcontrollers
-- Working with peripherals and advanced debugging tools
-- Software testing including Unit, Integration, and Acceptance Testing
-- Leading and mentoring a team of engineers
-- Adherence to automotive standards and processes such as ASPICE and ISO 26262
-
-Experience Required:
-- 4–8 years of experience in Automotive Embedded Software Development`,
-  },
-];
+const initialJobs = [];
 
 // Helper functions to work with localStorage
 const getStoredJobs = () => {

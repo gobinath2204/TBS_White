@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '/src/pages/Prod-Serv-pages.css';
 import { useFeatureAnimations } from '../../utils/useFeatureAnimations';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import SEO from "../../components/SEO";
 import PageNavigation from "../../components/PageNavigation";
 
@@ -50,6 +50,31 @@ const P2 = () => {
             <p className="fs-1-2rem text-justify">
               Our <b>EV Generic Deck</b> is a versatile, modular powertrain solution accelerating electric vehicle development. This comprehensive kit includes a high-voltage motor, battery management system, and inverter, offering a plug-and-play foundation for prototyping and production. Compatible with various vehicle architectures, it supports power outputs up to 400V and 66 kWh, from compact urban EVs to high-performance models.
             </p>
+            <div className="brief-callout" style={{
+              background: '#eef3fc',
+              borderLeft: '4px solid #213c7a',
+              padding: '16px 20px',
+              borderRadius: '0 6px 6px 0',
+              marginTop: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '15px'
+            }}>
+              <span style={{ fontSize: '1rem', color: '#1f3864', fontWeight: '500' }}>
+                📄 Looking for the technical rollup from the trade show?
+              </span>
+              <Link to="/advert/ev-generic-deck" style={{
+                color: '#e56b2e',
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                fontFamily: 'Axiforma, sans-serif',
+                fontSize: '0.95rem'
+              }}>
+                Read our Technical Brief &rarr;
+              </Link>
+            </div>
           </section>
 
           <section className="content-section section-with-image reverse">

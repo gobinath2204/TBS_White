@@ -25,34 +25,14 @@ const ContactUS = () => {
     iconAnchor: [12, 41],
   });
 
-  const sendEmail = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-
-    const formData = {
-      user_name: form.current.user_name.value,
-      user_email: form.current.user_email.value,
-      user_phone: phone,
-      message: form.current.message.value,
-    };
-
-    try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSuccessMessage("Message sent successfully! We'll respond within 24 hours.");
-        form.current.reset();
-        setPhone('');
-        setTimeout(() => setSuccessMessage(''), 5000);
-      } else {
-        setSuccessMessage("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      setSuccessMessage("Error sending message. Please try again later.");
-    }
+    const name = form.current.user_name.value;
+    const email = form.current.user_email.value;
+    const phoneValue = phone;
+    const message = form.current.message.value;
+    const mailto = `mailto:info@testbasesolutions.co.uk?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0APhone:%20${encodeURIComponent(phoneValue)}%0AMessage:%20${encodeURIComponent(message)}`;
+    window.location.href = mailto;
   };
 
   return (
@@ -61,6 +41,11 @@ const ContactUS = () => {
         <div className="form-section" data-aos="fade-right">
           <h2>Get in Touch</h2>
           <form ref={form} onSubmit={sendEmail}>
+            <div className="contact-info-message" style={{ marginBottom: '1rem', background: '#f5f5f5', padding: '0.75rem', borderRadius: '8px', textAlign: 'center' }}>
+              <p>
+                Contact us at <a href="mailto:info@testbasesolutions.co.uk">info@testbasesolutions.co.uk</a> or fill out the contact form to get in touch with us.
+              </p>
+            </div>
             <div className="form-group">
               <label>Name</label>
               <input type="text" name="user_name" required />
