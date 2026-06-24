@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="event-banner">
         <div className="event-banner-content">
           <span>🎉 Visit Test Base Solutions at the Trade Show! See our HIL demo at the booth. </span>
-          <Link to="/advert/ev-generic-deck" className="event-banner-link">Read Technical Briefs &rarr;</Link>
+          <Link to="/briefs/ev-generic-deck" className="event-banner-link">Read Technical Briefs &rarr;</Link>
         </div>
       </div>
       <div className="nav-container">

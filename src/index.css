@@ -1450,6 +1450,16 @@ section h2 {
   margin: 0;
 }
 
+.promo-modal-subhead {
+  font-size: 0.95rem;
+  color: #bfd3ee;
+  display: block;
+  margin-top: 8px;
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 .promo-modal-body {
   margin-bottom: 28px;
 }

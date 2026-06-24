@@ -65,7 +65,7 @@ const SystemEngineering = () => {
               <span style={{ fontSize: '1rem', color: '#1f3864', fontWeight: '500' }}>
                 📄 Looking for the technical rollup from the trade show?
               </span>
-              <Link to="/advert/engineering-reinforcement" style={{
+              <Link to="/briefs/engineering-reinforcement" style={{
                 color: '#e56b2e',
                 fontWeight: 'bold',
                 textDecoration: 'none',

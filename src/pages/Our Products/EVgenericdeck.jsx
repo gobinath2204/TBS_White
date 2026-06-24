@@ -65,7 +65,7 @@ const P2 = () => {
               <span style={{ fontSize: '1rem', color: '#1f3864', fontWeight: '500' }}>
                 📄 Looking for the technical rollup from the trade show?
               </span>
-              <Link to="/advert/ev-generic-deck" style={{
+              <Link to="/briefs/ev-generic-deck" style={{
                 color: '#e56b2e',
                 fontWeight: 'bold',
                 textDecoration: 'none',

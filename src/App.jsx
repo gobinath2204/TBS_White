@@ -23,9 +23,9 @@ const S3 = lazy(() => import("./pages/Services/HardwareEngineering"));
 const S4 = lazy(() => import("./pages/Services/SystemValidation"));
 const S5 = lazy(() => import("./pages/Services/SafetyandRegulatory"));
 const Admin = lazy(() => import("./pages/Admin"));
-const EVGenericDeckBrief = lazy(() => import("./pages/Advert/EVGenericDeckBrief"));
-const EngineeringBrief = lazy(() => import("./pages/Advert/EngineeringBrief"));
-const PartnershipBrief = lazy(() => import("./pages/Advert/PartnershipBrief"));
+const EVGenericDeckBrief = lazy(() => import("./pages/Briefs/EVGenericDeckBrief"));
+const EngineeringBrief = lazy(() => import("./pages/Briefs/EngineeringBrief"));
+const PartnershipBrief = lazy(() => import("./pages/Briefs/PartnershipBrief"));
 
 function AppContent() {
   const location = useLocation();
@@ -49,9 +49,20 @@ function AppContent() {
     // Reset modal state on navigation
     setIsPromoModalOpen(false);
 
-    // Don't show the promo popup if the user is already reading one of the briefs
-    const isBriefPage = location.pathname.startsWith("/advert/");
-    if (isBriefPage) {
+    // 1. Auto-disappear after 10 July 2026
+    const isExpired = new Date() > new Date("2026-07-11T00:00:00");
+    if (isExpired) {
+      return;
+    }
+
+    // 2. Permanent dismiss check
+    const isDismissed = localStorage.getItem("tbs_promo_dismissed") === "true";
+    if (isDismissed) {
+      return;
+    }
+
+    // 3. Only fire on the home route
+    if (location.pathname !== "/") {
       return;
     }
 
@@ -63,6 +74,11 @@ function AppContent() {
   }, [location]);
 
   const handleCloseModal = () => {
+    setIsPromoModalOpen(false);
+  };
+
+  const handleDismissPermanently = () => {
+    localStorage.setItem("tbs_promo_dismissed", "true");
     setIsPromoModalOpen(false);
   };
 
@@ -89,9 +105,9 @@ function AppContent() {
             <Route path="/pages/Services/SystemValidation" element={<S4 />} />
             <Route path="/pages/Services/SafetyandRegulatory" element={<S5 />} />
             <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
-            <Route path="/advert/ev-generic-deck" element={<EVGenericDeckBrief />} />
-            <Route path="/advert/engineering-reinforcement" element={<EngineeringBrief />} />
-            <Route path="/advert/partnership-brief" element={<PartnershipBrief />} />
+            <Route path="/briefs/ev-generic-deck" element={<EVGenericDeckBrief />} />
+            <Route path="/briefs/engineering-reinforcement" element={<EngineeringBrief />} />
+            <Route path="/briefs/partnership-brief" element={<PartnershipBrief />} />
           </Routes>
         </Suspense>
       </main>
@@ -103,31 +119,32 @@ function AppContent() {
           <div className="promo-modal-card" onClick={(e) => e.stopPropagation()}>
             <button className="promo-modal-close" onClick={handleCloseModal} aria-label="Close modal">&times;</button>
             <div className="promo-modal-header">
-              <span className="promo-modal-badge">🎉 Trade Show Special</span>
-              <h2>Test Base Solutions at the Trade Show!</h2>
+              <h2>Visit TBS at Vehicle Electrification Expo</h2>
+              <span className="promo-modal-subhead">8-9 July 2026 &middot; NEC Birmingham &middot; Free to attend</span>
             </div>
             <div className="promo-modal-body">
-              <p>Come see our live HIL demonstration at the booth and get a physical copy of our technical briefs rollup banner.</p>
-              <p className="promo-modal-subtext">You can also download the rollup briefs in PDF format directly, or read our online technical briefs to see how we integrate our platform and engineering scale.</p>
+              <p>Live HIL demo at the booth. Co-located with Battery Cells &amp; Systems Expo. Three technical briefs are available now covering the EV Generic Deck platform, our engineering capability, and the partnership model.</p>
             </div>
             <div className="promo-modal-actions">
               <Link 
-                to="/advert/ev-generic-deck" 
+                to="/briefs/ev-generic-deck" 
                 className="promo-modal-btn primary"
                 onClick={handleCloseModal}
               >
-                Read Technical Briefs
+                Read the technical briefs
               </Link>
               <a 
-                href="/briefs/TBS_TradeShow_Rollups_v5.1.pdf" 
-                download="TBS_TradeShow_Rollups_v5.1.pdf" 
+                href="/briefs/TBS_Technical_Briefs.pdf" 
+                download="TBS_Technical_Briefs.pdf" 
                 className="promo-modal-btn secondary"
                 onClick={handleCloseModal}
               >
-                Download PDF Rollup
+                Download brief (PDF)
               </a>
             </div>
-            <button className="promo-modal-dismiss" onClick={handleCloseModal}>No thanks, dismiss</button>
+            <button className="promo-modal-dismiss" onClick={handleDismissPermanently}>
+              Dismiss, don't show again
+            </button>
           </div>
         </div>
       )}

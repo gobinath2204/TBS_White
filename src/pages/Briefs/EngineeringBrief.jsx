@@ -275,50 +275,39 @@ const EngineeringBrief = () => {
           {/* Card: Download PDF */}
           <div className="sidebar-card pdf-download-card">
             <h3>Download Brief PDF</h3>
-            <div className="qr-container">
-              <img
-                src="/briefs/engineering-reinforcement-qr.jpg"
-                alt="Engineering Reinforcement Rollup QR Code"
-                className="qr-image"
-              />
-            </div>
-            <p className="qr-caption">
-              Scan this QR code from the rollup banner to view the deck directly on your mobile
-              device.
-            </p>
             <a
-              href="/briefs/TBS_TradeShow_Rollups_v5.1.pdf"
-              download="TBS_TradeShow_Rollups_v5.1.pdf"
+              href="/briefs/TBS_Technical_Briefs.pdf"
+              download="TBS_Technical_Briefs.pdf"
               className="download-button"
             >
-              Download PDF Rollup
+              Download brief (PDF)
             </a>
           </div>
 
           {/* Card: Technical Brief Navigation */}
           <div className="sidebar-card nav-card">
-            <h3>Trade Show Briefs</h3>
+            <h3>Technical Briefs</h3>
             <nav className="sidebar-links">
               <Link
-                to="/advert/ev-generic-deck"
+                to="/briefs/ev-generic-deck"
                 className={`sidebar-link-item ${
-                  location.pathname === "/advert/ev-generic-deck" ? "active" : ""
+                  location.pathname === "/briefs/ev-generic-deck" ? "active" : ""
                 }`}
               >
                 EV Generic Deck Platform
               </Link>
               <Link
-                to="/advert/engineering-reinforcement"
+                to="/briefs/engineering-reinforcement"
                 className={`sidebar-link-item ${
-                  location.pathname === "/advert/engineering-reinforcement" ? "active" : ""
+                  location.pathname === "/briefs/engineering-reinforcement" ? "active" : ""
                 }`}
               >
                 Engineering Reinforcement
               </Link>
               <Link
-                to="/advert/partnership-brief"
+                to="/briefs/partnership-brief"
                 className={`sidebar-link-item ${
-                  location.pathname === "/advert/partnership-brief" ? "active" : ""
+                  location.pathname === "/briefs/partnership-brief" ? "active" : ""
                 }`}
               >
                 Platform + Engineering Integration
